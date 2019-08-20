@@ -1,0 +1,3 @@
+D:\Users\pedro.kle7771\Desktop\MoonFlorist\MoonFlorist\Source\MoonFlorist\MoonFlorist.Build.cs
+D:\Users\pedro.kle7771\Desktop\MoonFlorist\MoonFlorist\Source\MoonFlorist.Target.cs
+D:\Users\pedro.kle7771\Desktop\MoonFlorist\MoonFlorist\Source\MoonFloristEditor.Target.cs
