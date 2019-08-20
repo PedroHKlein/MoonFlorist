@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\MoonFlorist.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{78192E0B-CAF5-4D6F-9103-0736BB678D79}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\MoonFlorist.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\MoonFloristEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{693844FE-BC02-4965-A2FC-E56ACCD4F700}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\MoonFlorist">
+      <UniqueIdentifier>{E6F66EB4-1483-4A3A-A963-974E45C58DE9}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\MoonFlorist\MoonFlorist.Build.cs">
+      <Filter>Source\MoonFlorist</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\MoonFlorist\MoonFlorist.cpp">
+      <Filter>Source\MoonFlorist</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MoonFlorist\MoonFlorist.h">
+      <Filter>Source\MoonFlorist</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MoonFlorist\MoonFloristCharacter.cpp">
+      <Filter>Source\MoonFlorist</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MoonFlorist\MoonFloristCharacter.h">
+      <Filter>Source\MoonFlorist</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MoonFlorist\MoonFloristGameMode.cpp">
+      <Filter>Source\MoonFlorist</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MoonFlorist\MoonFloristGameMode.h">
+      <Filter>Source\MoonFlorist</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MoonFlorist\MoonFloristHUD.cpp">
+      <Filter>Source\MoonFlorist</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MoonFlorist\MoonFloristHUD.h">
+      <Filter>Source\MoonFlorist</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MoonFlorist\MoonFloristProjectile.cpp">
+      <Filter>Source\MoonFlorist</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MoonFlorist\MoonFloristProjectile.h">
+      <Filter>Source\MoonFlorist</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
