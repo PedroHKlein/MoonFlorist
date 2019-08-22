@@ -1,9 +1,0 @@
-D:\Users\pedro.kle7771\Desktop\MoonFlorist\MoonFlorist\Intermediate\Build\Win64\UE4Editor\Development\MoonFlorist\Definitions.MoonFlorist.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-D:\Users\pedro.kle7771\Desktop\MoonFlorist\MoonFlorist\Source\MoonFlorist/MoonFloristGameMode.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
-C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-D:\Users\pedro.kle7771\Desktop\MoonFlorist\MoonFlorist\Intermediate\Build\Win64\UE4Editor\Inc\MoonFlorist\MoonFloristGameMode.generated.h
