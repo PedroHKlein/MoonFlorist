@@ -16,18 +16,39 @@ AMyGameManager::AMyGameManager()
 void AMyGameManager::BeginPlay()
 {
 	Super::BeginPlay();
-
-	CurrentClient = new MyClientOrder(FMath::RandRange(1, 6), FMath::RandRange(1, 6), FMath::RandRange(1, 2));
-
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Hi! My name is %s"), *FString(CurrentClient->GetName())));
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("I would like to order a boquet that feels %s"), *FString(CurrentClient->GetGoal())));
-	
 }
 
 // Called every frame
 void AMyGameManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	Test(DeltaTime);
 }
 
+void AMyGameManager::NewClient()
+{
+	if (CurrentClient == NULL)
+	{
+		CurrentClient = new MyClientOrder(FMath::RandRange(1, 100), FMath::RandRange(1, 6), FMath::RandRange(1, 5));
+	}
+	else
+	{
+		delete CurrentClient;
+		CurrentClient = new MyClientOrder(FMath::RandRange(1, 100), FMath::RandRange(1, 6), FMath::RandRange(1, 5));
+	}
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Hi! My name is %s"), *FString(CurrentClient->GetName())), false);
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("I would like to order a boquet that feels %s"), *FString(CurrentClient->GetGoal())), false);
+	
+}
+
+void AMyGameManager::Test(float delta)
+{
+	fCurrTime = fCurrTime + delta;
+
+	if (fCurrTime >= fTimeToWait)
+	{
+		NewClient();
+		fCurrTime = 0.0f;
+	}
+}
