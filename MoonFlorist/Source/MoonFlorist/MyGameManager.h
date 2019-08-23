@@ -23,9 +23,12 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	void NewClient();
+	void Test(float delta);
 
 private:
 
 	MyClientOrder* CurrentClient;
-
+	float fTimeToWait = 6.0f;
+	float fCurrTime = 6.0f;
 };

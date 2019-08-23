@@ -12,10 +12,104 @@ enum ClientNames
 {
 	MARK = 1,
 	PEPE,
-	KIEKIE,
+	KIKI,
 	SHIKA,
 	STEVEN,
-	IZZIE
+	IZZIE,
+	JONTY,
+	ALEX,
+	FRASER,
+	ROURKE,
+	ROWAN,
+	MICHAEL,
+	SHUNI,
+	JESSKALOO,
+	CASPIAN,
+	MATI,
+	JEREMY,
+	ROGER,
+	KERRY,
+	VIVIAN,
+	SALLY,
+	JAMES,
+	JIMBO,
+	DONUT,
+	JIMOTHY,
+	JASPOR,
+	CARLO,
+	LARISSA,
+	MARA,
+	CAROLINE,
+	SAMI,
+	KATE,
+	BENNET,
+	RYAN,
+	FRANCIS,
+	ELLIE,
+	REBEKKAH,
+	SOFIE,
+	ZANNI,
+	HOLLY,
+	EMMA,
+	ROBYN,
+	YULI,
+	PAULA,
+	MEG,
+	BERT,
+	MAXWELL,
+	ABIGAIL,
+	ALEXANDRA,
+	AMANDA,
+	ARIANNE,
+	BAILEY,
+	BEN,
+	BETH,
+	BLAIR,
+	BO,
+	BRIDGET,
+	BROOKE,
+	BECKY,
+	CLAIRE,
+	DAMIEN,
+	DANNY,
+	IVAN,
+	SAM,
+	SID,
+	TECE,
+	ASMA,
+	SHILPA,
+	SAMAH,
+	TAMRYN,
+	CALLAN,
+	FAWAD,
+	DAVID,
+	ANDREW,
+	SHANNON,
+	KAITLIN,
+	PIGEON,
+	BOOF,
+	ANNA,
+	KIMBERLY,
+	SASKIA,
+	STEPH,
+	PINKY,
+	SARAH,
+	SERENA,
+	IDA,
+	LAUREN,
+	KEIRA,
+	RIANNA,
+	ROSARIA,
+	JHARAIZ,
+	AMY,
+	JANELLE,
+	JORDAN,
+	HAMISH,
+	NIKKI,
+	PITCAM,
+	JUNIPER,
+	LOCHIE,
+	CALLUM
 };
 
 enum ClientColourGoals
@@ -31,6 +125,9 @@ enum ClientColourGoals
 enum RedGoalNames
 {
 	FIESTY = 1,
+	PASSIONATE,
+	LOVE,
+	CORAGEOUS,
 	REDRED
 
 };
@@ -38,6 +135,9 @@ enum RedGoalNames
 enum BlueGoalNames
 {
 	COOL = 1,
+	TRUST,
+	SMART,
+	PEACEFUL,
 	BLUEBLUE
 
 };
@@ -45,6 +145,9 @@ enum BlueGoalNames
 enum YellowGoalNames
 {
 	OPTIMISTIC = 1,
+	CHEERFUL,
+	BRIGHT,
+	SUNNY,
 	YELLOWYELLOW
 
 };
@@ -52,19 +155,28 @@ enum YellowGoalNames
 enum PurpleGoalNames
 {
 	MAGIC = 1,
+	MYSTERY,
+	INSPIRING,
+	SENSUAL,
 	REDBLUE
 
 };
 
 enum GreenGoalNames
 {
-	ENIGMATIC = 1,
+	NATURAL = 1,
+	DOWNTOEARTH,
+	CLEAN,
+	FORWARD,
 	YELLOWBLUE
 };
 
 enum OrangeGoalNames
 {
 	ADVENTUROUS = 1,
+	WARM,
+	ZESTY,
+	TANGY,
 	REDYELLOW
 };
 
