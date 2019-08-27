@@ -29,17 +29,27 @@ void AMyGameManager::NewClient()
 {
 	if (CurrentClient == NULL)
 	{
-		CurrentClient = new MyClientOrder(FMath::RandRange(1, 100), FMath::RandRange(1, 6), FMath::RandRange(1, 5));
+		CurrentClient = new MyClientOrder(FMath::RandRange(1, 100), FMath::RandRange(1, 3));
 	}
 	else
 	{
 		delete CurrentClient;
-		CurrentClient = new MyClientOrder(FMath::RandRange(1, 100), FMath::RandRange(1, 6), FMath::RandRange(1, 5));
+		CurrentClient = new MyClientOrder(FMath::RandRange(1, 100), FMath::RandRange(1, 3));
 	}
 
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Hi! My name is %s"), *FString(CurrentClient->GetName())), false);
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("I would like to order a boquet that feels %s"), *FString(CurrentClient->GetGoal())), false);
-	
+
+	for (int i = 0; i < CurrentClient->GetGoals().Num(); i++)
+	{
+		if (i == 0)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("I would like to order a boquet that feels %s"), *FString(CurrentClient->GetGoals()[i]->GetGoal())), false);
+		}
+		else
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("and %s"), *FString(CurrentClient->GetGoals()[i]->GetGoal())), false);
+		}
+	}
 }
 
 void AMyGameManager::Test(float delta)
