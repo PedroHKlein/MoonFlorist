@@ -1,9 +1,0 @@
-D:\Users\kieran.dun7788\Desktop\Moon Florist\MoonFlorist\MoonFlorist\Intermediate\Build\Win64\UE4Editor\Development\MoonFlorist\Definitions.MoonFlorist.h
-D:\Unreal 4.22\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-D:\Unreal 4.22\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-D:\Users\kieran.dun7788\Desktop\Moon Florist\MoonFlorist\MoonFlorist\Source\MoonFlorist/MoonFloristCharacter.h
-D:\Unreal 4.22\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
-D:\Unreal 4.22\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
-D:\Unreal 4.22\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
-D:\Unreal 4.22\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
-D:\Users\kieran.dun7788\Desktop\Moon Florist\MoonFlorist\MoonFlorist\Intermediate\Build\Win64\UE4Editor\Inc\MoonFlorist\MoonFloristCharacter.generated.h
