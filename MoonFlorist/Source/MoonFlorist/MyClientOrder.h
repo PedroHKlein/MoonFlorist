@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "MyGoal.h"
 
 /**
  * 
@@ -112,89 +113,19 @@ enum ClientNames
 	CALLUM
 };
 
-enum ClientColourGoals
-{
-	RED = 1,
-	BLUE,
-	YELLOW,
-	PURPLE,
-	GREEN,
-	ORANGE
-};
-
-enum RedGoalNames
-{
-	FIESTY = 1,
-	PASSIONATE,
-	LOVE,
-	CORAGEOUS,
-	REDRED
-
-};
-
-enum BlueGoalNames
-{
-	COOL = 1,
-	TRUST,
-	SMART,
-	PEACEFUL,
-	BLUEBLUE
-
-};
-
-enum YellowGoalNames
-{
-	OPTIMISTIC = 1,
-	CHEERFUL,
-	BRIGHT,
-	SUNNY,
-	YELLOWYELLOW
-
-};
-
-enum PurpleGoalNames
-{
-	MAGIC = 1,
-	MYSTERY,
-	INSPIRING,
-	SENSUAL,
-	REDBLUE
-
-};
-
-enum GreenGoalNames
-{
-	NATURAL = 1,
-	DOWNTOEARTH,
-	CLEAN,
-	FORWARD,
-	YELLOWBLUE
-};
-
-enum OrangeGoalNames
-{
-	ADVENTUROUS = 1,
-	WARM,
-	ZESTY,
-	TANGY,
-	REDYELLOW
-};
-
 class MOONFLORIST_API MyClientOrder
 {
 public:
-	MyClientOrder(int _iName, int _goalColour, int _goalNumber);
+	MyClientOrder(int _iName, int _iNumOfGoals);
 	~MyClientOrder();
 
+	void GenerateJob(int _iNum);
+
 	FString GetName();
-	FString GetColour();
-	FString GetGoal();
+	TArray<MyGoal*> GetGoals();
 
 private:
 	int iName;
-	int iGoalColour;
-	int iGoalNumber;
 	FString sName;
-	FString sColour;
-	FString sGoal;
+	TArray<MyGoal*> Goals;
 };
