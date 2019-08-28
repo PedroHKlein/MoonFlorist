@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 {
 	"BuildId": "5660361",
 	"Modules": 
 	{
 		"MoonFlorist": "UE4Editor-MoonFlorist-0005.dll"
 	}
+=======
+{
+	"BuildId": "5660361",
+	"Modules": 
+	{
+		"MoonFlorist": "UE4Editor-MoonFlorist.dll"
+	}
+>>>>>>> 3DWidget
 }
