@@ -12,7 +12,7 @@ MyGoal::MyGoal(int _iCol, int _iGoal)
 	switch (iGoalColour)
 	{
 		//RED GOALS HERE
-	case RED:
+	case GRED:
 		sColour = "Red";
 		switch (iGoalNumber)
 		{
@@ -36,7 +36,7 @@ MyGoal::MyGoal(int _iCol, int _iGoal)
 		}
 		break;
 		//BLUE GOALS HERE
-	case BLUE:
+	case GBLUE:
 		sColour = "Blue";
 		switch (iGoalNumber)
 		{
@@ -60,7 +60,7 @@ MyGoal::MyGoal(int _iCol, int _iGoal)
 		}
 		break;
 		//YELLOW GOALS HERE
-	case YELLOW:
+	case GYELLOW:
 		sColour = "Yellow";
 		switch (iGoalNumber)
 		{
@@ -84,7 +84,7 @@ MyGoal::MyGoal(int _iCol, int _iGoal)
 		}
 		break;
 		//PURPLE GOALS HERE
-	case PURPLE:
+	case GPURPLE:
 		sColour = "Purple";
 		switch (iGoalNumber)
 		{
@@ -108,7 +108,7 @@ MyGoal::MyGoal(int _iCol, int _iGoal)
 		}
 		break;
 		//GREEN GOALS HERE
-	case GREEN:
+	case GGREEN:
 		sColour = "Green";
 		switch (iGoalNumber)
 		{
@@ -132,7 +132,7 @@ MyGoal::MyGoal(int _iCol, int _iGoal)
 		}
 		break;
 		//ORANGE GOALS HERE
-	case ORANGE:
+	case GORANGE:
 		sColour = "Orange";
 		switch (iGoalNumber)
 		{

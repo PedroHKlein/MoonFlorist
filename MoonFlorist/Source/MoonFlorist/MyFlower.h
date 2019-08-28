@@ -13,10 +13,10 @@ enum FLOWERCOLOUR
 	RED = 1,
 	BLUE,
 	YELLOW,
-	WHITE,
 	PURPLE,
 	GREEN,
-	ORANGE
+	ORANGE,
+	WHITE
 };
 
 class MOONFLORIST_API MyFlower
@@ -24,10 +24,14 @@ class MOONFLORIST_API MyFlower
 public:
 	MyFlower(int _iType);
 	~MyFlower();
+	int GetColourScore(int _iCol);
+	int GetFlowerID();
+	FString GetFlowerName();
 
 private:
 	//type of flower
 	int iType;
+	FString sColour;
 
 	//Score Values
 	int iRed = 0;

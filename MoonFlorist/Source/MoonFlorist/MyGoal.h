@@ -10,12 +10,12 @@
 
 enum ClientColourGoals
 {
-	RED = 1,
-	BLUE,
-	YELLOW,
-	PURPLE,
-	GREEN,
-	ORANGE
+	GRED = 1,
+	GBLUE,
+	GYELLOW,
+	GPURPLE,
+	GGREEN,
+	GORANGE
 };
 
 enum RedGoalNames
