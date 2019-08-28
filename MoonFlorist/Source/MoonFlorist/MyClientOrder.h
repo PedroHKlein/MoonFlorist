@@ -126,6 +126,7 @@ public:
 
 private:
 	int iName;
+	FString sGreeting; 
 	FString sName;
 	TArray<MyGoal*> Goals;
 };

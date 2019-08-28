@@ -52,6 +52,62 @@ void AMyGameManager::NewClient()
 	}
 }
 
+void AMyGameManager::NewBouquet()
+{
+	if (CurrentBouquet == NULL)
+	{
+		CurrentBouquet = new MyBouquet();
+	}
+	else
+	{
+		delete CurrentBouquet;
+		CurrentBouquet = new MyBouquet();
+	}
+
+	CurrentBouquet->SetCurrOrder(CurrentClient);
+
+	for (int i = 0; i < 7; i++)
+	{
+		if (i < 2)
+		{
+			CurrentBouquet->AddToRow(1, new MyFlower(FMath::RandRange(1, 3)));
+		}
+		if (i > 1 && i < 5)
+		{
+			CurrentBouquet->AddToRow(2, new MyFlower(FMath::RandRange(1, 3)));
+		}
+		if (i > 4)
+		{
+			CurrentBouquet->AddToRow(3, new MyFlower(FMath::RandRange(1, 3)));
+		}
+	}
+
+	for (int i = 0; i < CurrentBouquet->GetRow(1).Num(); i++)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Row1:  %s"), *FString(CurrentBouquet->GetRow(1)[i]->GetFlowerName())), false);
+	}
+
+	for (int i = 0; i < CurrentBouquet->GetRow(2).Num(); i++)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Row2:  %s"), *FString(CurrentBouquet->GetRow(2)[i]->GetFlowerName())), false);
+	}
+
+	for (int i = 0; i < CurrentBouquet->GetRow(3).Num(); i++)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Row3:  %s"), *FString(CurrentBouquet->GetRow(3)[i]->GetFlowerName())), false);
+	}
+
+	CurrentBouquet->GradeBouquet();
+
+	FString Debug = FString::FromInt(CurrentBouquet->GetWorth());
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, FString::Printf(TEXT("Worth:  %s"), *FString(Debug)), false);
+
+	AddMoney(CurrentBouquet->GetWorth());
+	FString Debug1 = FString::FromInt(iMoney);
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, FString::Printf(TEXT("My moolah:  %s"), *FString(Debug1)), false);
+
+}
+
 void AMyGameManager::Test(float delta)
 {
 	fCurrTime = fCurrTime + delta;
@@ -59,6 +115,30 @@ void AMyGameManager::Test(float delta)
 	if (fCurrTime >= fTimeToWait)
 	{
 		NewClient();
+		NewBouquet();
 		fCurrTime = 0.0f;
 	}
+}
+
+void AMyGameManager::BuySeed(int _iID)
+{
+	if (_iID == SWHITE && iMoney >= 350)
+	{
+		Seeds.Add(new MySeed(_iID));
+		iMoney = iMoney - 50;
+	}
+	else if (_iID == SWHITE && iMoney <= 350)
+	{
+
+	}
+	else
+	{
+		Seeds.Add(new MySeed(_iID));
+		iMoney = iMoney - 10;
+	}
+}
+
+void AMyGameManager::AddMoney(int _iMoolah)
+{
+	iMoney = iMoney + _iMoolah;
 }

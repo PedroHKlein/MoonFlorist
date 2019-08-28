@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "MyClientOrder.h"
+#include "MyBouquet.h"
+#include "MySeed.h"
 #include "GameFramework/Actor.h"
 #include "MyGameManager.generated.h"
 
@@ -24,11 +26,17 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	void NewClient();
+	void NewBouquet();
 	void Test(float delta);
+	void BuySeed(int _iID);
+	void AddMoney(int _iMoolah);
 
 private:
-
 	MyClientOrder* CurrentClient;
+	MyBouquet* CurrentBouquet;
 	float fTimeToWait = 6.0f;
 	float fCurrTime = 6.0f;
+	int iMoney = 70;
+
+	TArray<MySeed*> Seeds;
 };
