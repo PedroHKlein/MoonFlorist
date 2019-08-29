@@ -2,10 +2,6 @@
 	"BuildId": "5660361",
 	"Modules": 
 	{
-<<<<<<< Updated upstream
 		"MoonFlorist": "UE4Editor-MoonFlorist.dll"
-=======
-		"MoonFlorist": "UE4Editor-MoonFlorist-7011.dll"
->>>>>>> Stashed changes
 	}
 }
