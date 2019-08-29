@@ -180,3 +180,11 @@ void AMyGameManager::SetMoney(int _iMoolah)
 	iMoney = _iMoolah;
 }
 
+void AMyGameManager::CompleteOrder()
+{
+	CurrentBouquet->GradeBouquet();
+	AddMoney(CurrentBouquet->GetWorth());
+	NewBouquet();
+	NewClient();
+}
+

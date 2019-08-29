@@ -44,6 +44,9 @@ public:
 	int GetMoney();
 	UFUNCTION(BlueprintCallable)
 	void SetMoney(int _iMoolah);
+	UFUNCTION(BlueprintCallable)
+	void CompleteOrder();
+
 
 private:
 	UMyClientOrder* CurrentClient;
