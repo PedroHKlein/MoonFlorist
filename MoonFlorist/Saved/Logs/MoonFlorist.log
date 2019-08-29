@@ -607,3 +607,27 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2019.08.29-05.51.52:674][439]LogBlueprintActionDatabase: Requesting refresh due to hot reload
 [2019.08.29-05.51.52:736][439]LogContentBrowser: Native class hierarchy populated in 0.0138 seconds. Added 2758 classes and 669 folders.
 [2019.08.29-05.51.52:742][439]Display: HotReload took  0.6s.
+[2019.08.29-06.32.53:734][783]LogHotReload: New module detected: UE4Editor-MoonFlorist-0002.dll
+[2019.08.29-06.32.55:106][788]LogHotReload: Starting Hot-Reload from IDE
+[2019.08.29-06.32.55:363][788]LogUObjectHash: Compacting FUObjectHashTables data took   9.94ms
+[2019.08.29-06.32.55:363][788]LogBlueprintActionDatabase: Requesting refresh due to module change: MoonFlorist (unloaded)
+[2019.08.29-06.32.55:380][788]LogClass: Could not find existing class MyBouquet in package /Script/MoonFlorist for HotReload, assuming new class
+[2019.08.29-06.32.55:380][788]LogClass: Function AddToRow is new.
+[2019.08.29-06.32.55:380][788]LogClass: Function BaseColourCheck is new.
+[2019.08.29-06.32.55:380][788]LogClass: Function ClearBouquet is new.
+[2019.08.29-06.32.55:380][788]LogClass: Function ComColourCheck is new.
+[2019.08.29-06.32.55:381][788]LogClass: Function GetCurrOrder is new.
+[2019.08.29-06.32.55:381][788]LogClass: Function GetRow is new.
+[2019.08.29-06.32.55:381][788]LogClass: Function GetWorth is new.
+[2019.08.29-06.32.55:381][788]LogClass: Function GradeBouquet is new.
+[2019.08.29-06.32.55:381][788]LogClass: Function RemoveFromRow is new.
+[2019.08.29-06.32.55:381][788]LogClass: Function SetCurrOrder is new.
+[2019.08.29-06.32.55:381][788]LogClass: Function SpawnFlower is new.
+[2019.08.29-06.32.55:415][788]LogHotReload: Re-instancing MyBouquet after hot-reload.
+[2019.08.29-06.32.55:610][788]LogBlueprintActionDatabase: Requesting refresh due to module change: MoonFlorist (loaded)
+[2019.08.29-06.32.55:611][788]LogContentBrowser: Native class hierarchy updated for 'MoonFlorist' in 0.0011 seconds. Added 11 classes and 2 folders.
+[2019.08.29-06.32.55:615][788]Display: HotReload successful (25 functions remapped  0 scriptstructs remapped)
+[2019.08.29-06.32.55:718][788]LogUObjectHash: Compacting FUObjectHashTables data took   3.62ms
+[2019.08.29-06.32.55:718][788]LogBlueprintActionDatabase: Requesting refresh due to hot reload
+[2019.08.29-06.32.55:758][788]LogContentBrowser: Native class hierarchy populated in 0.0137 seconds. Added 2758 classes and 669 folders.
+[2019.08.29-06.32.55:763][788]Display: HotReload took  0.7s.
