@@ -39,6 +39,10 @@ public:
 	int GetWorth();
 	UFUNCTION(BlueprintCallable)
 	void ClearBouquet();
+	UFUNCTION(BlueprintCallable)
+	UMyFlower* SpawnFlower(int _iType);
+
+
 
 private:
 
