@@ -31,13 +31,22 @@ void UMyBouquet::AddToRow(int _iRow, UMyFlower* _Flower)
 	switch (_iRow)
 	{
 	case 1:
-		Row1.Add(_Flower);
+		if (Row1.Num() < 2)
+		{
+			Row1.Add(_Flower);
+		}
 		break;
 	case 2:
-		Row2.Add(_Flower);
+		if (Row2.Num() < 3)
+		{
+			Row2.Add(_Flower);
+		}
 		break;
 	case 3:
-		Row3.Add(_Flower);
+		if (Row3.Num() < 2)
+		{
+			Row3.Add(_Flower);
+		}
 		break;
 	default:
 		break;
