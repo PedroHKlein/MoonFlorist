@@ -184,3 +184,10 @@ void UMyBouquet::ClearBouquet()
 	Row2.Empty();
 	Row3.Empty();
 }
+
+UMyFlower* UMyBouquet::SpawnFlower(int _iType)
+{
+	UMyFlower* temp = NewObject<UMyFlower>();
+	temp->init(_iType);
+	return temp;
+}
