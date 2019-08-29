@@ -5,33 +5,48 @@
 #include "CoreMinimal.h"
 #include "MyClientOrder.h"
 #include "MyFlower.h"
+#include "UObject/NoExportTypes.h"
+#include "MyBouquet.generated.h"
 
 /**
  * 
  */
-class MOONFLORIST_API MyBouquet
+UCLASS()
+class MOONFLORIST_API UMyBouquet : public UObject
 {
+	GENERATED_BODY()
 public:
-	MyBouquet();
-	~MyBouquet();
+	UMyBouquet();
+	~UMyBouquet();
 
-	void SetCurrOrder(MyClientOrder* _Order);
-	MyClientOrder* GetCurrOrder();
-	void AddToRow(int _iRow, MyFlower* _Flower);
-	void RemoveFromRow(int _iRow, MyFlower* _Flower);
+	UFUNCTION(BlueprintCallable)
+	void SetCurrOrder(UMyClientOrder* _Order);
+	UFUNCTION(BlueprintCallable)
+	UMyClientOrder* GetCurrOrder();
+	UFUNCTION(BlueprintCallable)
+	void AddToRow(int _iRow, UMyFlower* _Flower);
+	UFUNCTION(BlueprintCallable)
+	void RemoveFromRow(int _iRow, UMyFlower* _Flower);
+	UFUNCTION(BlueprintCallable)
 	void BaseColourCheck(int _iCol);
+	UFUNCTION(BlueprintCallable)
 	void ComColourCheck(int _iCol);
+	UFUNCTION(BlueprintCallable)
 	void GradeBouquet();
-	TArray<MyFlower*> GetRow(int _iRow);
+	UFUNCTION(BlueprintCallable)
+	TArray<UMyFlower*> GetRow(int _iRow);
+	UFUNCTION(BlueprintCallable)
 	int GetWorth();
+	UFUNCTION(BlueprintCallable)
+	void ClearBouquet();
 
 private:
 
-	MyClientOrder* Order;
+	UMyClientOrder* Order;
 
-	TArray<MyFlower*> Row1;
-	TArray<MyFlower*> Row2;
-	TArray<MyFlower*> Row3;
+	TArray<UMyFlower*> Row1;
+	TArray<UMyFlower*> Row2;
+	TArray<UMyFlower*> Row3;
 	int iScore;
 	int iMoney = 70;
 };

@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "MyFlower.generated.h"
 
 /**
  * 
@@ -19,13 +21,21 @@ enum FLOWERCOLOUR
 	WHITE
 };
 
-class MOONFLORIST_API MyFlower
+UCLASS()
+class MOONFLORIST_API UMyFlower : public UObject
 {
+	GENERATED_BODY()
+
 public:
-	MyFlower(int _iType);
-	~MyFlower();
+	UMyFlower();
+	~UMyFlower();
+	UFUNCTION(BlueprintCallable)
+	void init(int _iType);
+	UFUNCTION(BlueprintCallable)
 	int GetColourScore(int _iCol);
+	UFUNCTION(BlueprintCallable)
 	int GetFlowerID();
+	UFUNCTION(BlueprintCallable)
 	FString GetFlowerName();
 
 private:
@@ -40,4 +50,5 @@ private:
 	int iPurple = 0;
 	int iGreen = 0;
 	int iOrange = 0;
+	
 };

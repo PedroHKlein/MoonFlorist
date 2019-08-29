@@ -16,27 +16,32 @@ AMyGameManager::AMyGameManager()
 void AMyGameManager::BeginPlay()
 {
 	Super::BeginPlay();
+	NewClient();
+	NewBouquet();
 }
 
 // Called every frame
 void AMyGameManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	Test(DeltaTime);
+
 }
 
 void AMyGameManager::NewClient()
 {
 	if (CurrentClient == NULL)
 	{
-		CurrentClient = new MyClientOrder(FMath::RandRange(1, 100), FMath::RandRange(1, 3));
+		CurrentClient = NewObject<UMyClientOrder>();
+		CurrentClient->init(FMath::RandRange(1, 100), FMath::RandRange(1, 3));
 	}
 	else
 	{
-		delete CurrentClient;
-		CurrentClient = new MyClientOrder(FMath::RandRange(1, 100), FMath::RandRange(1, 3));
+		CurrentClient = NewObject<UMyClientOrder>();
+		CurrentClient->init(FMath::RandRange(1, 100), FMath::RandRange(1, 3));
 	}
 
+	//TEST
+	/*
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Hi! My name is %s"), *FString(CurrentClient->GetName())), false);
 
 	for (int i = 0; i < CurrentClient->GetGoals().Num(); i++)
@@ -50,35 +55,43 @@ void AMyGameManager::NewClient()
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("and %s"), *FString(CurrentClient->GetGoals()[i]->GetGoal())), false);
 		}
 	}
+	*/
 }
 
 void AMyGameManager::NewBouquet()
 {
 	if (CurrentBouquet == NULL)
 	{
-		CurrentBouquet = new MyBouquet();
+		CurrentBouquet = NewObject<UMyBouquet>();
 	}
 	else
 	{
-		delete CurrentBouquet;
-		CurrentBouquet = new MyBouquet();
+		CurrentBouquet = NewObject<UMyBouquet>();
 	}
 
 	CurrentBouquet->SetCurrOrder(CurrentClient);
 
+	//TEST
+	/*
 	for (int i = 0; i < 7; i++)
 	{
 		if (i < 2)
 		{
-			CurrentBouquet->AddToRow(1, new MyFlower(FMath::RandRange(1, 3)));
+			UMyFlower* temp = NewObject<UMyFlower>();
+			temp->init(FMath::RandRange(1, 3));
+			CurrentBouquet->AddToRow(1, temp);
 		}
 		if (i > 1 && i < 5)
 		{
-			CurrentBouquet->AddToRow(2, new MyFlower(FMath::RandRange(1, 3)));
+			UMyFlower* temp = NewObject<UMyFlower>();
+			temp->init(FMath::RandRange(1, 3));
+			CurrentBouquet->AddToRow(2, temp);
 		}
 		if (i > 4)
 		{
-			CurrentBouquet->AddToRow(3, new MyFlower(FMath::RandRange(1, 3)));
+			UMyFlower* temp = NewObject<UMyFlower>();
+			temp->init(FMath::RandRange(1, 3));
+			CurrentBouquet->AddToRow(3, temp);
 		}
 	}
 
@@ -105,7 +118,7 @@ void AMyGameManager::NewBouquet()
 	AddMoney(CurrentBouquet->GetWorth());
 	FString Debug1 = FString::FromInt(iMoney);
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, FString::Printf(TEXT("My moolah:  %s"), *FString(Debug1)), false);
-
+	*/
 }
 
 void AMyGameManager::Test(float delta)
@@ -124,7 +137,9 @@ void AMyGameManager::BuySeed(int _iID)
 {
 	if (_iID == SWHITE && iMoney >= 350)
 	{
-		Seeds.Add(new MySeed(_iID));
+		UMySeed* temp = NewObject<UMySeed>();
+		temp->init(_iID);
+		Seeds.Add(temp);
 		iMoney = iMoney - 50;
 	}
 	else if (_iID == SWHITE && iMoney <= 350)
@@ -133,7 +148,9 @@ void AMyGameManager::BuySeed(int _iID)
 	}
 	else
 	{
-		Seeds.Add(new MySeed(_iID));
+		UMySeed* temp = NewObject<UMySeed>();
+		temp->init(_iID);
+		Seeds.Add(temp);
 		iMoney = iMoney - 10;
 	}
 }
@@ -142,3 +159,24 @@ void AMyGameManager::AddMoney(int _iMoolah)
 {
 	iMoney = iMoney + _iMoolah;
 }
+
+UMyClientOrder* AMyGameManager::GetOrder()
+{
+	return CurrentClient;
+}
+
+UMyBouquet* AMyGameManager::GetBouquet()
+{
+	return CurrentBouquet;
+}
+
+int AMyGameManager::GetMoney()
+{
+	return iMoney;
+}
+
+void AMyGameManager::SetMoney(int _iMoolah)
+{
+	iMoney = _iMoolah;
+}
+

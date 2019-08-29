@@ -3,17 +3,17 @@
 
 #include "MyBouquet.h"
 
-MyBouquet::MyBouquet()
+UMyBouquet::UMyBouquet()
 {
 
 }
 
-MyBouquet::~MyBouquet()
+UMyBouquet::~UMyBouquet()
 {
-	
+
 }
 
-void MyBouquet::SetCurrOrder(MyClientOrder* _Order)
+void UMyBouquet::SetCurrOrder(UMyClientOrder* _Order)
 {
 	if (_Order != NULL)
 	{
@@ -21,12 +21,12 @@ void MyBouquet::SetCurrOrder(MyClientOrder* _Order)
 	}
 }
 
-MyClientOrder* MyBouquet::GetCurrOrder()
+UMyClientOrder* UMyBouquet::GetCurrOrder()
 {
 	return Order;
 }
 
-void MyBouquet::AddToRow(int _iRow, MyFlower* _Flower)
+void UMyBouquet::AddToRow(int _iRow, UMyFlower* _Flower)
 {
 	switch (_iRow)
 	{
@@ -44,12 +44,12 @@ void MyBouquet::AddToRow(int _iRow, MyFlower* _Flower)
 	}
 }
 
-void MyBouquet::RemoveFromRow(int _iRow, MyFlower* _Flower)
+void UMyBouquet::RemoveFromRow(int _iRow, UMyFlower* _Flower)
 {
 
 }
 
-void MyBouquet::BaseColourCheck(int _iCol)
+void UMyBouquet::BaseColourCheck(int _iCol)
 {
 	static int iTemp;
 	for (int j = 0; j < Row1.Num(); j++)
@@ -81,7 +81,7 @@ void MyBouquet::BaseColourCheck(int _iCol)
 	iTemp = 0;
 }
 
-void MyBouquet::ComColourCheck(int _iCol)
+void UMyBouquet::ComColourCheck(int _iCol)
 {
 	static int iTemp;
 	for (int j = 0; j < Row1.Num(); j++)
@@ -113,9 +113,9 @@ void MyBouquet::ComColourCheck(int _iCol)
 	iTemp = 0;
 }
 
-void MyBouquet::GradeBouquet()
+void UMyBouquet::GradeBouquet()
 {
-	TArray<MyGoal*> Temp = GetCurrOrder()->GetGoals();
+	TArray<UMyGoal*> Temp = GetCurrOrder()->GetGoals();
 
 	for (int i = 0; i < Temp.Num(); i++)
 	{
@@ -148,7 +148,7 @@ void MyBouquet::GradeBouquet()
 	iScore = 0;
 }
 
-TArray<MyFlower*> MyBouquet::GetRow(int _iRow)
+TArray<UMyFlower*> UMyBouquet::GetRow(int _iRow)
 {
 	switch (_iRow)
 	{
@@ -164,7 +164,14 @@ TArray<MyFlower*> MyBouquet::GetRow(int _iRow)
 	}
 }
 
-int MyBouquet::GetWorth()
+int UMyBouquet::GetWorth()
 {
 	return iMoney;
+}
+
+void UMyBouquet::ClearBouquet()
+{
+	Row1.Empty();
+	Row2.Empty();
+	Row3.Empty();
 }

@@ -3,7 +3,17 @@
 
 #include "MyFlower.h"
 
-MyFlower::MyFlower(int _iType)
+UMyFlower::UMyFlower()
+{
+
+}
+
+UMyFlower::~UMyFlower()
+{
+
+}
+
+void UMyFlower::init(int _iType)
 {
 	int Temp = _iType;
 	iType = Temp;
@@ -78,11 +88,7 @@ MyFlower::MyFlower(int _iType)
 	}
 }
 
-MyFlower::~MyFlower()
-{
-}
-
-int MyFlower::GetColourScore(int _iCol)
+int UMyFlower::GetColourScore(int _iCol)
 {
 	switch (_iCol)
 	{
@@ -104,12 +110,12 @@ int MyFlower::GetColourScore(int _iCol)
 	}
 }
 
-int MyFlower::GetFlowerID()
+int UMyFlower::GetFlowerID()
 {
 	return iType;
 }
 
-FString MyFlower::GetFlowerName()
+FString UMyFlower::GetFlowerName()
 {
 	return sColour;
 }

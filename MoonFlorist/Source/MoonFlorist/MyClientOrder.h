@@ -4,12 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "MyGoal.h"
+#include "UObject/NoExportTypes.h"
+#include "MyClientOrder.generated.h"
 
 /**
  * 
  */
 
-enum ClientNames 
+enum ClientNames
 {
 	MARK = 1,
 	PEPE,
@@ -113,20 +115,28 @@ enum ClientNames
 	CALLUM
 };
 
-class MOONFLORIST_API MyClientOrder
+UCLASS()
+class MOONFLORIST_API UMyClientOrder : public UObject
 {
+	GENERATED_BODY()
+	
 public:
-	MyClientOrder(int _iName, int _iNumOfGoals);
-	~MyClientOrder();
+	UMyClientOrder();
+	~UMyClientOrder();
 
+	UFUNCTION(BlueprintCallable)
+	void init(int _iName, int _iNumOfGoals);
+	UFUNCTION(BlueprintCallable)
 	void GenerateJob(int _iNum);
-
+	UFUNCTION(BlueprintCallable)
 	FString GetName();
-	TArray<MyGoal*> GetGoals();
+	UFUNCTION(BlueprintCallable)
+	TArray<UMyGoal*> GetGoals();
 
 private:
 	int iName;
-	FString sGreeting; 
+	FString sGreeting;
 	FString sName;
-	TArray<MyGoal*> Goals;
+	TArray<UMyGoal*> Goals;
+
 };
