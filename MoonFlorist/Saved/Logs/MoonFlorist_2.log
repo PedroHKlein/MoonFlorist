@@ -1,4 +1,4 @@
-﻿Log file open, 08/28/19 13:44:55
+﻿Log file open, 08/29/19 17:38:40
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
 LogWindows: File 'aqProf.dll' does not exist
 LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
@@ -10,7 +10,7 @@ LogInit: Display: Running engine for game: MoonFlorist
 LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
 LogPlatformFile: Not using cached read wrapper
 LogTaskGraph: Started task graph with 5 named threads and 23 total threads with 3 sets of task threads.
-LogStats: Stats thread started at 0.333865
+LogStats: Stats thread started at 3.365366
 LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
 LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +12:00, Platform Override: ''
 LogPluginManager: Mounting plugin Paper2D
@@ -99,7 +99,19 @@ LogPluginManager: Mounting plugin SteamVR
 LogPluginManager: Mounting plugin WebMMoviePlayer
 LogPluginManager: Mounting plugin WindowsMoviePlayer
 LogInit: Warning: Incompatible or missing module: MoonFlorist
-Running C:/Program Files/Epic Games/UE_4.22/Engine/Binaries/DotNET/UnrealBuildTool.exe Development Win64 -Project="D:/Users/steven.zha7447/Documents/MoonFlorist/MoonFlorist/MoonFlorist.uproject" -TargetType=Editor -Progress -NoHotReloadFromIDE
+Running D:/UE_4.22/Engine/Binaries/DotNET/UnrealBuildTool.exe Development Win64 -Project="D:/Users/rasyiqah.tak7175/Documents/Thicczilla/MoonFlorist/MoonFlorist/MoonFlorist.uproject" -TargetType=Editor -Progress -NoHotReloadFromIDE
+Using 'git status' to determine working set for adaptive non-unity build (D:\Users\rasyiqah.tak7175\Documents\Thicczilla\MoonFlorist).
+Creating makefile for MoonFloristEditor (ini files are newer than makefile)
+@progress push 5%
+Parsing headers for MoonFloristEditor
+  Running UnrealHeaderTool "D:\Users\rasyiqah.tak7175\Documents\Thicczilla\MoonFlorist\MoonFlorist\MoonFlorist.uproject" "D:\Users\rasyiqah.tak7175\Documents\Thicczilla\MoonFlorist\MoonFlorist\Intermediate\Build\Win64\MoonFloristEditor\Development\MoonFloristEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+Reflection code generated for MoonFloristEditor in 21.2234548 seconds
+@progress pop
+Using Visual Studio 2019 14.21.27702 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.21.27702) and Windows 10.0.17763.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+Building 17 actions with 8 processes...
+  @progress 'Compiling C++ source code...' 0%
+  @progress 'Compiling C++ source code...' 6%
+  [1/17] Default.rc2
 LogInit: Warning: Still incompatible or missing module: MoonFlorist
 LogExit: Preparing to exit.
 LogModuleManager: Shutting down and abandoning module DesktopPlatform (40)
@@ -123,4 +135,4 @@ LogModuleManager: Shutting down and abandoning module SandboxFile (6)
 LogModuleManager: Shutting down and abandoning module PakFile (4)
 LogModuleManager: Shutting down and abandoning module RSA (3)
 LogExit: Exiting.
-Log file closed, 08/28/19 13:45:20
+Log file closed, 08/29/19 17:40:06
