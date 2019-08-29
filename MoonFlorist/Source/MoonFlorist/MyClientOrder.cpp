@@ -3,7 +3,17 @@
 
 #include "MyClientOrder.h"
 
-MyClientOrder::MyClientOrder(int _iName, int _iNumOfGoals)
+UMyClientOrder::UMyClientOrder()
+{
+	
+}
+
+UMyClientOrder::~UMyClientOrder()
+{
+
+}
+
+void UMyClientOrder::init(int _iName, int _iNumOfGoals)
 {
 	iName = _iName;
 
@@ -227,7 +237,7 @@ MyClientOrder::MyClientOrder(int _iName, int _iNumOfGoals)
 	case FAWAD:
 		sName = "Fawad";
 		break;
-	case DAVID: 
+	case DAVID:
 		sName = "David";
 		break;
 	case ANDREW:
@@ -316,30 +326,21 @@ MyClientOrder::MyClientOrder(int _iName, int _iNumOfGoals)
 	}
 }
 
-MyClientOrder::~MyClientOrder()
-{
-	for (int i = 0; i < Goals.Num(); i++)
-	{
-		delete Goals[i];
-	}
-}
-
-FString MyClientOrder::GetName()
+FString UMyClientOrder::GetName()
 {
 	return sName;
 }
 
-void MyClientOrder::GenerateJob(int _iNum)
+void UMyClientOrder::GenerateJob(int _iNum)
 {
 	for (int i = 0; i < _iNum; i++)
 	{
-		Goals.Add(new MyGoal(FMath::RandRange(1, 6), FMath::RandRange(1, 5)));
+		Goals.Add(NewObject<UMyGoal>());
+		Goals[i]->init(FMath::RandRange(1, 6), FMath::RandRange(1, 5));
 	}
 }
 
-TArray<MyGoal*> MyClientOrder::GetGoals()
+TArray<UMyGoal*> UMyClientOrder::GetGoals()
 {
 	return Goals;
 }
-
-//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Collision!")));

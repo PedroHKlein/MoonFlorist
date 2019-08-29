@@ -25,18 +25,33 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	UFUNCTION(BlueprintCallable)
 	void NewClient();
+	UFUNCTION(BlueprintCallable)
 	void NewBouquet();
+	UFUNCTION(BlueprintCallable)
 	void Test(float delta);
+	UFUNCTION(BlueprintCallable)
 	void BuySeed(int _iID);
+	UFUNCTION(BlueprintCallable)
 	void AddMoney(int _iMoolah);
+	UFUNCTION(BlueprintCallable)
+	UMyClientOrder* GetOrder();
+	UFUNCTION(BlueprintCallable)
+	UMyBouquet* GetBouquet();
+	UFUNCTION(BlueprintCallable)
+	int GetMoney();
+	UFUNCTION(BlueprintCallable)
+	void SetMoney(int _iMoolah);
 
 private:
-	MyClientOrder* CurrentClient;
-	MyBouquet* CurrentBouquet;
+	UMyClientOrder* CurrentClient;
+	UMyBouquet* CurrentBouquet;
 	float fTimeToWait = 6.0f;
 	float fCurrTime = 6.0f;
 	int iMoney = 70;
 
-	TArray<MySeed*> Seeds;
+	TArray<UMySeed*> Seeds;
+
 };

@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "MyGoal.generated.h"
 
 /**
  * 
@@ -76,16 +78,25 @@ enum OrangeGoalNames
 	REDYELLOW
 };
 
-
-class MOONFLORIST_API MyGoal
+UCLASS()
+class MOONFLORIST_API UMyGoal : public UObject
 {
-public:
-	MyGoal(int _iCol, int iGoal);
-	~MyGoal();
+	GENERATED_BODY()
 
+public:
+	UMyGoal();
+	~UMyGoal();
+
+
+	UFUNCTION(BlueprintCallable)
+	void init(int _iCol, int iGoal);
+	UFUNCTION(BlueprintCallable)
 	int GetColourID();
+	UFUNCTION(BlueprintCallable)
 	int GetGoalID();
+	UFUNCTION(BlueprintCallable)
 	FString GetColour();
+	UFUNCTION(BlueprintCallable)
 	FString GetGoal();
 
 private:
@@ -94,4 +105,5 @@ private:
 	int iGoalNumber;
 	FString sColour;
 	FString sGoal;
+	
 };

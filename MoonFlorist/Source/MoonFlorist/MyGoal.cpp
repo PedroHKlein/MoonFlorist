@@ -3,7 +3,11 @@
 
 #include "MyGoal.h"
 
-MyGoal::MyGoal(int _iCol, int _iGoal)
+UMyGoal::UMyGoal()
+{
+}
+
+void UMyGoal::init(int _iCol, int _iGoal)
 {
 
 	iGoalColour = _iCol;
@@ -160,27 +164,27 @@ MyGoal::MyGoal(int _iCol, int _iGoal)
 	}
 }
 
-MyGoal::~MyGoal()
+UMyGoal::~UMyGoal()
 {
 
 }
 
-int MyGoal::GetColourID()
+int UMyGoal::GetColourID()
 {
 	return iGoalColour;
 }
 
-int MyGoal::GetGoalID()
+int UMyGoal::GetGoalID()
 {
 	return iGoalNumber;
 }
 
-FString MyGoal::GetColour()
+FString UMyGoal::GetColour()
 {
 	return sColour;
 }
 
-FString MyGoal::GetGoal()
+FString UMyGoal::GetGoal()
 {
 	return sGoal;
 }

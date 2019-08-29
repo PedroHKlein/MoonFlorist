@@ -3,11 +3,15 @@
 
 #include "MySeed.h"
 
-MySeed::MySeed(int _iType)
+UMySeed::UMySeed()
+{
+}
+
+void UMySeed::init(int _iType)
 {
 	iType = _iType;
 }
 
-MySeed::~MySeed()
+UMySeed::~UMySeed()
 {
 }

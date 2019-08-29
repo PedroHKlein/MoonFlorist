@@ -3,7 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
-
+#include "UObject/NoExportTypes.h"
+#include "MySeed.generated.h"
 
 /**
  * 
@@ -20,11 +21,17 @@ enum SEEDCOLOUR
 	SWHITE
 };
 
-class MOONFLORIST_API MySeed
+UCLASS()
+class MOONFLORIST_API UMySeed : public UObject
 {
+	GENERATED_BODY()
+	
 public:
-	MySeed(int _iType);
-	~MySeed();
+	UMySeed();
+	~UMySeed();
+	UFUNCTION(BlueprintCallable)
+	void init(int _iType);
+
 
 private:
 	int iType = 0;
