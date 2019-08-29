@@ -43,7 +43,6 @@ public:
 private:
 
 	UMyClientOrder* Order;
-
 	TArray<UMyFlower*> Row1;
 	TArray<UMyFlower*> Row2;
 	TArray<UMyFlower*> Row3;
