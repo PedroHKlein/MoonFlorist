@@ -1,4 +1,4 @@
-﻿Log file open, 08/28/19 13:44:55
+﻿Log file open, 08/29/19 22:57:25
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
 LogWindows: File 'aqProf.dll' does not exist
 LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
@@ -10,7 +10,7 @@ LogInit: Display: Running engine for game: MoonFlorist
 LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
 LogPlatformFile: Not using cached read wrapper
 LogTaskGraph: Started task graph with 5 named threads and 23 total threads with 3 sets of task threads.
-LogStats: Stats thread started at 0.333865
+LogStats: Stats thread started at 0.337591
 LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
 LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +12:00, Platform Override: ''
 LogPluginManager: Mounting plugin Paper2D
@@ -98,29 +98,1272 @@ LogPluginManager: Mounting plugin SignificanceManager
 LogPluginManager: Mounting plugin SteamVR
 LogPluginManager: Mounting plugin WebMMoviePlayer
 LogPluginManager: Mounting plugin WindowsMoviePlayer
-LogInit: Warning: Incompatible or missing module: MoonFlorist
-Running C:/Program Files/Epic Games/UE_4.22/Engine/Binaries/DotNET/UnrealBuildTool.exe Development Win64 -Project="D:/Users/steven.zha7447/Documents/MoonFlorist/MoonFlorist/MoonFlorist.uproject" -TargetType=Editor -Progress -NoHotReloadFromIDE
-LogInit: Warning: Still incompatible or missing module: MoonFlorist
-LogExit: Preparing to exit.
-LogModuleManager: Shutting down and abandoning module DesktopPlatform (40)
-LogModuleManager: Shutting down and abandoning module AnimationModifiers (38)
-LogModuleManager: Shutting down and abandoning module PropertyEditor (37)
-LogModuleManager: Shutting down and abandoning module AudioEditor (34)
-LogModuleManager: Shutting down and abandoning module TextureCompressor (32)
-LogModuleManager: Shutting down and abandoning module RenderCore (30)
-LogModuleManager: Shutting down and abandoning module Landscape (28)
-LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (26)
-LogModuleManager: Shutting down and abandoning module OpenGLDrv (24)
-LogModuleManager: Shutting down and abandoning module D3D11RHI (22)
-LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (20)
-LogModuleManager: Shutting down and abandoning module Renderer (18)
-LogModuleManager: Shutting down and abandoning module Engine (16)
-LogModuleManager: Shutting down and abandoning module CoreUObject (14)
-LogModuleManager: Shutting down and abandoning module NetworkFile (12)
-LogModuleManager: Shutting down and abandoning module CookedIterativeFile (10)
-LogModuleManager: Shutting down and abandoning module StreamingFile (8)
-LogModuleManager: Shutting down and abandoning module SandboxFile (6)
-LogModuleManager: Shutting down and abandoning module PakFile (4)
-LogModuleManager: Shutting down and abandoning module RSA (3)
-LogExit: Exiting.
-Log file closed, 08/28/19 13:45:20
+LogInit: Using libcurl 7.55.1-DEV
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.1.1
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogInit: Build: ++UE4+Release-4.22-CL-7053642
+LogInit: Engine Version: 4.22.3-7053642+++UE4+Release-4.22
+LogInit: Compatible Engine Version: 4.22.0-5660361+++UE4+Release-4.22
+LogInit: Net CL: 5660361
+LogInit: OS: Windows 10 (Release 1903) (), CPU: Intel(R) Core(TM) i7-4790K CPU @ 4.00GHz, GPU: NVIDIA GeForce GTX 970
+LogInit: Compiled (64-bit): Jun 18 2019 03:09:11
+LogInit: Compiled with Visual C++: 19.16.27025.01
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.22
+LogInit: Command Line:  /Game/Levels/MainLevel -game -PIEVIACONSOLE -ResX=1280 -ResY=720 -Multiprocess -messaging -SessionName="Play in Standalone Game" -windowed
+LogInit: Base Directory: D:/ShitGame/UE_4.22/Engine/Binaries/Win64/
+LogInit: Installed Engine Build: 1
+LogDevObjectVersion: Number of dev versions registered: 23
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 3
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 30
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 35
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 2
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 0
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 28
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 11
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 2
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 2
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 25
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 6
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 2
+LogInit: Presizing for max 16777216 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogInit: Object subsystem initialized
+LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+LogConfig: Setting CVar [[r.setres:1280x720]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[r.setres:1280x720]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure:0]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.08.29-10.57.25:808][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2019.08.29-10.57.25:808][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:16777216]]
+[2019.08.29-10.57.25:809][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2019.08.29-10.57.25:809][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2019.08.29-10.57.25:809][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2019.08.29-10.57.25:809][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2019.08.29-10.57.25:809][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2019.08.29-10.57.25:809][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2019.08.29-10.57.25:809][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.08.29-10.57.25:809][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.08.29-10.57.25:815][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2019.08.29-10.57.25:815][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.08.29-10.57.25:815][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2019.08.29-10.57.25:816][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2019.08.29-10.57.25:816][  0]LogInit: Selected Device Profile: [Windows]
+[2019.08.29-10.57.25:816][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2019.08.29-10.57.25:820][  0]LogHAL: Display: Platform has ~ 16 GB [17018228736 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2019.08.29-10.57.25:820][  0]LogConfig: Setting CVar [[r.Vulkan.UseRealUBs:0		; Required until we fix HLR fall-out]]
+[2019.08.29-10.57.25:820][  0]LogInit: Going up to parent DeviceProfile []
+[2019.08.29-10.57.25:820][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2019.08.29-10.57.25:821][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2019.08.29-10.57.25:822][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2019.08.29-10.57.25:822][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2019.08.29-10.57.25:822][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [D:/ShitGame/MyProject/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.08.29-10.57.25:822][  0]LogInit: Computer: STEVEN
+[2019.08.29-10.57.25:822][  0]LogInit: User: User
+[2019.08.29-10.57.25:822][  0]LogInit: CPU Page size=4096, Cores=4
+[2019.08.29-10.57.25:822][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2019.08.29-10.57.25:822][  0]LogMemory: Memory total: Physical=15.8GB (16GB approx)
+[2019.08.29-10.57.25:822][  0]LogMemory: Platform Memory Stats for Windows
+[2019.08.29-10.57.25:822][  0]LogMemory: Process Physical Memory: 98.84 MB used, 98.84 MB peak
+[2019.08.29-10.57.25:822][  0]LogMemory: Process Virtual Memory: 89.26 MB used, 89.26 MB peak
+[2019.08.29-10.57.25:822][  0]LogMemory: Physical Memory: 9461.95 MB used,  6767.89 MB free, 16229.85 MB total
+[2019.08.29-10.57.25:822][  0]LogMemory: Virtual Memory: 4642.14 MB used,  134213088.00 MB free, 134217728.00 MB total
+[2019.08.29-10.57.25:866][  0]LogInit: Using OS detected language (en-US).
+[2019.08.29-10.57.25:866][  0]LogInit: Using OS detected locale (en-NZ).
+[2019.08.29-10.57.25:867][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2019.08.29-10.57.26:079][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2019.08.29-10.57.26:079][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2019.08.29-10.57.26:103][  0]LogHMD: Failed to initialize OpenVR with code 100
+[2019.08.29-10.57.26:103][  0]LogD3D11RHI: D3D11 adapters:
+[2019.08.29-10.57.26:181][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 970' (Feature Level 11_0)
+[2019.08.29-10.57.26:181][  0]LogD3D11RHI:       4043/0/8114 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x10de
+[2019.08.29-10.57.26:191][  0]LogD3D11RHI:    1. 'Intel(R) HD Graphics 4600' (Feature Level 11_0)
+[2019.08.29-10.57.26:191][  0]LogD3D11RHI:       112/0/2048 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x8086
+[2019.08.29-10.57.26:195][  0]LogD3D11RHI:    2. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2019.08.29-10.57.26:195][  0]LogD3D11RHI:       0/0/8114 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2019.08.29-10.57.26:195][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2019.08.29-10.57.26:203][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2019.08.29-10.57.26:203][  0]LogD3D11RHI:     GPU DeviceId: 0x13c2 (for the marketing name, search the web for "GPU Device Id")
+[2019.08.29-10.57.26:203][  0]LogWindows: EnumDisplayDevices:
+[2019.08.29-10.57.26:204][  0]LogWindows:    0. 'NVIDIA GeForce GTX 970' (P:1 D:1)
+[2019.08.29-10.57.26:205][  0]LogWindows:    1. 'NVIDIA GeForce GTX 970' (P:0 D:1)
+[2019.08.29-10.57.26:205][  0]LogWindows:    2. 'NVIDIA GeForce GTX 970' (P:0 D:0)
+[2019.08.29-10.57.26:206][  0]LogWindows:    3. 'NVIDIA GeForce GTX 970' (P:0 D:0)
+[2019.08.29-10.57.26:208][  0]LogWindows:    4. 'Intel(R) HD Graphics 4600' (P:0 D:0)
+[2019.08.29-10.57.26:209][  0]LogWindows:    5. 'Intel(R) HD Graphics 4600' (P:0 D:0)
+[2019.08.29-10.57.26:209][  0]LogWindows:    6. 'Intel(R) HD Graphics 4600' (P:0 D:0)
+[2019.08.29-10.57.26:210][  0]LogWindows: DebugString: PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter FoundDriverCount:4 
+[2019.08.29-10.57.26:210][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 970
+[2019.08.29-10.57.26:210][  0]LogD3D11RHI:   Driver Version: 431.60 (internal:26.21.14.3160, unified:431.60)
+[2019.08.29-10.57.26:210][  0]LogD3D11RHI:      Driver Date: 7-17-2019
+[2019.08.29-10.57.26:210][  0]LogRHI: Texture pool is 2830 MB (70% of 4043 MB)
+[2019.08.29-10.57.26:262][  0]LogD3D11RHI: Async texture creation enabled
+[2019.08.29-10.57.26:277][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
+[2019.08.29-10.57.26:277][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
+[2019.08.29-10.57.26:277][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
+[2019.08.29-10.57.26:285][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 1)
+[2019.08.29-10.57.26:693][  0]LogTemp: Display: Module 'WindowsClientTargetPlatform' loaded TargetPlatform 'WindowsClient'
+[2019.08.29-10.57.26:709][  0]LogTemp: Display: Module 'WindowsNoEditorTargetPlatform' loaded TargetPlatform 'WindowsNoEditor'
+[2019.08.29-10.57.26:725][  0]LogTemp: Display: Module 'WindowsServerTargetPlatform' loaded TargetPlatform 'WindowsServer'
+[2019.08.29-10.57.26:733][  0]LogTemp: Display: Module 'WindowsTargetPlatform' loaded TargetPlatform 'Windows'
+[2019.08.29-10.57.26:733][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2019.08.29-10.57.26:747][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2019.08.29-10.57.26:835][  0]LogShaderCompilers: Guid format shader working directory is 0 characters bigger than the processId version (../../../../MyProject/MoonFlorist/MoonFlorist/Intermediate/Shaders/WorkingDirectory/7272/).
+[2019.08.29-10.57.26:836][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/User/AppData/Local/Temp/UnrealShaderWorkingDir/6098E13A4A6D47BCB92C9C85E2746DCC/'.
+[2019.08.29-10.57.26:839][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2019.08.29-10.57.26:839][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2019.08.29-10.57.26:839][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2019.08.29-10.57.27:358][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2019.08.29-10.57.27:430][  0]LogDerivedDataCache: Loaded boot cache 0.07s 71MB C:/Users/User/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc.
+[2019.08.29-10.57.27:430][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/User/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc
+[2019.08.29-10.57.27:430][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../MyProject/MoonFlorist/MoonFlorist/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2019.08.29-10.57.27:430][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2019.08.29-10.57.27:430][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../MyProject/MoonFlorist/MoonFlorist/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.08.29-10.57.27:430][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2019.08.29-10.57.27:441][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2019.08.29-10.57.27:441][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.08.29-10.57.27:441][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2019.08.29-10.57.27:455][  0]LogDerivedDataCache: Using Local data cache path C:/Users/User/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2019.08.29-10.57.27:455][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2019.08.29-10.57.27:455][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2019.08.29-10.57.27:479][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2019.08.29-10.57.27:480][  0]LogSlate: Using FreeType 2.6.0
+[2019.08.29-10.57.27:481][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2019.08.29-10.57.27:610][  0]LogInit: Using OS detected language (en-US).
+[2019.08.29-10.57.27:610][  0]LogInit: Using OS detected locale (en-NZ).
+[2019.08.29-10.57.27:610][  0]LogTextLocalizationManager: No localization for 'en-US' exists, so 'en' will be used for the language.
+[2019.08.29-10.57.27:610][  0]LogTextLocalizationManager: No localization for 'en-NZ' exists, so 'en' will be used for the locale.
+[2019.08.29-10.57.27:610][  0]LogSlate: FontCache flush requested. Reason: Culture for localization was changed
+[2019.08.29-10.57.27:610][  0]LogSlate: FontCache flush requested. Reason: Culture for localization was changed
+[2019.08.29-10.57.27:611][  0]LogTextLocalizationManager: Compacting localization data took   0.00ms
+[2019.08.29-10.57.27:620][  0]LogAssetRegistry: FAssetRegistry took 0.0043 seconds to start up
+[2019.08.29-10.57.27:805][  0]LogPackageLocalizationCache: Processed 10 localized package path(s) for 1 prioritized culture(s) in 0.000664 seconds
+[2019.08.29-10.57.28:007][  0]LogInit: Selected Device Profile: [Windows]
+[2019.08.29-10.57.28:151][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2019.08.29-10.57.28:151][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2019.08.29-10.57.28:151][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2019.08.29-10.57.28:151][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2019.08.29-10.57.28:151][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2019.08.29-10.57.28:162][  0]LogNetVersion: MoonFlorist 1.0.0, NetCL: 5660361, EngineNetVer: 10, GameNetVer: 0 (Checksum: 3291226662)
+[2019.08.29-10.57.28:773][  0]LogMoviePlayer: Initializing movie player
+[2019.08.29-10.57.28:902][  0]LogSubstanceCoreModule: Substance [CPU] Engine Loaded, Max Texture Size = 2048
+[2019.08.29-10.57.28:908][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2019.08.29-10.57.28:922][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2019.08.29-10.57.29:020][  0]SourceControl: Source control is disabled
+[2019.08.29-10.57.29:020][  0]SourceControl: Source control is disabled
+[2019.08.29-10.57.29:021][  0]SourceControl: Source control is disabled
+[2019.08.29-10.57.29:113][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2019.08.29-10.57.29:497][  0]LogOcInput: OculusInput pre-init called
+[2019.08.29-10.57.29:508][  0]LogUObjectArray: 46794 objects as part of root set at end of initial load.
+[2019.08.29-10.57.29:508][  0]LogUObjectAllocator: 8251800 out of 0 bytes used by permanent object pool.
+[2019.08.29-10.57.29:508][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2019.08.29-10.57.29:670][  0]LogEngine: Initializing Engine...
+[2019.08.29-10.57.29:677][  0]LogHMD: Failed to initialize OpenVR with code 100
+[2019.08.29-10.57.29:691][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.001 s
+[2019.08.29-10.57.29:850][  0]LogInit: Initializing FReadOnlyCVARCache
+[2019.08.29-10.57.29:967][  0]LogInit: XAudio2 using 'Speakers (Logitech G533 Gaming Headset)' : 6 channels at 48 kHz using 16 bits per sample (channel mask 0x3f)
+[2019.08.29-10.57.30:024][  0]LogInit: FAudioDevice initialized.
+[2019.08.29-10.57.30:035][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2019.08.29-10.57.30:045][  0]LogInit: Texture streaming: Enabled
+[2019.08.29-10.57.30:212][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.08.29-10.57.30:212][  0]LogInit: Display: Game Engine Initialized.
+[2019.08.29-10.57.30:277][  0]LogInit: Display: Starting Game.
+[2019.08.29-10.57.30:277][  0]LogNet: Browse: /Game/Levels/MainLevel?Name=Player
+[2019.08.29-10.57.30:277][  0]LogLoad: LoadMap: /Game/Levels/MainLevel?Name=Player
+[2019.08.29-10.57.30:299][  0]LogUObjectHash: Compacting FUObjectHashTables data took   1.40ms
+[2019.08.29-10.57.30:982][  0]LogBlueprint: Warning: USimpleConstructionScript::FixupRootNodeParentReferences() - Couldn't find native parent component 'Arrow' for 'Infront Of Player' in BlueprintGeneratedClass 'BP_MoonFloristCharacter_C' (it may have been removed)
+[2019.08.29-10.57.31:297][  0]LogAIModule: Creating AISystem for world MainLevel
+[2019.08.29-10.57.31:297][  0]LogLoad: Game class is 'BP_MoonFloristGameMode_C'
+[2019.08.29-10.57.31:317][  0]LogWorld: Bringing World /Game/Levels/MainLevel.MainLevel up for play (max tick rate 0) at 2019.08.29-22.57.31
+[2019.08.29-10.57.31:319][  0]LogWorld: Bringing up level for play took: 0.021298
+[2019.08.29-10.57.31:341][  0]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(710)]!
+[2019.08.29-10.57.31:358][  0]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.31:358][  0]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.31:358][  0]LogLoad: Took 1.080478 seconds to LoadMap(/Game/Levels/MainLevel)
+[2019.08.29-10.57.31:436][  0]LogRenderer: Reallocating scene render targets to support 1280x720 Format 10 NumSamples 1 (Frame:1).
+[2019.08.29-10.57.31:436][  0]LogLoad: (Engine Initialization) Total time: 8.53 seconds
+[2019.08.29-10.57.31:436][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2019.08.29-10.57.31:483][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2019.08.29-10.57.31:501][  0]LogRenderer: Reallocating scene render targets to support 128x128 Format 10 NumSamples 1 (Frame:1).
+[2019.08.29-10.57.31:555][  0]LogRenderer: Reallocating scene render targets to support 1280x720 Format 10 NumSamples 1 (Frame:2).
+[2019.08.29-10.57.39:315][477]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.08.29-10.57.39:477][487]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:493][488]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:493][488]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:509][489]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:525][490]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:541][491]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:542][491]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:574][493]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:606][495]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:622][496]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:623][496]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:832][509]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:834][509]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:848][510]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:848][510]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:864][511]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:864][511]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:880][512]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:881][512]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:897][513]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:897][513]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:913][514]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:913][514]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:929][515]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:929][515]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:945][516]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:945][516]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:961][517]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:961][517]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:977][518]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:977][518]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:993][519]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.39:993][519]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:010][520]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:010][520]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:026][521]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:026][521]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:042][522]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:042][522]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:058][523]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:058][523]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:075][524]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:075][524]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:091][525]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:092][525]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:107][526]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:108][526]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:123][527]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:124][527]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:138][528]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:139][528]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:155][529]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:155][529]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:171][530]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:171][530]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:187][531]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:187][531]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:203][532]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:219][533]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:219][533]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:235][534]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:235][534]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:251][535]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:251][535]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:267][536]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:268][536]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:284][537]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:300][538]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:316][539]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:332][540]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:349][541]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:349][541]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:364][542]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:365][542]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:380][543]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:381][543]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:396][544]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:397][544]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:460][548]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:476][549]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:493][550]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:509][551]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:525][552]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:526][552]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:541][553]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:541][553]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:557][554]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:558][554]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:575][555]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:575][555]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:590][556]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:591][556]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:606][557]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:607][557]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:622][558]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:623][558]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:638][559]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:703][563]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:718][564]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:735][565]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:751][566]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:767][567]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:783][568]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:799][569]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:815][570]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:816][570]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:831][571]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:832][571]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:848][572]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:848][572]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:848][572]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:864][573]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:864][573]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:864][573]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:880][574]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:880][574]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:880][574]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:896][575]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:896][575]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:897][575]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:912][576]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:912][576]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:913][576]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:928][577]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:929][577]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:929][577]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:945][578]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:945][578]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:961][579]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:961][579]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:961][579]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:977][580]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:977][580]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:978][580]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:993][581]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:994][581]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.40:994][581]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:009][582]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:010][582]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:010][582]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:025][583]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:026][583]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:026][583]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:042][584]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:042][584]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:042][584]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:058][585]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:058][585]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:075][586]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:076][586]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:091][587]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:092][587]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:107][588]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:108][588]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:124][589]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:125][589]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:140][590]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:141][590]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:155][591]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:155][591]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:171][592]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:173][592]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:187][593]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:188][593]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:203][594]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:204][594]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:219][595]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:220][595]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:220][595]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:236][596]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:236][596]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:236][596]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:252][597]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:252][597]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:268][598]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:284][599]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:284][599]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:300][600]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:300][600]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:301][600]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:316][601]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:316][601]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:332][602]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:332][602]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:348][603]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:349][603]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:365][604]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:365][604]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:365][604]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:381][605]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:381][605]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:381][605]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:397][606]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:397][606]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:398][606]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:413][607]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:413][607]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:429][608]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:429][608]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:445][609]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:445][609]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:461][610]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:477][611]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:494][612]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:510][613]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:510][613]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:510][613]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:526][614]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:526][614]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:543][615]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:543][615]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:558][616]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:558][616]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:559][616]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:574][617]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:574][617]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:590][618]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:590][618]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:591][618]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:606][619]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:607][619]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:608][619]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:623][620]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:623][620]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:624][620]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:640][621]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:640][621]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:641][621]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:655][622]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:655][622]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:656][622]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:671][623]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:671][623]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:687][624]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:687][624]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:703][625]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:703][625]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:719][626]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:719][626]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:735][627]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:751][628]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:767][629]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:784][630]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:800][631]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:800][631]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:816][632]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:816][632]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:832][633]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:832][633]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:848][634]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:849][634]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:849][634]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:864][635]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:865][635]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:865][635]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:881][636]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:881][636]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:881][636]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:897][637]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:897][637]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:913][638]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:913][638]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:914][638]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:929][639]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:929][639]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:945][640]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:945][640]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:961][641]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:961][641]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:977][642]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:977][642]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:978][642]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:993][643]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.41:993][643]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:010][644]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:010][644]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:010][644]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:026][645]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:026][645]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:026][645]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:042][646]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:042][646]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:042][646]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:058][647]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:058][647]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:059][647]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:075][648]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:075][648]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:075][648]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:091][649]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:091][649]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:091][649]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:107][650]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:107][650]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:108][650]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:123][651]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:123][651]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:124][651]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:139][652]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:139][652]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:140][652]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:155][653]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:155][653]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:171][654]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:187][655]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:203][656]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:219][657]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:235][658]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:236][658]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:236][658]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:252][659]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:252][659]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:252][659]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:268][660]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:268][660]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:268][660]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:284][661]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:300][662]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:316][663]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:332][664]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:348][665]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:364][666]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:381][667]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:397][668]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:413][669]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:429][670]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:445][671]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:461][672]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:477][673]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:494][674]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:510][675]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:510][675]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:511][675]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:526][676]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:526][676]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:527][676]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:542][677]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:542][677]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:543][677]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:559][678]LogBlueprintUserMessages: [BP_MoonFloristCharacter_C_0] Not Close Enough to Access Plantation
+[2019.08.29-10.57.42:559][678]LogBlueprintUserMessages: [BP_MoonFloristCharacter_C_0] Not Close Enough To access Radio
+[2019.08.29-10.57.42:559][678]LogBlueprintUserMessages: [BP_MoonFloristCharacter_C_0] Not Close Enough to Access Inventory
+[2019.08.29-10.57.42:559][678]LogBlueprintUserMessages: [BP_MoonFloristCharacter_C_0] Hello
+[2019.08.29-10.57.42:559][678]LogBlueprintUserMessages: [BP_MoonFloristCharacter_C_0] 1
+[2019.08.29-10.57.42:559][678]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:559][678]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:560][678]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:575][679]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:575][679]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:576][679]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:591][680]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:591][680]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:592][680]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:607][681]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:607][681]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:608][681]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:622][682]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:624][682]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:640][683]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:641][683]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:656][684]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:657][684]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:672][685]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:673][685]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:688][686]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:690][686]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:704][687]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:705][687]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:720][688]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:720][688]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:736][689]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:737][689]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:752][690]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:978][704]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.42:994][705]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.43:027][707]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.43:043][708]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.43:059][709]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.43:092][711]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.43:140][714]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.43:188][717]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.43:527][738]LogScript: Warning: Accessed None trying to read property K2Node_DynamicCast_AsStorage_Window
+	BP_MoonFloristCharacter_C /Game/Levels/MainLevel.MainLevel:PersistentLevel.BP_MoonFloristCharacter_C_0
+	Function /Game/BP_MoonFloristCharacter.BP_MoonFloristCharacter_C:ExecuteUbergraph_BP_MoonFloristCharacter:1EE9
+[2019.08.29-10.57.43:527][738]LogScript: Warning: Script call stack:
+	Function /Game/BP_MoonFloristCharacter.BP_MoonFloristCharacter_C:InpActEvt_F_K2Node_InputKeyEvent_1
+	Function /Game/BP_MoonFloristCharacter.BP_MoonFloristCharacter_C:ExecuteUbergraph_BP_MoonFloristCharacter
+
+[2019.08.29-10.57.43:527][738]LogScript: Warning: Accessed None
+	BP_MoonFloristCharacter_C /Game/Levels/MainLevel.MainLevel:PersistentLevel.BP_MoonFloristCharacter_C_0
+	Function /Game/BP_MoonFloristCharacter.BP_MoonFloristCharacter_C:ExecuteUbergraph_BP_MoonFloristCharacter:1EFE
+[2019.08.29-10.57.43:527][738]LogScript: Warning: Script call stack:
+	Function /Game/BP_MoonFloristCharacter.BP_MoonFloristCharacter_C:InpActEvt_F_K2Node_InputKeyEvent_1
+	Function /Game/BP_MoonFloristCharacter.BP_MoonFloristCharacter_C:ExecuteUbergraph_BP_MoonFloristCharacter
+
+[2019.08.29-10.57.43:527][738]LogScript: Warning: Accessed None
+	BP_MoonFloristCharacter_C /Game/Levels/MainLevel.MainLevel:PersistentLevel.BP_MoonFloristCharacter_C_0
+	Function /Game/BP_MoonFloristCharacter.BP_MoonFloristCharacter_C:ExecuteUbergraph_BP_MoonFloristCharacter:1EC9
+[2019.08.29-10.57.43:527][738]LogScript: Warning: Script call stack:
+	Function /Game/BP_MoonFloristCharacter.BP_MoonFloristCharacter_C:InpActEvt_F_K2Node_InputKeyEvent_1
+	Function /Game/BP_MoonFloristCharacter.BP_MoonFloristCharacter_C:ExecuteUbergraph_BP_MoonFloristCharacter
+
+[2019.08.29-10.57.43:527][738]LogScript: Warning: Accessed None trying to read property CallFunc_Array_Get_Item2
+	BP_MoonFloristCharacter_C /Game/Levels/MainLevel.MainLevel:PersistentLevel.BP_MoonFloristCharacter_C_0
+	Function /Game/BP_MoonFloristCharacter.BP_MoonFloristCharacter_C:ExecuteUbergraph_BP_MoonFloristCharacter:1F47
+[2019.08.29-10.57.43:527][738]LogScript: Warning: Script call stack:
+	Function /Game/BP_MoonFloristCharacter.BP_MoonFloristCharacter_C:InpActEvt_F_K2Node_InputKeyEvent_1
+	Function /Game/BP_MoonFloristCharacter.BP_MoonFloristCharacter_C:ExecuteUbergraph_BP_MoonFloristCharacter
+
+[2019.08.29-10.57.43:527][738]LogScript: Warning: Accessed None trying to read property CallFunc_Array_Get_Item2
+	BP_MoonFloristCharacter_C /Game/Levels/MainLevel.MainLevel:PersistentLevel.BP_MoonFloristCharacter_C_0
+	Function /Game/BP_MoonFloristCharacter.BP_MoonFloristCharacter_C:ExecuteUbergraph_BP_MoonFloristCharacter:1F75
+[2019.08.29-10.57.43:527][738]LogScript: Warning: Script call stack:
+	Function /Game/BP_MoonFloristCharacter.BP_MoonFloristCharacter_C:InpActEvt_F_K2Node_InputKeyEvent_1
+	Function /Game/BP_MoonFloristCharacter.BP_MoonFloristCharacter_C:ExecuteUbergraph_BP_MoonFloristCharacter
+
+[2019.08.29-10.57.43:527][738]LogScript: Warning: Attempted to assign to None
+	BP_MoonFloristCharacter_C /Game/Levels/MainLevel.MainLevel:PersistentLevel.BP_MoonFloristCharacter_C_0
+	Function /Game/BP_MoonFloristCharacter.BP_MoonFloristCharacter_C:ExecuteUbergraph_BP_MoonFloristCharacter:1F8A
+[2019.08.29-10.57.43:527][738]LogScript: Warning: Script call stack:
+	Function /Game/BP_MoonFloristCharacter.BP_MoonFloristCharacter_C:InpActEvt_F_K2Node_InputKeyEvent_1
+	Function /Game/BP_MoonFloristCharacter.BP_MoonFloristCharacter_C:ExecuteUbergraph_BP_MoonFloristCharacter
+
+[2019.08.29-10.57.44:417][793]LogSlate: FSceneViewport::OnFocusLost() reason 1
+[2019.08.29-10.57.44:675][809]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.44:692][810]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:607][610]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:608][610]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:625][611]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:625][611]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:640][612]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:642][612]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:657][613]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:658][613]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:672][614]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:674][614]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:688][615]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:690][615]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:704][616]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:706][616]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:721][617]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:721][617]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:737][618]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:737][618]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:753][619]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:753][619]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:769][620]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:770][620]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:785][621]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:786][621]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:801][622]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:802][622]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:817][623]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:818][623]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:833][624]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:849][625]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:850][625]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:866][626]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:881][627]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:882][627]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:898][628]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:898][628]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:914][629]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:915][629]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:930][630]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:931][630]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:946][631]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:947][631]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:962][632]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:963][632]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:978][633]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:979][633]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:995][634]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.57:995][634]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:010][635]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:011][635]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:027][636]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:027][636]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:043][637]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:059][638]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:059][638]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:075][639]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:076][639]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:091][640]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:236][649]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:253][650]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:253][650]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:269][651]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:269][651]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:285][652]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:285][652]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:301][653]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:301][653]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:317][654]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:317][654]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:333][655]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:334][655]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:350][656]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:350][656]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:366][657]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:366][657]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:382][658]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:382][658]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:398][659]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:753][681]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:882][689]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:883][689]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:898][690]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:899][690]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:915][691]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:915][691]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:931][692]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:931][692]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:947][693]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:947][693]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:963][694]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:964][694]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:979][695]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:980][695]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:995][696]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.58:996][696]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:012][697]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:012][697]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:028][698]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:028][698]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:044][699]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:044][699]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:060][700]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:061][700]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:092][702]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:108][703]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:109][703]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:124][704]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:140][705]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:156][706]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:172][707]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:188][708]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:204][709]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:220][710]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:237][711]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:237][711]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:253][712]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:253][712]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:269][713]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:270][713]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:285][714]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:286][714]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:301][715]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:302][715]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:317][716]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:318][716]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:334][717]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:334][717]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:350][718]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:350][718]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:366][719]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:366][719]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:382][720]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:383][720]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:398][721]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:399][721]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:414][722]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:415][722]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:430][723]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:431][723]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:446][724]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:447][724]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:463][725]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:463][725]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:479][726]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:479][726]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:495][727]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:495][727]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:511][728]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:512][728]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:527][729]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:528][729]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:543][730]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:544][730]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:559][731]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:560][731]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:575][732]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:705][740]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:721][741]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:737][742]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:753][743]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:754][743]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:770][744]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:786][745]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:786][745]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:802][746]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:818][747]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:819][747]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:850][749]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:883][751]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:899][752]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:915][753]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:930][754]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:931][754]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:946][755]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:947][755]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:963][756]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:964][756]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:979][757]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.57.59:980][757]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:011][759]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:012][759]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:157][768]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:158][768]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:174][769]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:191][770]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:207][771]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:222][772]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:224][772]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:351][780]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:384][782]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:416][784]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:432][785]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:433][785]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:448][786]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:464][787]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:465][787]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:480][788]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:497][789]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:513][790]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:514][790]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:529][791]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:545][792]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:577][794]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:593][795]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:594][795]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:610][796]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:610][796]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:626][797]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:642][798]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:643][798]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:658][799]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:674][800]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:675][800]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:691][801]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:707][802]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:708][802]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:723][803]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:739][804]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:756][805]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:771][806]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:787][807]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:803][808]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:820][809]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:836][810]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:852][811]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.00:884][813]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.08.29-10.58.01:077][825]LogWindowsDesktop: Alt-F4 pressed!
+[2019.08.29-10.58.01:102][825]LogSlate: Window 'MoonFlorist (64-bit Development PCD3D_SM5) ' being destroyed
+[2019.08.29-10.58.01:102][825]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
+[2019.08.29-10.58.01:108][825]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.08.29-10.58.01:108][825]LogEngine: All Windows Closed
+[2019.08.29-10.58.01:108][825]LogWindows: FPlatformMisc::RequestExit(0)
+[2019.08.29-10.58.01:694][826]LogExit: Preparing to exit.
+[2019.08.29-10.58.01:694][826]LogMoviePlayer: Shutting down movie player
+[2019.08.29-10.58.01:948][826]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.08.29-10.58.01:963][826]LogExit: Game engine shut down
+[2019.08.29-10.58.02:034][826]LogExit: Object subsystem successfully closed.
+[2019.08.29-10.58.02:056][826]LogShaderCompilers: Display: Shaders left to compile 0
+[2019.08.29-10.58.02:059][826]LogD3D11RHI: Shutdown
+[2019.08.29-10.58.02:059][826]LogD3D11RHI: CleanupD3DDevice
+[2019.08.29-10.58.02:060][826]LogRendererCore: FGlobalReadBuffer::ReleaseRHI
+[2019.08.29-10.58.02:060][826]LogRendererCore: FGlobalDynamicReadBuffer::Cleanup()
+[2019.08.29-10.58.02:060][826]LogRendererCore: FGlobalReadBuffer::ReleaseRHI
+[2019.08.29-10.58.02:060][826]LogRendererCore: FGlobalDynamicReadBuffer::Cleanup()
+[2019.08.29-10.58.02:060][826]LogRendererCore: FGlobalReadBuffer::ReleaseRHI
+[2019.08.29-10.58.02:060][826]LogRendererCore: FGlobalDynamicReadBuffer::Cleanup()
+[2019.08.29-10.58.02:125][826]LogD3D11RHI: ~FD3D11DynamicRHI
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (402)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module SequenceRecorder (400)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module AutomationController (398)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module AutomationWorker (396)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module Voice (394)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module AIModule (392)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module GameplayDebugger (391)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module AITestSuite (389)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module NavigationSystem (387)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module OculusMR (384)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (382)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module WebMMediaFactory (380)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module WebMMedia (378)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module OpenExrWrapper (376)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module ImgMediaFactory (374)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (372)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module MagicLeapCameraPreviewFactory (370)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module MagicLeapMediaCodecFactory (368)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module MagicLeapMediaFactory (366)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module CharacterAI (364)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module SessionServices (362)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module MovieSceneCapture (360)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module LiveCoding (358)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module LevelSequence (356)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module MovieSceneTracks (354)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module MovieScene (352)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (350)
+[2019.08.29-10.58.02:162][826]LogModuleManager: Shutting down and abandoning module PortalServices (348)
+[2019.08.29-10.58.02:163][826]LogModuleManager: Shutting down and abandoning module PortalRpc (346)
+[2019.08.29-10.58.02:163][826]LogModuleManager: Shutting down and abandoning module MessagingRpc (344)
+[2019.08.29-10.58.02:163][826]LogModuleManager: Shutting down and abandoning module ImageWriteQueue (342)
+[2019.08.29-10.58.02:164][826]LogModuleManager: Shutting down and abandoning module ProfilerService (340)
+[2019.08.29-10.58.02:370][826]LogModuleManager: Shutting down and abandoning module TaskGraph (338)
+[2019.08.29-10.58.02:370][826]LogModuleManager: Shutting down and abandoning module SteamVRController (336)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (334)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module OculusInput (332)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module MobilePatchingUtils (330)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module EditableMesh (328)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (326)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module CableComponent (324)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module AudioCapture (322)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (320)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module AndroidPermission (318)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module NUTUnrealEngine4 (316)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module NetcodeUnitTest (314)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module MediaCompositing (312)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module LinearTimecode (310)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module ImgMedia (308)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module MagicLeapHelperVulkan (306)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module MagicLeapHelperOpenGL (304)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module MagicLeapAudio (302)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module HTML5Networking (300)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module GeometryCacheTracks (298)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module GeometryCacheSequencer (297)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module GeometryCache (294)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module GeometryCacheEd (293)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module BackChannel (290)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module AppleVision (288)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module AppleImageUtilsBlueprintSupport (286)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module AppleImageUtils (284)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module VariantManagerContent (282)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module CryptoKeysOpenSSL (280)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module CryptoKeys (278)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (276)
+[2019.08.29-10.58.02:371][826]LogModuleManager: Shutting down and abandoning module HotReload (275)
+[2019.08.29-10.58.02:372][826]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (274)
+[2019.08.29-10.58.02:372][826]LogModuleManager: Shutting down and abandoning module VisualStudioCodeSourceCodeAccess (270)
+[2019.08.29-10.58.02:372][826]LogModuleManager: Shutting down and abandoning module UObjectPlugin (268)
+[2019.08.29-10.58.02:372][826]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (266)
+[2019.08.29-10.58.02:372][826]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (264)
+[2019.08.29-10.58.02:372][826]LogModuleManager: Shutting down and abandoning module SourceControl (263)
+[2019.08.29-10.58.02:372][826]LogModuleManager: Shutting down and abandoning module CLionSourceCodeAccess (260)
+[2019.08.29-10.58.02:372][826]LogModuleManager: Shutting down and abandoning module ActorLayerUtilities (258)
+[2019.08.29-10.58.02:372][826]LogModuleManager: Shutting down and abandoning module MoonFlorist (256)
+[2019.08.29-10.58.02:372][826]LogModuleManager: Shutting down and abandoning module SignificanceManager (254)
+[2019.08.29-10.58.02:372][826]LogModuleManager: Shutting down and abandoning module RuntimePhysXCooking (252)
+[2019.08.29-10.58.02:372][826]LogModuleManager: Shutting down and abandoning module PhysXVehiclesEditor (250)
+[2019.08.29-10.58.02:372][826]LogModuleManager: Shutting down and abandoning module PhysXVehicles (248)
+[2019.08.29-10.58.02:372][826]LogModuleManager: Shutting down and abandoning module LocationServicesBPLibrary (246)
+[2019.08.29-10.58.02:372][826]LogModuleManager: Shutting down and abandoning module ActorSequence (244)
+[2019.08.29-10.58.02:373][826]LogModuleManager: Shutting down and abandoning module UdpMessaging (242)
+[2019.08.29-10.58.02:474][826]LogModuleManager: Shutting down and abandoning module TcpMessaging (240)
+[2019.08.29-10.58.02:925][826]LogModuleManager: Shutting down and abandoning module SubstanceCore (238)
+[2019.08.29-10.58.02:925][826]LogModuleManager: Shutting down and abandoning module MagicLeapIdentity (236)
+[2019.08.29-10.58.02:925][826]LogModuleManager: Shutting down and abandoning module MagicLeapSecureStorage (234)
+[2019.08.29-10.58.02:925][826]LogModuleManager: Shutting down and abandoning module MagicLeapHandTracking (232)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module MagicLeapEyeTracker (230)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module MagicLeapController (228)
+[2019.08.29-10.58.02:926][826]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module MagicLeapAR (226)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module AugmentedReality (225)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (222)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module FacialAnimation (220)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module DataValidation (218)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module AssetManagerEditor (216)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module TreeMap (215)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module AnimationSharing (212)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (210)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module AISupportModule (208)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module Paper2D (206)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (204)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module WebMMoviePlayer (202)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module PacketHandler (200)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module ClothingSystemEditor (198)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module ClothingSystemRuntime (196)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module MediaAssets (194)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module Overlay (192)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module OverlayEditor (191)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module VREditor (188)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module StringTableEditor (186)
+[2019.08.29-10.58.02:926][826]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (184)
+[2019.08.29-10.58.02:927][826]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (182)
+[2019.08.29-10.58.02:927][826]LogModuleManager: Shutting down and abandoning module FunctionalTesting (180)
+[2019.08.29-10.58.02:927][826]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (178)
+[2019.08.29-10.58.02:927][826]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (177)
+[2019.08.29-10.58.02:927][826]LogModuleManager: Shutting down and abandoning module UMG (174)
+[2019.08.29-10.58.02:927][826]LogModuleManager: Shutting down and abandoning module UMGEditor (173)
+[2019.08.29-10.58.02:927][826]LogModuleManager: Shutting down and abandoning module Sequencer (172)
+[2019.08.29-10.58.02:927][826]LogModuleManager: Shutting down and abandoning module MessageLog (169)
+[2019.08.29-10.58.02:927][826]LogModuleManager: Shutting down and abandoning module SlateReflector (164)
+[2019.08.29-10.58.02:927][826]LogModuleManager: Shutting down and abandoning module Slate (162)
+[2019.08.29-10.58.02:927][826]LogModuleManager: Shutting down and abandoning module EditorStyle (160)
+[2019.08.29-10.58.02:929][826]LogModuleManager: Shutting down and abandoning module UnrealEd (158)
+[2019.08.29-10.58.02:929][826]LogModuleManager: Shutting down and abandoning module MRMesh (156)
+[2019.08.29-10.58.02:929][826]LogModuleManager: Shutting down and abandoning module Messaging (154)
+[2019.08.29-10.58.02:929][826]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (152)
+[2019.08.29-10.58.02:929][826]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (150)
+[2019.08.29-10.58.02:929][826]LogModuleManager: Shutting down and abandoning module XAudio2 (148)
+[2019.08.29-10.58.02:929][826]LogModuleManager: Shutting down and abandoning module Networking (146)
+[2019.08.29-10.58.02:929][826]LogModuleManager: Shutting down and abandoning module Core (144)
+[2019.08.29-10.58.02:929][826]LogModuleManager: Shutting down and abandoning module KismetCompiler (142)
+[2019.08.29-10.58.02:929][826]LogModuleManager: Shutting down and abandoning module MeshUtilities (140)
+[2019.08.29-10.58.02:929][826]LogModuleManager: Shutting down and abandoning module MeshMergeUtilities (139)
+[2019.08.29-10.58.02:929][826]LogModuleManager: Shutting down and abandoning module MeshReductionInterface (138)
+[2019.08.29-10.58.02:929][826]LogModuleManager: Shutting down and abandoning module SkeletalMeshReduction (137)
+[2019.08.29-10.58.02:929][826]LogModuleManager: Shutting down and abandoning module ProxyLODMeshReduction (135)
+[2019.08.29-10.58.02:929][826]LogModuleManager: Shutting down and abandoning module QuadricMeshReduction (133)
+[2019.08.29-10.58.02:930][826]LogModuleManager: Shutting down and abandoning module MaterialBaking (129)
+[2019.08.29-10.58.02:930][826]LogModuleManager: Shutting down and abandoning module PIEPreviewDeviceProfileSelector (124)
+[2019.08.29-10.58.02:930][826]LogModuleManager: Shutting down and abandoning module DerivedDataCache (122)
+[2019.08.29-10.58.02:987][826]LogDerivedDataCache: Shutdown
+[2019.08.29-10.58.02:987][826]LogModuleManager: Shutting down and abandoning module XGEController (120)
+[2019.08.29-10.58.02:987][826]LogModuleManager: Shutting down and abandoning module TargetPlatform (118)
+[2019.08.29-10.58.02:987][826]LogModuleManager: Shutting down and abandoning module VulkanShaderFormat (117)
+[2019.08.29-10.58.02:987][826]LogModuleManager: Shutting down and abandoning module ShaderFormatVectorVM (115)
+[2019.08.29-10.58.02:987][826]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (113)
+[2019.08.29-10.58.02:987][826]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (111)
+[2019.08.29-10.58.02:987][826]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (109)
+[2019.08.29-10.58.02:987][826]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (107)
+[2019.08.29-10.58.02:987][826]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (105)
+[2019.08.29-10.58.02:987][826]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (103)
+[2019.08.29-10.58.02:987][826]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (101)
+[2019.08.29-10.58.02:987][826]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (99)
+[2019.08.29-10.58.02:987][826]LogModuleManager: Shutting down and abandoning module ImageWrapper (98)
+[2019.08.29-10.58.02:988][826]LogModuleManager: Shutting down and abandoning module TextureFormatAndroid (95)
+[2019.08.29-10.58.02:988][826]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (93)
+[2019.08.29-10.58.02:988][826]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (91)
+[2019.08.29-10.58.02:988][826]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (89)
+[2019.08.29-10.58.02:988][826]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (87)
+[2019.08.29-10.58.02:988][826]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (85)
+[2019.08.29-10.58.02:988][826]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (83)
+[2019.08.29-10.58.02:988][826]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (81)
+[2019.08.29-10.58.02:988][826]LogModuleManager: Shutting down and abandoning module InputCore (78)
+[2019.08.29-10.58.02:988][826]LogModuleManager: Shutting down and abandoning module Settings (76)
+[2019.08.29-10.58.02:988][826]LogModuleManager: Shutting down and abandoning module PhysXCooking (74)
+[2019.08.29-10.58.02:988][826]LogModuleManager: Shutting down and abandoning module SteamVR (72)
+[2019.08.29-10.58.02:988][826]LogHMD: Freeing OpenVRDLLHandle.
+[2019.08.29-10.58.02:989][826]LogModuleManager: Shutting down and abandoning module OculusHMD (70)
+[2019.08.29-10.58.02:989][826]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (68)
+[2019.08.29-10.58.02:989][826]LogModuleManager: Shutting down and abandoning module LauncherChunkInstaller (66)
+[2019.08.29-10.58.02:989][826]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (64)
+[2019.08.29-10.58.02:989][826]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (60)
+[2019.08.29-10.58.02:990][826]LogModuleManager: Shutting down and abandoning module XMPP (55)
+[2019.08.29-10.58.02:990][826]LogModuleManager: Shutting down and abandoning module WebSockets (54)
+[2019.08.29-10.58.03:009][826]LogModuleManager: Shutting down and abandoning module HTTP (51)
+[2019.08.29-10.58.03:035][826]LogModuleManager: Shutting down and abandoning module SSL (50)
+[2019.08.29-10.58.03:038][826]LogModuleManager: Shutting down and abandoning module WmfMedia (46)
+[2019.08.29-10.58.03:041][826]LogModuleManager: Shutting down and abandoning module Media (45)
+[2019.08.29-10.58.03:048][826]LogModuleManager: Shutting down and abandoning module MagicLeap (42)
+[2019.08.29-10.58.03:049][826]LogModuleManager: Shutting down and abandoning module DatasmithContent (40)
+[2019.08.29-10.58.03:051][826]LogModuleManager: Shutting down and abandoning module AnimationModifiers (38)
+[2019.08.29-10.58.03:051][826]LogModuleManager: Shutting down and abandoning module PropertyEditor (37)
+[2019.08.29-10.58.03:051][826]LogModuleManager: Shutting down and abandoning module AudioEditor (34)
+[2019.08.29-10.58.03:051][826]LogModuleManager: Shutting down and abandoning module TextureCompressor (32)
+[2019.08.29-10.58.03:052][826]LogModuleManager: Shutting down and abandoning module RenderCore (30)
+[2019.08.29-10.58.03:052][826]LogModuleManager: Shutting down and abandoning module Landscape (28)
+[2019.08.29-10.58.03:052][826]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (26)
+[2019.08.29-10.58.03:052][826]LogModuleManager: Shutting down and abandoning module OpenGLDrv (24)
+[2019.08.29-10.58.03:052][826]LogModuleManager: Shutting down and abandoning module D3D11RHI (22)
+[2019.08.29-10.58.03:052][826]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (20)
+[2019.08.29-10.58.03:052][826]LogModuleManager: Shutting down and abandoning module Renderer (18)
+[2019.08.29-10.58.03:052][826]LogModuleManager: Shutting down and abandoning module Engine (16)
+[2019.08.29-10.58.03:052][826]LogModuleManager: Shutting down and abandoning module CoreUObject (14)
+[2019.08.29-10.58.03:052][826]LogModuleManager: Shutting down and abandoning module NetworkFile (12)
+[2019.08.29-10.58.03:052][826]LogModuleManager: Shutting down and abandoning module CookedIterativeFile (10)
+[2019.08.29-10.58.03:052][826]LogModuleManager: Shutting down and abandoning module StreamingFile (8)
+[2019.08.29-10.58.03:052][826]LogModuleManager: Shutting down and abandoning module SandboxFile (6)
+[2019.08.29-10.58.03:052][826]LogModuleManager: Shutting down and abandoning module PakFile (4)
+[2019.08.29-10.58.03:052][826]LogModuleManager: Shutting down and abandoning module RSA (3)
+[2019.08.29-10.58.03:064][826]LogExit: Exiting.
+[2019.08.29-10.58.03:166][826]Log file closed, 08/29/19 22:58:03
