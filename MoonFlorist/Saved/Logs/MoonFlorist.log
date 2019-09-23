@@ -1,4 +1,4 @@
-﻿Log file open, 08/30/19 08:47:33
+﻿Log file open, 09/23/19 14:39:32
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
 LogWindows: File 'aqProf.dll' does not exist
 LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
@@ -10,7 +10,7 @@ LogInit: Display: Running engine for game: MoonFlorist
 LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
 LogPlatformFile: Not using cached read wrapper
 LogTaskGraph: Started task graph with 5 named threads and 23 total threads with 3 sets of task threads.
-LogStats: Stats thread started at 0.562473
+LogStats: Stats thread started at 1.308230
 LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
 LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +12:00, Platform Override: ''
 LogPluginManager: Mounting plugin Paper2D
@@ -98,29 +98,6 @@ LogPluginManager: Mounting plugin SignificanceManager
 LogPluginManager: Mounting plugin SteamVR
 LogPluginManager: Mounting plugin WebMMoviePlayer
 LogPluginManager: Mounting plugin WindowsMoviePlayer
-LogInit: Warning: Incompatible or missing module: MoonFlorist
-Running D:/Users/mark.wil7543/Documents/UE_4.22/Engine/Binaries/DotNET/UnrealBuildTool.exe Development Win64 -Project="D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/MoonFlorist.uproject" -TargetType=Editor -Progress -NoHotReloadFromIDE
-Using 'git status' to determine working set for adaptive non-unity build (D:\Users\mark.wil7543\Documents\GitKraken\HereAfter\Flower\MoonFlorist).
-Creating makefile for MoonFloristEditor (ini files are newer than makefile)
-@progress push 5%
-Parsing headers for MoonFloristEditor
-  Running UnrealHeaderTool "D:\Users\mark.wil7543\Documents\GitKraken\HereAfter\Flower\MoonFlorist\MoonFlorist\MoonFlorist.uproject" "D:\Users\mark.wil7543\Documents\GitKraken\HereAfter\Flower\MoonFlorist\MoonFlorist\Intermediate\Build\Win64\MoonFloristEditor\Development\MoonFloristEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-Reflection code generated for MoonFloristEditor in 26.5232191 seconds
-@progress pop
-Using Visual Studio 2019 14.21.27702 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.21.27702) and Windows 10.0.17763.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-Building 3 actions with 8 processes...
-  @progress 'Compiling C++ source code...' 0%
-  @progress 'Compiling C++ source code...' 33%
-  [1/3] UE4Editor-MoonFlorist.lib
-     Creating library D:\Users\mark.wil7543\Documents\GitKraken\HereAfter\Flower\MoonFlorist\MoonFlorist\Intermediate\Build\Win64\UE4Editor\Development\MoonFlorist\UE4Editor-MoonFlorist.lib and object D:\Users\mark.wil7543\Documents\GitKraken\HereAfter\Flower\MoonFlorist\MoonFlorist\Intermediate\Build\Win64\UE4Editor\Development\MoonFlorist\UE4Editor-MoonFlorist.exp
-  @progress 'Compiling C++ source code...' 67%
-  [2/3] UE4Editor-MoonFlorist.dll
-     Creating library D:\Users\mark.wil7543\Documents\GitKraken\HereAfter\Flower\MoonFlorist\MoonFlorist\Intermediate\Build\Win64\UE4Editor\Development\MoonFlorist\UE4Editor-MoonFlorist.suppressed.lib and object D:\Users\mark.wil7543\Documents\GitKraken\HereAfter\Flower\MoonFlorist\MoonFlorist\Intermediate\Build\Win64\UE4Editor\Development\MoonFlorist\UE4Editor-MoonFlorist.suppressed.exp
-  @progress 'Compiling C++ source code...' 100%
-  [3/3] MoonFloristEditor.target
-  WARNING: Unable to read 'D:\Users\mark.wil7543\Documents\GitKraken\HereAfter\Flower\MoonFlorist\MoonFlorist\Binaries\Win64\UE4Editor.modules'; ignoring.
-Total time in Parallel executor: 4.95 seconds
-Total execution time: 50.33 seconds
 LogInit: Using libcurl 7.55.1-DEV
 LogInit:  - built for x86_64-pc-win32
 LogInit:  - supports SSL with OpenSSL/1.1.1
@@ -181,631 +158,651 @@ LogInit: Presizing for max 16777216 objects, including 0 objects not considered 
 LogInit: Object subsystem initialized
 LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
 LogConfig: Setting CVar [[r.setres:1280x720]]
-[2019.08.29-20.48.30:922][  0]LogConfig: Setting CVar [[r.VSync:0]]
-[2019.08.29-20.48.30:922][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
-[2019.08.29-20.48.30:922][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
-[2019.08.29-20.48.30:922][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
-[2019.08.29-20.48.30:922][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure:0]]
-[2019.08.29-20.48.30:922][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
-[2019.08.29-20.48.30:922][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:16777216]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
-[2019.08.29-20.48.30:923][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
-[2019.08.29-20.48.30:923][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
-[2019.08.29-20.48.30:976][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
-[2019.08.29-20.48.30:976][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
-[2019.08.29-20.48.30:977][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
-[2019.08.29-20.48.30:977][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
-[2019.08.29-20.48.30:977][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
-[2019.08.29-20.48.30:977][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
-[2019.08.29-20.48.30:977][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
-[2019.08.29-20.48.30:977][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
-[2019.08.29-20.48.30:977][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
-[2019.08.29-20.48.30:977][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.08.29-20.48.30:977][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
-[2019.08.29-20.48.30:977][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
-[2019.08.29-20.48.30:985][  0]LogInit: Selected Device Profile: [Windows]
-[2019.08.29-20.48.30:985][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
-[2019.08.29-20.48.31:057][  0]LogHAL: Display: Platform has ~ 16 GB [17092669440 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
-[2019.08.29-20.48.31:063][  0]LogConfig: Setting CVar [[r.Vulkan.UseRealUBs:0		; Required until we fix HLR fall-out]]
-[2019.08.29-20.48.31:063][  0]LogInit: Going up to parent DeviceProfile []
-[2019.08.29-20.48.31:064][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
-[2019.08.29-20.48.31:064][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
-[2019.08.29-20.48.31:065][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
-[2019.08.29-20.48.31:085][  0]LogInit: Computer: 1405C099
-[2019.08.29-20.48.31:085][  0]LogInit: User: MarkWil7543
-[2019.08.29-20.48.31:085][  0]LogInit: CPU Page size=4096, Cores=4
-[2019.08.29-20.48.31:085][  0]LogInit: High frequency timer resolution =3.515626 MHz
-[2019.08.29-20.48.31:098][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
-[2019.08.29-20.48.31:098][  0]LogMemory: Platform Memory Stats for Windows
-[2019.08.29-20.48.31:098][  0]LogMemory: Process Physical Memory: 103.88 MB used, 103.88 MB peak
-[2019.08.29-20.48.31:098][  0]LogMemory: Process Virtual Memory: 90.00 MB used, 90.00 MB peak
-[2019.08.29-20.48.31:098][  0]LogMemory: Physical Memory: 6093.60 MB used,  10207.24 MB free, 16300.84 MB total
-[2019.08.29-20.48.31:098][  0]LogMemory: Virtual Memory: 4703.58 MB used,  134213024.00 MB free, 134217728.00 MB total
-[2019.08.29-20.48.31:812][  0]LogInit: Using OS detected language (en-US).
-[2019.08.29-20.48.31:812][  0]LogInit: Using OS detected locale (en-NZ).
-[2019.08.29-20.48.31:867][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
-[2019.08.29-20.48.32:298][  0]LogInit: Setting process to per monitor DPI aware
-[2019.08.29-20.48.32:891][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
-[2019.08.29-20.48.32:891][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
-[2019.08.29-20.48.34:148][  0]LogHMD: Failed to initialize OpenVR with code 110
-[2019.08.29-20.48.34:148][  0]LogD3D11RHI: D3D11 adapters:
-[2019.08.29-20.48.34:200][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 960' (Feature Level 11_0)
-[2019.08.29-20.48.34:200][  0]LogD3D11RHI:       2016/0/8150 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x10de
-[2019.08.29-20.48.34:335][  0]LogD3D11RHI:    1. 'Intel(R) HD Graphics 4600' (Feature Level 11_0)
-[2019.08.29-20.48.34:335][  0]LogD3D11RHI:       0/0/1792 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x8086
-[2019.08.29-20.48.34:406][  0]LogD3D11RHI:    2. 'Microsoft Basic Render Driver' (Feature Level 11_0)
-[2019.08.29-20.48.34:406][  0]LogD3D11RHI:       0/0/8150 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
-[2019.08.29-20.48.34:406][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
-[2019.08.29-20.48.34:465][  0]LogD3D11RHI: Creating new Direct3DDevice
-[2019.08.29-20.48.34:465][  0]LogD3D11RHI:     GPU DeviceId: 0x1401 (for the marketing name, search the web for "GPU Device Id")
-[2019.08.29-20.48.34:468][  0]LogWindows: EnumDisplayDevices:
-[2019.08.29-20.48.34:468][  0]LogWindows:    0. 'NVIDIA GeForce GTX 960' (P:1 D:1)
-[2019.08.29-20.48.34:468][  0]LogWindows:    1. 'NVIDIA GeForce GTX 960' (P:0 D:1)
-[2019.08.29-20.48.34:469][  0]LogWindows:    2. 'NVIDIA GeForce GTX 960' (P:0 D:0)
-[2019.08.29-20.48.34:469][  0]LogWindows:    3. 'NVIDIA GeForce GTX 960' (P:0 D:0)
-[2019.08.29-20.48.34:469][  0]LogWindows:    4. 'Intel(R) HD Graphics 4600' (P:0 D:0)
-[2019.08.29-20.48.34:470][  0]LogWindows:    5. 'Intel(R) HD Graphics 4600' (P:0 D:0)
-[2019.08.29-20.48.34:470][  0]LogWindows:    6. 'Intel(R) HD Graphics 4600' (P:0 D:0)
-[2019.08.29-20.48.34:470][  0]LogWindows:    7. 'Mirage Driver' (P:0 D:0)
-[2019.08.29-20.48.34:470][  0]LogWindows: DebugString: PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter FoundDriverCount:4 
-[2019.08.29-20.48.34:470][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 960
-[2019.08.29-20.48.34:470][  0]LogD3D11RHI:   Driver Version: 388.13 (internal:23.21.13.8813, unified:388.13)
-[2019.08.29-20.48.34:470][  0]LogD3D11RHI:      Driver Date: 10-27-2017
-[2019.08.29-20.48.34:470][  0]LogRHI: Texture pool is 1411 MB (70% of 2016 MB)
-[2019.08.29-20.48.34:498][  0]LogD3D11RHI: Async texture creation enabled
-[2019.08.29-20.48.34:663][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
-[2019.08.29-20.48.34:669][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
-[2019.08.29-20.48.34:669][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
-[2019.08.29-20.48.34:713][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 1)
-[2019.08.29-20.48.35:113][  0]LogTemp: Display: Module 'AllDesktopTargetPlatform' loaded TargetPlatform 'AllDesktop'
-[2019.08.29-20.48.35:134][  0]LogTemp: Display: Module 'MacClientTargetPlatform' loaded TargetPlatform 'MacClient'
-[2019.08.29-20.48.35:150][  0]LogTemp: Display: Module 'MacNoEditorTargetPlatform' loaded TargetPlatform 'MacNoEditor'
-[2019.08.29-20.48.35:166][  0]LogTemp: Display: Module 'MacServerTargetPlatform' loaded TargetPlatform 'MacServer'
-[2019.08.29-20.48.35:199][  0]LogTemp: Display: Module 'MacTargetPlatform' loaded TargetPlatform 'Mac'
-[2019.08.29-20.48.35:229][  0]LogTemp: Display: Module 'WindowsClientTargetPlatform' loaded TargetPlatform 'WindowsClient'
-[2019.08.29-20.48.35:258][  0]LogTemp: Display: Module 'WindowsNoEditorTargetPlatform' loaded TargetPlatform 'WindowsNoEditor'
-[2019.08.29-20.48.35:281][  0]LogTemp: Display: Module 'WindowsServerTargetPlatform' loaded TargetPlatform 'WindowsServer'
-[2019.08.29-20.48.35:293][  0]LogTemp: Display: Module 'WindowsTargetPlatform' loaded TargetPlatform 'Windows'
-[2019.08.29-20.48.35:392][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android'
-[2019.08.29-20.48.35:392][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTC'
-[2019.08.29-20.48.35:392][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATC'
-[2019.08.29-20.48.35:392][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXT'
-[2019.08.29-20.48.35:392][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1'
-[2019.08.29-20.48.35:392][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1a'
-[2019.08.29-20.48.35:392][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2'
-[2019.08.29-20.48.35:392][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTC'
-[2019.08.29-20.48.35:392][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'AndroidClient'
-[2019.08.29-20.48.35:392][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTCClient'
-[2019.08.29-20.48.35:392][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATCClient'
-[2019.08.29-20.48.35:392][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXTClient'
-[2019.08.29-20.48.35:392][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1Client'
-[2019.08.29-20.48.35:392][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1aClient'
-[2019.08.29-20.48.35:392][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2Client'
-[2019.08.29-20.48.35:392][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTCClient'
-[2019.08.29-20.48.35:392][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_Multi'
-[2019.08.29-20.48.35:392][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_MultiClient'
-[2019.08.29-20.48.35:401][  0]LogTemp: Display: Module 'HTML5TargetPlatform' loaded TargetPlatform 'HTML5'
-[2019.08.29-20.48.35:472][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOSClient'
-[2019.08.29-20.48.35:472][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOS'
-[2019.08.29-20.48.35:501][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOSClient'
-[2019.08.29-20.48.35:501][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOS'
-[2019.08.29-20.48.35:522][  0]LogTemp: Display: Module 'LinuxClientTargetPlatform' loaded TargetPlatform 'LinuxClient'
-[2019.08.29-20.48.35:536][  0]LogTemp: Display: Module 'LinuxNoEditorTargetPlatform' loaded TargetPlatform 'LinuxNoEditor'
-[2019.08.29-20.48.35:551][  0]LogTemp: Display: Module 'LinuxServerTargetPlatform' loaded TargetPlatform 'LinuxServer'
-[2019.08.29-20.48.35:566][  0]LogTemp: Display: Module 'LinuxTargetPlatform' loaded TargetPlatform 'Linux'
-[2019.08.29-20.48.35:618][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'Lumin'
-[2019.08.29-20.48.35:618][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'LuminClient'
-[2019.08.29-20.48.35:618][  0]LogTargetPlatformManager: Display: Building Assets For Windows
-[2019.08.29-20.48.35:672][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
-[2019.08.29-20.48.36:081][  0]LogShaderCompilers: Guid format shader working directory is -10 characters bigger than the processId version (../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/Shaders/WorkingDirectory/10920/).
-[2019.08.29-20.48.36:081][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'D:/Users/mark.wil7543/AppData/Local/Temp/UnrealShaderWorkingDir/48AFF3CF4EA56702FE8D86A30D624DA5/'.
-[2019.08.29-20.48.36:106][  0]LogXGEController: Cleaning working directory: D:/Users/mark.wil7543/AppData/Local/Temp/UnrealXGEWorkingDir/
-[2019.08.29-20.48.36:107][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
-[2019.08.29-20.48.36:107][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
-[2019.08.29-20.48.36:107][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
-[2019.08.29-20.48.38:576][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
-[2019.08.29-20.48.39:181][  0]LogDerivedDataCache: Loaded boot cache 0.59s 71MB D:/Users/mark.wil7543/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc.
-[2019.08.29-20.48.39:181][  0]LogDerivedDataCache: Display: Loaded Boot cache: D:/Users/mark.wil7543/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc
-[2019.08.29-20.48.39:181][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
-[2019.08.29-20.48.39:181][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
-[2019.08.29-20.48.39:181][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2019.08.29-20.48.39:181][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
-[2019.08.29-20.48.39:244][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
-[2019.08.29-20.48.39:244][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2019.08.29-20.48.39:244][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
-[2019.08.29-20.48.39:267][  0]LogDerivedDataCache: Using Local data cache path D:/Users/mark.wil7543/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
-[2019.08.29-20.48.39:267][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
-[2019.08.29-20.48.39:267][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
-[2019.08.29-20.48.39:314][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
-[2019.08.29-20.48.39:383][  0]LogSlate: Using FreeType 2.6.0
-[2019.08.29-20.48.39:463][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
-[2019.08.29-20.48.40:004][  0]LogAssetRegistry: FAssetRegistry took 0.0481 seconds to start up
-[2019.08.29-20.48.46:021][  0]LogInit: Selected Device Profile: [Windows]
-[2019.08.29-20.48.48:608][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
-[2019.08.29-20.48.48:608][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
-[2019.08.29-20.48.48:608][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
-[2019.08.29-20.48.48:608][  0]LogMeshReduction: No distributed automatic mesh merging module available
-[2019.08.29-20.48.48:608][  0]LogMeshMerging: No distributed automatic mesh merging module available
-[2019.08.29-20.48.49:933][  0]LogNetVersion: MoonFlorist 1.0.0, NetCL: 5660361, EngineNetVer: 10, GameNetVer: 0 (Checksum: 3291226662)
-[2019.08.29-20.48.55:254][  0]LogPackageLocalizationCache: Processed 10 localized package path(s) for 1 prioritized culture(s) in 0.135908 seconds
-[2019.08.29-20.48.55:285][  0]LogUObjectArray: 42205 objects as part of root set at end of initial load.
-[2019.08.29-20.48.55:285][  0]LogUObjectAllocator: 7325032 out of 0 bytes used by permanent object pool.
-[2019.08.29-20.48.55:285][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
-[2019.08.29-20.49.04:055][  0]LogSubstanceCoreModule: Substance [CPU] Engine Loaded, Max Texture Size = 2048
-[2019.08.29-20.49.04:123][  0]LogTcpMessaging: Initializing TcpMessaging bridge
-[2019.08.29-20.49.04:152][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
-[2019.08.29-20.49.04:839][  0]SourceControl: Source control is disabled
-[2019.08.29-20.49.04:848][  0]SourceControl: Source control is disabled
-[2019.08.29-20.49.04:901][  0]SourceControl: Source control is disabled
-[2019.08.29-20.49.04:926][  0]SourceControl: Source control is disabled
-[2019.08.29-20.49.05:589][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
-[2019.08.29-20.49.05:955][  0]LogOcInput: OculusInput pre-init called
-[2019.08.29-20.49.08:478][  0]LogEngine: Initializing Engine...
-[2019.08.29-20.49.08:533][  0]LogHMD: Failed to initialize OpenVR with code 110
-[2019.08.29-20.49.08:559][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.006 s
-[2019.08.29-20.49.09:574][  0]LogInit: Initializing FReadOnlyCVARCache
-[2019.08.29-20.49.10:077][  0]LogAIModule: Creating AISystem for world Untitled
-[2019.08.29-20.49.10:371][  0]LogInit: XAudio2 using 'Speakers (USB Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
-[2019.08.29-20.49.10:481][  0]LogInit: FAudioDevice initialized.
-[2019.08.29-20.49.10:494][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
-[2019.08.29-20.49.10:709][  0]LogDerivedDataCache: Saved boot cache 0.22s 71MB D:/Users/mark.wil7543/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc.
-[2019.08.29-20.49.10:717][  0]LogInit: Texture streaming: Enabled
-[2019.08.29-20.49.10:925][  0]LogEngineSessionManager: EngineSessionManager initialized
-[2019.08.29-20.49.11:089][  0]LogInit: Transaction tracking system initialized
-[2019.08.29-20.49.11:658][  0]BlueprintLog: New page: Editor Load
-[2019.08.29-20.49.12:493][  0]LocalizationService: Localization service is disabled
-[2019.08.29-20.49.13:750][  0]LogAutoReimportManager: Warning: Unable to watch directory ../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/ as it will conflict with another watching ../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/.
-[2019.08.29-20.49.13:793][  0]LogFileCache: Scanning file cache for directory 'D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/' took 0.03s
-[2019.08.29-20.49.13:793][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
-[2019.08.29-20.49.13:794][  0]LogCook: Display: Mobile HDR setting 1
-[2019.08.29-20.49.15:638][  0]SourceControl: Source control is disabled
-[2019.08.29-20.49.15:660][  0]Cmd: MAP LOAD FILE="../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/Levels/MainLevel.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
-[2019.08.29-20.49.15:688][  0]LightingResults: New page: Lighting Build
-[2019.08.29-20.49.15:828][  0]MapCheck: New page: Map Check
-[2019.08.29-20.49.15:828][  0]LightingResults: New page: Lighting Build
-[2019.08.29-20.49.16:147][  0]LogUObjectHash: Compacting FUObjectHashTables data took   4.98ms
-[2019.08.29-20.49.18:715][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
-[2019.08.29-20.49.18:715][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
-[2019.08.29-20.49.19:483][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
-[2019.08.29-20.49.19:483][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
-[2019.08.29-20.49.20:329][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
-[2019.08.29-20.49.20:329][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
-[2019.08.29-20.49.20:329][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
-[2019.08.29-20.49.20:329][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
-[2019.08.29-20.49.20:426][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
-[2019.08.29-20.49.20:432][  0]LoadErrors: Failed to load /Game/Levels/MainLevel_BuiltData.MainLevel_BuiltData Referenced by PersistentLevel
-[2019.08.29-20.49.20:433][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
-[2019.08.29-20.49.23:599][  0]LogTexture: Display: Building textures: LeftArrow (BGRA8, 284X385)
-[2019.08.29-20.49.23:599][  0]LogTexture: Display: Building textures: T_OrderPaper_BaseColour (BGRA8, 379X517)
-[2019.08.29-20.49.23:600][  0]LogTexture: Display: Building textures: RightArrow (BGRA8, 285X384)
-[2019.08.29-20.49.23:600][  0]LogTexture: Display: Building textures: Plus (BGRA8, 286X297)
-[2019.08.29-20.49.23:600][  0]LogTexture: Display: Building textures: Minus (BGRA8, 297X91)
-[2019.08.29-20.49.29:528][  0]LogAIModule: Creating AISystem for world MainLevel
-[2019.08.29-20.49.30:502][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
-[2019.08.29-20.49.30:764][  0]LogUObjectHash: Compacting FUObjectHashTables data took   3.02ms
-[2019.08.29-20.49.30:776][  0]Cmd: MAP CHECKDEP NOCLEARLOG
-[2019.08.29-20.49.30:796][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 14.031ms to complete.
-[2019.08.29-20.49.30:801][  0]LogFileHelpers: Loading map 'MainLevel' took 15.155
-[2019.08.29-20.49.33:480][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.08.29-20.49.33:495][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.08.29-20.49.33:502][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.08.29-20.49.33:509][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.08.29-20.49.33:693][  0]LogCollectionManager: Loaded 0 collections in 0.003186 seconds
-[2019.08.29-20.49.33:828][  0]LogFileCache: Scanning file cache for directory 'D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Collections/' took 0.01s
-[2019.08.29-20.49.33:828][  0]LogFileCache: Scanning file cache for directory 'D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/Developers/MarkWil7543/Collections/' took 0.01s
-[2019.08.29-20.49.33:828][  0]LogFileCache: Scanning file cache for directory 'D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/Collections/' took 0.00s
-[2019.08.29-20.49.33:828][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000000 seconds
-[2019.08.29-20.49.33:894][  0]LogContentBrowser: Native class hierarchy populated in 0.0620 seconds. Added 2758 classes and 669 folders.
-[2019.08.29-20.49.33:993][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0006 seconds. Added 0 classes and 0 folders.
-[2019.08.29-20.49.34:051][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:092][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:108][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:137][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:165][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:175][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:193][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:223][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:238][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:253][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:267][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:290][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:296][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:306][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:343][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:367][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:382][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:389][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:402][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:421][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:423][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:440][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:441][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:464][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:472][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.34:492][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.08.29-20.49.36:266][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0005 seconds. Added 0 classes and 0 folders.
-[2019.08.29-20.49.36:879][  0]LogSlate: Took 0.001727 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
-[2019.08.29-20.49.36:935][  0]LogSlate: Took 0.001896 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
-[2019.08.29-20.49.36:948][  0]LogSlate: Took 0.010367 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
-[2019.08.29-20.49.37:330][  0]LogRenderer: Reallocating scene render targets to support 1100x680 Format 10 NumSamples 1 (Frame:1).
-[2019.08.29-20.49.37:957][  0]LogSlate: Took 0.008678 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
-[2019.08.29-20.49.38:231][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0006 seconds. Added 0 classes and 0 folders.
-[2019.08.29-20.49.38:231][  0]LogLoad: (Engine Initialization) Total time: 147.77 seconds
-[2019.08.29-20.49.38:231][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
-[2019.08.29-20.49.38:350][  0]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2019.08.29-20.49.38:358][  0]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
-[2019.08.29-20.49.39:044][  0]LogContentStreaming: Texture pool size now 1000 MB
-[2019.08.29-20.49.39:460][  1]LogSubstanceLiveLink: Warning: Unable to send data along socket, closing connection
-[2019.08.29-20.49.39:659][  1]LogAssetRegistry: Asset discovery search completed in 59.6802 seconds
-[2019.08.29-20.49.39:705][  1]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000001 seconds (found 0 objects)
-[2019.08.29-20.49.39:705][  1]LogCollectionManager: Fixed up redirectors for 0 collections in 0.010654 seconds (updated 0 objects)
-[2019.08.29-20.49.40:110][  2]LogSlate: Took 0.000196 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
-[2019.08.29-20.49.43:128][230]LogTemp: Repeating last play command: Selected Viewport
-[2019.08.29-20.49.43:166][230]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
-[2019.08.29-20.49.43:195][230]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2019.08.29-20.49.43:245][230]PIE: New page: PIE session: MainLevel (30/08/2019 8:49:43 pm)
-[2019.08.29-20.49.43:308][230]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_MainLevel
-[2019.08.29-20.49.43:356][230]LogPlayLevel: PIE: StaticDuplicateObject took: (0.047875s)
-[2019.08.29-20.49.43:362][230]LogAIModule: Creating AISystem for world MainLevel
-[2019.08.29-20.49.43:380][230]LogPlayLevel: PIE: World Init took: (0.022642s)
-[2019.08.29-20.49.43:380][230]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainLevel.MainLevel to /Game/Levels/UEDPIE_0_MainLevel.MainLevel (0.071009s)
-[2019.08.29-20.49.43:400][230]LogUObjectHash: Compacting FUObjectHashTables data took   1.23ms
-[2019.08.29-20.49.43:438][230]LogInit: XAudio2 using 'Speakers (USB Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
-[2019.08.29-20.49.43:451][230]LogInit: FAudioDevice initialized.
-[2019.08.29-20.49.43:540][230]LogLoad: Game class is 'BP_MoonFloristGameMode_C'
-[2019.08.29-20.49.43:665][230]LogWorld: Bringing World /Game/Levels/UEDPIE_0_MainLevel.MainLevel up for play (max tick rate 0) at 2019.08.30-08.49.43
-[2019.08.29-20.49.43:720][230]LogWorld: Bringing up level for play took: 0.060450
-[2019.08.29-20.49.43:830][230]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0007 seconds. Added 20 classes and 0 folders.
-[2019.08.29-20.49.44:005][230]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(710)]!
-[2019.08.29-20.49.44:013][230]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.44:013][230]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.44:022][230]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_MainLevel 0.593
-[2019.08.29-20.49.44:023][230]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
-[2019.08.29-20.49.45:745][374]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2019.08.29-20.49.46:019][403]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:020][403]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:029][404]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:049][405]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:058][406]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:117][411]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:117][411]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:129][412]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:130][412]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:141][413]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:142][413]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:154][414]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:154][414]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:698][455]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:699][455]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:711][456]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:712][456]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:725][457]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:725][457]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:737][458]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:739][458]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:751][459]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:752][459]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:764][460]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:766][460]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:777][461]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:778][461]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:791][462]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:792][462]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:805][463]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:806][463]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:818][464]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:818][464]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:831][465]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:831][465]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:843][466]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:844][466]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:857][467]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:859][467]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:870][468]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:871][468]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:883][469]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:885][469]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:897][470]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:898][470]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:910][471]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:911][471]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:924][472]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:925][472]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:938][473]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:938][473]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:950][474]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:951][474]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:964][475]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:965][475]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:977][476]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:978][476]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:991][477]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.46:992][477]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:005][478]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:019][479]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:032][480]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:100][485]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:113][486]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:127][487]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:194][492]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:195][492]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:207][493]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:208][493]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:221][494]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:222][494]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:245][495]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:245][495]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:245][495]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:255][496]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:256][496]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:256][496]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:263][497]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:264][497]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:264][497]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:275][498]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:276][498]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:276][498]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:290][499]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:290][499]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:304][500]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:304][500]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:317][501]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:331][502]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:345][503]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:360][504]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:374][505]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:388][506]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:401][507]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:415][508]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:429][509]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:443][510]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:457][511]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:471][512]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:485][513]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:485][513]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:486][513]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:500][514]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:500][514]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:513][515]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:514][515]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:527][516]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:528][516]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:541][517]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:556][518]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:570][519]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:585][520]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:599][521]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:615][522]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:629][523]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:674][526]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:674][526]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:687][527]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:702][528]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:717][529]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:731][530]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:804][535]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.08.29-20.49.47:961][546]LogBlueprintUserMessages: [BP_MoonFloristCharacter_C_0] Not Close Enough to Access Plantation
-[2019.08.29-20.49.47:990][546]LogBlueprintUserMessages: [BP_MoonFloristCharacter_C_0] Not Close Enough to Access Inventory
-[2019.08.29-20.49.51:398][773]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2019.08.29-20.49.54:612][986]LogBlueprintUserMessages: [5] 0
-[2019.08.29-20.49.54:612][986]LogBlueprintUserMessages: [5] Put in row 1
-[2019.08.29-20.49.54:612][986]LogBlueprintUserMessages: [5] 1
-[2019.08.29-20.49.56:587][117]LogBlueprintUserMessages: [4] 0
-[2019.08.29-20.49.56:587][117]LogBlueprintUserMessages: [4] Put in row 1
-[2019.08.29-20.49.56:587][117]LogBlueprintUserMessages: [4] 1
-[2019.08.29-20.49.58:204][224]LogBlueprintUserMessages: [6] 0
-[2019.08.29-20.49.58:204][224]LogBlueprintUserMessages: [6] Hello
-[2019.08.29-20.49.58:204][224]LogBlueprintUserMessages: [6] Put in row 2
-[2019.08.29-20.49.58:204][224]LogBlueprintUserMessages: [6] 2
-[2019.08.29-20.49.59:979][342]LogBlueprintUserMessages: [9] 0
-[2019.08.29-20.49.59:979][342]LogBlueprintUserMessages: [9] Hello
-[2019.08.29-20.49.59:979][342]LogBlueprintUserMessages: [9] Put in row 3
-[2019.08.29-20.49.59:979][342]LogBlueprintUserMessages: [9] 3
-[2019.08.29-20.50.03:383][570]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
-[2019.08.29-20.50.03:396][570]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.08.29-20.50.03:477][570]LogPlayLevel: Display: Shutting down PIE online subsystems
-[2019.08.29-20.50.03:477][570]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
-[2019.08.29-20.50.03:547][570]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.08.29-20.50.03:595][570]LogUObjectHash: Compacting FUObjectHashTables data took   1.90ms
-[2019.08.29-20.50.03:634][571]LogPlayLevel: Display: Destroying online subsystem :Context_2
-[2019.08.29-20.50.14:304][233]LogVSAccessor: Warning: Couldn't access Visual Studio
-[2019.08.29-20.50.14:334][233]Candidate modules for hot reload:
-[2019.08.29-20.50.14:334][233]  MoonFlorist
-[2019.08.29-20.50.14:334][233]Launching UnrealBuildTool... [D:/Users/mark.wil7543/Documents/UE_4.22/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=MoonFlorist,551 Win64 Development -TargetType=Editor -Project="D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/MoonFlorist.uproject" "D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/MoonFlorist.uproject"  -IgnoreJunk]
-[2019.08.29-20.50.14:338][233]Warning: Starting HotReload took  0.1s.
-[2019.08.29-20.50.24:861][390]CompilerResultsLog: New page: Compilation - 30/08/2019 8:50:24 pm
-[2019.08.29-20.50.24:869][390]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Users\mark.wil7543\Documents\GitKraken\HereAfter\Flower\MoonFlorist).
-[2019.08.29-20.50.24:869][390]CompilerResultsLog: Creating makefile for MoonFloristEditor (ini files are newer than makefile)
-[2019.08.29-20.50.24:869][390]CompilerResultsLog: Parsing headers for MoonFloristEditor
-[2019.08.29-20.50.24:869][390]CompilerResultsLog:   Running UnrealHeaderTool "D:\Users\mark.wil7543\Documents\GitKraken\HereAfter\Flower\MoonFlorist\MoonFlorist\MoonFlorist.uproject" "D:\Users\mark.wil7543\Documents\GitKraken\HereAfter\Flower\MoonFlorist\MoonFlorist\Intermediate\Build\Win64\MoonFloristEditor\Development\MoonFloristEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-[2019.08.29-20.50.24:869][390]CompilerResultsLog: Reflection code generated for MoonFloristEditor in 6.6174649 seconds
-[2019.08.29-20.50.24:869][390]CompilerResultsLog: Using Visual Studio 2019 14.21.27702 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.21.27702) and Windows 10.0.17763.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-[2019.08.29-20.50.24:869][390]CompilerResultsLog: Building 3 actions with 8 processes...
-[2019.08.29-20.50.24:869][390]CompilerResultsLog:   [1/3] UE4Editor-MoonFlorist-0551.lib
-[2019.08.29-20.50.24:869][390]CompilerResultsLog:      Creating library D:\Users\mark.wil7543\Documents\GitKraken\HereAfter\Flower\MoonFlorist\MoonFlorist\Intermediate\Build\Win64\UE4Editor\Development\MoonFlorist\UE4Editor-MoonFlorist-0551.lib and object D:\Users\mark.wil7543\Documents\GitKraken\HereAfter\Flower\MoonFlorist\MoonFlorist\Intermediate\Build\Win64\UE4Editor\Development\MoonFlorist\UE4Editor-MoonFlorist-0551.exp
-[2019.08.29-20.50.24:869][390]CompilerResultsLog:   [2/3] UE4Editor-MoonFlorist-0551.dll
-[2019.08.29-20.50.24:869][390]CompilerResultsLog:      Creating library D:\Users\mark.wil7543\Documents\GitKraken\HereAfter\Flower\MoonFlorist\MoonFlorist\Intermediate\Build\Win64\UE4Editor\Development\MoonFlorist\UE4Editor-MoonFlorist-0551.suppressed.lib and object D:\Users\mark.wil7543\Documents\GitKraken\HereAfter\Flower\MoonFlorist\MoonFlorist\Intermediate\Build\Win64\UE4Editor\Development\MoonFlorist\UE4Editor-MoonFlorist-0551.suppressed.exp
-[2019.08.29-20.50.24:869][390]CompilerResultsLog:   [3/3] MoonFloristEditor.target
-[2019.08.29-20.50.24:869][390]CompilerResultsLog: Total time in Parallel executor: 1.22 seconds
-[2019.08.29-20.50.24:869][390]CompilerResultsLog: Total execution time: 10.36 seconds
-[2019.08.29-20.50.24:879][390]LogMainFrame: MainFrame: Module compiling took 10.575 seconds
-[2019.08.29-20.50.24:904][390]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
-[2019.08.29-20.50.24:925][390]LogContentBrowser: Native class hierarchy populated in 0.0113 seconds. Added 2758 classes and 669 folders.
-[2019.08.29-20.50.24:950][390]Display: HotReload took 10.7s.
+[2019.09.23-02.39.34:469][  0]LogConfig: Setting CVar [[r.VSync:0]]
+[2019.09.23-02.39.34:469][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure:0]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.09.23-02.39.34:470][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:16777216]]
+[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2019.09.23-02.39.34:471][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2019.09.23-02.39.34:471][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2019.09.23-02.39.34:471][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2019.09.23-02.39.34:471][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2019.09.23-02.39.34:471][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2019.09.23-02.39.34:471][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.09.23-02.39.34:471][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.09.23-02.39.34:521][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2019.09.23-02.39.34:522][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-02.39.34:522][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2019.09.23-02.39.34:522][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2019.09.23-02.39.34:531][  0]LogInit: Selected Device Profile: [Windows]
+[2019.09.23-02.39.34:532][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2019.09.23-02.39.34:580][  0]LogHAL: Display: Platform has ~ 16 GB [17092669440 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2019.09.23-02.39.34:580][  0]LogConfig: Setting CVar [[r.Vulkan.UseRealUBs:0		; Required until we fix HLR fall-out]]
+[2019.09.23-02.39.34:580][  0]LogInit: Going up to parent DeviceProfile []
+[2019.09.23-02.39.34:584][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2019.09.23-02.39.34:585][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.09.23-02.39.34:599][  0]LogInit: Computer: 1405C099
+[2019.09.23-02.39.34:599][  0]LogInit: User: MarkWil7543
+[2019.09.23-02.39.34:599][  0]LogInit: CPU Page size=4096, Cores=4
+[2019.09.23-02.39.34:599][  0]LogInit: High frequency timer resolution =3.515626 MHz
+[2019.09.23-02.39.34:599][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
+[2019.09.23-02.39.34:599][  0]LogMemory: Platform Memory Stats for Windows
+[2019.09.23-02.39.34:599][  0]LogMemory: Process Physical Memory: 100.75 MB used, 100.75 MB peak
+[2019.09.23-02.39.34:599][  0]LogMemory: Process Virtual Memory: 105.74 MB used, 105.74 MB peak
+[2019.09.23-02.39.34:599][  0]LogMemory: Physical Memory: 7440.11 MB used,  8860.73 MB free, 16300.84 MB total
+[2019.09.23-02.39.34:599][  0]LogMemory: Virtual Memory: 4678.96 MB used,  134213048.00 MB free, 134217728.00 MB total
+[2019.09.23-02.39.35:059][  0]LogInit: Using OS detected language (en-US).
+[2019.09.23-02.39.35:059][  0]LogInit: Using OS detected locale (en-NZ).
+[2019.09.23-02.39.35:065][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2019.09.23-02.39.35:821][  0]LogInit: Setting process to per monitor DPI aware
+[2019.09.23-02.39.36:489][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2019.09.23-02.39.36:489][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2019.09.23-02.39.36:996][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.09.23-02.39.36:996][  0]LogD3D11RHI: D3D11 adapters:
+[2019.09.23-02.39.37:333][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 960' (Feature Level 11_0)
+[2019.09.23-02.39.37:333][  0]LogD3D11RHI:       2016/0/8150 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x10de
+[2019.09.23-02.39.38:065][  0]LogD3D11RHI:    1. 'Intel(R) HD Graphics 4600' (Feature Level 11_0)
+[2019.09.23-02.39.38:065][  0]LogD3D11RHI:       0/0/1792 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x8086
+[2019.09.23-02.39.38:069][  0]LogD3D11RHI:    2. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2019.09.23-02.39.38:069][  0]LogD3D11RHI:       0/0/8150 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2019.09.23-02.39.38:069][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2019.09.23-02.39.38:095][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2019.09.23-02.39.38:095][  0]LogD3D11RHI:     GPU DeviceId: 0x1401 (for the marketing name, search the web for "GPU Device Id")
+[2019.09.23-02.39.38:106][  0]LogWindows: EnumDisplayDevices:
+[2019.09.23-02.39.38:107][  0]LogWindows:    0. 'NVIDIA GeForce GTX 960' (P:1 D:1)
+[2019.09.23-02.39.38:107][  0]LogWindows:    1. 'NVIDIA GeForce GTX 960' (P:0 D:1)
+[2019.09.23-02.39.38:107][  0]LogWindows:    2. 'NVIDIA GeForce GTX 960' (P:0 D:0)
+[2019.09.23-02.39.38:108][  0]LogWindows:    3. 'NVIDIA GeForce GTX 960' (P:0 D:0)
+[2019.09.23-02.39.38:108][  0]LogWindows:    4. 'Intel(R) HD Graphics 4600' (P:0 D:0)
+[2019.09.23-02.39.38:108][  0]LogWindows:    5. 'Intel(R) HD Graphics 4600' (P:0 D:0)
+[2019.09.23-02.39.38:108][  0]LogWindows:    6. 'Intel(R) HD Graphics 4600' (P:0 D:0)
+[2019.09.23-02.39.38:109][  0]LogWindows:    7. 'Mirage Driver' (P:0 D:0)
+[2019.09.23-02.39.38:109][  0]LogWindows: DebugString: PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter FoundDriverCount:4 
+[2019.09.23-02.39.38:109][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 960
+[2019.09.23-02.39.38:109][  0]LogD3D11RHI:   Driver Version: 388.13 (internal:23.21.13.8813, unified:388.13)
+[2019.09.23-02.39.38:109][  0]LogD3D11RHI:      Driver Date: 10-27-2017
+[2019.09.23-02.39.38:109][  0]LogRHI: Texture pool is 1411 MB (70% of 2016 MB)
+[2019.09.23-02.39.38:219][  0]LogD3D11RHI: Async texture creation enabled
+[2019.09.23-02.39.38:470][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
+[2019.09.23-02.39.38:492][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
+[2019.09.23-02.39.38:492][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
+[2019.09.23-02.39.38:573][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 3)
+[2019.09.23-02.39.40:620][  0]LogTemp: Display: Module 'AllDesktopTargetPlatform' loaded TargetPlatform 'AllDesktop'
+[2019.09.23-02.39.40:655][  0]LogTemp: Display: Module 'MacClientTargetPlatform' loaded TargetPlatform 'MacClient'
+[2019.09.23-02.39.40:672][  0]LogTemp: Display: Module 'MacNoEditorTargetPlatform' loaded TargetPlatform 'MacNoEditor'
+[2019.09.23-02.39.40:688][  0]LogTemp: Display: Module 'MacServerTargetPlatform' loaded TargetPlatform 'MacServer'
+[2019.09.23-02.39.40:705][  0]LogTemp: Display: Module 'MacTargetPlatform' loaded TargetPlatform 'Mac'
+[2019.09.23-02.39.40:777][  0]LogTemp: Display: Module 'WindowsClientTargetPlatform' loaded TargetPlatform 'WindowsClient'
+[2019.09.23-02.39.40:816][  0]LogTemp: Display: Module 'WindowsNoEditorTargetPlatform' loaded TargetPlatform 'WindowsNoEditor'
+[2019.09.23-02.39.40:879][  0]LogTemp: Display: Module 'WindowsServerTargetPlatform' loaded TargetPlatform 'WindowsServer'
+[2019.09.23-02.39.40:887][  0]LogTemp: Display: Module 'WindowsTargetPlatform' loaded TargetPlatform 'Windows'
+[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android'
+[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTC'
+[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATC'
+[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXT'
+[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1'
+[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1a'
+[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2'
+[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTC'
+[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'AndroidClient'
+[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTCClient'
+[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATCClient'
+[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXTClient'
+[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1Client'
+[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1aClient'
+[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2Client'
+[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTCClient'
+[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_Multi'
+[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_MultiClient'
+[2019.09.23-02.39.41:007][  0]LogTemp: Display: Module 'HTML5TargetPlatform' loaded TargetPlatform 'HTML5'
+[2019.09.23-02.39.41:087][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOSClient'
+[2019.09.23-02.39.41:087][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOS'
+[2019.09.23-02.39.41:123][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOSClient'
+[2019.09.23-02.39.41:123][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOS'
+[2019.09.23-02.39.41:148][  0]LogTemp: Display: Module 'LinuxClientTargetPlatform' loaded TargetPlatform 'LinuxClient'
+[2019.09.23-02.39.41:163][  0]LogTemp: Display: Module 'LinuxNoEditorTargetPlatform' loaded TargetPlatform 'LinuxNoEditor'
+[2019.09.23-02.39.41:177][  0]LogTemp: Display: Module 'LinuxServerTargetPlatform' loaded TargetPlatform 'LinuxServer'
+[2019.09.23-02.39.41:192][  0]LogTemp: Display: Module 'LinuxTargetPlatform' loaded TargetPlatform 'Linux'
+[2019.09.23-02.39.41:252][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'Lumin'
+[2019.09.23-02.39.41:252][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'LuminClient'
+[2019.09.23-02.39.41:252][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2019.09.23-02.39.41:311][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2019.09.23-02.39.41:871][  0]LogShaderCompilers: Guid format shader working directory is -10 characters bigger than the processId version (../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/Shaders/WorkingDirectory/14372/).
+[2019.09.23-02.39.41:871][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'D:/Users/mark.wil7543/AppData/Local/Temp/UnrealShaderWorkingDir/87C206A6484B301EEF2DCCAFBA9D35B5/'.
+[2019.09.23-02.39.41:892][  0]LogXGEController: Cleaning working directory: D:/Users/mark.wil7543/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2019.09.23-02.39.41:893][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2019.09.23-02.39.41:893][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2019.09.23-02.39.41:893][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2019.09.23-02.39.42:922][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2019.09.23-02.39.43:413][  0]LogDerivedDataCache: Loaded boot cache 0.49s 71MB D:/Users/mark.wil7543/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc.
+[2019.09.23-02.39.43:413][  0]LogDerivedDataCache: Display: Loaded Boot cache: D:/Users/mark.wil7543/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc
+[2019.09.23-02.39.43:413][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2019.09.23-02.39.43:413][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2019.09.23-02.39.43:413][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.09.23-02.39.43:413][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2019.09.23-02.39.43:442][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2019.09.23-02.39.43:442][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.09.23-02.39.43:442][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2019.09.23-02.39.43:455][  0]LogDerivedDataCache: Using Local data cache path D:/Users/mark.wil7543/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2019.09.23-02.39.43:455][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2019.09.23-02.39.43:455][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2019.09.23-02.39.43:522][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2019.09.23-02.39.43:562][  0]LogSlate: Using FreeType 2.6.0
+[2019.09.23-02.39.43:576][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2019.09.23-02.39.43:823][  0]LogAssetRegistry: FAssetRegistry took 0.0531 seconds to start up
+[2019.09.23-02.39.46:920][  0]LogInit: Selected Device Profile: [Windows]
+[2019.09.23-02.39.47:839][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2019.09.23-02.39.47:839][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2019.09.23-02.39.47:840][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2019.09.23-02.39.47:840][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2019.09.23-02.39.47:840][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2019.09.23-02.39.48:094][  0]LogNetVersion: MoonFlorist 1.0.0, NetCL: 5660361, EngineNetVer: 10, GameNetVer: 0 (Checksum: 3291226662)
+[2019.09.23-02.39.50:472][  0]LogPackageLocalizationCache: Processed 10 localized package path(s) for 1 prioritized culture(s) in 0.076402 seconds
+[2019.09.23-02.39.50:486][  0]LogUObjectArray: 42205 objects as part of root set at end of initial load.
+[2019.09.23-02.39.50:486][  0]LogUObjectAllocator: 7325032 out of 0 bytes used by permanent object pool.
+[2019.09.23-02.39.50:486][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2019.09.23-02.39.53:714][  0]LogSubstanceCoreModule: Substance [CPU] Engine Loaded, Max Texture Size = 2048
+[2019.09.23-02.39.53:748][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2019.09.23-02.39.53:770][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2019.09.23-02.39.54:207][  0]SourceControl: Source control is disabled
+[2019.09.23-02.39.54:217][  0]SourceControl: Source control is disabled
+[2019.09.23-02.39.54:276][  0]SourceControl: Source control is disabled
+[2019.09.23-02.39.54:293][  0]SourceControl: Source control is disabled
+[2019.09.23-02.39.55:048][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2019.09.23-02.39.55:479][  0]LogOcInput: OculusInput pre-init called
+[2019.09.23-02.40.01:862][  0]LogEngine: Initializing Engine...
+[2019.09.23-02.40.01:921][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.09.23-02.40.01:949][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.011 s
+[2019.09.23-02.40.02:766][  0]LogInit: Initializing FReadOnlyCVARCache
+[2019.09.23-02.40.03:294][  0]LogAIModule: Creating AISystem for world Untitled
+[2019.09.23-02.40.03:501][  0]LogInit: XAudio2 using 'Speakers (2- USB Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.09.23-02.40.03:523][  0]LogInit: FAudioDevice initialized.
+[2019.09.23-02.40.03:536][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2019.09.23-02.40.03:708][  0]LogDerivedDataCache: Saved boot cache 0.17s 71MB D:/Users/mark.wil7543/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc.
+[2019.09.23-02.40.03:720][  0]LogInit: Texture streaming: Enabled
+[2019.09.23-02.40.03:879][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2019.09.23-02.40.04:022][  0]LogInit: Transaction tracking system initialized
+[2019.09.23-02.40.04:291][  0]BlueprintLog: New page: Editor Load
+[2019.09.23-02.40.04:996][  0]LocalizationService: Localization service is disabled
+[2019.09.23-02.40.06:058][  0]LogAutoReimportManager: Warning: Unable to watch directory ../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/ as it will conflict with another watching ../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/.
+[2019.09.23-02.40.06:138][  0]LogFileCache: Scanning file cache for directory 'D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/' took 0.04s
+[2019.09.23-02.40.06:138][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2019.09.23-02.40.06:139][  0]LogCook: Display: Mobile HDR setting 1
+[2019.09.23-02.40.07:274][  0]SourceControl: Source control is disabled
+[2019.09.23-02.40.07:309][  0]Cmd: MAP LOAD FILE="../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/Levels/MainLevel.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2019.09.23-02.40.07:346][  0]LightingResults: New page: Lighting Build
+[2019.09.23-02.40.07:428][  0]MapCheck: New page: Map Check
+[2019.09.23-02.40.07:428][  0]LightingResults: New page: Lighting Build
+[2019.09.23-02.40.07:639][  0]LogUObjectHash: Compacting FUObjectHashTables data took   4.69ms
+[2019.09.23-02.40.08:990][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
+[2019.09.23-02.40.08:991][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
+[2019.09.23-02.40.09:272][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
+[2019.09.23-02.40.09:273][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
+[2019.09.23-02.40.09:558][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
+[2019.09.23-02.40.09:558][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
+[2019.09.23-02.40.09:558][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
+[2019.09.23-02.40.09:558][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
+[2019.09.23-02.40.10:328][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
+[2019.09.23-02.40.10:328][  0]LoadErrors: Failed to load /Game/Levels/MainLevel_BuiltData.MainLevel_BuiltData Referenced by PersistentLevel
+[2019.09.23-02.40.10:329][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
+[2019.09.23-02.40.12:062][  0]LogAIModule: Creating AISystem for world MainLevel
+[2019.09.23-02.40.12:940][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2019.09.23-02.40.13:190][  0]LogUObjectHash: Compacting FUObjectHashTables data took   2.81ms
+[2019.09.23-02.40.13:205][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2019.09.23-02.40.13:226][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 14.426ms to complete.
+[2019.09.23-02.40.13:231][  0]LogFileHelpers: Loading map 'MainLevel' took 5.938
+[2019.09.23-02.40.14:877][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.09.23-02.40.14:893][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.09.23-02.40.14:901][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.09.23-02.40.14:908][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.09.23-02.40.14:974][  0]LogCollectionManager: Loaded 0 collections in 0.003189 seconds
+[2019.09.23-02.40.15:101][  0]LogFileCache: Scanning file cache for directory 'D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Collections/' took 0.01s
+[2019.09.23-02.40.15:101][  0]LogFileCache: Scanning file cache for directory 'D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/Developers/MarkWil7543/Collections/' took 0.00s
+[2019.09.23-02.40.15:101][  0]LogFileCache: Scanning file cache for directory 'D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/Collections/' took 0.00s
+[2019.09.23-02.40.15:101][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000001 seconds
+[2019.09.23-02.40.15:143][  0]LogContentBrowser: Native class hierarchy populated in 0.0382 seconds. Added 2758 classes and 669 folders.
+[2019.09.23-02.40.15:232][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0005 seconds. Added 0 classes and 0 folders.
+[2019.09.23-02.40.15:236][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:283][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:316][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:333][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:344][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:355][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:361][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:375][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:381][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:399][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:405][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:419][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:433][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:441][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:445][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:457][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:488][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:500][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:505][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:516][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:537][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:548][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:560][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:577][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:608][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:622][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.23-02.40.15:903][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0006 seconds. Added 0 classes and 0 folders.
+[2019.09.23-02.40.16:320][  0]LogSlate: Took 0.007264 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2019.09.23-02.40.16:346][  0]LogSlate: Took 0.010191 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2019.09.23-02.40.16:360][  0]LogSlate: Took 0.006891 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2019.09.23-02.40.16:671][  0]LogRenderer: Reallocating scene render targets to support 1100x680 Format 10 NumSamples 1 (Frame:1).
+[2019.09.23-02.40.17:260][  0]LogSlate: Took 0.000163 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.09.23-02.40.17:461][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0005 seconds. Added 0 classes and 0 folders.
+[2019.09.23-02.40.17:461][  0]LogLoad: (Engine Initialization) Total time: 50.12 seconds
+[2019.09.23-02.40.17:461][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2019.09.23-02.40.17:480][  0]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
+[2019.09.23-02.40.17:768][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2019.09.23-02.40.17:798][  0]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.09.23-02.40.17:887][  1]LogSubstanceLiveLink: Warning: Unable to send data along socket, closing connection
+[2019.09.23-02.40.18:183][  2]LogAssetRegistry: Asset discovery search completed in 34.3841 seconds
+[2019.09.23-02.40.18:206][  2]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000001 seconds (found 0 objects)
+[2019.09.23-02.40.18:207][  2]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000112 seconds (updated 0 objects)
+[2019.09.23-02.40.51:609][502]LogSlate: Window 'Message Log' being destroyed
+[2019.09.23-02.40.51:618][502]LogSlate: Window 'Message Log' being destroyed
+[2019.09.23-02.45.03:961][937]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.09.23-02.57.20:679][136]LogHotReload: New module detected: UE4Editor-MoonFlorist-0002.dll
+[2019.09.23-02.57.22:694][143]LogHotReload: Starting Hot-Reload from IDE
+[2019.09.23-02.57.22:799][143]LogSlate: Took 0.052797 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.09.23-02.57.22:861][143]LogUObjectHash: Compacting FUObjectHashTables data took   1.65ms
+[2019.09.23-02.57.22:893][143]LogContentBrowser: Native class hierarchy updated for 'MoonFlorist' in 0.0007 seconds. Added 11 classes and 2 folders.
+[2019.09.23-02.57.22:898][143]Display: HotReload successful (36 functions remapped  0 scriptstructs remapped)
+[2019.09.23-02.57.23:243][143]LogUObjectHash: Compacting FUObjectHashTables data took   1.37ms
+[2019.09.23-02.57.23:262][143]LogContentBrowser: Native class hierarchy populated in 0.0093 seconds. Added 2758 classes and 669 folders.
+[2019.09.23-02.57.23:369][143]Display: HotReload took  0.7s.
+[2019.09.23-03.01.10:992][891]LogTemp: Repeating last play command: Selected Viewport
+[2019.09.23-03.01.11:056][891]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
+[2019.09.23-03.01.11:076][891]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.09.23-03.01.11:103][891]PIE: New page: PIE session: MainLevel (24/09/2019 3:01:11 am)
+[2019.09.23-03.01.11:181][891]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_MainLevel
+[2019.09.23-03.01.11:229][891]LogPlayLevel: PIE: StaticDuplicateObject took: (0.047986s)
+[2019.09.23-03.01.11:230][891]LogAIModule: Creating AISystem for world MainLevel
+[2019.09.23-03.01.11:243][891]LogPlayLevel: PIE: World Init took: (0.013833s)
+[2019.09.23-03.01.11:243][891]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainLevel.MainLevel to /Game/Levels/UEDPIE_0_MainLevel.MainLevel (0.062366s)
+[2019.09.23-03.01.11:267][891]LogUObjectHash: Compacting FUObjectHashTables data took   1.41ms
+[2019.09.23-03.01.11:303][891]LogInit: XAudio2 using 'Speakers (2- USB Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.09.23-03.01.11:315][891]LogInit: FAudioDevice initialized.
+[2019.09.23-03.01.11:379][891]LogLoad: Game class is 'BP_MoonFloristGameMode_C'
+[2019.09.23-03.01.11:486][891]LogWorld: Bringing World /Game/Levels/UEDPIE_0_MainLevel.MainLevel up for play (max tick rate 0) at 2019.09.23-15.01.11
+[2019.09.23-03.01.11:568][891]LogWorld: Bringing up level for play took: 0.094508
+[2019.09.23-03.01.11:709][891]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0007 seconds. Added 20 classes and 0 folders.
+[2019.09.23-03.01.11:929][891]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(710)]!
+[2019.09.23-03.01.11:940][891]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.11:940][891]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.11:961][891]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_MainLevel 0.844
+[2019.09.23-03.01.11:962][891]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
+[2019.09.23-03.01.18:884][612]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.09.23-03.01.19:441][664]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.19:442][664]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.19:454][665]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.19:467][666]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.19:468][666]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.19:480][667]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.19:481][667]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.19:493][668]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.19:494][668]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.19:507][669]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.19:508][669]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.19:520][670]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.19:534][671]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:399][737]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:399][737]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:411][738]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:412][738]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:425][739]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:438][740]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:463][742]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:464][742]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:477][743]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:478][743]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:490][744]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:490][744]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:502][745]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:503][745]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:517][746]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:518][746]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:529][747]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:530][747]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:672][758]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:673][758]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:685][759]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:686][759]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:712][761]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:738][763]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:751][764]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:752][764]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.20:830][770]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:390][890]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:390][890]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:402][891]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:403][891]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:415][892]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:416][892]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:428][893]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:430][893]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:442][894]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:443][894]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:456][895]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:457][895]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:469][896]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:470][896]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:482][897]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:496][898]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:498][898]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:509][899]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:510][899]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:522][900]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:535][901]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:536][901]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:548][902]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:561][903]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:562][903]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:574][904]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:575][904]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:588][905]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:588][905]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:601][906]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:602][906]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:614][907]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:614][907]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:627][908]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:628][908]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:640][909]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:641][909]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:653][910]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:654][910]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:667][911]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:668][911]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:680][912]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:681][912]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:693][913]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:694][913]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:705][914]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:706][914]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:719][915]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:770][919]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:784][920]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:785][920]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:796][921]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:809][922]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:822][923]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:835][924]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:849][925]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:862][926]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:862][926]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:874][927]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:887][928]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:901][929]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:913][930]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:927][931]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:941][932]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:954][933]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:968][934]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:969][934]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:981][935]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:982][935]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:995][936]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.22:996][936]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:008][937]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:009][937]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:021][938]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:022][938]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:035][939]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:036][939]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:048][940]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:049][940]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:488][972]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:502][973]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:502][973]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:516][974]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:517][974]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:530][975]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:530][975]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:544][976]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:544][976]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:557][977]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:557][977]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:571][978]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:572][978]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:584][979]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:585][979]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:599][980]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:600][980]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:612][981]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:625][982]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:638][983]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.23:677][986]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.01.26:228][181]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
+[2019.09.23-03.01.26:240][181]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.09.23-03.01.26:304][181]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.09.23-03.01.26:305][181]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
+[2019.09.23-03.01.26:364][181]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.09.23-03.01.26:415][181]LogUObjectHash: Compacting FUObjectHashTables data took   1.82ms
+[2019.09.23-03.01.26:494][182]LogPlayLevel: Display: Destroying online subsystem :Context_2
+[2019.09.23-03.02.39:469][474]LogHotReload: New module detected: UE4Editor-MoonFlorist-0003.dll
+[2019.09.23-03.02.40:840][479]LogHotReload: Starting Hot-Reload from IDE
+[2019.09.23-03.02.40:874][479]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2019.09.23-03.02.40:903][479]LogContentBrowser: Native class hierarchy updated for 'MoonFlorist' in 0.0006 seconds. Added 11 classes and 2 folders.
+[2019.09.23-03.02.40:907][479]Display: HotReload successful (36 functions remapped  0 scriptstructs remapped)
+[2019.09.23-03.02.40:961][479]LogUObjectHash: Compacting FUObjectHashTables data took   1.37ms
+[2019.09.23-03.02.40:975][479]LogContentBrowser: Native class hierarchy populated in 0.0089 seconds. Added 2758 classes and 669 folders.
+[2019.09.23-03.02.40:978][479]Display: HotReload took  0.1s.
+[2019.09.23-03.03.15:717][634]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.09.23-03.03.15:816][641]LogTemp: Repeating last play command: Selected Viewport
+[2019.09.23-03.03.15:842][641]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
+[2019.09.23-03.03.15:843][641]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.09.23-03.03.15:843][641]PIE: New page: PIE session: MainLevel (24/09/2019 3:03:15 am)
+[2019.09.23-03.03.15:843][641]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_MainLevel
+[2019.09.23-03.03.15:852][641]LogPlayLevel: PIE: StaticDuplicateObject took: (0.009664s)
+[2019.09.23-03.03.15:853][641]LogAIModule: Creating AISystem for world MainLevel
+[2019.09.23-03.03.15:873][641]LogPlayLevel: PIE: World Init took: (0.021310s)
+[2019.09.23-03.03.15:873][641]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainLevel.MainLevel to /Game/Levels/UEDPIE_0_MainLevel.MainLevel (0.031175s)
+[2019.09.23-03.03.15:895][641]LogUObjectHash: Compacting FUObjectHashTables data took   1.18ms
+[2019.09.23-03.03.15:920][641]LogInit: XAudio2 using 'Speakers (2- USB Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.09.23-03.03.15:934][641]LogInit: FAudioDevice initialized.
+[2019.09.23-03.03.15:960][641]LogLoad: Game class is 'BP_MoonFloristGameMode_C'
+[2019.09.23-03.03.15:964][641]LogWorld: Bringing World /Game/Levels/UEDPIE_0_MainLevel.MainLevel up for play (max tick rate 0) at 2019.09.23-15.03.15
+[2019.09.23-03.03.15:965][641]LogWorld: Bringing up level for play took: 0.004765
+[2019.09.23-03.03.15:989][641]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(710)]!
+[2019.09.23-03.03.15:994][641]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.03.15:994][641]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
+[2019.09.23-03.03.15:994][641]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_MainLevel 0.878
+[2019.09.23-03.03.15:994][641]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
+[2019.09.23-03.03.22:993][402]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.09.23-03.03.45:836][176]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
+[2019.09.23-03.03.45:836][176]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.09.23-03.03.45:881][176]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.09.23-03.03.45:881][176]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
+[2019.09.23-03.03.45:906][176]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.09.23-03.03.45:911][176]LogUObjectHash: Compacting FUObjectHashTables data took   1.28ms
+[2019.09.23-03.03.45:961][177]LogPlayLevel: Display: Destroying online subsystem :Context_3
