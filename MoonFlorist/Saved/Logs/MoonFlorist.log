@@ -1,4 +1,4 @@
-﻿Log file open, 09/23/19 14:39:32
+﻿Log file open, 09/30/19 10:21:58
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
 LogWindows: File 'aqProf.dll' does not exist
 LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
@@ -10,7 +10,7 @@ LogInit: Display: Running engine for game: MoonFlorist
 LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
 LogPlatformFile: Not using cached read wrapper
 LogTaskGraph: Started task graph with 5 named threads and 23 total threads with 3 sets of task threads.
-LogStats: Stats thread started at 1.308230
+LogStats: Stats thread started at 1.530480
 LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
 LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +12:00, Platform Override: ''
 LogPluginManager: Mounting plugin Paper2D
@@ -158,651 +158,793 @@ LogInit: Presizing for max 16777216 objects, including 0 objects not considered 
 LogInit: Object subsystem initialized
 LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
 LogConfig: Setting CVar [[r.setres:1280x720]]
-[2019.09.23-02.39.34:469][  0]LogConfig: Setting CVar [[r.VSync:0]]
-[2019.09.23-02.39.34:469][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure:0]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
-[2019.09.23-02.39.34:470][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:16777216]]
-[2019.09.23-02.39.34:470][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
-[2019.09.23-02.39.34:471][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
-[2019.09.23-02.39.34:471][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
-[2019.09.23-02.39.34:471][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
-[2019.09.23-02.39.34:471][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
-[2019.09.23-02.39.34:471][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
-[2019.09.23-02.39.34:471][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
-[2019.09.23-02.39.34:471][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
-[2019.09.23-02.39.34:521][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
-[2019.09.23-02.39.34:521][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
-[2019.09.23-02.39.34:522][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.09.23-02.39.34:522][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
-[2019.09.23-02.39.34:522][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
-[2019.09.23-02.39.34:531][  0]LogInit: Selected Device Profile: [Windows]
-[2019.09.23-02.39.34:532][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
-[2019.09.23-02.39.34:580][  0]LogHAL: Display: Platform has ~ 16 GB [17092669440 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
-[2019.09.23-02.39.34:580][  0]LogConfig: Setting CVar [[r.Vulkan.UseRealUBs:0		; Required until we fix HLR fall-out]]
-[2019.09.23-02.39.34:580][  0]LogInit: Going up to parent DeviceProfile []
-[2019.09.23-02.39.34:584][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
-[2019.09.23-02.39.34:584][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
-[2019.09.23-02.39.34:585][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
-[2019.09.23-02.39.34:599][  0]LogInit: Computer: 1405C099
-[2019.09.23-02.39.34:599][  0]LogInit: User: MarkWil7543
-[2019.09.23-02.39.34:599][  0]LogInit: CPU Page size=4096, Cores=4
-[2019.09.23-02.39.34:599][  0]LogInit: High frequency timer resolution =3.515626 MHz
-[2019.09.23-02.39.34:599][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
-[2019.09.23-02.39.34:599][  0]LogMemory: Platform Memory Stats for Windows
-[2019.09.23-02.39.34:599][  0]LogMemory: Process Physical Memory: 100.75 MB used, 100.75 MB peak
-[2019.09.23-02.39.34:599][  0]LogMemory: Process Virtual Memory: 105.74 MB used, 105.74 MB peak
-[2019.09.23-02.39.34:599][  0]LogMemory: Physical Memory: 7440.11 MB used,  8860.73 MB free, 16300.84 MB total
-[2019.09.23-02.39.34:599][  0]LogMemory: Virtual Memory: 4678.96 MB used,  134213048.00 MB free, 134217728.00 MB total
-[2019.09.23-02.39.35:059][  0]LogInit: Using OS detected language (en-US).
-[2019.09.23-02.39.35:059][  0]LogInit: Using OS detected locale (en-NZ).
-[2019.09.23-02.39.35:065][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
-[2019.09.23-02.39.35:821][  0]LogInit: Setting process to per monitor DPI aware
-[2019.09.23-02.39.36:489][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
-[2019.09.23-02.39.36:489][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
-[2019.09.23-02.39.36:996][  0]LogHMD: Failed to initialize OpenVR with code 110
-[2019.09.23-02.39.36:996][  0]LogD3D11RHI: D3D11 adapters:
-[2019.09.23-02.39.37:333][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 960' (Feature Level 11_0)
-[2019.09.23-02.39.37:333][  0]LogD3D11RHI:       2016/0/8150 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x10de
-[2019.09.23-02.39.38:065][  0]LogD3D11RHI:    1. 'Intel(R) HD Graphics 4600' (Feature Level 11_0)
-[2019.09.23-02.39.38:065][  0]LogD3D11RHI:       0/0/1792 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x8086
-[2019.09.23-02.39.38:069][  0]LogD3D11RHI:    2. 'Microsoft Basic Render Driver' (Feature Level 11_0)
-[2019.09.23-02.39.38:069][  0]LogD3D11RHI:       0/0/8150 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
-[2019.09.23-02.39.38:069][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
-[2019.09.23-02.39.38:095][  0]LogD3D11RHI: Creating new Direct3DDevice
-[2019.09.23-02.39.38:095][  0]LogD3D11RHI:     GPU DeviceId: 0x1401 (for the marketing name, search the web for "GPU Device Id")
-[2019.09.23-02.39.38:106][  0]LogWindows: EnumDisplayDevices:
-[2019.09.23-02.39.38:107][  0]LogWindows:    0. 'NVIDIA GeForce GTX 960' (P:1 D:1)
-[2019.09.23-02.39.38:107][  0]LogWindows:    1. 'NVIDIA GeForce GTX 960' (P:0 D:1)
-[2019.09.23-02.39.38:107][  0]LogWindows:    2. 'NVIDIA GeForce GTX 960' (P:0 D:0)
-[2019.09.23-02.39.38:108][  0]LogWindows:    3. 'NVIDIA GeForce GTX 960' (P:0 D:0)
-[2019.09.23-02.39.38:108][  0]LogWindows:    4. 'Intel(R) HD Graphics 4600' (P:0 D:0)
-[2019.09.23-02.39.38:108][  0]LogWindows:    5. 'Intel(R) HD Graphics 4600' (P:0 D:0)
-[2019.09.23-02.39.38:108][  0]LogWindows:    6. 'Intel(R) HD Graphics 4600' (P:0 D:0)
-[2019.09.23-02.39.38:109][  0]LogWindows:    7. 'Mirage Driver' (P:0 D:0)
-[2019.09.23-02.39.38:109][  0]LogWindows: DebugString: PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter FoundDriverCount:4 
-[2019.09.23-02.39.38:109][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 960
-[2019.09.23-02.39.38:109][  0]LogD3D11RHI:   Driver Version: 388.13 (internal:23.21.13.8813, unified:388.13)
-[2019.09.23-02.39.38:109][  0]LogD3D11RHI:      Driver Date: 10-27-2017
-[2019.09.23-02.39.38:109][  0]LogRHI: Texture pool is 1411 MB (70% of 2016 MB)
-[2019.09.23-02.39.38:219][  0]LogD3D11RHI: Async texture creation enabled
-[2019.09.23-02.39.38:470][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
-[2019.09.23-02.39.38:492][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
-[2019.09.23-02.39.38:492][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
-[2019.09.23-02.39.38:573][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 3)
-[2019.09.23-02.39.40:620][  0]LogTemp: Display: Module 'AllDesktopTargetPlatform' loaded TargetPlatform 'AllDesktop'
-[2019.09.23-02.39.40:655][  0]LogTemp: Display: Module 'MacClientTargetPlatform' loaded TargetPlatform 'MacClient'
-[2019.09.23-02.39.40:672][  0]LogTemp: Display: Module 'MacNoEditorTargetPlatform' loaded TargetPlatform 'MacNoEditor'
-[2019.09.23-02.39.40:688][  0]LogTemp: Display: Module 'MacServerTargetPlatform' loaded TargetPlatform 'MacServer'
-[2019.09.23-02.39.40:705][  0]LogTemp: Display: Module 'MacTargetPlatform' loaded TargetPlatform 'Mac'
-[2019.09.23-02.39.40:777][  0]LogTemp: Display: Module 'WindowsClientTargetPlatform' loaded TargetPlatform 'WindowsClient'
-[2019.09.23-02.39.40:816][  0]LogTemp: Display: Module 'WindowsNoEditorTargetPlatform' loaded TargetPlatform 'WindowsNoEditor'
-[2019.09.23-02.39.40:879][  0]LogTemp: Display: Module 'WindowsServerTargetPlatform' loaded TargetPlatform 'WindowsServer'
-[2019.09.23-02.39.40:887][  0]LogTemp: Display: Module 'WindowsTargetPlatform' loaded TargetPlatform 'Windows'
-[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android'
-[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTC'
-[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATC'
-[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXT'
-[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1'
-[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1a'
-[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2'
-[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTC'
-[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'AndroidClient'
-[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTCClient'
-[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATCClient'
-[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXTClient'
-[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1Client'
-[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1aClient'
-[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2Client'
-[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTCClient'
-[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_Multi'
-[2019.09.23-02.39.40:999][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_MultiClient'
-[2019.09.23-02.39.41:007][  0]LogTemp: Display: Module 'HTML5TargetPlatform' loaded TargetPlatform 'HTML5'
-[2019.09.23-02.39.41:087][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOSClient'
-[2019.09.23-02.39.41:087][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOS'
-[2019.09.23-02.39.41:123][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOSClient'
-[2019.09.23-02.39.41:123][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOS'
-[2019.09.23-02.39.41:148][  0]LogTemp: Display: Module 'LinuxClientTargetPlatform' loaded TargetPlatform 'LinuxClient'
-[2019.09.23-02.39.41:163][  0]LogTemp: Display: Module 'LinuxNoEditorTargetPlatform' loaded TargetPlatform 'LinuxNoEditor'
-[2019.09.23-02.39.41:177][  0]LogTemp: Display: Module 'LinuxServerTargetPlatform' loaded TargetPlatform 'LinuxServer'
-[2019.09.23-02.39.41:192][  0]LogTemp: Display: Module 'LinuxTargetPlatform' loaded TargetPlatform 'Linux'
-[2019.09.23-02.39.41:252][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'Lumin'
-[2019.09.23-02.39.41:252][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'LuminClient'
-[2019.09.23-02.39.41:252][  0]LogTargetPlatformManager: Display: Building Assets For Windows
-[2019.09.23-02.39.41:311][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
-[2019.09.23-02.39.41:871][  0]LogShaderCompilers: Guid format shader working directory is -10 characters bigger than the processId version (../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/Shaders/WorkingDirectory/14372/).
-[2019.09.23-02.39.41:871][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'D:/Users/mark.wil7543/AppData/Local/Temp/UnrealShaderWorkingDir/87C206A6484B301EEF2DCCAFBA9D35B5/'.
-[2019.09.23-02.39.41:892][  0]LogXGEController: Cleaning working directory: D:/Users/mark.wil7543/AppData/Local/Temp/UnrealXGEWorkingDir/
-[2019.09.23-02.39.41:893][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
-[2019.09.23-02.39.41:893][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
-[2019.09.23-02.39.41:893][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
-[2019.09.23-02.39.42:922][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
-[2019.09.23-02.39.43:413][  0]LogDerivedDataCache: Loaded boot cache 0.49s 71MB D:/Users/mark.wil7543/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc.
-[2019.09.23-02.39.43:413][  0]LogDerivedDataCache: Display: Loaded Boot cache: D:/Users/mark.wil7543/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc
-[2019.09.23-02.39.43:413][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
-[2019.09.23-02.39.43:413][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
-[2019.09.23-02.39.43:413][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2019.09.23-02.39.43:413][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
-[2019.09.23-02.39.43:442][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
-[2019.09.23-02.39.43:442][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2019.09.23-02.39.43:442][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
-[2019.09.23-02.39.43:455][  0]LogDerivedDataCache: Using Local data cache path D:/Users/mark.wil7543/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
-[2019.09.23-02.39.43:455][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
-[2019.09.23-02.39.43:455][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
-[2019.09.23-02.39.43:522][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
-[2019.09.23-02.39.43:562][  0]LogSlate: Using FreeType 2.6.0
-[2019.09.23-02.39.43:576][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
-[2019.09.23-02.39.43:823][  0]LogAssetRegistry: FAssetRegistry took 0.0531 seconds to start up
-[2019.09.23-02.39.46:920][  0]LogInit: Selected Device Profile: [Windows]
-[2019.09.23-02.39.47:839][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
-[2019.09.23-02.39.47:839][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
-[2019.09.23-02.39.47:840][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
-[2019.09.23-02.39.47:840][  0]LogMeshReduction: No distributed automatic mesh merging module available
-[2019.09.23-02.39.47:840][  0]LogMeshMerging: No distributed automatic mesh merging module available
-[2019.09.23-02.39.48:094][  0]LogNetVersion: MoonFlorist 1.0.0, NetCL: 5660361, EngineNetVer: 10, GameNetVer: 0 (Checksum: 3291226662)
-[2019.09.23-02.39.50:472][  0]LogPackageLocalizationCache: Processed 10 localized package path(s) for 1 prioritized culture(s) in 0.076402 seconds
-[2019.09.23-02.39.50:486][  0]LogUObjectArray: 42205 objects as part of root set at end of initial load.
-[2019.09.23-02.39.50:486][  0]LogUObjectAllocator: 7325032 out of 0 bytes used by permanent object pool.
-[2019.09.23-02.39.50:486][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
-[2019.09.23-02.39.53:714][  0]LogSubstanceCoreModule: Substance [CPU] Engine Loaded, Max Texture Size = 2048
-[2019.09.23-02.39.53:748][  0]LogTcpMessaging: Initializing TcpMessaging bridge
-[2019.09.23-02.39.53:770][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
-[2019.09.23-02.39.54:207][  0]SourceControl: Source control is disabled
-[2019.09.23-02.39.54:217][  0]SourceControl: Source control is disabled
-[2019.09.23-02.39.54:276][  0]SourceControl: Source control is disabled
-[2019.09.23-02.39.54:293][  0]SourceControl: Source control is disabled
-[2019.09.23-02.39.55:048][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
-[2019.09.23-02.39.55:479][  0]LogOcInput: OculusInput pre-init called
-[2019.09.23-02.40.01:862][  0]LogEngine: Initializing Engine...
-[2019.09.23-02.40.01:921][  0]LogHMD: Failed to initialize OpenVR with code 110
-[2019.09.23-02.40.01:949][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.011 s
-[2019.09.23-02.40.02:766][  0]LogInit: Initializing FReadOnlyCVARCache
-[2019.09.23-02.40.03:294][  0]LogAIModule: Creating AISystem for world Untitled
-[2019.09.23-02.40.03:501][  0]LogInit: XAudio2 using 'Speakers (2- USB Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
-[2019.09.23-02.40.03:523][  0]LogInit: FAudioDevice initialized.
-[2019.09.23-02.40.03:536][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
-[2019.09.23-02.40.03:708][  0]LogDerivedDataCache: Saved boot cache 0.17s 71MB D:/Users/mark.wil7543/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc.
-[2019.09.23-02.40.03:720][  0]LogInit: Texture streaming: Enabled
-[2019.09.23-02.40.03:879][  0]LogEngineSessionManager: EngineSessionManager initialized
-[2019.09.23-02.40.04:022][  0]LogInit: Transaction tracking system initialized
-[2019.09.23-02.40.04:291][  0]BlueprintLog: New page: Editor Load
-[2019.09.23-02.40.04:996][  0]LocalizationService: Localization service is disabled
-[2019.09.23-02.40.06:058][  0]LogAutoReimportManager: Warning: Unable to watch directory ../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/ as it will conflict with another watching ../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/.
-[2019.09.23-02.40.06:138][  0]LogFileCache: Scanning file cache for directory 'D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/' took 0.04s
-[2019.09.23-02.40.06:138][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
-[2019.09.23-02.40.06:139][  0]LogCook: Display: Mobile HDR setting 1
-[2019.09.23-02.40.07:274][  0]SourceControl: Source control is disabled
-[2019.09.23-02.40.07:309][  0]Cmd: MAP LOAD FILE="../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/Levels/MainLevel.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
-[2019.09.23-02.40.07:346][  0]LightingResults: New page: Lighting Build
-[2019.09.23-02.40.07:428][  0]MapCheck: New page: Map Check
-[2019.09.23-02.40.07:428][  0]LightingResults: New page: Lighting Build
-[2019.09.23-02.40.07:639][  0]LogUObjectHash: Compacting FUObjectHashTables data took   4.69ms
-[2019.09.23-02.40.08:990][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
-[2019.09.23-02.40.08:991][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
-[2019.09.23-02.40.09:272][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
-[2019.09.23-02.40.09:273][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
-[2019.09.23-02.40.09:558][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
-[2019.09.23-02.40.09:558][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
-[2019.09.23-02.40.09:558][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
-[2019.09.23-02.40.09:558][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
-[2019.09.23-02.40.10:328][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
-[2019.09.23-02.40.10:328][  0]LoadErrors: Failed to load /Game/Levels/MainLevel_BuiltData.MainLevel_BuiltData Referenced by PersistentLevel
-[2019.09.23-02.40.10:329][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
-[2019.09.23-02.40.12:062][  0]LogAIModule: Creating AISystem for world MainLevel
-[2019.09.23-02.40.12:940][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
-[2019.09.23-02.40.13:190][  0]LogUObjectHash: Compacting FUObjectHashTables data took   2.81ms
-[2019.09.23-02.40.13:205][  0]Cmd: MAP CHECKDEP NOCLEARLOG
-[2019.09.23-02.40.13:226][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 14.426ms to complete.
-[2019.09.23-02.40.13:231][  0]LogFileHelpers: Loading map 'MainLevel' took 5.938
-[2019.09.23-02.40.14:877][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.09.23-02.40.14:893][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.09.23-02.40.14:901][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.09.23-02.40.14:908][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.09.23-02.40.14:974][  0]LogCollectionManager: Loaded 0 collections in 0.003189 seconds
-[2019.09.23-02.40.15:101][  0]LogFileCache: Scanning file cache for directory 'D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Collections/' took 0.01s
-[2019.09.23-02.40.15:101][  0]LogFileCache: Scanning file cache for directory 'D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/Developers/MarkWil7543/Collections/' took 0.00s
-[2019.09.23-02.40.15:101][  0]LogFileCache: Scanning file cache for directory 'D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/Collections/' took 0.00s
-[2019.09.23-02.40.15:101][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000001 seconds
-[2019.09.23-02.40.15:143][  0]LogContentBrowser: Native class hierarchy populated in 0.0382 seconds. Added 2758 classes and 669 folders.
-[2019.09.23-02.40.15:232][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0005 seconds. Added 0 classes and 0 folders.
-[2019.09.23-02.40.15:236][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:283][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:316][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:333][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:344][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:355][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:361][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:375][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:381][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:399][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:405][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:419][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:433][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:441][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:445][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:457][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:488][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:500][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:505][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:516][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:537][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:548][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:560][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:577][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:608][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:622][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
-[2019.09.23-02.40.15:903][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0006 seconds. Added 0 classes and 0 folders.
-[2019.09.23-02.40.16:320][  0]LogSlate: Took 0.007264 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
-[2019.09.23-02.40.16:346][  0]LogSlate: Took 0.010191 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
-[2019.09.23-02.40.16:360][  0]LogSlate: Took 0.006891 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
-[2019.09.23-02.40.16:671][  0]LogRenderer: Reallocating scene render targets to support 1100x680 Format 10 NumSamples 1 (Frame:1).
-[2019.09.23-02.40.17:260][  0]LogSlate: Took 0.000163 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
-[2019.09.23-02.40.17:461][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0005 seconds. Added 0 classes and 0 folders.
-[2019.09.23-02.40.17:461][  0]LogLoad: (Engine Initialization) Total time: 50.12 seconds
-[2019.09.23-02.40.17:461][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
-[2019.09.23-02.40.17:480][  0]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
-[2019.09.23-02.40.17:768][  0]LogContentStreaming: Texture pool size now 1000 MB
-[2019.09.23-02.40.17:798][  0]LogSlate: FSceneViewport::OnFocusLost() reason 2
-[2019.09.23-02.40.17:887][  1]LogSubstanceLiveLink: Warning: Unable to send data along socket, closing connection
-[2019.09.23-02.40.18:183][  2]LogAssetRegistry: Asset discovery search completed in 34.3841 seconds
-[2019.09.23-02.40.18:206][  2]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000001 seconds (found 0 objects)
-[2019.09.23-02.40.18:207][  2]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000112 seconds (updated 0 objects)
-[2019.09.23-02.40.51:609][502]LogSlate: Window 'Message Log' being destroyed
-[2019.09.23-02.40.51:618][502]LogSlate: Window 'Message Log' being destroyed
-[2019.09.23-02.45.03:961][937]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2019.09.23-02.57.20:679][136]LogHotReload: New module detected: UE4Editor-MoonFlorist-0002.dll
-[2019.09.23-02.57.22:694][143]LogHotReload: Starting Hot-Reload from IDE
-[2019.09.23-02.57.22:799][143]LogSlate: Took 0.052797 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
-[2019.09.23-02.57.22:861][143]LogUObjectHash: Compacting FUObjectHashTables data took   1.65ms
-[2019.09.23-02.57.22:893][143]LogContentBrowser: Native class hierarchy updated for 'MoonFlorist' in 0.0007 seconds. Added 11 classes and 2 folders.
-[2019.09.23-02.57.22:898][143]Display: HotReload successful (36 functions remapped  0 scriptstructs remapped)
-[2019.09.23-02.57.23:243][143]LogUObjectHash: Compacting FUObjectHashTables data took   1.37ms
-[2019.09.23-02.57.23:262][143]LogContentBrowser: Native class hierarchy populated in 0.0093 seconds. Added 2758 classes and 669 folders.
-[2019.09.23-02.57.23:369][143]Display: HotReload took  0.7s.
-[2019.09.23-03.01.10:992][891]LogTemp: Repeating last play command: Selected Viewport
-[2019.09.23-03.01.11:056][891]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
-[2019.09.23-03.01.11:076][891]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2019.09.23-03.01.11:103][891]PIE: New page: PIE session: MainLevel (24/09/2019 3:01:11 am)
-[2019.09.23-03.01.11:181][891]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_MainLevel
-[2019.09.23-03.01.11:229][891]LogPlayLevel: PIE: StaticDuplicateObject took: (0.047986s)
-[2019.09.23-03.01.11:230][891]LogAIModule: Creating AISystem for world MainLevel
-[2019.09.23-03.01.11:243][891]LogPlayLevel: PIE: World Init took: (0.013833s)
-[2019.09.23-03.01.11:243][891]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainLevel.MainLevel to /Game/Levels/UEDPIE_0_MainLevel.MainLevel (0.062366s)
-[2019.09.23-03.01.11:267][891]LogUObjectHash: Compacting FUObjectHashTables data took   1.41ms
-[2019.09.23-03.01.11:303][891]LogInit: XAudio2 using 'Speakers (2- USB Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
-[2019.09.23-03.01.11:315][891]LogInit: FAudioDevice initialized.
-[2019.09.23-03.01.11:379][891]LogLoad: Game class is 'BP_MoonFloristGameMode_C'
-[2019.09.23-03.01.11:486][891]LogWorld: Bringing World /Game/Levels/UEDPIE_0_MainLevel.MainLevel up for play (max tick rate 0) at 2019.09.23-15.01.11
-[2019.09.23-03.01.11:568][891]LogWorld: Bringing up level for play took: 0.094508
-[2019.09.23-03.01.11:709][891]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0007 seconds. Added 20 classes and 0 folders.
-[2019.09.23-03.01.11:929][891]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(710)]!
-[2019.09.23-03.01.11:940][891]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.11:940][891]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.11:961][891]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_MainLevel 0.844
-[2019.09.23-03.01.11:962][891]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
-[2019.09.23-03.01.18:884][612]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2019.09.23-03.01.19:441][664]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.19:442][664]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.19:454][665]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.19:467][666]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.19:468][666]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.19:480][667]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.19:481][667]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.19:493][668]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.19:494][668]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.19:507][669]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.19:508][669]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.19:520][670]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.19:534][671]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:399][737]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:399][737]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:411][738]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:412][738]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:425][739]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:438][740]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:463][742]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:464][742]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:477][743]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:478][743]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:490][744]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:490][744]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:502][745]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:503][745]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:517][746]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:518][746]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:529][747]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:530][747]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:672][758]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:673][758]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:685][759]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:686][759]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:712][761]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:738][763]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:751][764]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:752][764]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.20:830][770]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:390][890]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:390][890]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:402][891]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:403][891]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:415][892]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:416][892]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:428][893]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:430][893]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:442][894]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:443][894]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:456][895]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:457][895]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:469][896]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:470][896]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:482][897]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:496][898]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:498][898]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:509][899]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:510][899]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:522][900]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:535][901]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:536][901]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:548][902]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:561][903]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:562][903]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:574][904]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:575][904]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:588][905]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:588][905]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:601][906]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:602][906]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:614][907]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:614][907]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:627][908]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:628][908]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:640][909]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:641][909]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:653][910]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:654][910]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:667][911]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:668][911]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:680][912]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:681][912]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:693][913]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:694][913]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:705][914]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:706][914]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:719][915]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:770][919]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:784][920]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:785][920]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:796][921]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:809][922]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:822][923]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:835][924]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:849][925]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:862][926]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:862][926]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:874][927]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:887][928]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:901][929]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:913][930]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:927][931]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:941][932]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:954][933]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:968][934]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:969][934]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:981][935]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:982][935]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:995][936]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.22:996][936]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:008][937]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:009][937]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:021][938]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:022][938]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:035][939]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:036][939]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:048][940]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:049][940]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:488][972]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:502][973]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:502][973]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:516][974]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:517][974]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:530][975]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:530][975]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:544][976]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:544][976]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:557][977]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:557][977]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:571][978]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:572][978]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:584][979]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:585][979]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:599][980]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:600][980]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:612][981]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:625][982]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:638][983]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.23:677][986]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.01.26:228][181]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
-[2019.09.23-03.01.26:240][181]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.09.23-03.01.26:304][181]LogPlayLevel: Display: Shutting down PIE online subsystems
-[2019.09.23-03.01.26:305][181]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
-[2019.09.23-03.01.26:364][181]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.09.23-03.01.26:415][181]LogUObjectHash: Compacting FUObjectHashTables data took   1.82ms
-[2019.09.23-03.01.26:494][182]LogPlayLevel: Display: Destroying online subsystem :Context_2
-[2019.09.23-03.02.39:469][474]LogHotReload: New module detected: UE4Editor-MoonFlorist-0003.dll
-[2019.09.23-03.02.40:840][479]LogHotReload: Starting Hot-Reload from IDE
-[2019.09.23-03.02.40:874][479]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
-[2019.09.23-03.02.40:903][479]LogContentBrowser: Native class hierarchy updated for 'MoonFlorist' in 0.0006 seconds. Added 11 classes and 2 folders.
-[2019.09.23-03.02.40:907][479]Display: HotReload successful (36 functions remapped  0 scriptstructs remapped)
-[2019.09.23-03.02.40:961][479]LogUObjectHash: Compacting FUObjectHashTables data took   1.37ms
-[2019.09.23-03.02.40:975][479]LogContentBrowser: Native class hierarchy populated in 0.0089 seconds. Added 2758 classes and 669 folders.
-[2019.09.23-03.02.40:978][479]Display: HotReload took  0.1s.
-[2019.09.23-03.03.15:717][634]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2019.09.23-03.03.15:816][641]LogTemp: Repeating last play command: Selected Viewport
-[2019.09.23-03.03.15:842][641]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
-[2019.09.23-03.03.15:843][641]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2019.09.23-03.03.15:843][641]PIE: New page: PIE session: MainLevel (24/09/2019 3:03:15 am)
-[2019.09.23-03.03.15:843][641]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_MainLevel
-[2019.09.23-03.03.15:852][641]LogPlayLevel: PIE: StaticDuplicateObject took: (0.009664s)
-[2019.09.23-03.03.15:853][641]LogAIModule: Creating AISystem for world MainLevel
-[2019.09.23-03.03.15:873][641]LogPlayLevel: PIE: World Init took: (0.021310s)
-[2019.09.23-03.03.15:873][641]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainLevel.MainLevel to /Game/Levels/UEDPIE_0_MainLevel.MainLevel (0.031175s)
-[2019.09.23-03.03.15:895][641]LogUObjectHash: Compacting FUObjectHashTables data took   1.18ms
-[2019.09.23-03.03.15:920][641]LogInit: XAudio2 using 'Speakers (2- USB Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
-[2019.09.23-03.03.15:934][641]LogInit: FAudioDevice initialized.
-[2019.09.23-03.03.15:960][641]LogLoad: Game class is 'BP_MoonFloristGameMode_C'
-[2019.09.23-03.03.15:964][641]LogWorld: Bringing World /Game/Levels/UEDPIE_0_MainLevel.MainLevel up for play (max tick rate 0) at 2019.09.23-15.03.15
-[2019.09.23-03.03.15:965][641]LogWorld: Bringing up level for play took: 0.004765
-[2019.09.23-03.03.15:989][641]LogPlayerController: Error: InputMode:UIOnly - Attempting to focus Non-Focusable widget SObjectWidget [Widget.cpp(710)]!
-[2019.09.23-03.03.15:994][641]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.03.15:994][641]LogSkinnedMeshComp: Warning: GetSocketByName(GripPoint): No SkeletalMesh for Component(CharacterMesh1P) Actor(BP_MoonFloristCharacter_C_0)
-[2019.09.23-03.03.15:994][641]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_MainLevel 0.878
-[2019.09.23-03.03.15:994][641]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
-[2019.09.23-03.03.22:993][402]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2019.09.23-03.03.45:836][176]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
-[2019.09.23-03.03.45:836][176]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.09.23-03.03.45:881][176]LogPlayLevel: Display: Shutting down PIE online subsystems
-[2019.09.23-03.03.45:881][176]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/MainLevel.MainLevel:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel' with GeneratedClass '/Game/Levels/MainLevel.MainLevel_C' with ClassGeneratedBy '/Game/Levels/MainLevel.MainLevel:PersistentLevel.MainLevel'
-[2019.09.23-03.03.45:906][176]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.09.23-03.03.45:911][176]LogUObjectHash: Compacting FUObjectHashTables data took   1.28ms
-[2019.09.23-03.03.45:961][177]LogPlayLevel: Display: Destroying online subsystem :Context_3
+[2019.09.29-21.22.01:865][  0]LogConfig: Setting CVar [[r.VSync:0]]
+[2019.09.29-21.22.01:865][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
+[2019.09.29-21.22.01:865][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.09.29-21.22.01:865][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2019.09.29-21.22.01:865][  0]LogConfig: Setting CVar [[r.DefaultFeature.AutoExposure:0]]
+[2019.09.29-21.22.01:865][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.09.29-21.22.01:865][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.09.29-21.22.01:865][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2019.09.29-21.22.01:865][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2019.09.29-21.22.01:865][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2019.09.29-21.22.01:865][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2019.09.29-21.22.01:865][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:16777216]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2019.09.29-21.22.01:866][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.09.29-21.22.01:866][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.09.29-21.22.01:911][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2019.09.29-21.22.01:911][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2019.09.29-21.22.01:912][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2019.09.29-21.22.01:912][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.29-21.22.01:912][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2019.09.29-21.22.01:912][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2019.09.29-21.22.01:912][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2019.09.29-21.22.01:912][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2019.09.29-21.22.01:912][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2019.09.29-21.22.01:912][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2019.09.29-21.22.01:912][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2019.09.29-21.22.01:912][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2019.09.29-21.22.01:912][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2019.09.29-21.22.01:912][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2019.09.29-21.22.01:912][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2019.09.29-21.22.01:912][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2019.09.29-21.22.01:912][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2019.09.29-21.22.01:912][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.29-21.22.01:912][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2019.09.29-21.22.01:912][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2019.09.29-21.22.01:927][  0]LogInit: Selected Device Profile: [Windows]
+[2019.09.29-21.22.01:927][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2019.09.29-21.22.01:967][  0]LogHAL: Display: Platform has ~ 16 GB [17092669440 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2019.09.29-21.22.01:968][  0]LogConfig: Setting CVar [[r.Vulkan.UseRealUBs:0		; Required until we fix HLR fall-out]]
+[2019.09.29-21.22.01:968][  0]LogInit: Going up to parent DeviceProfile []
+[2019.09.29-21.22.01:969][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.29-21.22.01:969][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2019.09.29-21.22.01:969][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2019.09.29-21.22.01:969][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.29-21.22.01:969][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2019.09.29-21.22.01:969][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.29-21.22.01:969][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2019.09.29-21.22.01:969][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2019.09.29-21.22.01:969][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2019.09.29-21.22.01:969][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2019.09.29-21.22.01:969][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Scalability.ini]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2019.09.29-21.22.01:970][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2019.09.29-21.22.01:985][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2019.09.29-21.22.01:985][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2019.09.29-21.22.01:985][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Config/Windows/Engine.ini]
+[2019.09.29-21.22.02:012][  0]LogInit: Computer: 1405C099
+[2019.09.29-21.22.02:012][  0]LogInit: User: MarkWil7543
+[2019.09.29-21.22.02:012][  0]LogInit: CPU Page size=4096, Cores=4
+[2019.09.29-21.22.02:012][  0]LogInit: High frequency timer resolution =3.515618 MHz
+[2019.09.29-21.22.02:019][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
+[2019.09.29-21.22.02:019][  0]LogMemory: Platform Memory Stats for Windows
+[2019.09.29-21.22.02:019][  0]LogMemory: Process Physical Memory: 100.56 MB used, 100.56 MB peak
+[2019.09.29-21.22.02:020][  0]LogMemory: Process Virtual Memory: 105.53 MB used, 105.53 MB peak
+[2019.09.29-21.22.02:020][  0]LogMemory: Physical Memory: 5319.05 MB used,  10981.79 MB free, 16300.84 MB total
+[2019.09.29-21.22.02:020][  0]LogMemory: Virtual Memory: 4678.96 MB used,  134213048.00 MB free, 134217728.00 MB total
+[2019.09.29-21.22.02:722][  0]LogInit: Using OS detected language (en-US).
+[2019.09.29-21.22.02:722][  0]LogInit: Using OS detected locale (en-NZ).
+[2019.09.29-21.22.02:820][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2019.09.29-21.22.03:400][  0]LogInit: Setting process to per monitor DPI aware
+[2019.09.29-21.22.04:105][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2019.09.29-21.22.04:105][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2019.09.29-21.22.05:497][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.09.29-21.22.05:497][  0]LogD3D11RHI: D3D11 adapters:
+[2019.09.29-21.22.05:872][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 960' (Feature Level 11_0)
+[2019.09.29-21.22.05:872][  0]LogD3D11RHI:       2016/0/8150 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x10de
+[2019.09.29-21.22.06:010][  0]LogD3D11RHI:    1. 'Intel(R) HD Graphics 4600' (Feature Level 11_0)
+[2019.09.29-21.22.06:010][  0]LogD3D11RHI:       0/0/1792 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x8086
+[2019.09.29-21.22.06:061][  0]LogD3D11RHI:    2. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2019.09.29-21.22.06:061][  0]LogD3D11RHI:       0/0/8150 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2019.09.29-21.22.06:061][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2019.09.29-21.22.06:101][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2019.09.29-21.22.06:102][  0]LogD3D11RHI:     GPU DeviceId: 0x1401 (for the marketing name, search the web for "GPU Device Id")
+[2019.09.29-21.22.06:110][  0]LogWindows: EnumDisplayDevices:
+[2019.09.29-21.22.06:111][  0]LogWindows:    0. 'NVIDIA GeForce GTX 960' (P:1 D:1)
+[2019.09.29-21.22.06:111][  0]LogWindows:    1. 'NVIDIA GeForce GTX 960' (P:0 D:1)
+[2019.09.29-21.22.06:111][  0]LogWindows:    2. 'NVIDIA GeForce GTX 960' (P:0 D:0)
+[2019.09.29-21.22.06:112][  0]LogWindows:    3. 'NVIDIA GeForce GTX 960' (P:0 D:0)
+[2019.09.29-21.22.06:112][  0]LogWindows:    4. 'Intel(R) HD Graphics 4600' (P:0 D:0)
+[2019.09.29-21.22.06:112][  0]LogWindows:    5. 'Intel(R) HD Graphics 4600' (P:0 D:0)
+[2019.09.29-21.22.06:113][  0]LogWindows:    6. 'Intel(R) HD Graphics 4600' (P:0 D:0)
+[2019.09.29-21.22.06:113][  0]LogWindows:    7. 'Mirage Driver' (P:0 D:0)
+[2019.09.29-21.22.06:114][  0]LogWindows: DebugString: PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter FoundDriverCount:4 
+[2019.09.29-21.22.06:114][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 960
+[2019.09.29-21.22.06:114][  0]LogD3D11RHI:   Driver Version: 388.13 (internal:23.21.13.8813, unified:388.13)
+[2019.09.29-21.22.06:114][  0]LogD3D11RHI:      Driver Date: 10-27-2017
+[2019.09.29-21.22.06:114][  0]LogRHI: Texture pool is 1411 MB (70% of 2016 MB)
+[2019.09.29-21.22.06:241][  0]LogD3D11RHI: Async texture creation enabled
+[2019.09.29-21.22.06:498][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
+[2019.09.29-21.22.06:504][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
+[2019.09.29-21.22.06:504][  0]LogRendererCore: FGlobalReadBuffer::InitRHI
+[2019.09.29-21.22.06:553][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 3)
+[2019.09.29-21.22.10:374][  0]LogTemp: Display: Module 'AllDesktopTargetPlatform' loaded TargetPlatform 'AllDesktop'
+[2019.09.29-21.22.10:396][  0]LogTemp: Display: Module 'MacClientTargetPlatform' loaded TargetPlatform 'MacClient'
+[2019.09.29-21.22.10:424][  0]LogTemp: Display: Module 'MacNoEditorTargetPlatform' loaded TargetPlatform 'MacNoEditor'
+[2019.09.29-21.22.10:442][  0]LogTemp: Display: Module 'MacServerTargetPlatform' loaded TargetPlatform 'MacServer'
+[2019.09.29-21.22.10:483][  0]LogTemp: Display: Module 'MacTargetPlatform' loaded TargetPlatform 'Mac'
+[2019.09.29-21.22.10:514][  0]LogTemp: Display: Module 'WindowsClientTargetPlatform' loaded TargetPlatform 'WindowsClient'
+[2019.09.29-21.22.10:545][  0]LogTemp: Display: Module 'WindowsNoEditorTargetPlatform' loaded TargetPlatform 'WindowsNoEditor'
+[2019.09.29-21.22.10:574][  0]LogTemp: Display: Module 'WindowsServerTargetPlatform' loaded TargetPlatform 'WindowsServer'
+[2019.09.29-21.22.10:586][  0]LogTemp: Display: Module 'WindowsTargetPlatform' loaded TargetPlatform 'Windows'
+[2019.09.29-21.22.10:741][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android'
+[2019.09.29-21.22.10:741][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTC'
+[2019.09.29-21.22.10:741][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATC'
+[2019.09.29-21.22.10:741][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXT'
+[2019.09.29-21.22.10:741][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1'
+[2019.09.29-21.22.10:741][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1a'
+[2019.09.29-21.22.10:741][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2'
+[2019.09.29-21.22.10:741][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTC'
+[2019.09.29-21.22.10:741][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'AndroidClient'
+[2019.09.29-21.22.10:741][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTCClient'
+[2019.09.29-21.22.10:741][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATCClient'
+[2019.09.29-21.22.10:741][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXTClient'
+[2019.09.29-21.22.10:741][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1Client'
+[2019.09.29-21.22.10:741][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1aClient'
+[2019.09.29-21.22.10:741][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2Client'
+[2019.09.29-21.22.10:741][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTCClient'
+[2019.09.29-21.22.10:741][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_Multi'
+[2019.09.29-21.22.10:741][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_MultiClient'
+[2019.09.29-21.22.10:744][  0]LogTemp: Display: Module 'HTML5TargetPlatform' loaded TargetPlatform 'HTML5'
+[2019.09.29-21.22.10:841][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOSClient'
+[2019.09.29-21.22.10:841][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOS'
+[2019.09.29-21.22.10:909][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOSClient'
+[2019.09.29-21.22.10:909][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOS'
+[2019.09.29-21.22.10:937][  0]LogTemp: Display: Module 'LinuxClientTargetPlatform' loaded TargetPlatform 'LinuxClient'
+[2019.09.29-21.22.10:967][  0]LogTemp: Display: Module 'LinuxNoEditorTargetPlatform' loaded TargetPlatform 'LinuxNoEditor'
+[2019.09.29-21.22.10:983][  0]LogTemp: Display: Module 'LinuxServerTargetPlatform' loaded TargetPlatform 'LinuxServer'
+[2019.09.29-21.22.11:017][  0]LogTemp: Display: Module 'LinuxTargetPlatform' loaded TargetPlatform 'Linux'
+[2019.09.29-21.22.11:126][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'Lumin'
+[2019.09.29-21.22.11:126][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'LuminClient'
+[2019.09.29-21.22.11:126][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2019.09.29-21.22.11:249][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2019.09.29-21.22.11:908][  0]LogShaderCompilers: Guid format shader working directory is -10 characters bigger than the processId version (../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/Shaders/WorkingDirectory/23536/).
+[2019.09.29-21.22.11:908][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'D:/Users/mark.wil7543/AppData/Local/Temp/UnrealShaderWorkingDir/DB40320246EE488BCBC1C899B014297D/'.
+[2019.09.29-21.22.11:933][  0]LogXGEController: Cleaning working directory: D:/Users/mark.wil7543/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2019.09.29-21.22.11:933][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2019.09.29-21.22.11:934][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2019.09.29-21.22.11:934][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2019.09.29-21.22.15:960][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2019.09.29-21.22.16:590][  0]LogDerivedDataCache: Loaded boot cache 0.62s 71MB D:/Users/mark.wil7543/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc.
+[2019.09.29-21.22.16:590][  0]LogDerivedDataCache: Display: Loaded Boot cache: D:/Users/mark.wil7543/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc
+[2019.09.29-21.22.16:590][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2019.09.29-21.22.16:590][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2019.09.29-21.22.16:590][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.09.29-21.22.16:590][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2019.09.29-21.22.16:630][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2019.09.29-21.22.16:630][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.09.29-21.22.16:630][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2019.09.29-21.22.16:652][  0]LogDerivedDataCache: Using Local data cache path D:/Users/mark.wil7543/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2019.09.29-21.22.16:652][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2019.09.29-21.22.16:652][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2019.09.29-21.22.16:748][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2019.09.29-21.22.16:791][  0]LogSlate: Using FreeType 2.6.0
+[2019.09.29-21.22.16:865][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2019.09.29-21.22.18:116][  0]LogAssetRegistry: FAssetRegistry took 0.0643 seconds to start up
+[2019.09.29-21.22.28:943][  0]LogInit: Selected Device Profile: [Windows]
+[2019.09.29-21.22.32:560][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2019.09.29-21.22.32:560][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2019.09.29-21.22.32:560][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2019.09.29-21.22.32:560][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2019.09.29-21.22.32:560][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2019.09.29-21.22.33:034][  0]LogNetVersion: MoonFlorist 1.0.0, NetCL: 5660361, EngineNetVer: 10, GameNetVer: 0 (Checksum: 3291226662)
+[2019.09.29-21.22.38:672][  0]LogAssetRegistry: Error: Failed to open file for write ../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/c9e91a3f.bin
+[2019.09.29-21.22.38:676][  0]LogFileManager: Warning: MoveFile was unable to move '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin.tmp' to '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin', retrying in .5s...
+[2019.09.29-21.22.39:177][  0]LogFileManager: Warning: MoveFile was unable to move '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin.tmp' to '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin', retrying in .5s...
+[2019.09.29-21.22.39:678][  0]LogFileManager: Warning: MoveFile was unable to move '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin.tmp' to '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin', retrying in .5s...
+[2019.09.29-21.22.40:179][  0]LogFileManager: Warning: MoveFile was unable to move '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin.tmp' to '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin', retrying in .5s...
+[2019.09.29-21.22.40:680][  0]LogFileManager: Warning: MoveFile was unable to move '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin.tmp' to '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin', retrying in .5s...
+[2019.09.29-21.22.41:180][  0]LogFileManager: Warning: MoveFile was unable to move '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin.tmp' to '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin', retrying in .5s...
+[2019.09.29-21.22.41:681][  0]LogFileManager: Warning: MoveFile was unable to move '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin.tmp' to '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin', retrying in .5s...
+[2019.09.29-21.22.42:183][  0]LogFileManager: Warning: MoveFile was unable to move '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin.tmp' to '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin', retrying in .5s...
+[2019.09.29-21.22.42:683][  0]LogFileManager: Warning: MoveFile was unable to move '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin.tmp' to '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin', retrying in .5s...
+[2019.09.29-21.22.43:184][  0]LogFileManager: Warning: MoveFile was unable to move '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin.tmp' to '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin', retrying in .5s...
+[2019.09.29-21.22.43:685][  0]LogFileManager: Error: Error moving file '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin.tmp' to '../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Intermediate/AssetRegistryCache/50a675f9.bin'.
+[2019.09.29-21.22.43:701][  0]LogPackageLocalizationCache: Processed 10 localized package path(s) for 1 prioritized culture(s) in 5.106990 seconds
+[2019.09.29-21.22.43:707][  0]LogUObjectArray: 42205 objects as part of root set at end of initial load.
+[2019.09.29-21.22.43:707][  0]LogUObjectAllocator: 7325032 out of 0 bytes used by permanent object pool.
+[2019.09.29-21.22.43:707][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2019.09.29-21.22.48:399][  0]LogSubstanceCoreModule: Substance [CPU] Engine Loaded, Max Texture Size = 2048
+[2019.09.29-21.22.48:508][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2019.09.29-21.22.48:537][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2019.09.29-21.22.49:273][  0]SourceControl: Source control is disabled
+[2019.09.29-21.22.49:283][  0]SourceControl: Source control is disabled
+[2019.09.29-21.22.49:360][  0]SourceControl: Source control is disabled
+[2019.09.29-21.22.49:377][  0]SourceControl: Source control is disabled
+[2019.09.29-21.22.50:357][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2019.09.29-21.22.50:805][  0]LogOcInput: OculusInput pre-init called
+[2019.09.29-21.22.53:654][  0]LogEngine: Initializing Engine...
+[2019.09.29-21.22.53:705][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.09.29-21.22.53:724][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.011 s
+[2019.09.29-21.22.55:091][  0]LogInit: Initializing FReadOnlyCVARCache
+[2019.09.29-21.22.55:743][  0]LogAIModule: Creating AISystem for world Untitled
+[2019.09.29-21.22.56:081][  0]LogInit: XAudio2 using 'Speakers (USB Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.09.29-21.22.56:117][  0]LogInit: FAudioDevice initialized.
+[2019.09.29-21.22.56:135][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2019.09.29-21.22.56:640][  0]LogDerivedDataCache: Saved boot cache 0.50s 71MB D:/Users/mark.wil7543/AppData/Local/UnrealEngine/4.22/DerivedDataCache/Boot.ddc.
+[2019.09.29-21.22.56:658][  0]LogInit: Texture streaming: Enabled
+[2019.09.29-21.22.56:683][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2019.09.29-21.22.57:126][  0]LogInit: Transaction tracking system initialized
+[2019.09.29-21.22.57:416][  0]BlueprintLog: New page: Editor Load
+[2019.09.29-21.22.58:577][  0]LocalizationService: Localization service is disabled
+[2019.09.29-21.23.01:775][  0]LogAutoReimportManager: Warning: Unable to watch directory ../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/ as it will conflict with another watching ../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/.
+[2019.09.29-21.23.01:906][  0]LogFileCache: Scanning file cache for directory 'D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/' took 0.10s
+[2019.09.29-21.23.01:906][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2019.09.29-21.23.01:906][  0]LogCook: Display: Mobile HDR setting 1
+[2019.09.29-21.23.08:499][  0]SourceControl: Source control is disabled
+[2019.09.29-21.23.08:612][  0]Cmd: MAP LOAD FILE="../../../../GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/Levels/MainLevel.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2019.09.29-21.23.08:689][  0]LightingResults: New page: Lighting Build
+[2019.09.29-21.23.08:863][  0]MapCheck: New page: Map Check
+[2019.09.29-21.23.08:863][  0]LightingResults: New page: Lighting Build
+[2019.09.29-21.23.09:274][  0]LogUObjectHash: Compacting FUObjectHashTables data took  10.19ms
+[2019.09.29-21.23.12:411][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
+[2019.09.29-21.23.12:412][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
+[2019.09.29-21.23.13:076][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
+[2019.09.29-21.23.13:076][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
+[2019.09.29-21.23.14:257][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
+[2019.09.29-21.23.14:258][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
+[2019.09.29-21.23.14:258][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
+[2019.09.29-21.23.14:258][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
+[2019.09.29-21.23.14:304][  0]LogLinker: Warning: Can't find file '/Game/Levels/MainLevel_BuiltData'
+[2019.09.29-21.23.14:304][  0]LoadErrors: Failed to load /Game/Levels/MainLevel_BuiltData.MainLevel_BuiltData Referenced by PersistentLevel
+[2019.09.29-21.23.14:304][  0]LogLinker: Warning: Can't find file for asset '/Game/Levels/MainLevel_BuiltData' while loading NULL.
+[2019.09.29-21.23.23:487][  0]LogAIModule: Creating AISystem for world MainLevel
+[2019.09.29-21.23.24:952][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2019.09.29-21.23.25:469][  0]LogUObjectHash: Compacting FUObjectHashTables data took   2.97ms
+[2019.09.29-21.23.25:494][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2019.09.29-21.23.25:514][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 12.691ms to complete.
+[2019.09.29-21.23.25:519][  0]LogFileHelpers: Loading map 'MainLevel' took 16.973
+[2019.09.29-21.23.27:597][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.09.29-21.23.27:612][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.09.29-21.23.27:620][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.09.29-21.23.27:628][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.09.29-21.23.27:722][  0]LogCollectionManager: Loaded 0 collections in 0.015159 seconds
+[2019.09.29-21.23.27:944][  0]LogFileCache: Scanning file cache for directory 'D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Saved/Collections/' took 0.01s
+[2019.09.29-21.23.27:944][  0]LogFileCache: Scanning file cache for directory 'D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/Developers/MarkWil7543/Collections/' took 0.01s
+[2019.09.29-21.23.27:944][  0]LogFileCache: Scanning file cache for directory 'D:/Users/mark.wil7543/Documents/GitKraken/HereAfter/Flower/MoonFlorist/MoonFlorist/Content/Collections/' took 0.00s
+[2019.09.29-21.23.27:944][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000000 seconds
+[2019.09.29-21.23.27:984][  0]LogContentBrowser: Native class hierarchy populated in 0.0381 seconds. Added 2758 classes and 669 folders.
+[2019.09.29-21.23.28:127][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0007 seconds. Added 0 classes and 0 folders.
+[2019.09.29-21.23.28:187][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:294][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:312][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:337][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:348][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:373][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:397][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:420][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:432][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:453][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:467][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:525][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:545][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:553][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:557][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:584][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:601][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:612][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:618][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:629][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:657][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:677][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:689][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:758][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:787][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.28:801][  0]LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+[2019.09.29-21.23.30:355][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0005 seconds. Added 0 classes and 0 folders.
+[2019.09.29-21.23.30:925][  0]LogSlate: Took 0.008617 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2019.09.29-21.23.31:026][  0]LogSlate: Took 0.025808 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2019.09.29-21.23.31:040][  0]LogSlate: Took 0.011286 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2019.09.29-21.23.31:546][  0]LogRenderer: Reallocating scene render targets to support 1100x680 Format 10 NumSamples 1 (Frame:1).
+[2019.09.29-21.23.32:331][  0]LogSlate: Took 0.016978 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.09.29-21.23.32:714][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0006 seconds. Added 0 classes and 0 folders.
+[2019.09.29-21.23.32:714][  0]LogLoad: (Engine Initialization) Total time: 125.80 seconds
+[2019.09.29-21.23.32:714][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2019.09.29-21.23.33:358][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2019.09.29-21.23.33:420][  0]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.09.29-21.23.33:735][  1]LogSubstanceLiveLink: Warning: Unable to send data along socket, closing connection
+[2019.09.29-21.23.34:422][  3]LogAssetRegistry: Asset discovery search completed in 76.3301 seconds
+[2019.09.29-21.23.34:473][  3]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000001 seconds (found 0 objects)
+[2019.09.29-21.23.34:473][  3]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000126 seconds (updated 0 objects)
+[2019.09.29-21.24.54:762][321]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.09.29-21.43.43:441][812]LogUObjectHash: Compacting FUObjectHashTables data took   1.56ms
+[2019.09.29-21.43.43:613][812]LogSlate: Window 'Message Log' being destroyed
+[2019.09.29-21.43.43:645][812]LogSlate: Window 'MoonFlorist - Unreal Editor' being destroyed
+[2019.09.29-21.43.43:655][812]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
+[2019.09.29-21.43.44:244][813]Cmd: QUIT_EDITOR
+[2019.09.29-21.43.44:526][813]LogExit: Preparing to exit.
+[2019.09.29-21.43.45:971][813]LogExit: Editor shut down
+[2019.09.29-21.43.45:971][813]LogExit: Transaction tracking system shut down
+[2019.09.29-21.43.47:318][813]LogExit: Object subsystem successfully closed.
+[2019.09.29-21.43.47:456][813]LogShaderCompilers: Display: Shaders left to compile 0
+[2019.09.29-21.43.47:473][813]LogD3D11RHI: Shutdown
+[2019.09.29-21.43.47:473][813]LogD3D11RHI: CleanupD3DDevice
+[2019.09.29-21.43.47:476][813]LogRendererCore: FGlobalReadBuffer::ReleaseRHI
+[2019.09.29-21.43.47:476][813]LogRendererCore: FGlobalDynamicReadBuffer::Cleanup()
+[2019.09.29-21.43.47:479][813]LogRendererCore: FGlobalReadBuffer::ReleaseRHI
+[2019.09.29-21.43.47:479][813]LogRendererCore: FGlobalDynamicReadBuffer::Cleanup()
+[2019.09.29-21.43.47:479][813]LogRendererCore: FGlobalReadBuffer::ReleaseRHI
+[2019.09.29-21.43.47:479][813]LogRendererCore: FGlobalDynamicReadBuffer::Cleanup()
+[2019.09.29-21.43.47:646][813]LogD3D11RHI: ~FD3D11DynamicRHI
+[2019.09.29-21.43.48:604][813]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (652)
+[2019.09.29-21.43.48:604][813]LogModuleManager: Shutting down and abandoning module AddContentDialog (650)
+[2019.09.29-21.43.48:622][813]LogModuleManager: Shutting down and abandoning module WidgetCarousel (649)
+[2019.09.29-21.43.48:622][813]LogModuleManager: Shutting down and abandoning module EditorWidgets (646)
+[2019.09.29-21.43.48:622][813]LogModuleManager: Shutting down and abandoning module CollectionManager (644)
+[2019.09.29-21.43.48:627][813]LogModuleManager: Shutting down and abandoning module SceneOutliner (642)
+[2019.09.29-21.43.48:627][813]LogModuleManager: Shutting down and abandoning module StatsViewer (640)
+[2019.09.29-21.43.48:633][813]LogModuleManager: Shutting down and abandoning module FoliageEdit (638)
+[2019.09.29-21.43.48:644][813]LogModuleManager: Shutting down and abandoning module LandscapeEditor (636)
+[2019.09.29-21.43.48:723][813]LogModuleManager: Shutting down and abandoning module MeshPaintMode (634)
+[2019.09.29-21.43.48:726][813]LogModuleManager: Shutting down and abandoning module SceneDepthPickerMode (632)
+[2019.09.29-21.43.48:726][813]LogModuleManager: Shutting down and abandoning module ActorPickerMode (630)
+[2019.09.29-21.43.48:726][813]LogModuleManager: Shutting down and abandoning module GeometryMode (628)
+[2019.09.29-21.43.48:726][813]LogModuleManager: Shutting down and abandoning module TextureAlignMode (626)
+[2019.09.29-21.43.48:726][813]LogModuleManager: Shutting down and abandoning module BspMode (624)
+[2019.09.29-21.43.48:726][813]LogModuleManager: Shutting down and abandoning module PIEPreviewDeviceProfileSelector (622)
+[2019.09.29-21.43.48:750][813]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (620)
+[2019.09.29-21.43.48:753][813]LogModuleManager: Shutting down and abandoning module AutomationWorker (618)
+[2019.09.29-21.43.48:759][813]LogModuleManager: Shutting down and abandoning module OculusMR (616)
+[2019.09.29-21.43.48:759][813]LogModuleManager: Shutting down and abandoning module AudioCaptureEditor (614)
+[2019.09.29-21.43.48:767][813]LogModuleManager: Shutting down and abandoning module MatineeToLevelSequence (612)
+[2019.09.29-21.43.48:780][813]LogModuleManager: Shutting down and abandoning module LevelSequenceEditor (610)
+[2019.09.29-21.43.48:791][813]LogModuleManager: Shutting down and abandoning module PlacementMode (609)
+[2019.09.29-21.43.48:791][813]LogModuleManager: Shutting down and abandoning module MaterialEditor (608)
+[2019.09.29-21.43.48:813][813]LogModuleManager: Shutting down and abandoning module ActorSequenceEditor (604)
+[2019.09.29-21.43.48:825][813]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (602)
+[2019.09.29-21.43.48:825][813]LogModuleManager: Shutting down and abandoning module WmfMediaEditor (600)
+[2019.09.29-21.43.48:825][813]LogModuleManager: Shutting down and abandoning module WebMMediaFactory (598)
+[2019.09.29-21.43.48:825][813]LogModuleManager: Shutting down and abandoning module WebMMediaEditor (596)
+[2019.09.29-21.43.48:825][813]LogModuleManager: Shutting down and abandoning module WebMMedia (594)
+[2019.09.29-21.43.48:832][813]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (592)
+[2019.09.29-21.43.48:845][813]LogModuleManager: Shutting down and abandoning module MediaCompositingEditor (590)
+[2019.09.29-21.43.48:856][813]LogModuleManager: Shutting down and abandoning module SequenceRecorder (589)
+[2019.09.29-21.43.48:856][813]LogModuleManager: Shutting down and abandoning module OpenExrWrapper (586)
+[2019.09.29-21.43.48:856][813]LogModuleManager: Shutting down and abandoning module ImgMediaFactory (584)
+[2019.09.29-21.43.48:856][813]LogModuleManager: Shutting down and abandoning module ImgMediaEditor (582)
+[2019.09.29-21.43.48:856][813]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (580)
+[2019.09.29-21.43.48:856][813]LogModuleManager: Shutting down and abandoning module AvfMediaEditor (578)
+[2019.09.29-21.43.48:856][813]LogModuleManager: Shutting down and abandoning module AndroidMediaFactory (576)
+[2019.09.29-21.43.48:856][813]LogModuleManager: Shutting down and abandoning module AndroidMediaEditor (574)
+[2019.09.29-21.43.48:856][813]LogModuleManager: Shutting down and abandoning module MagicLeapCameraPreviewFactory (572)
+[2019.09.29-21.43.48:856][813]LogModuleManager: Shutting down and abandoning module MagicLeapMediaCodecFactory (570)
+[2019.09.29-21.43.48:856][813]LogModuleManager: Shutting down and abandoning module MagicLeapMediaFactory (568)
+[2019.09.29-21.43.48:856][813]LogModuleManager: Shutting down and abandoning module MagicLeapMediaEditor (566)
+[2019.09.29-21.43.48:856][813]LogModuleManager: Shutting down and abandoning module CharacterAI (564)
+[2019.09.29-21.43.48:856][813]LogModuleManager: Shutting down and abandoning module SmartSnapping (562)
+[2019.09.29-21.43.48:856][813]LogModuleManager: Shutting down and abandoning module SessionServices (560)
+[2019.09.29-21.43.48:856][813]LogModuleManager: Shutting down and abandoning module MeshPaint (558)
+[2019.09.29-21.43.48:863][813]LogModuleManager: Shutting down and abandoning module ViewportSnapping (556)
+[2019.09.29-21.43.48:863][813]LogModuleManager: Shutting down and abandoning module ViewportInteraction (554)
+[2019.09.29-21.43.48:863][813]LogModuleManager: Shutting down and abandoning module ClothPainter (552)
+[2019.09.29-21.43.48:866][813]LogModuleManager: Shutting down and abandoning module SkeletalMeshEditor (551)
+[2019.09.29-21.43.48:883][813]LogModuleManager: Shutting down and abandoning module LogVisualizer (548)
+[2019.09.29-21.43.48:893][813]LogModuleManager: Shutting down and abandoning module IntroTutorials (546)
+[2019.09.29-21.43.48:916][813]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (545)
+[2019.09.29-21.43.48:968][813]LogModuleManager: Shutting down and abandoning module LuminPlatformEditor (542)
+[2019.09.29-21.43.48:969][813]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (540)
+[2019.09.29-21.43.48:969][813]LogModuleManager: Shutting down and abandoning module HTML5PlatformEditor (538)
+[2019.09.29-21.43.48:969][813]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (536)
+[2019.09.29-21.43.48:972][813]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (535)
+[2019.09.29-21.43.49:937][813]LogModuleManager: Shutting down and abandoning module WindowsPlatformEditor (532)
+[2019.09.29-21.43.49:937][813]LogModuleManager: Shutting down and abandoning module LuminRuntimeSettings (530)
+[2019.09.29-21.43.49:937][813]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (528)
+[2019.09.29-21.43.49:937][813]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (526)
+[2019.09.29-21.43.49:937][813]LogModuleManager: Shutting down and abandoning module TimeManagementEditor (524)
+[2019.09.29-21.43.49:937][813]LogModuleManager: Shutting down and abandoning module InputBindingEditor (522)
+[2019.09.29-21.43.49:956][813]LogModuleManager: Shutting down and abandoning module MergeActors (520)
+[2019.09.29-21.43.49:965][813]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (518)
+[2019.09.29-21.43.49:971][813]LogModuleManager: Shutting down and abandoning module LocalizationService (517)
+[2019.09.29-21.43.49:979][813]LogModuleManager: Shutting down and abandoning module HardwareTargeting (514)
+[2019.09.29-21.43.49:979][813]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (512)
+[2019.09.29-21.43.49:984][813]LogModuleManager: Shutting down and abandoning module UndoHistory (510)
+[2019.09.29-21.43.49:992][813]LogModuleManager: Shutting down and abandoning module XmlParser (508)
+[2019.09.29-21.43.49:995][813]LogModuleManager: Shutting down and abandoning module Blutility (506)
+[2019.09.29-21.43.50:010][813]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (504)
+[2019.09.29-21.43.50:010][813]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (503)
+[2019.09.29-21.43.50:010][813]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (500)
+[2019.09.29-21.43.50:010][813]LogModuleManager: Shutting down and abandoning module SettingsEditor (498)
+[2019.09.29-21.43.50:016][813]LogModuleManager: Shutting down and abandoning module ProjectLauncher (496)
+[2019.09.29-21.43.50:028][813]LogModuleManager: Shutting down and abandoning module SessionFrontend (494)
+[2019.09.29-21.43.50:035][813]LogModuleManager: Shutting down and abandoning module ProfilerClient (492)
+[2019.09.29-21.43.50:045][813]LogModuleManager: Shutting down and abandoning module DeviceManager (490)
+[2019.09.29-21.43.50:076][813]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (489)
+[2019.09.29-21.43.50:119][813]LogModuleManager: Shutting down and abandoning module AutomationController (486)
+[2019.09.29-21.43.50:128][813]LogModuleManager: Shutting down and abandoning module AutomationWindow (484)
+[2019.09.29-21.43.50:140][813]LogModuleManager: Shutting down and abandoning module Layers (482)
+[2019.09.29-21.43.50:157][813]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (480)
+[2019.09.29-21.43.50:157][813]LogModuleManager: Shutting down and abandoning module DetailCustomizations (478)
+[2019.09.29-21.43.50:175][813]LogModuleManager: Shutting down and abandoning module PackagesDialog (476)
+[2019.09.29-21.43.50:182][813]LogModuleManager: Shutting down and abandoning module AnimationBlueprintEditor (474)
+[2019.09.29-21.43.50:212][813]LogModuleManager: Shutting down and abandoning module Persona (472)
+[2019.09.29-21.43.50:228][813]LogModuleManager: Shutting down and abandoning module AdvancedPreviewScene (471)
+[2019.09.29-21.43.50:228][813]LogModuleManager: Shutting down and abandoning module AnimGraph (469)
+[2019.09.29-21.43.50:228][813]LogModuleManager: Shutting down and abandoning module Kismet (466)
+[2019.09.29-21.43.50:244][813]LogModuleManager: Shutting down and abandoning module GraphEditor (464)
+[2019.09.29-21.43.50:270][813]LogModuleManager: Shutting down and abandoning module ClassViewer (462)
+[2019.09.29-21.43.50:270][813]LogModuleManager: Shutting down and abandoning module Toolbox (460)
+[2019.09.29-21.43.50:270][813]LogModuleManager: Shutting down and abandoning module DesktopPlatform (459)
+[2019.09.29-21.43.50:279][813]LogModuleManager: Shutting down and abandoning module ModuleUI (456)
+[2019.09.29-21.43.50:281][813]LogModuleManager: Shutting down and abandoning module MovieSceneTools (454)
+[2019.09.29-21.43.50:285][813]LogModuleManager: Shutting down and abandoning module OutputLog (452)
+[2019.09.29-21.43.50:285][813]LogModuleManager: Shutting down and abandoning module GammaUI (450)
+[2019.09.29-21.43.50:291][813]LogModuleManager: Shutting down and abandoning module Documentation (448)
+[2019.09.29-21.43.50:291][813]LogModuleManager: Shutting down and abandoning module LiveCoding (446)
+[2019.09.29-21.43.50:295][813]LogModuleManager: Shutting down and abandoning module LevelSequence (444)
+[2019.09.29-21.43.50:295][813]LogModuleManager: Shutting down and abandoning module MovieSceneTracks (442)
+[2019.09.29-21.43.50:295][813]LogModuleManager: Shutting down and abandoning module MovieScene (440)
+[2019.09.29-21.43.50:303][813]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (438)
+[2019.09.29-21.43.50:313][813]LogModuleManager: Shutting down and abandoning module LauncherPlatform (436)
+[2019.09.29-21.43.50:313][813]LogModuleManager: Shutting down and abandoning module AnalyticsET (434)
+[2019.09.29-21.43.50:313][813]LogModuleManager: Shutting down and abandoning module PortalServices (432)
+[2019.09.29-21.43.50:313][813]LogModuleManager: Shutting down and abandoning module PortalRpc (430)
+[2019.09.29-21.43.50:314][813]LogModuleManager: Shutting down and abandoning module MessagingRpc (428)
+[2019.09.29-21.43.50:314][813]LogModuleManager: Shutting down and abandoning module AIModule (426)
+[2019.09.29-21.43.50:342][813]LogModuleManager: Shutting down and abandoning module GameplayDebugger (425)
+[2019.09.29-21.43.50:350][813]LogModuleManager: Shutting down and abandoning module AITestSuite (423)
+[2019.09.29-21.43.50:361][813]LogModuleManager: Shutting down and abandoning module NavigationSystem (421)
+[2019.09.29-21.43.50:361][813]LogModuleManager: Shutting down and abandoning module ImageWriteQueue (418)
+[2019.09.29-21.43.50:364][813]LogModuleManager: Shutting down and abandoning module ProfilerService (416)
+[2019.09.29-21.43.50:533][813]LogModuleManager: Shutting down and abandoning module TaskGraph (414)
+[2019.09.29-21.43.50:556][813]LogModuleManager: Shutting down and abandoning module SubstanceLiveLink (412)
+[2019.09.29-21.43.50:557][813]LogModuleManager: Shutting down and abandoning module SubstanceSource (410)
+[2019.09.29-21.43.50:570][813]LogModuleManager: Shutting down and abandoning module SubstanceEditor (408)
+[2019.09.29-21.43.50:575][813]LogModuleManager: Shutting down and abandoning module SteamVRController (406)
+[2019.09.29-21.43.50:575][813]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponentEditor (404)
+[2019.09.29-21.43.50:576][813]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (402)
+[2019.09.29-21.43.50:583][813]LogModuleManager: Shutting down and abandoning module OculusEditor (400)
+[2019.09.29-21.43.50:590][813]LogModuleManager: Shutting down and abandoning module OculusInput (398)
+[2019.09.29-21.43.50:590][813]LogModuleManager: Shutting down and abandoning module MobilePatchingUtils (396)
+[2019.09.29-21.43.50:590][813]LogModuleManager: Shutting down and abandoning module EditableMesh (394)
+[2019.09.29-21.43.50:602][813]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (392)
+[2019.09.29-21.43.50:602][813]LogModuleManager: Shutting down and abandoning module CableComponent (390)
+[2019.09.29-21.43.50:607][813]LogModuleManager: Shutting down and abandoning module AudioCapture (388)
+[2019.09.29-21.43.50:607][813]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (386)
+[2019.09.29-21.43.50:608][813]LogModuleManager: Shutting down and abandoning module AndroidPermission (384)
+[2019.09.29-21.43.50:608][813]LogModuleManager: Shutting down and abandoning module NUTUnrealEngine4 (382)
+[2019.09.29-21.43.50:612][813]LogModuleManager: Shutting down and abandoning module NetcodeUnitTest (380)
+[2019.09.29-21.43.50:620][813]LogModuleManager: Shutting down and abandoning module MediaCompositing (378)
+[2019.09.29-21.43.50:620][813]LogModuleManager: Shutting down and abandoning module LinearTimecode (376)
+[2019.09.29-21.43.50:620][813]LogModuleManager: Shutting down and abandoning module ImgMedia (374)
+[2019.09.29-21.43.50:620][813]LogModuleManager: Shutting down and abandoning module MagicLeapHelperVulkan (372)
+[2019.09.29-21.43.50:620][813]LogModuleManager: Shutting down and abandoning module MagicLeapHelperOpenGL (370)
+[2019.09.29-21.43.50:626][813]LogModuleManager: Shutting down and abandoning module MagicLeapAudio (368)
+[2019.09.29-21.43.50:631][813]LogModuleManager: Shutting down and abandoning module HTML5Networking (366)
+[2019.09.29-21.43.50:631][813]LogModuleManager: Shutting down and abandoning module GeometryCacheTracks (364)
+[2019.09.29-21.43.50:631][813]LogModuleManager: Shutting down and abandoning module GeometryCacheSequencer (362)
+[2019.09.29-21.43.50:631][813]LogModuleManager: Shutting down and abandoning module BackChannel (360)
+[2019.09.29-21.43.50:639][813]LogModuleManager: Shutting down and abandoning module AppleVision (358)
+[2019.09.29-21.43.50:639][813]LogModuleManager: Shutting down and abandoning module AppleImageUtilsBlueprintSupport (356)
+[2019.09.29-21.43.50:639][813]LogModuleManager: Shutting down and abandoning module AppleImageUtils (354)
+[2019.09.29-21.43.50:639][813]LogModuleManager: Shutting down and abandoning module AlembicImporter (352)
+[2019.09.29-21.43.50:639][813]LogModuleManager: Shutting down and abandoning module AlembicLibrary (351)
+[2019.09.29-21.43.50:639][813]LogModuleManager: Shutting down and abandoning module GeometryCache (350)
+[2019.09.29-21.43.50:639][813]LogModuleManager: Shutting down and abandoning module GeometryCacheEd (349)
+[2019.09.29-21.43.50:639][813]LogModuleManager: Shutting down and abandoning module VariantManagerContent (344)
+[2019.09.29-21.43.50:639][813]LogModuleManager: Shutting down and abandoning module DatasmithContentEditor (342)
+[2019.09.29-21.43.50:647][813]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (340)
+[2019.09.29-21.43.50:647][813]LogModuleManager: Shutting down and abandoning module PluginBrowser (338)
+[2019.09.29-21.43.50:667][813]LogModuleManager: Shutting down and abandoning module MobileLauncherProfileWizard (336)
+[2019.09.29-21.43.50:678][813]LogModuleManager: Shutting down and abandoning module MaterialAnalyzer (334)
+[2019.09.29-21.43.50:684][813]LogModuleManager: Shutting down and abandoning module CryptoKeysOpenSSL (332)
+[2019.09.29-21.43.50:684][813]LogModuleManager: Shutting down and abandoning module CryptoKeys (330)
+[2019.09.29-21.43.50:684][813]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (328)
+[2019.09.29-21.43.50:686][813]LogModuleManager: Shutting down and abandoning module VisualStudioCodeSourceCodeAccess (326)
+[2019.09.29-21.43.50:686][813]LogModuleManager: Shutting down and abandoning module UObjectPlugin (324)
+[2019.09.29-21.43.50:686][813]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (322)
+[2019.09.29-21.43.50:697][813]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (320)
+[2019.09.29-21.43.50:708][813]LogModuleManager: Shutting down and abandoning module GitSourceControl (318)
+[2019.09.29-21.43.50:714][813]LogModuleManager: Shutting down and abandoning module SourceControl (317)
+[2019.09.29-21.43.50:725][813]LogModuleManager: Shutting down and abandoning module CLionSourceCodeAccess (314)
+[2019.09.29-21.43.50:725][813]LogModuleManager: Shutting down and abandoning module AnimationSharingEd (312)
+[2019.09.29-21.43.50:725][813]LogModuleManager: Shutting down and abandoning module ActorLayerUtilitiesEditor (310)
+[2019.09.29-21.43.50:725][813]LogModuleManager: Shutting down and abandoning module ActorLayerUtilities (308)
+[2019.09.29-21.43.50:725][813]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeEditor (306)
+[2019.09.29-21.43.50:725][813]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (304)
+[2019.09.29-21.43.50:725][813]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (302)
+[2019.09.29-21.43.50:725][813]LogModuleManager: Shutting down and abandoning module Paper2DEditor (300)
+[2019.09.29-21.43.50:742][813]LogModuleManager: Shutting down and abandoning module MoonFlorist (298)
+[2019.09.29-21.43.50:742][813]LogModuleManager: Shutting down and abandoning module SignificanceManager (296)
+[2019.09.29-21.43.50:742][813]LogModuleManager: Shutting down and abandoning module RuntimePhysXCooking (294)
+[2019.09.29-21.43.50:742][813]LogModuleManager: Shutting down and abandoning module PhysXVehiclesEditor (292)
+[2019.09.29-21.43.50:742][813]LogModuleManager: Shutting down and abandoning module PhysXVehicles (290)
+[2019.09.29-21.43.50:742][813]LogModuleManager: Shutting down and abandoning module LocationServicesBPLibrary (288)
+[2019.09.29-21.43.50:742][813]LogModuleManager: Shutting down and abandoning module ActorSequence (286)
+[2019.09.29-21.43.50:742][813]LogModuleManager: Shutting down and abandoning module UdpMessaging (284)
+[2019.09.29-21.43.50:843][813]LogModuleManager: Shutting down and abandoning module TcpMessaging (282)
+[2019.09.29-21.43.50:959][813]LogModuleManager: Shutting down and abandoning module SubstanceCore (280)
+[2019.09.29-21.43.50:982][813]LogModuleManager: Shutting down and abandoning module MagicLeapIdentity (278)
+[2019.09.29-21.43.50:982][813]LogModuleManager: Shutting down and abandoning module MagicLeapSecureStorage (276)
+[2019.09.29-21.43.50:982][813]LogModuleManager: Shutting down and abandoning module MagicLeapHandTracking (274)
+[2019.09.29-21.43.50:987][813]LogModuleManager: Shutting down and abandoning module MagicLeapEyeTracker (272)
+[2019.09.29-21.43.50:988][813]LogModuleManager: Shutting down and abandoning module MagicLeapController (270)
+[2019.09.29-21.43.50:992][813]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2019.09.29-21.43.50:993][813]LogModuleManager: Shutting down and abandoning module MagicLeapAR (268)
+[2019.09.29-21.43.50:993][813]LogModuleManager: Shutting down and abandoning module AugmentedReality (267)
+[2019.09.29-21.43.50:993][813]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (264)
+[2019.09.29-21.43.50:996][813]LogModuleManager: Shutting down and abandoning module FacialAnimationEditor (262)
+[2019.09.29-21.43.50:996][813]LogModuleManager: Shutting down and abandoning module FacialAnimation (260)
+[2019.09.29-21.43.50:996][813]LogModuleManager: Shutting down and abandoning module DataValidation (258)
+[2019.09.29-21.43.50:996][813]LogModuleManager: Shutting down and abandoning module AssetManagerEditor (256)
+[2019.09.29-21.43.51:005][813]LogModuleManager: Shutting down and abandoning module LevelEditor (255)
+[2019.09.29-21.43.51:015][813]LogModuleManager: Shutting down and abandoning module PixelInspectorModule (254)
+[2019.09.29-21.43.51:021][813]LogModuleManager: Shutting down and abandoning module CommonMenuExtensions (252)
+[2019.09.29-21.43.51:022][813]LogModuleManager: Shutting down and abandoning module MainFrame (250)
+[2019.09.29-21.43.51:022][813]LogModuleManager: Shutting down and abandoning module HotReload (249)
+[2019.09.29-21.43.51:026][813]LogModuleManager: Shutting down and abandoning module ContentBrowser (245)
+[2019.09.29-21.43.51:027][813]LogModuleManager: Shutting down and abandoning module TreeMap (243)
+[2019.09.29-21.43.51:029][813]LogModuleManager: Shutting down and abandoning module AnimationSharing (240)
+[2019.09.29-21.43.51:029][813]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (238)
+[2019.09.29-21.43.51:029][813]LogModuleManager: Shutting down and abandoning module AISupportModule (236)
+[2019.09.29-21.43.51:029][813]LogModuleManager: Shutting down and abandoning module Paper2D (234)
+[2019.09.29-21.43.51:035][813]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (232)
+[2019.09.29-21.43.51:046][813]LogModuleManager: Shutting down and abandoning module WebMMoviePlayer (230)
+[2019.09.29-21.43.51:054][813]LogModuleManager: Shutting down and abandoning module PacketHandler (228)
+[2019.09.29-21.43.51:054][813]LogModuleManager: Shutting down and abandoning module ClothingSystemEditor (226)
+[2019.09.29-21.43.51:054][813]LogModuleManager: Shutting down and abandoning module ClothingSystemRuntime (224)
+[2019.09.29-21.43.51:066][813]LogModuleManager: Shutting down and abandoning module MediaAssets (222)
+[2019.09.29-21.43.51:066][813]LogModuleManager: Shutting down and abandoning module Overlay (220)
+[2019.09.29-21.43.51:066][813]LogModuleManager: Shutting down and abandoning module OverlayEditor (219)
+[2019.09.29-21.43.51:066][813]LogModuleManager: Shutting down and abandoning module VREditor (216)
+[2019.09.29-21.43.51:080][813]LogModuleManager: Shutting down and abandoning module StringTableEditor (214)
+[2019.09.29-21.43.51:089][813]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (212)
+[2019.09.29-21.43.51:089][813]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (210)
+[2019.09.29-21.43.51:115][813]LogModuleManager: Shutting down and abandoning module FunctionalTesting (208)
+[2019.09.29-21.43.51:133][813]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (206)
+[2019.09.29-21.43.51:138][813]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (205)
+[2019.09.29-21.43.51:145][813]LogModuleManager: Shutting down and abandoning module UMG (202)
+[2019.09.29-21.43.51:145][813]LogModuleManager: Shutting down and abandoning module UMGEditor (201)
+[2019.09.29-21.43.51:146][813]LogModuleManager: Shutting down and abandoning module Sequencer (200)
+[2019.09.29-21.43.51:177][813]LogModuleManager: Shutting down and abandoning module MessageLog (197)
+[2019.09.29-21.43.51:178][813]LogModuleManager: Shutting down and abandoning module SlateReflector (192)
+[2019.09.29-21.43.51:201][813]LogModuleManager: Shutting down and abandoning module Slate (190)
+[2019.09.29-21.43.51:201][813]LogModuleManager: Shutting down and abandoning module EditorStyle (188)
+[2019.09.29-21.43.51:203][813]LogModuleManager: Shutting down and abandoning module UnrealEd (186)
+[2019.09.29-21.43.51:211][813]LogModuleManager: Shutting down and abandoning module MRMesh (184)
+[2019.09.29-21.43.51:211][813]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (182)
+[2019.09.29-21.43.51:211][813]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (180)
+[2019.09.29-21.43.51:211][813]LogModuleManager: Shutting down and abandoning module XAudio2 (178)
+[2019.09.29-21.43.51:211][813]LogModuleManager: Shutting down and abandoning module Networking (176)
+[2019.09.29-21.43.51:211][813]LogModuleManager: Shutting down and abandoning module Core (174)
+[2019.09.29-21.43.51:211][813]LogModuleManager: Shutting down and abandoning module KismetCompiler (172)
+[2019.09.29-21.43.51:211][813]LogModuleManager: Shutting down and abandoning module MeshUtilities (170)
+[2019.09.29-21.43.51:211][813]LogModuleManager: Shutting down and abandoning module MeshMergeUtilities (169)
+[2019.09.29-21.43.51:218][813]LogModuleManager: Shutting down and abandoning module MeshReductionInterface (168)
+[2019.09.29-21.43.51:218][813]LogModuleManager: Shutting down and abandoning module SkeletalMeshReduction (167)
+[2019.09.29-21.43.51:228][813]LogModuleManager: Shutting down and abandoning module ProxyLODMeshReduction (165)
+[2019.09.29-21.43.51:240][813]LogModuleManager: Shutting down and abandoning module QuadricMeshReduction (163)
+[2019.09.29-21.43.51:249][813]LogModuleManager: Shutting down and abandoning module MaterialBaking (159)
+[2019.09.29-21.43.51:252][813]LogModuleManager: Shutting down and abandoning module DerivedDataCache (154)
+[2019.09.29-21.43.51:314][813]LogDerivedDataCache: Shutdown
+[2019.09.29-21.43.51:314][813]LogModuleManager: Shutting down and abandoning module XGEController (152)
+[2019.09.29-21.43.51:314][813]LogXGEController: Cleaning working directory: D:/Users/mark.wil7543/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2019.09.29-21.43.51:346][813]LogModuleManager: Shutting down and abandoning module TargetPlatform (150)
+[2019.09.29-21.43.51:354][813]LogModuleManager: Shutting down and abandoning module VulkanShaderFormat (149)
+[2019.09.29-21.43.51:361][813]LogModuleManager: Shutting down and abandoning module ShaderFormatVectorVM (147)
+[2019.09.29-21.43.51:371][813]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (145)
+[2019.09.29-21.43.51:380][813]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (143)
+[2019.09.29-21.43.51:381][813]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (141)
+[2019.09.29-21.43.51:387][813]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (139)
+[2019.09.29-21.43.51:387][813]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (137)
+[2019.09.29-21.43.51:387][813]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (135)
+[2019.09.29-21.43.51:391][813]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (133)
+[2019.09.29-21.43.51:392][813]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (131)
+[2019.09.29-21.43.51:392][813]LogModuleManager: Shutting down and abandoning module ImageWrapper (130)
+[2019.09.29-21.43.51:392][813]LogModuleManager: Shutting down and abandoning module TextureFormatAndroid (127)
+[2019.09.29-21.43.51:392][813]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (125)
+[2019.09.29-21.43.51:398][813]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (123)
+[2019.09.29-21.43.51:398][813]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (121)
+[2019.09.29-21.43.51:403][813]LogModuleManager: Shutting down and abandoning module LuminTargetPlatform (119)
+[2019.09.29-21.43.51:410][813]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (117)
+[2019.09.29-21.43.51:410][813]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (115)
+[2019.09.29-21.43.51:418][813]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (113)
+[2019.09.29-21.43.51:419][813]LogModuleManager: Shutting down and abandoning module LinuxClientTargetPlatform (111)
+[2019.09.29-21.43.51:425][813]LogModuleManager: Shutting down and abandoning module TVOSTargetPlatform (109)
+[2019.09.29-21.43.51:426][813]LogModuleManager: Shutting down and abandoning module Messaging (107)
+[2019.09.29-21.43.51:426][813]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (105)
+[2019.09.29-21.43.51:426][813]LogModuleManager: Shutting down and abandoning module HTML5TargetPlatform (103)
+[2019.09.29-21.43.51:426][813]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (101)
+[2019.09.29-21.43.51:432][813]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (99)
+[2019.09.29-21.43.51:433][813]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (97)
+[2019.09.29-21.43.51:433][813]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (95)
+[2019.09.29-21.43.51:433][813]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (93)
+[2019.09.29-21.43.51:433][813]LogModuleManager: Shutting down and abandoning module MacTargetPlatform (91)
+[2019.09.29-21.43.51:433][813]LogModuleManager: Shutting down and abandoning module MacServerTargetPlatform (89)
+[2019.09.29-21.43.51:433][813]LogModuleManager: Shutting down and abandoning module MacNoEditorTargetPlatform (87)
+[2019.09.29-21.43.51:433][813]LogModuleManager: Shutting down and abandoning module MacClientTargetPlatform (85)
+[2019.09.29-21.43.51:433][813]LogModuleManager: Shutting down and abandoning module AllDesktopTargetPlatform (83)
+[2019.09.29-21.43.51:433][813]LogModuleManager: Shutting down and abandoning module InputCore (80)
+[2019.09.29-21.43.51:433][813]LogModuleManager: Shutting down and abandoning module Settings (78)
+[2019.09.29-21.43.51:433][813]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (76)
+[2019.09.29-21.43.51:433][813]LogModuleManager: Shutting down and abandoning module PhysXCooking (74)
+[2019.09.29-21.43.51:433][813]LogModuleManager: Shutting down and abandoning module SteamVR (72)
+[2019.09.29-21.43.51:444][813]LogHMD: Freeing OpenVRDLLHandle.
+[2019.09.29-21.43.51:444][813]LogModuleManager: Shutting down and abandoning module OculusHMD (70)
+[2019.09.29-21.43.51:457][813]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (68)
+[2019.09.29-21.43.51:457][813]LogModuleManager: Shutting down and abandoning module LauncherChunkInstaller (66)
+[2019.09.29-21.43.51:457][813]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (64)
+[2019.09.29-21.43.51:457][813]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (60)
+[2019.09.29-21.43.51:476][813]LogModuleManager: Shutting down and abandoning module XMPP (55)
+[2019.09.29-21.43.51:489][813]LogModuleManager: Shutting down and abandoning module WebSockets (54)
+[2019.09.29-21.43.51:516][813]LogModuleManager: Shutting down and abandoning module HTTP (51)
+[2019.09.29-21.43.51:516][813]LogHttp: Display: Http module shutting down, but needs to wait on 1 outstanding Http requests:
+[2019.09.29-21.43.51:516][813]LogHttp: Display: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BF0BD8D59-4FDE-3D86-22D2-DC8589FEE991%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.22.3-7053642%2B%2B%2BUE4%2BRelease-4.22&UserID=c271b6db4c952cfecacb67aeaa4d4a1c%7C7bcf88b31b2f4e80810d873055aca1f5%7C6b29d9cf-3560-4283-ac61-0ea466c1bdfe&AppEnvironment=datacollector-binary&UploadType=eteventstream] status=Processing
+[2019.09.29-21.43.51:522][813]LogModuleManager: Shutting down and abandoning module SSL (50)
+[2019.09.29-21.43.51:523][813]LogModuleManager: Shutting down and abandoning module WmfMedia (46)
+[2019.09.29-21.43.51:529][813]LogModuleManager: Shutting down and abandoning module Media (45)
+[2019.09.29-21.43.51:535][813]LogModuleManager: Shutting down and abandoning module MagicLeap (42)
+[2019.09.29-21.43.51:546][813]LogModuleManager: Shutting down and abandoning module DatasmithContent (40)
+[2019.09.29-21.43.51:546][813]LogModuleManager: Shutting down and abandoning module AnimationModifiers (38)
+[2019.09.29-21.43.51:574][813]LogModuleManager: Shutting down and abandoning module PropertyEditor (37)
+[2019.09.29-21.43.51:587][813]LogModuleManager: Shutting down and abandoning module AudioEditor (34)
+[2019.09.29-21.43.51:610][813]LogModuleManager: Shutting down and abandoning module TextureCompressor (32)
+[2019.09.29-21.43.51:619][813]LogModuleManager: Shutting down and abandoning module RenderCore (30)
+[2019.09.29-21.43.51:619][813]LogModuleManager: Shutting down and abandoning module Landscape (28)
+[2019.09.29-21.43.51:619][813]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (26)
+[2019.09.29-21.43.51:623][813]LogModuleManager: Shutting down and abandoning module OpenGLDrv (24)
+[2019.09.29-21.43.51:633][813]LogModuleManager: Shutting down and abandoning module D3D11RHI (22)
+[2019.09.29-21.43.51:633][813]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (20)
+[2019.09.29-21.43.51:635][813]LogModuleManager: Shutting down and abandoning module Renderer (18)
+[2019.09.29-21.43.51:635][813]LogModuleManager: Shutting down and abandoning module Engine (16)
+[2019.09.29-21.43.51:635][813]LogModuleManager: Shutting down and abandoning module CoreUObject (14)
+[2019.09.29-21.43.51:636][813]LogModuleManager: Shutting down and abandoning module NetworkFile (12)
+[2019.09.29-21.43.51:645][813]LogModuleManager: Shutting down and abandoning module CookedIterativeFile (10)
+[2019.09.29-21.43.51:645][813]LogModuleManager: Shutting down and abandoning module StreamingFile (8)
+[2019.09.29-21.43.51:655][813]LogModuleManager: Shutting down and abandoning module SandboxFile (6)
+[2019.09.29-21.43.51:655][813]LogModuleManager: Shutting down and abandoning module PakFile (4)
+[2019.09.29-21.43.51:660][813]LogModuleManager: Shutting down and abandoning module RSA (3)
+[2019.09.29-21.43.51:673][813]LogExit: Exiting.
+[2019.09.29-21.43.51:699][813]Log file closed, 09/30/19 10:43:51
