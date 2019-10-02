@@ -24,7 +24,7 @@ void AMyGameManager::BeginPlay()
 void AMyGameManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	Test(DeltaTime);
+	//Test(DeltaTime);
 }
 
 void AMyGameManager::NewClient()
@@ -41,7 +41,7 @@ void AMyGameManager::NewClient()
 	}
 
 	//TEST
-	/*
+	
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Hi! My name is %s"), *FString(CurrentClient->GetName())), false);
 
 	for (int i = 0; i < CurrentClient->GetGoals().Num(); i++)
@@ -55,7 +55,7 @@ void AMyGameManager::NewClient()
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("and %s"), *FString(CurrentClient->GetGoals()[i]->GetGoal())), false);
 		}
 	}
-	*/
+	
 }
 
 void AMyGameManager::NewBouquet()
@@ -182,9 +182,12 @@ void AMyGameManager::SetMoney(int _iMoolah)
 
 void AMyGameManager::CompleteOrder()
 {
-	CurrentBouquet->GradeBouquet();
-	AddMoney(CurrentBouquet->GetWorth());
-	NewBouquet();
-	NewClient();
+	if (CurrentBouquet->CheckFull())
+	{
+		CurrentBouquet->GradeBouquet();
+		AddMoney(CurrentBouquet->GetWorth());
+		NewBouquet();
+		NewClient();
+	}
 }
 

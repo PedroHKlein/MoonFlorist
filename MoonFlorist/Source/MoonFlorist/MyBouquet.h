@@ -41,6 +41,8 @@ public:
 	void ClearBouquet();
 	UFUNCTION(BlueprintCallable)
 	UMyFlower* SpawnFlower(int _iType);
+	UFUNCTION(BlueprintCallable)
+	bool CheckFull();
 
 
 
