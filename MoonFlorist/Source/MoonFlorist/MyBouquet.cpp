@@ -2,6 +2,7 @@
 
 
 #include "MyBouquet.h"
+#include "Engine/Engine.h"
 
 UMyBouquet::UMyBouquet()
 {
@@ -189,5 +190,25 @@ UMyFlower* UMyBouquet::SpawnFlower(int _iType)
 {
 	UMyFlower* temp = NewObject<UMyFlower>();
 	temp->init(_iType);
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Flower added:  %s"), *FString(temp->GetFlowerName())), false);
+
+	return temp;
+}
+
+
+bool UMyBouquet::CheckFull()
+{
+	bool temp;
+
+	if ((Row1.Num() == 2) && (Row2.Num() == 3) && (Row3.Num() == 2))
+	{
+		temp = true;
+	}
+	else
+	{
+		temp = false;
+	}
+
 	return temp;
 }
