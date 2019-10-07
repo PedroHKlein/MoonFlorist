@@ -22,308 +22,310 @@ void UMyClientOrder::init(int _iName, int _iNumOfGoals)
 	switch (iName)
 	{
 	case MARK:
-		sName = "Mark";
+		sName = "<Default> Mark";
 		break;
 	case PEPE:
-		sName = "Pepe";
+		sName = "<Default> Pepe";
 		break;
 	case KIKI:
-		sName = "KiKi";
+		sName = "<Default> KiKi";
 		break;
 	case SHIKA:
-		sName = "Shika";
+		sName = "<Default> Shika";
 		break;
 	case STEVEN:
-		sName = "Steven";
+		sName = "<Default> Steven";
 		break;
 	case IZZIE:
-		sName = "Izzie";
+		sName = "<Default> Izzie";
 		break;
 	case JONTY:
-		sName = "Jonty";
+		sName = "<Default> Jonty";
 		break;
 	case ALEX:
-		sName = "Alex";
+		sName = "<Default> Alex";
 		break;
 	case FRASER:
-		sName = "Fraser";
+		sName = "<Default> Fraser";
 		break;
 	case ROURKE:
-		sName = "Rourke";
+		sName = "<Default> Rourke";
 		break;
 	case ROWAN:
-		sName = "Rowan";
+		sName = "<Default> Rowan";
 		break;
 	case MICHAEL:
-		sName = "Michael";
+		sName = "<Default> Michael";
 		break;
 	case SHUNI:
-		sName = "Shuni";
+		sName = "<Default> Shuni";
 		break;
 	case JESSKALOO:
-		sName = "Jesska-Loo";
+		sName = "<Default> Jesska-Loo";
 		break;
 	case CASPIAN:
-		sName = "Caspian";
+		sName = "<Default> Caspian";
 		break;
 	case MATI:
-		sName = "Mati";
+		sName = "<Default> Mati";
 		break;
 	case JEREMY:
-		sName = "Jeremy";
+		sName = "<Default> Jeremy";
 		break;
 	case ROGER:
-		sName = "Roger";
+		sName = "<Default> Roger";
 		break;
 	case KERRY:
-		sName = "Kerry";
+		sName = "<Default> Kerry";
 		break;
 	case VIVIAN:
-		sName = "Vivian";
+		sName = "<Default> Vivian";
 		break;
 	case SALLY:
-		sName = "Sally";
+		sName = "<Default> Sally";
 		break;
 	case JAMES:
-		sName = "James";
+		sName = "<Default> James";
 		break;
 	case JIMBO:
-		sName = "Jimbo";
+		sName = "<Default> Jimbo";
 		break;
 	case DONUT:
-		sName = "Donut";
+		sName = "<Default> Donut";
 		break;
 	case JIMOTHY:
-		sName = "Jimothy";
+		sName = "<Default> Jimothy";
 		break;
 	case JASPOR:
-		sName = "Jaspor";
+		sName = "<Default> Jaspor";
 		break;
 	case CARLO:
-		sName = "Carlo";
+		sName = "<Default> Carlo";
 		break;
 	case LARISSA:
-		sName = "Larissa";
+		sName = "<Default> Larissa";
 		break;
 	case MARA:
-		sName = "Mara";
+		sName = "<Default> Mara";
 		break;
 	case CAROLINE:
-		sName = "Caroline";
+		sName = "<Default> Caroline";
 		break;
 	case SAMI:
-		sName = "Sami";
+		sName = "<Default> Sami";
 		break;
 	case KATE:
-		sName = "Kate";
+		sName = "<Default> Kate";
 		break;
 	case BENNET:
-		sName = "Bennet";
+		sName = "<Default> Bennet";
 		break;
 	case RYAN:
-		sName = "Ryan";
+		sName = "<Default> Ryan";
 		break;
 	case FRANCIS:
-		sName = "Francis";
+		sName = "<Default> Francis";
 		break;
 	case ELLIE:
-		sName = "Ellie";
+		sName = "<Default> Ellie";
 		break;
 	case REBEKKAH:
-		sName = "Rebekkah";
+		sName = "<Default> Rebekkah";
 		break;
 	case SOFIE:
-		sName = "Sofie";
+		sName = "<Default> Sofie";
 		break;
 	case ZANNI:
-		sName = "Zanni";
+		sName = "<Default> Zanni";
 		break;
 	case HOLLY:
-		sName = "Holly";
+		sName = "<Default> Holly";
 		break;
 	case EMMA:
-		sName = "Emma";
+		sName = "<Default> Emma";
 		break;
 	case ROBYN:
-		sName = "Robyn";
+		sName = "<Default> Robyn";
 		break;
 	case YULI:
-		sName = "Yuli";
+		sName = "<Default> Yuli";
 		break;
 	case PAULA:
-		sName = "Paula";
+		sName = "<Default> Paula";
 		break;
 	case MEG:
-		sName = "Meg";
+		sName = "<Default> Meg";
 		break;
 	case BERT:
-		sName = "Bert";
+		sName = "<Default> Bert";
 		break;
 	case MAXWELL:
-		sName = "Maxwell";
+		sName = "<Default> Maxwell";
 		break;
 	case ABIGAIL:
-		sName = "Abigail";
+		sName = "<Default> Abigail";
 		break;
 	case ALEXANDRA:
-		sName = "Alexandra";
+		sName = "<Default> Alexandra";
 		break;
 	case AMANDA:
-		sName = "Amanda";
+		sName = "<Default> Amanda";
 		break;
 	case ARIANNE:
-		sName = "Arianne";
+		sName = "<Default> Arianne";
 		break;
 	case BAILEY:
-		sName = "Bailey";
+		sName = "<Default> Bailey";
 		break;
 	case BEN:
-		sName = "Ben";
+		sName = "<Default> Ben";
 		break;
 	case BETH:
-		sName = "Beth";
+		sName = "<Default> Beth";
 		break;
 	case BLAIR:
-		sName = "Blair";
+		sName = "<Default> Blair";
 		break;
 	case BO:
-		sName = "Bo";
+		sName = "<Default> Bo";
 		break;
 	case BRIDGET:
-		sName = "Bridget";
+		sName = "<Default> Bridget";
 		break;
 	case BROOKE:
-		sName = "Brooke";
+		sName = "<Default> Brooke";
 		break;
 	case BECKY:
-		sName = "Becky";
+		sName = "<Default> Becky";
 		break;
 	case CLAIRE:
-		sName = "Claire";
+		sName = "<Default> Claire";
 		break;
 	case DAMIEN:
-		sName = "Damien";
+		sName = "<Default> Damien";
 		break;
 	case DANNY:
-		sName = "Danny";
+		sName = "<Default> Danny";
 		break;
 	case IVAN:
-		sName = "Ivan";
+		sName = "<Default> Ivan";
 		break;
 	case SAM:
-		sName = "Sam";
+		sName = "<Default> Sam";
 		break;
 	case SID:
-		sName = "Sid";
+		sName = "<Default> Sid";
 		break;
 	case TECE:
-		sName = "Tece";
+		sName = "<Default> Tece";
 		break;
 	case ASMA:
-		sName = "Asma";
+		sName = "<Default> Asma";
 		break;
 	case SHILPA:
-		sName = "Shilpa";
+		sName = "<Default> Shilpa";
 		break;
 	case SAMAH:
-		sName = "Samah";
+		sName = "<Default> Samah";
 		break;
 	case TAMRYN:
-		sName = "Tamryn";
+		sName = "<Default> Tamryn";
 		break;
 	case CALLAN:
-		sName = "Callan";
+		sName = "<Default> Callan";
 		break;
 	case FAWAD:
-		sName = "Fawad";
+		sName = "<Default> Fawad";
 		break;
 	case DAVID:
-		sName = "David";
+		sName = "<Default> David";
 		break;
 	case ANDREW:
-		sName = "Andrew";
+		sName = "<Default> Andrew";
 		break;
 	case SHANNON:
-		sName = "Shannon";
+		sName = "<Default> Shannon";
 		break;
 	case KAITLIN:
-		sName = "Kaitlin";
+		sName = "<Default> Kaitlin";
 		break;
 	case PIGEON:
-		sName = "Pigeon";
+		sName = "<Default> Pigeon";
 		break;
 	case BOOF:
-		sName = "Boof";
+		sName = "<Default> Boof";
 		break;
 	case ANNA:
-		sName = "Anna Rose";
+		sName = "<Default> Anna Rose";
 		break;
 	case KIMBERLY:
-		sName = "Kimmi";
+		sName = "<Default> Kimmi";
 		break;
 	case SASKIA:
-		sName = "Saskia";
+		sName = "<Default> Saskia";
 		break;
 	case STEPH:
-		sName = "Steph";
+		sName = "<Default> Steph";
 		break;
 	case PINKY:
-		sName = "Pinky";
+		sName = "<Default> Pinky";
 		break;
 	case SARAH:
-		sName = "Sarah";
+		sName = "<Default> Sarah";
 		break;
 	case SERENA:
-		sName = "Serena";
+		sName = "<Default> Serena";
 		break;
 	case IDA:
-		sName = "Ida";
+		sName = "<Default> Ida";
 		break;
 	case LAUREN:
-		sName = "Lauren";
+		sName = "<Default> Lauren";
 		break;
 	case KEIRA:
-		sName = "Keira";
+		sName = "<Default> Keira";
 		break;
 	case RIANNA:
-		sName = "Rianna";
+		sName = "<Default> Rianna";
 		break;
 	case ROSARIA:
-		sName = "Rosaria";
+		sName = "<Default> Rosaria";
 		break;
 	case JHARAIZ:
-		sName = "Jharaiz";
+		sName = "<Default> Jharaiz";
 		break;
 	case AMY:
-		sName = "Amy";
+		sName = "<Default> Amy";
 		break;
 	case JANELLE:
-		sName = "Janelle";
+		sName = "<Default> Janelle";
 		break;
 	case JORDAN:
-		sName = "Jordan";
+		sName = "<Default> Jordan";
 		break;
 	case HAMISH:
-		sName = "Hamish";
+		sName = "<Default> Hamish";
 		break;
 	case NIKKI:
-		sName = "Nikki";
+		sName = "<Default> Nikki";
 		break;
 	case PITCAM:
-		sName = "Pitcam";
+		sName = "<Default> Pitcam";
 		break;
 	case JUNIPER:
-		sName = "Juniper";
+		sName = "<Default> Juniper";
 		break;
 	case LOCHIE:
-		sName = "Lochie";
+		sName = "<Default> Lochie";
 		break;
 	case CALLUM:
-		sName = "Callum";
+		sName = "<Default> Callum";
 		break;
 	default:
 		break;
 	}
+
+	SetDescription();
 }
 
 FString UMyClientOrder::GetName()
@@ -343,4 +345,29 @@ void UMyClientOrder::GenerateJob(int _iNum)
 TArray<UMyGoal*> UMyClientOrder::GetGoals()
 {
 	return Goals;
+}
+
+FString UMyClientOrder::GetFullDescription()
+{
+	return sFullDescription;
+}
+
+void UMyClientOrder::SetDescription()
+{
+	int temp = Goals.Num();
+
+	switch (temp)
+	{
+	case 1:
+		sFullDescription = sGreeting + sName + Dialogue1 + Goals[0]->GetGoal();
+		break;
+	case 2:
+		sFullDescription = sGreeting + sName + Dialogue1 + Goals[0]->GetGoal() + Dialogue3 + Goals[1]->GetGoal();
+		break;
+	case 3:
+		sFullDescription = sGreeting + sName + Dialogue1 + Goals[0]->GetGoal() + Dialogue2 + Goals[1]->GetGoal() + Dialogue3 + Goals[2]->GetGoal();
+		break;
+	default:
+		break;
+	}
 }

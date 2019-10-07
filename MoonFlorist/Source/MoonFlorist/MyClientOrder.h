@@ -132,11 +132,19 @@ public:
 	FString GetName();
 	UFUNCTION(BlueprintCallable)
 	TArray<UMyGoal*> GetGoals();
+	UFUNCTION(BlueprintCallable)
+	FString GetFullDescription();
+	UFUNCTION(BlueprintCallable)
+	void SetDescription();
 
 private:
 	int iName;
-	FString sGreeting;
+	FString sGreeting = "<Default>Hello my name is ";
+	FString Dialogue1 = "<Default>. I would like to order a bouquet that feels";
+	FString Dialogue2 = "<Default>,";
+	FString Dialogue3 = "<Default> and";
 	FString sName;
 	TArray<UMyGoal*> Goals;
+	FString sFullDescription;
 
 };
