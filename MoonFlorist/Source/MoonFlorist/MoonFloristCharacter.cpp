@@ -78,13 +78,13 @@ FHitResult AMoonFloristCharacter::RaycastCheck()
 	if (isHit)
 	{
 		AMoonFloristHUD* playerHUD = (AMoonFloristHUD*)(GetWorld()->GetFirstPlayerController()->GetHUD());
-		if ((start - HitData.GetActor()->GetActorLocation()).Size() <= 180.0f && HitData.GetActor()->ActorHasTag(FName(TEXT("Interactable"))))
+		if ((start - HitData.GetActor()->GetActorLocation()).Size() <= 200.0f && HitData.GetActor()->ActorHasTag(FName(TEXT("Interactable"))))
 		{
 
 			playerHUD->ChangeState(3);
 
 		}
-		else if ((start - HitData.GetActor()->GetActorLocation()).Size() > 180.0f && HitData.GetActor()->ActorHasTag(FName(TEXT("Interactable"))))
+		else if ((start - HitData.GetActor()->GetActorLocation()).Size() > 200.0f && HitData.GetActor()->ActorHasTag(FName(TEXT("Interactable"))))
 		{
 			playerHUD->ChangeState(2);
 
