@@ -26,10 +26,12 @@ public:
 	AMoonFloristCharacter();
 	virtual void Tick(float DeltaTime) override;
 
-	UFUNCTION(BlueprintCallable, Category = "RayCast")
+	UFUNCTION(BlueprintCallable, Category = "Raycast")
 	FHitResult RaycastCheck();
-
-
+	UPROPERTY(BlueprintReadWrite, Category = "Currency")
+	int CosmoCoins;
+	UPROPERTY(BlueprintReadWrite,EditAnywhere, Category = "Currency")
+	int StartCoins;
 protected:
 	virtual void BeginPlay();
 
