@@ -2,11 +2,12 @@
 
 #pragma once
 
+#include "MyClientOrder.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "MyClient.generated.h"
-#include "MyClientOrder.h"
 
+/*
 enum Nature
 {
 	NORMAL = 1,
@@ -15,6 +16,7 @@ enum Nature
 	GRUMPY,
 	COOL
 };
+*/
 
 UCLASS()
 class MOONFLORIST_API AMyClient : public AActor
@@ -24,8 +26,8 @@ class MOONFLORIST_API AMyClient : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AMyClient();
-	UFUNCTION(BlueprintCallable)
-	void Init(int _iNature);
+	//UFUNCTION(BlueprintCallable)
+	//void Init(int _iNature);
 
 protected:
 	// Called when the game starts or when spawned
