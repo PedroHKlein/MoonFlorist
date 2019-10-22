@@ -45,6 +45,8 @@ AMoonFloristCharacter::AMoonFloristCharacter()
 	Mesh1P->RelativeLocation = FVector(-0.5f, -4.4f, -155.7f);
 
 
+	
+	
 }
 
 void AMoonFloristCharacter::BeginPlay()
@@ -53,6 +55,7 @@ void AMoonFloristCharacter::BeginPlay()
 	Super::BeginPlay();
 
 	PrimaryActorTick.bCanEverTick = true;
+
 
 
 }

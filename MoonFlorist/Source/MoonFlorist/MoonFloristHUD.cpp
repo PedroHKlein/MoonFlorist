@@ -58,7 +58,6 @@ void AMoonFloristHUD::DrawHUD()
 
 void AMoonFloristHUD::ToggleAlpha(bool _changeState)
 {
-
 	if (_changeState)
 	{
 		Interacting = true;
@@ -71,8 +70,6 @@ void AMoonFloristHUD::ToggleAlpha(bool _changeState)
 		Interacting = false;
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, TEXT("Crosshair ON"));
 		Current_CH = Idle_CH;
-		
-	
 	}
 }
 
@@ -104,8 +101,14 @@ void AMoonFloristHUD::ChangeState(int _state)
 			//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, TEXT("InRange State Activate!!"));
 			break;
 		}
+		case 4:
+		{
+			Current_CH = None_CH;
+			break;
+		}
 		default:
 		{
+			Current_CH = None_CH;
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Crosshair Change Is Broken!"));
 			break;
 		}
