@@ -7,16 +7,16 @@
 #include "GameFramework/Actor.h"
 #include "MyClient.generated.h"
 
-/*
+
 enum Nature
 {
 	NORMAL = 1,
 	FLIRTY,
 	SHY,
 	GRUMPY,
-	COOL
+	HIP
 };
-*/
+
 
 UCLASS()
 class MOONFLORIST_API AMyClient : public AActor
@@ -26,14 +26,22 @@ class MOONFLORIST_API AMyClient : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AMyClient();
-	//UFUNCTION(BlueprintCallable)
-	//void Init(int _iNature);
+	~AMyClient();
+
+	UFUNCTION()
+	void Init(int _iNature);
+	void NewOrder(int _iOrder);
+	void SetGreetings(int _iNature);
+	UMyClientOrder* GetCurrentOrder();
+	UMyClientOrder* GetPreviousOrder();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	
 	int iName;
+	int iNature;
+
 	FString sGreeting = "<Default>Hello my name is ";
 	FString Dialogue1 = "<Default>. I would like to order a bouquet that feels";
 	FString Dialogue2 = "<Default>,";

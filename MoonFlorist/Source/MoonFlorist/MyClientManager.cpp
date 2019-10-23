@@ -24,4 +24,3 @@ void AMyClientManager::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
-
