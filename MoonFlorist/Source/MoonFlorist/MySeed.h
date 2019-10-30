@@ -34,5 +34,6 @@ public:
 
 
 private:
+	UPROPERTY()
 	int iType = 0;
 };
