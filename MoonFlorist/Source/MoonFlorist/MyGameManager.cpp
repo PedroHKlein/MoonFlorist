@@ -195,6 +195,7 @@ void AMyGameManager::CompleteOrder()
 	{
 		CurrentBouquet->GradeBouquet();
 		AddMoney(CurrentBouquet->GetWorth());
+		setLastBouquetWorth();
 		NewClient();
 		NewBouquet();
 	}
@@ -219,4 +220,14 @@ void AMyGameManager::init()
 AMyGameManager* AMyGameManager::GetInstance()
 {
 	return Instance;
+}
+
+void AMyGameManager::setLastBouquetWorth()
+{
+	iLastBoquetWorth = CurrentBouquet->GetWorth();
+}
+
+int AMyGameManager::getLastBouquetWorth()
+{
+	return iLastBoquetWorth;
 }

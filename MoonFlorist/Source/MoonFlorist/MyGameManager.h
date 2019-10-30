@@ -55,6 +55,10 @@ public:
 	void CompleteOrder();
 	UFUNCTION(BlueprintCallable)
 	AMyGoalManager* GetGoalList();
+	UFUNCTION(BlueprintCallable)
+	void setLastBouquetWorth();
+	UFUNCTION(BlueprintCallable)
+	int getLastBouquetWorth();
 
 private:
 	UPROPERTY()
@@ -77,5 +81,7 @@ private:
 	AMyGameManager* Instance;
 	UPROPERTY()
 	TArray<UMySeed*> Seeds;
+	UPROPERTY()
+	int iLastBoquetWorth;
 
 };
