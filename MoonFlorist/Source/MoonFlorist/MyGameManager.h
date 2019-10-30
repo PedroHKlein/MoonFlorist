@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "MyGoalManager.h"
+#include "MyClientManager.h"
 #include "MyClientOrder.h"
 #include "MyBouquet.h"
 #include "MySeed.h"
@@ -25,7 +27,12 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	UFUNCTION(BlueprintCallable)
+	AMyGameManager* GetInstance();
 
+
+	UFUNCTION(BlueprintCallable)
+	void init();
 	UFUNCTION(BlueprintCallable)
 	void NewClient();
 	UFUNCTION(BlueprintCallable)
@@ -46,15 +53,29 @@ public:
 	void SetMoney(int _iMoolah);
 	UFUNCTION(BlueprintCallable)
 	void CompleteOrder();
-
+	UFUNCTION(BlueprintCallable)
+	AMyGoalManager* GetGoalList();
 
 private:
+	UPROPERTY()
+	AMyGoalManager* GoalLists;
+	UPROPERTY()
+	AMyClientManager* ClientList;
+	UPROPERTY()
+	AMyClient* CurrClient;
+	UPROPERTY()
 	UMyClientOrder* CurrentClient;
+	UPROPERTY()
 	UMyBouquet* CurrentBouquet;
+	UPROPERTY()
 	float fTimeToWait = 6.0f;
+	UPROPERTY()
 	float fCurrTime = 6.0f;
+	UPROPERTY()
 	int iMoney = 70;
-
+	UPROPERTY()
+	AMyGameManager* Instance;
+	UPROPERTY()
 	TArray<UMySeed*> Seeds;
 
 };

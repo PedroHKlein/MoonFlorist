@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "EngineUtils.h"
+#include "Engine/World.h"
 #include "MyGoal.h"
 #include "UObject/NoExportTypes.h"
 #include "MyClientOrder.generated.h"
@@ -125,7 +127,7 @@ public:
 	~UMyClientOrder();
 
 	UFUNCTION(BlueprintCallable)
-	void init(int _iName, int _iNumOfGoals);
+	void init(int _iName, int _iNumOfGoals, UWorld* _world);
 	UFUNCTION(BlueprintCallable)
 	void GenerateJob(int _iNum);
 	UFUNCTION(BlueprintCallable)
@@ -135,16 +137,28 @@ public:
 	UFUNCTION(BlueprintCallable)
 	FString GetFullDescription();
 	UFUNCTION(BlueprintCallable)
-	void SetDescription();
+	void SetDescription(FString _Description);
 
 private:
+	UPROPERTY()
 	int iName;
+	UPROPERTY()
 	FString sGreeting = "<Default>Hello my name is ";
+	UPROPERTY()
 	FString Dialogue1 = "<Default>. I would like to order a bouquet that feels";
+	UPROPERTY()
 	FString Dialogue2 = "<Default>,";
+	UPROPERTY()
 	FString Dialogue3 = "<Default> and";
+	UPROPERTY()
 	FString sName;
+	UPROPERTY()
 	TArray<UMyGoal*> Goals;
+	UPROPERTY()
 	FString sFullDescription;
+	UPROPERTY()
+	UWorld* World;
+	UPROPERTY()
+	class AMyGameManager* GameManager;
 
 };

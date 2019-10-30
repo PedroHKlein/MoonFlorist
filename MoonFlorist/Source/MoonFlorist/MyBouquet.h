@@ -47,11 +47,16 @@ public:
 
 
 private:
-
+	UPROPERTY()
 	UMyClientOrder* Order;
+	UPROPERTY()
 	TArray<UMyFlower*> Row1;
+	UPROPERTY()
 	TArray<UMyFlower*> Row2;
+	UPROPERTY()
 	TArray<UMyFlower*> Row3;
+	UPROPERTY()
 	int iScore;
+	UPROPERTY()
 	int iMoney = 70;
 };

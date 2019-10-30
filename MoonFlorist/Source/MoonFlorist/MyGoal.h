@@ -98,12 +98,19 @@ public:
 	FString GetColour();
 	UFUNCTION(BlueprintCallable)
 	FString GetGoal();
+	UFUNCTION(BlueprintCallable)
+	void SetComplete();
 
 private:
-
+	UPROPERTY()
 	int iGoalColour;
+	UPROPERTY()
 	int iGoalNumber;
+	UPROPERTY()
 	FString sColour;
+	UPROPERTY()
 	FString sGoal;
+	UPROPERTY()
+	bool bComplete;
 	
 };

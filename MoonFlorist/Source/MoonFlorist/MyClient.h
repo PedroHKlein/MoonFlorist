@@ -29,27 +29,38 @@ public:
 	~AMyClient();
 
 	UFUNCTION()
-	void Init(int _iNature);
-	void NewOrder(int _iOrder);
-	void SetGreetings(int _iNature);
+	void Init(int _iName, int _iNature);
+	UFUNCTION()
+	void NewOrder();
+	UFUNCTION()
+	void SetFullDescription();
+	UFUNCTION()
 	UMyClientOrder* GetCurrentOrder();
+	UFUNCTION()
 	UMyClientOrder* GetPreviousOrder();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	
+	UPROPERTY()
 	int iName;
+	UPROPERTY()
 	int iNature;
-
+	UPROPERTY()
+	FString sName = "<Default> Jobin";
+	UPROPERTY()
 	FString sGreeting = "<Default>Hello my name is ";
+	UPROPERTY()
 	FString Dialogue1 = "<Default>. I would like to order a bouquet that feels";
+	UPROPERTY()
 	FString Dialogue2 = "<Default>,";
+	UPROPERTY()
 	FString Dialogue3 = "<Default> and";
-	FString sName;
+	UPROPERTY()
 	FString sFullDescription;
-
+	UPROPERTY()
 	UMyClientOrder* CurrentOrder;
+	UPROPERTY()
 	UMyClientOrder* LastOrder;
 
 public:	

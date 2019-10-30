@@ -1,7 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "MyClientOrder.h"
+#include "MyGameManager.h"
+#include "Kismet/GameplayStatics.h"
 
 UMyClientOrder::UMyClientOrder()
 {
@@ -13,8 +14,9 @@ UMyClientOrder::~UMyClientOrder()
 
 }
 
-void UMyClientOrder::init(int _iName, int _iNumOfGoals)
+void UMyClientOrder::init(int _iName, int _iNumOfGoals, UWorld* _world)
 {
+	World = _world;
 	iName = _iName;
 
 	GenerateJob(_iNumOfGoals);
@@ -325,7 +327,7 @@ void UMyClientOrder::init(int _iName, int _iNumOfGoals)
 		break;
 	}
 
-	SetDescription();
+	//SetDescription();
 }
 
 FString UMyClientOrder::GetName()
@@ -335,10 +337,17 @@ FString UMyClientOrder::GetName()
 
 void UMyClientOrder::GenerateJob(int _iNum)
 {
+	for (TActorIterator<AMyGameManager> ActorItr(World); ActorItr; ++ActorItr)
+	{
+		GameManager = *ActorItr;
+	}
 	for (int i = 0; i < _iNum; i++)
 	{
-		Goals.Add(NewObject<UMyGoal>());
-		Goals[i]->init(FMath::RandRange(1, 6), FMath::RandRange(1, 5));
+
+		Goals.Add(GameManager->GetGoalList()->GetGoal(FMath::RandRange(1, 6), FMath::RandRange(0, 4)));
+
+		//Goals.Add(NewObject<UMyGoal>());
+		//Goals[i]->init(FMath::RandRange(1, 6), FMath::RandRange(1, 5));
 	}
 }
 
@@ -352,22 +361,9 @@ FString UMyClientOrder::GetFullDescription()
 	return sFullDescription;
 }
 
-void UMyClientOrder::SetDescription()
+void UMyClientOrder::SetDescription(FString _description)
 {
-	int temp = Goals.Num();
+	sFullDescription = _description;
 
-	switch (temp)
-	{
-	case 1:
-		sFullDescription = sGreeting + sName + Dialogue1 + Goals[0]->GetGoal();
-		break;
-	case 2:
-		sFullDescription = sGreeting + sName + Dialogue1 + Goals[0]->GetGoal() + Dialogue3 + Goals[1]->GetGoal();
-		break;
-	case 3:
-		sFullDescription = sGreeting + sName + Dialogue1 + Goals[0]->GetGoal() + Dialogue2 + Goals[1]->GetGoal() + Dialogue3 + Goals[2]->GetGoal();
-		break;
-	default:
-		break;
-	}
+	
 }

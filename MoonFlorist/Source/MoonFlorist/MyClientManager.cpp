@@ -24,3 +24,18 @@ void AMyClientManager::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
+
+void AMyClientManager::init()
+{
+	for (int i = 0; i < 100; i++)
+	{
+		AMyClient* temp = GetWorld()->SpawnActor<AMyClient>(AMyClient::StaticClass());
+		temp->Init(i + 1, FMath::RandRange(1, 5));
+		Clients.Push(temp);
+	}
+}
+
+TArray<AMyClient*> AMyClientManager::GetClients()
+{
+	return Clients;
+}
