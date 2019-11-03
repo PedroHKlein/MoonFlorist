@@ -21,19 +21,19 @@ void UMyGoal::init(int _iCol, int _iGoal)
 		switch (iGoalNumber)
 		{
 		case FIESTY:
-			sGoal = "Fiesty";
+			sGoal = "<Incomplete> Fiesty";
 			break;
 		case REDRED:
-			sGoal = "like RedRed";
+			sGoal = "<Incomplete> like RedRed";
 			break;
 		case PASSIONATE:
-			sGoal = "Passionate";
+			sGoal = "<Incomplete> Passionate";
 			break;
 		case LOVE:
-			sGoal = "like Love";
+			sGoal = "<Incomplete> like Love";
 			break;
 		case CORAGEOUS:
-			sGoal = "Corageous";
+			sGoal = "<Incomplete> Corageous";
 			break;
 		default:
 			break;
@@ -41,23 +41,23 @@ void UMyGoal::init(int _iCol, int _iGoal)
 		break;
 		//BLUE GOALS HERE
 	case GBLUE:
-		sColour = "Blue";
+		sColour = "Blue ";
 		switch (iGoalNumber)
 		{
 		case COOL:
-			sGoal = "Cool";
+			sGoal = "<Incomplete> Cool";
 			break;
 		case BLUEBLUE:
-			sGoal = "like BlueBlue";
+			sGoal = "<Incomplete> like BlueBlue";
 			break;
 		case TRUST:
-			sGoal = "like Trust";
+			sGoal = "<Incomplete> like Trust";
 			break;
 		case SMART:
-			sGoal = "Smart";
+			sGoal = "<Incomplete> Smart";
 			break;
 		case PEACEFUL:
-			sGoal = "Peaceful";
+			sGoal = "<Incomplete> Peaceful";
 			break;
 		default:
 			break;
@@ -69,19 +69,19 @@ void UMyGoal::init(int _iCol, int _iGoal)
 		switch (iGoalNumber)
 		{
 		case OPTIMISTIC:
-			sGoal = "Optimistic";
+			sGoal = "<Incomplete> Optimistic";
 			break;
 		case YELLOWYELLOW:
-			sGoal = "like YellowYellow";
+			sGoal = "<Incomplete> like YellowYellow";
 			break;
 		case CHEERFUL:
-			sGoal = "Cheerful";
+			sGoal = "<Incomplete> Cheerful";
 			break;
 		case BRIGHT:
-			sGoal = "Bright";
+			sGoal = "<Incomplete> Bright";
 			break;
 		case SUNNY:
-			sGoal = "Sunny";
+			sGoal = "<Incomplete> Sunny";
 			break;
 		default:
 			break;
@@ -89,23 +89,23 @@ void UMyGoal::init(int _iCol, int _iGoal)
 		break;
 		//PURPLE GOALS HERE
 	case GPURPLE:
-		sColour = "Purple";
+		sColour = "Purple ";
 		switch (iGoalNumber)
 		{
 		case MAGIC:
-			sGoal = "Magic";
+			sGoal = "<Incomplete> Magic";
 			break;
 		case REDBLUE:
-			sGoal = "like RedBlue";
+			sGoal = "<Incomplete> like RedBlue";
 			break;
 		case MYSTERY:
-			sGoal = "Mysterious";
+			sGoal = "<Incomplete> Mysterious";
 			break;
 		case INSPIRING:
-			sGoal = "Inspiring";
+			sGoal = "<Incomplete> Inspiring";
 			break;
 		case SENSUAL:
-			sGoal = "Sensual";
+			sGoal = "<Incomplete> Sensual";
 			break;
 		default:
 			break;
@@ -113,23 +113,23 @@ void UMyGoal::init(int _iCol, int _iGoal)
 		break;
 		//GREEN GOALS HERE
 	case GGREEN:
-		sColour = "Green";
+		sColour = "Green ";
 		switch (iGoalNumber)
 		{
 		case NATURAL:
-			sGoal = "Natural";
+			sGoal = "<Incomplete> Natural";
 			break;
 		case YELLOWBLUE:
-			sGoal = "like YellowBlue";
+			sGoal = "<Incomplete> like YellowBlue";
 			break;
 		case DOWNTOEARTH:
-			sGoal = "Down to Earth";
+			sGoal = "<Incomplete> Down to Earth";
 			break;
 		case CLEAN:
-			sGoal = "Clean";
+			sGoal = "<Incomplete> Clean";
 			break;
 		case FORWARD:
-			sGoal = "Forward";
+			sGoal = "<Incomplete> Forward";
 			break;
 		default:
 			break;
@@ -141,19 +141,19 @@ void UMyGoal::init(int _iCol, int _iGoal)
 		switch (iGoalNumber)
 		{
 		case ADVENTUROUS:
-			sGoal = "Adventurous";
+			sGoal = "<Incomplete> Adventurous";
 			break;
 		case REDYELLOW:
-			sGoal = "like RedYellow";
+			sGoal = "<Incomplete> like RedYellow";
 			break;
 		case WARM:
-			sGoal = "Warm";
+			sGoal = "<Incomplete> Warm";
 			break;
 		case ZESTY:
-			sGoal = "Zesty";
+			sGoal = "<Incomplete> Zesty";
 			break;
 		case TANGY:
-			sGoal = "Tangy";
+			sGoal = "<Incomplete> Tangy";
 			break;
 		default:
 			break;
@@ -187,4 +187,157 @@ FString UMyGoal::GetColour()
 FString UMyGoal::GetGoal()
 {
 	return sGoal;
+}
+
+void UMyGoal::SetComplete()
+{
+	switch (iGoalColour)
+	{
+		//RED GOALS HERE
+	case GRED:
+		sColour = "Red";
+		switch (iGoalNumber)
+		{
+		case FIESTY:
+			sGoal = "<Red> Fiesty";
+			break;
+		case REDRED:
+			sGoal = "<Red> like RedRed";
+			break;
+		case PASSIONATE:
+			sGoal = "<Red> Passionate";
+			break;
+		case LOVE:
+			sGoal = "<Red> like Love";
+			break;
+		case CORAGEOUS:
+			sGoal = "<Red> Corageous";
+			break;
+		default:
+			break;
+		}
+		break;
+		//BLUE GOALS HERE
+	case GBLUE:
+		sColour = "Blue ";
+		switch (iGoalNumber)
+		{
+		case COOL:
+			sGoal = "<Blue> Cool";
+			break;
+		case BLUEBLUE:
+			sGoal = "<Blue> like BlueBlue";
+			break;
+		case TRUST:
+			sGoal = "<Blue> like Trust";
+			break;
+		case SMART:
+			sGoal = "<Blue> Smart";
+			break;
+		case PEACEFUL:
+			sGoal = "<Blue> Peaceful";
+			break;
+		default:
+			break;
+		}
+		break;
+		//YELLOW GOALS HERE
+	case GYELLOW:
+		sColour = "Yellow";
+		switch (iGoalNumber)
+		{
+		case OPTIMISTIC:
+			sGoal = "<Yellow> Optimistic";
+			break;
+		case YELLOWYELLOW:
+			sGoal = "<Yellow> like YellowYellow";
+			break;
+		case CHEERFUL:
+			sGoal = "<Yellow> Cheerful";
+			break;
+		case BRIGHT:
+			sGoal = "<Yellow> Bright";
+			break;
+		case SUNNY:
+			sGoal = "<Yellow> Sunny";
+			break;
+		default:
+			break;
+		}
+		break;
+		//PURPLE GOALS HERE
+	case GPURPLE:
+		sColour = "Purple ";
+		switch (iGoalNumber)
+		{
+		case MAGIC:
+			sGoal = "<Purple> Magic";
+			break;
+		case REDBLUE:
+			sGoal = "<Purple> like RedBlue";
+			break;
+		case MYSTERY:
+			sGoal = "<Purple> Mysterious";
+			break;
+		case INSPIRING:
+			sGoal = "<Purple> Inspiring";
+			break;
+		case SENSUAL:
+			sGoal = "<Purple> Sensual";
+			break;
+		default:
+			break;
+		}
+		break;
+		//GREEN GOALS HERE
+	case GGREEN:
+		sColour = "Green ";
+		switch (iGoalNumber)
+		{
+		case NATURAL:
+			sGoal = "<Green> Natural";
+			break;
+		case YELLOWBLUE:
+			sGoal = "<Green> like YellowBlue";
+			break;
+		case DOWNTOEARTH:
+			sGoal = "<Green> Down to Earth";
+			break;
+		case CLEAN:
+			sGoal = "<Green> Clean";
+			break;
+		case FORWARD:
+			sGoal = "<Green> Forward";
+			break;
+		default:
+			break;
+		}
+		break;
+		//ORANGE GOALS HERE
+	case GORANGE:
+		sColour = "Orange";
+		switch (iGoalNumber)
+		{
+		case ADVENTUROUS:
+			sGoal = "<Orange> Adventurous";
+			break;
+		case REDYELLOW:
+			sGoal = "<Orange> like RedYellow";
+			break;
+		case WARM:
+			sGoal = "<Orange> Warm";
+			break;
+		case ZESTY:
+			sGoal = "<Orange> Zesty";
+			break;
+		case TANGY:
+			sGoal = "<Orange> Tangy";
+			break;
+		default:
+			break;
+		}
+		break;
+	default:
+		break;
+	}
 }

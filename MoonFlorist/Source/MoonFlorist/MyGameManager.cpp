@@ -16,8 +16,10 @@ AMyGameManager::AMyGameManager()
 void AMyGameManager::BeginPlay()
 {
 	Super::BeginPlay();
-	NewClient();
-	NewBouquet();
+	init();
+
+	//NewClient();
+	//NewBouquet();
 }
 
 // Called every frame
@@ -29,15 +31,22 @@ void AMyGameManager::Tick(float DeltaTime)
 
 void AMyGameManager::NewClient()
 {
-	if (CurrentClient == NULL)
+	if (CurrClient == NULL)
 	{
-		CurrentClient = NewObject<UMyClientOrder>();
-		CurrentClient->init(FMath::RandRange(1, 100), FMath::RandRange(1, 3));
+		CurrClient = ClientList->GetClients()[FMath::RandRange(0, 99)];
 	}
 	else
 	{
-		CurrentClient = NewObject<UMyClientOrder>();
-		CurrentClient->init(FMath::RandRange(1, 100), FMath::RandRange(1, 3));
+		CurrClient = ClientList->GetClients()[FMath::RandRange(0, 99)];
+	}
+
+	if (CurrentClient == NULL)
+	{
+		CurrentClient = CurrClient->GetCurrentOrder();
+	}
+	else
+	{
+		CurrentClient = CurrClient->GetCurrentOrder();
 	}
 
 	//TEST
@@ -69,7 +78,7 @@ void AMyGameManager::NewBouquet()
 		CurrentBouquet = NewObject<UMyBouquet>();
 	}
 
-	CurrentBouquet->SetCurrOrder(CurrentClient);
+	CurrentBouquet->SetCurrOrder(CurrClient->GetCurrentOrder());
 
 	//TEST
 	/*
@@ -186,8 +195,39 @@ void AMyGameManager::CompleteOrder()
 	{
 		CurrentBouquet->GradeBouquet();
 		AddMoney(CurrentBouquet->GetWorth());
-		NewBouquet();
+		setLastBouquetWorth();
 		NewClient();
+		NewBouquet();
 	}
 }
 
+AMyGoalManager* AMyGameManager::GetGoalList()
+{
+	return GoalLists;
+}
+
+void AMyGameManager::init()
+{
+	Instance = this;
+	GoalLists = GetWorld()->SpawnActor<AMyGoalManager>(AMyGoalManager::StaticClass());
+	GoalLists->init();
+	ClientList = GetWorld()->SpawnActor<AMyClientManager>(AMyClientManager::StaticClass());
+	ClientList->init();
+	NewClient();
+	NewBouquet();
+}
+
+AMyGameManager* AMyGameManager::GetInstance()
+{
+	return Instance;
+}
+
+void AMyGameManager::setLastBouquetWorth()
+{
+	iLastBoquetWorth = CurrentBouquet->GetWorth();
+}
+
+int AMyGameManager::getLastBouquetWorth()
+{
+	return iLastBoquetWorth;
+}
