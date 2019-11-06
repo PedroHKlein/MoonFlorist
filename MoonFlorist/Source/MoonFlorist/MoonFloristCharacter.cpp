@@ -112,9 +112,7 @@ void AMoonFloristCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 	// set up gameplay key bindings
 	check(PlayerInputComponent);
 
-	// Bind jump events
-	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
-	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+
 
 	// Bind movement events
 	PlayerInputComponent->BindAxis("MoveForward", this, &AMoonFloristCharacter::MoveForward);
