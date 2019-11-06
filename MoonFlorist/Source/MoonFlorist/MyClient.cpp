@@ -431,3 +431,44 @@ UMyClientOrder* AMyClient::GetPreviousOrder()
 	return LastOrder;
 }
 
+void AMyClient::UpdateClientDescriptions()
+{
+	switch (iNature)
+	{
+	case NORMAL:
+		sGreeting = "<Default>Hi, it is ";
+		Dialogue1 = "<Default> again. I would like a bouquet that feels";
+		Dialogue2 = "<Default>,";
+		Dialogue3 = "<Default> and";
+		break;
+	case FLIRTY:
+		sGreeting = "<Default>xX";
+		Dialogue1 = "<Default>Xx again~ O.o need a buwuquet hehe that is";
+		Dialogue2 = "<Default>,";
+		Dialogue3 = "<Default>. oooOOOooo and";
+		break;
+	case SHY:
+		sGreeting = "<Default>Uhhh, I don't know if you remember me. I am ";
+		Dialogue1 = "<Default>. can I please have a bouquet, if you have the time, that feels";
+		Dialogue2 = "<Default>,";
+		Dialogue3 = "<Default> um and";
+		break;
+	case GRUMPY:
+		sGreeting = "<Default>IT IS ME AGAIN, ";
+		Dialogue1 = "<Default>. Give me a bouquet that feels";
+		Dialogue2 = "<Default>,";
+		Dialogue3 = "<Default> and";
+		break;
+	case HIP:
+		sGreeting = "<Default>Yo yo, mofo, remember ";
+		Dialogue1 = "<Default>. IT IS ME, need a broquet bro, that feels";
+		Dialogue2 = "<Default>,";
+		Dialogue3 = "<Default>. YO and";
+		break;
+	default:
+		break;
+	}
+
+	SetFullDescription();
+}
+

@@ -26,7 +26,7 @@ void AMyGameManager::BeginPlay()
 void AMyGameManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	//Test(DeltaTime);
+	Test(DeltaTime);
 }
 
 void AMyGameManager::NewClient()
@@ -34,10 +34,12 @@ void AMyGameManager::NewClient()
 	if (CurrClient == NULL)
 	{
 		CurrClient = ClientList->GetClients()[FMath::RandRange(0, 99)];
+		CurrClient->SetFullDescription();
 	}
 	else
 	{
 		CurrClient = ClientList->GetClients()[FMath::RandRange(0, 99)];
+		CurrClient->SetFullDescription();
 	}
 
 	if (CurrentClient == NULL)
@@ -81,7 +83,7 @@ void AMyGameManager::NewBouquet()
 	CurrentBouquet->SetCurrOrder(CurrClient->GetCurrentOrder());
 
 	//TEST
-	/*
+	
 	for (int i = 0; i < 7; i++)
 	{
 		if (i < 2)
@@ -127,7 +129,7 @@ void AMyGameManager::NewBouquet()
 	AddMoney(CurrentBouquet->GetWorth());
 	FString Debug1 = FString::FromInt(iMoney);
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, FString::Printf(TEXT("My moolah:  %s"), *FString(Debug1)), false);
-	*/
+	
 }
 
 void AMyGameManager::Test(float delta)
@@ -136,8 +138,7 @@ void AMyGameManager::Test(float delta)
 
 	if (fCurrTime >= fTimeToWait)
 	{
-		NewClient();
-		NewBouquet();
+		CompleteOrder();
 		fCurrTime = 0.0f;
 	}
 }
@@ -196,6 +197,7 @@ void AMyGameManager::CompleteOrder()
 		CurrentBouquet->GradeBouquet();
 		AddMoney(CurrentBouquet->GetWorth());
 		setLastBouquetWorth();
+		CurrClient->UpdateClientDescriptions();
 		NewClient();
 		NewBouquet();
 	}
