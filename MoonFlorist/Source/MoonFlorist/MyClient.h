@@ -38,6 +38,8 @@ public:
 	UMyClientOrder* GetCurrentOrder();
 	UFUNCTION()
 	UMyClientOrder* GetPreviousOrder();
+	UFUNCTION()
+	void UpdateClientDescriptions();
 
 protected:
 	// Called when the game starts or when spawned
