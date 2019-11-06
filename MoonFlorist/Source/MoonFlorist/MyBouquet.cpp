@@ -129,25 +129,57 @@ void UMyBouquet::GradeBouquet()
 
 	for (int i = 0; i < Temp.Num(); i++)
 	{
+		int temp;
+
 		switch (Temp[i]->GetColourID())
 		{
 		case RED:
+			temp = iScore;
 			BaseColourCheck(RED);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+			}
 			break;
 		case BLUE:
+			temp = iScore;
 			BaseColourCheck(BLUE);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+			}
 			break;
 		case YELLOW:
+			temp = iScore;
 			BaseColourCheck(YELLOW);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+			}
 			break;
 		case PURPLE:
+			temp = iScore;
 			ComColourCheck(PURPLE);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+			}
 			break;
 		case GREEN:
+			temp = iScore;
 			ComColourCheck(GREEN);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+			}
 			break;
 		case ORANGE:
-			ComColourCheck(GREEN);
+			temp = iScore;
+			ComColourCheck(ORANGE);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+			}
 			break;
 		default:
 			break;
