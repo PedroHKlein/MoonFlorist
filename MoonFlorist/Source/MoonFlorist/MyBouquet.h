@@ -43,6 +43,8 @@ public:
 	UMyFlower* SpawnFlower(int _iType);
 	UFUNCTION(BlueprintCallable)
 	bool CheckFull();
+	UFUNCTION(BlueprintCallable)
+	void GradeBouquetWithoutMoney();
 
 
 
