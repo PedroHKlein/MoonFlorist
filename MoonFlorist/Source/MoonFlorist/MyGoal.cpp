@@ -33,7 +33,7 @@ void UMyGoal::init(int _iCol, int _iGoal)
 			sGoal = "<Incomplete> like Love";
 			break;
 		case CORAGEOUS:
-			sGoal = "<Incomplete> Corageous";
+			sGoal = "<Incomplete> Courageous";
 			break;
 		default:
 			break;
@@ -211,7 +211,7 @@ void UMyGoal::SetComplete()
 			sGoal = "<Red> like Love";
 			break;
 		case CORAGEOUS:
-			sGoal = "<Red> Corageous";
+			sGoal = "<Red> Courageous";
 			break;
 		default:
 			break;
