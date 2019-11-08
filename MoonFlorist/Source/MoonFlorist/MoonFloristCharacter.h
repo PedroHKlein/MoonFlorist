@@ -25,13 +25,16 @@ class AMoonFloristCharacter : public ACharacter
 public:
 	AMoonFloristCharacter();
 	virtual void Tick(float DeltaTime) override;
-
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Mouse Sens")
+		float MouseSensitivity;
 	UFUNCTION(BlueprintCallable, Category = "Raycast")
 	FHitResult RaycastCheck();
-	UPROPERTY(BlueprintReadWrite, Category = "Currency")
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Currency")
 	int CosmoCoins;
 	UPROPERTY(BlueprintReadWrite,EditAnywhere, Category = "Currency")
 	int StartCoins;
+
+
 protected:
 	virtual void BeginPlay();
 
