@@ -1,0 +1,6 @@
+Known Issues in Vertical Slice:
+
+Collecting of plantation will break and not collect the flower and incubator cannot be reset.
+Will Fix in Alpha.
+
+Only occurs when trying to plant multiple plants quickly
