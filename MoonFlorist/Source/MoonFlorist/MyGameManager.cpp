@@ -34,10 +34,12 @@ void AMyGameManager::NewClient()
 	if (CurrClient == NULL)
 	{
 		CurrClient = ClientList->GetClients()[FMath::RandRange(0, 99)];
+		CurrClient->SetFullDescription();
 	}
 	else
 	{
 		CurrClient = ClientList->GetClients()[FMath::RandRange(0, 99)];
+		CurrClient->SetFullDescription();
 	}
 
 	if (CurrentClient == NULL)
@@ -50,7 +52,7 @@ void AMyGameManager::NewClient()
 	}
 
 	//TEST
-	
+	/*
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Hi! My name is %s"), *FString(CurrentClient->GetName())), false);
 
 	for (int i = 0; i < CurrentClient->GetGoals().Num(); i++)
@@ -64,7 +66,7 @@ void AMyGameManager::NewClient()
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("and %s"), *FString(CurrentClient->GetGoals()[i]->GetGoal())), false);
 		}
 	}
-	
+	*/
 }
 
 void AMyGameManager::NewBouquet()
@@ -136,8 +138,7 @@ void AMyGameManager::Test(float delta)
 
 	if (fCurrTime >= fTimeToWait)
 	{
-		NewClient();
-		NewBouquet();
+		CompleteOrder();
 		fCurrTime = 0.0f;
 	}
 }
@@ -196,6 +197,7 @@ void AMyGameManager::CompleteOrder()
 		CurrentBouquet->GradeBouquet();
 		AddMoney(CurrentBouquet->GetWorth());
 		setLastBouquetWorth();
+		CurrClient->UpdateClientDescriptions();
 		NewClient();
 		NewBouquet();
 	}
