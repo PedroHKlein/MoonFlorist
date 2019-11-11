@@ -59,6 +59,8 @@ public:
 	void setLastBouquetWorth();
 	UFUNCTION(BlueprintCallable)
 	int getLastBouquetWorth();
+	UFUNCTION(BlueprintCallable)
+	AMyClient* GetCurrClient();
 
 private:
 	UPROPERTY()

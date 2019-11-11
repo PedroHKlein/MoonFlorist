@@ -190,6 +190,72 @@ void UMyBouquet::GradeBouquet()
 	iScore = 0;
 }
 
+void UMyBouquet::GradeBouquetWithoutMoney()
+{
+	TArray<UMyGoal*> Temp = GetCurrOrder()->GetGoals();
+
+	for (int i = 0; i < Temp.Num(); i++)
+	{
+		int temp;
+
+		switch (Temp[i]->GetColourID())
+		{
+		case RED:
+			temp = iScore;
+			BaseColourCheck(RED);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+			}
+			break;
+		case BLUE:
+			temp = iScore;
+			BaseColourCheck(BLUE);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+			}
+			break;
+		case YELLOW:
+			temp = iScore;
+			BaseColourCheck(YELLOW);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+			}
+			break;
+		case PURPLE:
+			temp = iScore;
+			ComColourCheck(PURPLE);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+			}
+			break;
+		case GREEN:
+			temp = iScore;
+			ComColourCheck(GREEN);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+			}
+			break;
+		case ORANGE:
+			temp = iScore;
+			ComColourCheck(ORANGE);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+			}
+			break;
+		default:
+			break;
+		}
+	}
+
+	iScore = 0;
+}
+
 TArray<UMyFlower*> UMyBouquet::GetRow(int _iRow)
 {
 	switch (_iRow)

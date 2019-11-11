@@ -28,17 +28,17 @@ public:
 	AMyClient();
 	~AMyClient();
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void Init(int _iName, int _iNature);
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void NewOrder();
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetFullDescription();
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	UMyClientOrder* GetCurrentOrder();
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	UMyClientOrder* GetPreviousOrder();
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void UpdateClientDescriptions();
 
 protected:

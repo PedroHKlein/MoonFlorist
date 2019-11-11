@@ -23,8 +23,8 @@ void UMyGoal::init(int _iCol, int _iGoal)
 		case FIESTY:
 			sGoal = "<Incomplete> Fiesty";
 			break;
-		case REDRED:
-			sGoal = "<Incomplete> like RedRed";
+		case AMOROUS:
+			sGoal = "<Incomplete> Amorous";
 			break;
 		case PASSIONATE:
 			sGoal = "<Incomplete> Passionate";
@@ -33,7 +33,7 @@ void UMyGoal::init(int _iCol, int _iGoal)
 			sGoal = "<Incomplete> like Love";
 			break;
 		case CORAGEOUS:
-			sGoal = "<Incomplete> Corageous";
+			sGoal = "<Incomplete> Courageous";
 			break;
 		default:
 			break;
@@ -47,8 +47,8 @@ void UMyGoal::init(int _iCol, int _iGoal)
 		case COOL:
 			sGoal = "<Incomplete> Cool";
 			break;
-		case BLUEBLUE:
-			sGoal = "<Incomplete> like BlueBlue";
+		case CALM:
+			sGoal = "<Incomplete> Calm";
 			break;
 		case TRUST:
 			sGoal = "<Incomplete> like Trust";
@@ -71,8 +71,8 @@ void UMyGoal::init(int _iCol, int _iGoal)
 		case OPTIMISTIC:
 			sGoal = "<Incomplete> Optimistic";
 			break;
-		case YELLOWYELLOW:
-			sGoal = "<Incomplete> like YellowYellow";
+		case BUBBLY:
+			sGoal = "<Incomplete> Bubbly";
 			break;
 		case CHEERFUL:
 			sGoal = "<Incomplete> Cheerful";
@@ -95,8 +95,8 @@ void UMyGoal::init(int _iCol, int _iGoal)
 		case MAGIC:
 			sGoal = "<Incomplete> Magic";
 			break;
-		case REDBLUE:
-			sGoal = "<Incomplete> like RedBlue";
+		case REGAL:
+			sGoal = "<Incomplete> Regal";
 			break;
 		case MYSTERY:
 			sGoal = "<Incomplete> Mysterious";
@@ -119,8 +119,8 @@ void UMyGoal::init(int _iCol, int _iGoal)
 		case NATURAL:
 			sGoal = "<Incomplete> Natural";
 			break;
-		case YELLOWBLUE:
-			sGoal = "<Incomplete> like YellowBlue";
+		case ANCIENT:
+			sGoal = "<Incomplete> Ancient";
 			break;
 		case DOWNTOEARTH:
 			sGoal = "<Incomplete> Down to Earth";
@@ -143,8 +143,8 @@ void UMyGoal::init(int _iCol, int _iGoal)
 		case ADVENTUROUS:
 			sGoal = "<Incomplete> Adventurous";
 			break;
-		case REDYELLOW:
-			sGoal = "<Incomplete> like RedYellow";
+		case ENERGETIC:
+			sGoal = "<Incomplete> Energetic";
 			break;
 		case WARM:
 			sGoal = "<Incomplete> Warm";
@@ -201,8 +201,8 @@ void UMyGoal::SetComplete()
 		case FIESTY:
 			sGoal = "<Red> Fiesty";
 			break;
-		case REDRED:
-			sGoal = "<Red> like RedRed";
+		case AMOROUS:
+			sGoal = "<Red> Amorous";
 			break;
 		case PASSIONATE:
 			sGoal = "<Red> Passionate";
@@ -211,7 +211,7 @@ void UMyGoal::SetComplete()
 			sGoal = "<Red> like Love";
 			break;
 		case CORAGEOUS:
-			sGoal = "<Red> Corageous";
+			sGoal = "<Red> Courageous";
 			break;
 		default:
 			break;
@@ -225,8 +225,8 @@ void UMyGoal::SetComplete()
 		case COOL:
 			sGoal = "<Blue> Cool";
 			break;
-		case BLUEBLUE:
-			sGoal = "<Blue> like BlueBlue";
+		case CALM:
+			sGoal = "<Blue> Calm";
 			break;
 		case TRUST:
 			sGoal = "<Blue> like Trust";
@@ -249,8 +249,8 @@ void UMyGoal::SetComplete()
 		case OPTIMISTIC:
 			sGoal = "<Yellow> Optimistic";
 			break;
-		case YELLOWYELLOW:
-			sGoal = "<Yellow> like YellowYellow";
+		case BUBBLY:
+			sGoal = "<Yellow> Bubbly";
 			break;
 		case CHEERFUL:
 			sGoal = "<Yellow> Cheerful";
@@ -273,8 +273,8 @@ void UMyGoal::SetComplete()
 		case MAGIC:
 			sGoal = "<Purple> Magic";
 			break;
-		case REDBLUE:
-			sGoal = "<Purple> like RedBlue";
+		case REGAL:
+			sGoal = "<Purple> Regal";
 			break;
 		case MYSTERY:
 			sGoal = "<Purple> Mysterious";
@@ -297,8 +297,8 @@ void UMyGoal::SetComplete()
 		case NATURAL:
 			sGoal = "<Green> Natural";
 			break;
-		case YELLOWBLUE:
-			sGoal = "<Green> like YellowBlue";
+		case ANCIENT:
+			sGoal = "<Green> Ancient";
 			break;
 		case DOWNTOEARTH:
 			sGoal = "<Green> Down to Earth";
@@ -321,8 +321,8 @@ void UMyGoal::SetComplete()
 		case ADVENTUROUS:
 			sGoal = "<Orange> Adventurous";
 			break;
-		case REDYELLOW:
-			sGoal = "<Orange> like RedYellow";
+		case ENERGETIC:
+			sGoal = "<Orange> Energetic";
 			break;
 		case WARM:
 			sGoal = "<Orange> Warm";

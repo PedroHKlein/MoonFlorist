@@ -233,3 +233,8 @@ int AMyGameManager::getLastBouquetWorth()
 {
 	return iLastBoquetWorth;
 }
+
+AMyClient* AMyGameManager::GetCurrClient()
+{
+	return CurrClient;
+}
