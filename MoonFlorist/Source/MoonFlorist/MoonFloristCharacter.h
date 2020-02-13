@@ -34,7 +34,7 @@ public:
 	UPROPERTY(BlueprintReadWrite,EditAnywhere, Category = "Currency")
 	int StartCoins;
 
-
+	
 protected:
 	virtual void BeginPlay();
 
@@ -44,7 +44,7 @@ protected:
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);
 
-	/** Handles stafing movement, left and right */
+	/** Handles strafing movement, left and right */
 	void MoveRight(float Val);
 
 	
