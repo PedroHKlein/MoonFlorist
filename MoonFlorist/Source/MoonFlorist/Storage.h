@@ -8,7 +8,7 @@
 #include "Storage.generated.h"
 
 UCLASS()
-class MOONFLORIST_API AStorage : public AActor
+class MOONFLORIST_API AStorage : public AActor 
 {
 	GENERATED_BODY()
 	
@@ -19,10 +19,13 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	//Storage Methods
 	UFUNCTION(BlueprintCallable, Category = StorageFunc)
 	void AddItem(AItem* _Item);
 	UFUNCTION(BlueprintCallable, Category = StorageFunc)
 	void RemoveItem(AItem* _Item);
+
+	
 	UPROPERTY(BlueprintReadWrite,Category = StorageVar)
 	TArray<AItem*> Storage; 
 public:	

@@ -2,6 +2,7 @@
 
 
 #include "Item.h"
+#include "UObject/ConstructorHelpers.h"
 
 // Sets default values
 AItem::AItem()
@@ -24,9 +25,20 @@ void AItem::BeginPlay()
 	
 }
 
+void AItem::CreateItem(EItemType _ItemType, FString _Name,FString _IconPath, int _Stacks, int _Price, bool _Stackable, bool _InStorage)
+{ 
+	this->Icon = ConstructorHelpers::FObjectFinder<UTexture2D>(*_IconPath).Object;
+	this->ItemType = _ItemType;
+	this->Name.ToString( _Name);
+	this->Stacks = _Stacks;
+	this->Price = _Price;
+	this->Stackable = _Stackable;
+	this->InStorage = _InStorage;
+}
+
 void AItem::SetItemType(EItemType _ItemType)
 {
-	itemType = _ItemType;
+	ItemType = _ItemType;
 }
 
 void AItem::SetName(FName _Name)

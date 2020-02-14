@@ -28,6 +28,8 @@ public:
 	// Sets default values for this actor's properties
 	AItem();
 
+	void CreateItem(EItemType _ItemType, FString _Name, FString _IconPath, int _Stacks = 1, int _Price = 10, bool _Stackable = true, bool _InStorage = true);
+
 	UFUNCTION(BlueprintCallable, Category = ItemFunc)
 	void SetItemType(EItemType _ItemType);
 
@@ -59,7 +61,7 @@ public:
 	
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = ItemVar)
-	TEnumAsByte<EItemType> itemType;
+	TEnumAsByte<EItemType> ItemType;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = ItemVar)
 	FName Name;
