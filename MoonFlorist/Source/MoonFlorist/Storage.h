@@ -16,7 +16,7 @@ public:
 	// Sets default values for this actor's properties
 	AStorage();
 
-protected:
+public:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	//Storage Methods
@@ -25,9 +25,11 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = StorageFunc)
 	void RemoveItem(AItem* _Item);
 
-	
+	UFUNCTION(BlueprintCallable, Category = ItemFunc)
+	void IncreaseStacks(int _Amount, AItem* _Item);
+
 	UPROPERTY(BlueprintReadWrite,Category = StorageVar)
-	TArray<AItem*> Storage; 
+	 TArray<AItem*> StorageArray; 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

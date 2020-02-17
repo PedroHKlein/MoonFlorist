@@ -3,9 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
-
 #include "GameFramework/Character.h"
 #include "Storage.h"
+#include "Item.h"
 #include "MoonFloristCharacter.generated.h"
 
 class UInputComponent;
@@ -36,10 +36,12 @@ public:
 	UPROPERTY(BlueprintReadWrite,EditAnywhere, Category = "Currency")
 	int StartCoins;
 
-	//AStorage PlayerStorage;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Storage")
+	class AStorage* PlayerStorage;
 protected:
 	virtual void BeginPlay();
-
+	//Beginning Items that the player has
+	void StartItems();
 
 
 protected:

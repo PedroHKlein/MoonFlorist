@@ -25,15 +25,25 @@ void AItem::BeginPlay()
 	
 }
 
-void AItem::CreateItem(EItemType _ItemType, FString _Name,FString _IconPath, int _Stacks, int _Price, bool _Stackable, bool _InStorage)
+AItem* AItem::CreateItem( EItemType _ItemType, FString _Name,FString _IconPath, int _Stacks, int _Price, bool _Stackable, bool _InStorage)
 { 
-	this->Icon = ConstructorHelpers::FObjectFinder<UTexture2D>(*_IconPath).Object;
-	this->ItemType = _ItemType;
-	this->Name.ToString( _Name);
-	this->Stacks = _Stacks;
-	this->Price = _Price;
-	this->Stackable = _Stackable;
-	this->InStorage = _InStorage;
+	if (this != nullptr)
+	{
+		this->Icon = LoadObject<UTexture2D>(NULL, *_IconPath, NULL, LOAD_None, NULL);
+		this->ItemType = _ItemType;
+		this->Name.ToString(_Name);
+		this->Stacks = _Stacks;
+		this->Price = _Price;
+		this->Stackable = _Stackable;
+		this->InStorage = _InStorage;
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("Nullptr when creating item"));
+		return nullptr;
+	}
+
+	return this;
 }
 
 void AItem::SetItemType(EItemType _ItemType)
