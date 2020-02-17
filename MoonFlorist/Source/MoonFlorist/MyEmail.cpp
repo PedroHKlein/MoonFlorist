@@ -25,3 +25,23 @@ void AMyEmail::Tick(float DeltaTime)
 
 }
 
+void AMyEmail::init()
+{
+	sSubject = "No Subject";
+	sGood = "It was ok";
+	sBad = "It was pretty bad";
+	sOverall = "Overall pretty shit tbh";
+	sClientName = "Mark";
+	sFullEmail = sSubject + sGood + sBad + sOverall + sClientName;
+}
+
+FString AMyEmail::GetFullEmail()
+{
+	return sFullEmail;
+}
+
+void AMyEmail::SetFullEmail(FString _FullEmail)
+{
+	sFullEmail = _FullEmail;
+}
+

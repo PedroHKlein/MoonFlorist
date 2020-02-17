@@ -22,7 +22,7 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+	void init();
 	FString GetFullEmail();
 	void SetFullEmail(FString _FullEmail);
 
@@ -37,6 +37,5 @@ private:
 	FString sOverall;
 	FString sClientName;
 	FString sFullEmail;
-
 
 };
