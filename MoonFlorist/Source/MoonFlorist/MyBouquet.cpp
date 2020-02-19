@@ -139,6 +139,11 @@ void UMyBouquet::GradeBouquet()
 			if (iScore > temp)
 			{
 				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
 			}
 			break;
 		case BLUE:
@@ -147,6 +152,11 @@ void UMyBouquet::GradeBouquet()
 			if (iScore > temp)
 			{
 				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
 			}
 			break;
 		case YELLOW:
@@ -155,6 +165,11 @@ void UMyBouquet::GradeBouquet()
 			if (iScore > temp)
 			{
 				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
 			}
 			break;
 		case PURPLE:
@@ -163,6 +178,11 @@ void UMyBouquet::GradeBouquet()
 			if (iScore > temp)
 			{
 				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
 			}
 			break;
 		case GREEN:
@@ -171,6 +191,11 @@ void UMyBouquet::GradeBouquet()
 			if (iScore > temp)
 			{
 				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
 			}
 			break;
 		case ORANGE:
@@ -179,6 +204,11 @@ void UMyBouquet::GradeBouquet()
 			if (iScore > temp)
 			{
 				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
 			}
 			break;
 		default:
