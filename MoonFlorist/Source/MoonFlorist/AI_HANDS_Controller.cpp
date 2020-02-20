@@ -2,6 +2,7 @@
 
 
 #include "AI_HANDS_Controller.h"
+#include "AI_HANDS.h"
 #include "Perception/AIPerceptionComponent.h"
 #include "Perception/AISenseConfig_Sight.h"
 
@@ -50,6 +51,12 @@ void AAI_HANDS_Controller::OnPossess(APawn* _Pawn)
 void AAI_HANDS_Controller::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	AAI_HANDS* HandsRobot = Cast<AAI_HANDS>(GetPawn());
+	if (HandsRobot->NextWaypoint != nullptr)
+	{
+		MoveToActor(HandsRobot->NextWaypoint, 5.0f);
+	}
 }
 
 FRotator AAI_HANDS_Controller::GetControlRotation() const
