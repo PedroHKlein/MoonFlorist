@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "MyEmail.h"
 #include "GameFramework/Actor.h"
 #include "MyEmailManager.generated.h"
 
@@ -14,6 +15,9 @@ class MOONFLORIST_API AMyEmailManager : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AMyEmailManager();
+	TArray<AMyEmail*> GetOrders();
+	TArray<AMyEmail*> GetFeedback();
+	TArray<AMyEmail*> GetSpam();
 
 protected:
 	// Called when the game starts or when spawned
@@ -23,4 +27,8 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+private:
+	TArray<AMyEmail*> Orders;
+	TArray<AMyEmail*> Feedback;
+	TArray<AMyEmail*> Spam;
 };
