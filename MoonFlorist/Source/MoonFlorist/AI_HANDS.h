@@ -19,11 +19,11 @@ public:
 	TArray<AWaypoint*> WaypointArray;
 
 	UPROPERTY(EditAnywhere, Category = "Way Points")
-	 AWaypoint* CurrentWaypoint;
+	AWaypoint* CurrentWaypoint;
 	UPROPERTY(EditAnywhere, Category = "Way Points")
 		AWaypoint* NextWaypoint;
 
-
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -32,5 +32,5 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	AWaypoint* RandomiseWP();
-
+	void MoveToWayPoint();
 };

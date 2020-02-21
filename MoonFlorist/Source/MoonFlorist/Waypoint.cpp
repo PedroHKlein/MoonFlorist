@@ -4,6 +4,7 @@
 #include "Waypoint.h"
 #include "Components/SceneComponent.h"
 #include "Components/BoxComponent.h"
+#include "Components/PrimitiveComponent.h"
 #include "AI_HANDS.h"
 
 
@@ -18,8 +19,7 @@ AWaypoint::AWaypoint()
 
 	WaypointTrigger = CreateDefaultSubobject<UBoxComponent>("Waypoint");
 	WaypointTrigger->SetupAttachment(Root);
-	WaypointTrigger->OnComponentBeginOverlap.AddDynamic(this, &AWaypoint::OnBeginOverlap);
-	WaypointTrigger->OnComponentEndOverlap.AddDynamic(this, &AWaypoint::OnOverlapEnd);
+	
 	
 
 }
@@ -28,7 +28,8 @@ AWaypoint::AWaypoint()
 void AWaypoint::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	WaypointTrigger->OnComponentBeginOverlap.AddDynamic(this, &AWaypoint::OnOverlapBegin);
+
 }
 
 // Called every frame
@@ -38,28 +39,39 @@ void AWaypoint::Tick(float DeltaTime)
 
 }
 
-void AWaypoint::OnBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+void AWaypoint::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	
-	if (OtherActor != nullptr)
+	// Other Actor is the actor that triggered the event. Check that is not ourself.  
+	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr))
 	{
-		AAI_HANDS* HANDS;
-		HANDS = Cast<AAI_HANDS>(OtherActor);
-		HANDS->CurrentWaypoint = this;
-		HANDS->CurrentWaypoint->ActiveWaypoint = true;
-		HANDS->NextWaypoint->ActiveWaypoint = false;
-		UE_LOG(LogTemp, Warning, TEXT("Reached Waypoint"));
+		AAI_HANDS* Hands = Cast<AAI_HANDS>(OtherActor);
+		if (Hands)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("GotHands"));
+			Hands->CurrentWaypoint = Hands->NextWaypoint;
+			if (Hands->NextWaypoint == Hands->CurrentWaypoint)
+			{
+
+				Hands->NextWaypoint = Hands->RandomiseWP();
+				while (Hands->NextWaypoint == Hands->CurrentWaypoint)
+				{
+
+					Hands->NextWaypoint = Hands->RandomiseWP();
+
+
+				}
+			}
+			Hands->MoveToWayPoint();
+
+
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Not got"));
+		}
 	}
+
 	
 }
-
-void AWaypoint::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
-{
-	//AAI_HANDS* HANDS;
-	//HANDS = Cast<AAI_HANDS>(OtherActor);
-	//HANDS->CurrentWaypoint->ActiveWaypoint = false;
-	//HANDS->NextWaypoint->ActiveWaypoint = true;
-}
-
 
 

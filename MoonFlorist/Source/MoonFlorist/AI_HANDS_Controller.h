@@ -28,6 +28,8 @@ public:
 
 	virtual FRotator GetControlRotation() const override;
 
+//	void OnMoveCompleted(FAIRequestID RequestID, EPathFollowingResult::Type Result);
+
 	UFUNCTION()
 	void OnPawnDetected(const TArray<AActor*> &DetectedPawns);
 

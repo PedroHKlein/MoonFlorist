@@ -51,12 +51,6 @@ void AAI_HANDS_Controller::OnPossess(APawn* _Pawn)
 void AAI_HANDS_Controller::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	AAI_HANDS* HandsRobot = Cast<AAI_HANDS>(GetPawn());
-	if (HandsRobot->NextWaypoint != nullptr)
-	{
-		MoveToActor(HandsRobot->NextWaypoint, 5.0f);
-	}
 }
 
 FRotator AAI_HANDS_Controller::GetControlRotation() const
@@ -69,6 +63,13 @@ FRotator AAI_HANDS_Controller::GetControlRotation() const
 	//Returns the y axis
 	return FRotator(0.0f, GetPawn()->GetActorRotation().Yaw, 0.0f);
 }
+//
+//void AAI_HANDS_Controller::OnMoveCompleted(FAIRequestID RequestID, EPathFollowingResult::Type Result)
+//{
+//	
+//
+//}
+
 
 void AAI_HANDS_Controller::OnPawnDetected(const TArray<AActor*>& DetectedPawns)
 {

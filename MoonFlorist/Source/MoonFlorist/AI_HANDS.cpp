@@ -4,6 +4,7 @@
 #include "AI_HANDS.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Engine/Engine.h"
+#include "AI_HANDS_Controller.h"
 #include "EngineUtils.h"
 
 // Sets default values
@@ -14,7 +15,7 @@ AAI_HANDS::AAI_HANDS()
 
 	GetCharacterMovement()->bOrientRotationToMovement = true;
 	GetCharacterMovement()->RotationRate = FRotator(0.0f, 100.0f, 0.0f);
-	NextWaypoint->ActiveWaypoint = false;
+	
 
 }
 
@@ -22,13 +23,16 @@ AAI_HANDS::AAI_HANDS()
 void AAI_HANDS::BeginPlay()
 {
 	Super::BeginPlay();
+	//NextWaypoint->ActiveWaypoint = false;
 	for (TActorIterator<AWaypoint> Actor(GetWorld()); Actor; ++Actor)
 	{
 		WaypointArray.Add(Cast<AWaypoint>(*Actor));
 		
 	}
-	UE_LOG(LogTemp, Warning, TEXT("Waypoints: %d"), WaypointArray.Num());
-	
+	//UE_LOG(LogTemp, Warning, TEXT("Waypoints: %d"), WaypointArray.Num());
+	NextWaypoint = RandomiseWP();
+	CurrentWaypoint = RandomiseWP();
+	MoveToWayPoint();
 }
 
 // Called every frame
@@ -36,27 +40,7 @@ void AAI_HANDS::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (CurrentWaypoint != nullptr )
-	{
-		if (!NextWaypoint->ActiveWaypoint && CurrentWaypoint->ActiveWaypoint)
-		{
-			int index = FMath::RandRange(0, WaypointArray.Num() - 1);
-			if (WaypointArray[index] != CurrentWaypoint)
-			{
-				
-				NextWaypoint = WaypointArray[index];
-				NextWaypoint->ActiveWaypoint = true;
-				CurrentWaypoint->ActiveWaypoint = false;
-				UE_LOG(LogTemp, Warning, TEXT("Randoming"));
-			}
-			else
-			{
-				index = FMath::RandRange(0, WaypointArray.Num() - 1);
-			}
-			
-		
-		}
-	}
+	
 	
 }
 
@@ -68,5 +52,23 @@ AWaypoint* AAI_HANDS::RandomiseWP()
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, FString::Printf(TEXT("Rand Value: %f"), index));
 	}
 	return (WaypointArray[index]);
+}
+
+void AAI_HANDS::MoveToWayPoint()
+{
+	AAI_HANDS_Controller* HandsController = Cast<AAI_HANDS_Controller>(GetController());
+	if (HandsController)
+	{
+		if (CurrentWaypoint != nullptr)
+		{
+			if (NextWaypoint != nullptr)
+			{
+				HandsController->MoveToActor(NextWaypoint, 5.0f);
+				UE_LOG(LogTemp, Warning, TEXT("Working"));
+			}
+
+		}
+
+	}
 }
 
