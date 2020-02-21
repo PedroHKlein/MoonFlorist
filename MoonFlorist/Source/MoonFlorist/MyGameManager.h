@@ -8,6 +8,7 @@
 #include "MyClientOrder.h"
 #include "MyBouquet.h"
 #include "MySeed.h"
+#include "MyEmailManager.h"
 #include "GameFramework/Actor.h"
 #include "MyGameManager.generated.h"
 
@@ -85,5 +86,6 @@ private:
 	TArray<UMySeed*> Seeds;
 	UPROPERTY()
 	int iLastBoquetWorth;
-
+	UPROPERTY()
+	AMyEmailManager* EmailLists;
 };

@@ -217,6 +217,7 @@ void AMyGameManager::init()
 	ClientList->init();
 	NewClient();
 	NewBouquet();
+	EmailLists = GetWorld()->SpawnActor<AMyEmailManager>(AMyEmailManager::StaticClass());
 }
 
 AMyGameManager* AMyGameManager::GetInstance()
