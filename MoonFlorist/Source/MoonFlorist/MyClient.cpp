@@ -29,6 +29,7 @@ void AMyClient::Tick(float DeltaTime)
 
 }
 
+//init function
 void AMyClient::Init(int _iName, int _iNature)
 {
 
@@ -36,6 +37,8 @@ void AMyClient::Init(int _iName, int _iNature)
 	iName = _iName;
 	iNature = _iNature;
 
+
+	//set name
 	switch (_iName)
 	{
 	case MARK:
@@ -342,6 +345,7 @@ void AMyClient::Init(int _iName, int _iNature)
 		break;
 	}
 
+	//set nature
 	switch (_iNature)
 	{
 	case NORMAL:
@@ -378,31 +382,41 @@ void AMyClient::Init(int _iName, int _iNature)
 		break;
 	}
 
+	//set order
 	NewOrder();
 }
 
+//new order function
 void AMyClient::NewOrder()
 {
+	//if no new order
 	if (CurrentOrder == NULL)
 	{
+		//set new order as current order
 		CurrentOrder = NewObject<UMyClientOrder>();
 		CurrentOrder->init(iName, FMath::RandRange(1, 3), GetWorld());
 		SetFullDescription();
 	}
+	//else if order already exists
 	else
 	{
+		//Set current order to last order
 		LastOrder = CurrentOrder;
 
+		//Create new order, sett as current order
 		CurrentOrder = NewObject<UMyClientOrder>();
 		CurrentOrder->init(iName, FMath::RandRange(1, 3), GetWorld());
 		SetFullDescription();
 	}
 }
 
+//Client order description in full
 void AMyClient::SetFullDescription()
 {
+	//Get amount of goals
 	int temp = GetCurrentOrder()->GetGoals().Num();
 
+	//Set full description based on the amount of goals
 	switch (temp)
 	{
 	case 1:
@@ -417,20 +431,23 @@ void AMyClient::SetFullDescription()
 	default:
 		break;
 	}
+	//set order full description to sFullDescription
 	GetCurrentOrder()->SetDescription(sFullDescription);
 }
 
+//Getter for current order
 UMyClientOrder* AMyClient::GetCurrentOrder()
 {
 	return CurrentOrder;
 }
 
-
+//Getter for previous order
 UMyClientOrder* AMyClient::GetPreviousOrder()
 {
 	return LastOrder;
 }
 
+//Client description updates after they have been served
 void AMyClient::UpdateClientDescriptions()
 {
 	switch (iNature)
@@ -469,6 +486,7 @@ void AMyClient::UpdateClientDescriptions()
 		break;
 	}
 
+	//Set new full description
 	SetFullDescription();
 }
 

@@ -139,6 +139,13 @@ void UMyBouquet::GradeBouquet()
 			if (iScore > temp)
 			{
 				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
 			}
 			break;
 		case BLUE:
@@ -147,6 +154,13 @@ void UMyBouquet::GradeBouquet()
 			if (iScore > temp)
 			{
 				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
 			}
 			break;
 		case YELLOW:
@@ -155,6 +169,13 @@ void UMyBouquet::GradeBouquet()
 			if (iScore > temp)
 			{
 				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
 			}
 			break;
 		case PURPLE:
@@ -163,6 +184,13 @@ void UMyBouquet::GradeBouquet()
 			if (iScore > temp)
 			{
 				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
 			}
 			break;
 		case GREEN:
@@ -171,6 +199,13 @@ void UMyBouquet::GradeBouquet()
 			if (iScore > temp)
 			{
 				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
 			}
 			break;
 		case ORANGE:
@@ -179,6 +214,13 @@ void UMyBouquet::GradeBouquet()
 			if (iScore > temp)
 			{
 				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
 			}
 			break;
 		default:
@@ -206,6 +248,13 @@ void UMyBouquet::GradeBouquetWithoutMoney()
 			if (iScore > temp)
 			{
 				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
 			}
 			break;
 		case BLUE:
@@ -214,6 +263,13 @@ void UMyBouquet::GradeBouquetWithoutMoney()
 			if (iScore > temp)
 			{
 				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
 			}
 			break;
 		case YELLOW:
@@ -222,6 +278,13 @@ void UMyBouquet::GradeBouquetWithoutMoney()
 			if (iScore > temp)
 			{
 				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
 			}
 			break;
 		case PURPLE:
@@ -230,6 +293,13 @@ void UMyBouquet::GradeBouquetWithoutMoney()
 			if (iScore > temp)
 			{
 				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
 			}
 			break;
 		case GREEN:
@@ -238,6 +308,13 @@ void UMyBouquet::GradeBouquetWithoutMoney()
 			if (iScore > temp)
 			{
 				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
 			}
 			break;
 		case ORANGE:
@@ -246,6 +323,13 @@ void UMyBouquet::GradeBouquetWithoutMoney()
 			if (iScore > temp)
 			{
 				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
 			}
 			break;
 		default:
