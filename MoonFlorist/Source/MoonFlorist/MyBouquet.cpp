@@ -2,6 +2,7 @@
 
 
 #include "MyBouquet.h"
+#include "Engine/Engine.h"
 
 UMyBouquet::UMyBouquet()
 {
@@ -128,25 +129,99 @@ void UMyBouquet::GradeBouquet()
 
 	for (int i = 0; i < Temp.Num(); i++)
 	{
+		int temp;
+
 		switch (Temp[i]->GetColourID())
 		{
 		case RED:
+			temp = iScore;
 			BaseColourCheck(RED);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
+			}
 			break;
 		case BLUE:
+			temp = iScore;
 			BaseColourCheck(BLUE);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
+			}
 			break;
 		case YELLOW:
+			temp = iScore;
 			BaseColourCheck(YELLOW);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
+			}
 			break;
 		case PURPLE:
+			temp = iScore;
 			ComColourCheck(PURPLE);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
+			}
 			break;
 		case GREEN:
+			temp = iScore;
 			ComColourCheck(GREEN);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
+			}
 			break;
 		case ORANGE:
-			ComColourCheck(GREEN);
+			temp = iScore;
+			ComColourCheck(ORANGE);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
+			}
 			break;
 		default:
 			break;
@@ -154,6 +229,114 @@ void UMyBouquet::GradeBouquet()
 	}
 
 	iMoney = iMoney + (iScore * 10);
+	iScore = 0;
+}
+
+void UMyBouquet::GradeBouquetWithoutMoney()
+{
+	TArray<UMyGoal*> Temp = GetCurrOrder()->GetGoals();
+
+	for (int i = 0; i < Temp.Num(); i++)
+	{
+		int temp;
+
+		switch (Temp[i]->GetColourID())
+		{
+		case RED:
+			temp = iScore;
+			BaseColourCheck(RED);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
+			}
+			break;
+		case BLUE:
+			temp = iScore;
+			BaseColourCheck(BLUE);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
+			}
+			break;
+		case YELLOW:
+			temp = iScore;
+			BaseColourCheck(YELLOW);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
+			}
+			break;
+		case PURPLE:
+			temp = iScore;
+			ComColourCheck(PURPLE);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
+			}
+			break;
+		case GREEN:
+			temp = iScore;
+			ComColourCheck(GREEN);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
+			}
+			break;
+		case ORANGE:
+			temp = iScore;
+			ComColourCheck(ORANGE);
+			if (iScore > temp)
+			{
+				Temp[i]->SetComplete();
+				//EMAIL GOAL SUCCESS UPDATE HERE
+				GoalSuccess.Push(Temp[i]);
+			}
+			else
+			{
+				//EMAIL GOAL FAIL UPDATE HERE
+				GoalFailure.Push(Temp[i]);
+			}
+			break;
+		default:
+			break;
+		}
+	}
+
 	iScore = 0;
 }
 
@@ -189,5 +372,25 @@ UMyFlower* UMyBouquet::SpawnFlower(int _iType)
 {
 	UMyFlower* temp = NewObject<UMyFlower>();
 	temp->init(_iType);
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Flower added:  %s"), *FString(temp->GetFlowerName())), false);
+
+	return temp;
+}
+
+
+bool UMyBouquet::CheckFull()
+{
+	bool temp;
+
+	if ((Row1.Num() == 2) && (Row2.Num() == 3) && (Row3.Num() == 2))
+	{
+		temp = true;
+	}
+	else
+	{
+		temp = false;
+	}
+
 	return temp;
 }

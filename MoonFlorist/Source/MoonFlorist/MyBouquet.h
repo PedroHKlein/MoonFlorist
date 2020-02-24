@@ -41,15 +41,29 @@ public:
 	void ClearBouquet();
 	UFUNCTION(BlueprintCallable)
 	UMyFlower* SpawnFlower(int _iType);
+	UFUNCTION(BlueprintCallable)
+	bool CheckFull();
+	UFUNCTION(BlueprintCallable)
+	void GradeBouquetWithoutMoney();
 
 
 
 private:
-
+	UPROPERTY()
 	UMyClientOrder* Order;
+	UPROPERTY()
 	TArray<UMyFlower*> Row1;
+	UPROPERTY()
 	TArray<UMyFlower*> Row2;
+	UPROPERTY()
 	TArray<UMyFlower*> Row3;
+	UPROPERTY()
 	int iScore;
+	UPROPERTY()
 	int iMoney = 70;
+	UPROPERTY()
+	TArray<UMyGoal*> GoalSuccess;
+	UPROPERTY()
+	TArray<UMyGoal*> GoalFailure;
+
 };

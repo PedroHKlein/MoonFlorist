@@ -15,10 +15,10 @@ enum FLOWERCOLOUR
 	RED = 1,
 	BLUE,
 	YELLOW,
-	PURPLE,
+	WHITE,
 	GREEN,
 	ORANGE,
-	WHITE
+	PURPLE
 };
 
 UCLASS()
@@ -40,15 +40,23 @@ public:
 
 private:
 	//type of flower
+	UPROPERTY()
 	int iType;
+	UPROPERTY()
 	FString sColour;
 
 	//Score Values
+	UPROPERTY()
 	int iRed = 0;
+	UPROPERTY()
 	int iBlue = 0;
+	UPROPERTY()
 	int iYellow = 0;
+	UPROPERTY()
 	int iPurple = 0;
+	UPROPERTY()
 	int iGreen = 0;
+	UPROPERTY()
 	int iOrange = 0;
 	
 };
