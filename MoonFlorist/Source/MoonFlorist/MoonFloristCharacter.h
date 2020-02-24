@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Storage.h"
+#include "Item.h"
 #include "MoonFloristCharacter.generated.h"
 
 class UInputComponent;
@@ -25,13 +27,21 @@ class AMoonFloristCharacter : public ACharacter
 public:
 	AMoonFloristCharacter();
 	virtual void Tick(float DeltaTime) override;
-
-	UFUNCTION(BlueprintCallable, Category = "RayCast")
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Mouse Sens")
+		float MouseSensitivity;
+	UFUNCTION(BlueprintCallable, Category = "Raycast")
 	FHitResult RaycastCheck();
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Currency")
+	int CosmoCoins;
+	UPROPERTY(BlueprintReadWrite,EditAnywhere, Category = "Currency")
+	int StartCoins;
 
-
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Storage")
+	class AStorage* PlayerStorage;
 protected:
 	virtual void BeginPlay();
+	//Beginning Items that the player has
+	void StartItems();
 
 
 protected:
@@ -39,7 +49,7 @@ protected:
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);
 
-	/** Handles stafing movement, left and right */
+	/** Handles strafing movement, left and right */
 	void MoveRight(float Val);
 
 	

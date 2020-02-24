@@ -28,13 +28,13 @@ AMoonFloristCharacter::AMoonFloristCharacter()
 	// set our turn rates for input
 	BaseTurnRate = 45.f;
 	BaseLookUpRate = 45.f;
-
+	MouseSensitivity = 20.f;
 	// Create a CameraComponent	
 	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	FirstPersonCameraComponent->SetupAttachment(GetCapsuleComponent());
 	FirstPersonCameraComponent->RelativeLocation = FVector(-39.56f, 1.75f, 64.f); // Position the camera
 	FirstPersonCameraComponent->bUsePawnControlRotation = true;
-
+	CosmoCoins = 10;
 	// Create a mesh component that will be used when being viewed from a '1st person' view (when controlling this pawn)
 	Mesh1P = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("CharacterMesh1P"));
 	Mesh1P->SetOnlyOwnerSee(true);
@@ -45,6 +45,7 @@ AMoonFloristCharacter::AMoonFloristCharacter()
 	Mesh1P->RelativeLocation = FVector(-0.5f, -4.4f, -155.7f);
 
 
+	
 }
 
 void AMoonFloristCharacter::BeginPlay()
@@ -54,7 +55,59 @@ void AMoonFloristCharacter::BeginPlay()
 
 	PrimaryActorTick.bCanEverTick = true;
 
+	PlayerStorage = NewObject<AStorage>();
+	StartItems();
+	
 
+	
+
+}
+
+void AMoonFloristCharacter::StartItems()
+{
+#pragma region FLOWERS
+	//Scarlet Flower
+	AItem* Scarlet = NewObject<AItem>();
+	Scarlet->CreateItem(EItemType::IT_Flower, "RedFlower", "/Game/User_Interface/Storage/StorageAssets/ScarletFlower.ScarletFlower", 10, 15);
+	PlayerStorage->AddItem(Scarlet);
+	//Cobalt Flower
+	AItem* Cobalt = NewObject<AItem>();
+	Cobalt->CreateItem(EItemType::IT_Flower, "BlueFlower", "/Game/User_Interface/Storage/StorageAssets/CobaltFlower.CobaltFlower", 10, 15);
+	PlayerStorage->AddItem(Cobalt);
+	//Golden Flower
+	AItem* Golden = NewObject<AItem>();
+	Golden->CreateItem(EItemType::IT_Flower, "YellowFlower", "/Game/User_Interface/Storage/StorageAssets/GoldenFlower.GoldenFlower", 10, 15);
+	PlayerStorage->AddItem(Golden);
+	//Silver Flower
+	AItem* Silver = NewObject<AItem>();
+	Silver->CreateItem(EItemType::IT_Flower, "WhiteFlower", "/Game/User_Interface/Storage/StorageAssets/SilverFlower.SilverFlower", 10, 35);
+	PlayerStorage->AddItem(Silver);
+#pragma endregion
+#pragma region SEEDS
+	//Scarlet Seed
+	AItem* ScarletSeeds = NewObject<AItem>();
+	ScarletSeeds->CreateItem(EItemType::IT_Seed, "ScarletSeeds", "/Game/User_Interface/Storage/StorageAssets/ScarletSeeds.ScarletSeeds", 5, 15);
+	PlayerStorage->AddItem(ScarletSeeds);
+	//Cobalt Seed
+	AItem* CobaltSeeds = NewObject<AItem>();
+	CobaltSeeds->CreateItem(EItemType::IT_Seed, "CobaltSeeds", "/Game/User_Interface/Storage/StorageAssets/CobaltSeeds.CobaltSeeds", 5, 15);
+	PlayerStorage->AddItem(CobaltSeeds);
+	//Golden Seed
+	AItem* GoldenSeeds = NewObject<AItem>();
+	GoldenSeeds->CreateItem(EItemType::IT_Seed, "GoldenSeeds", "/Game/User_Interface/Storage/StorageAssets/GoldenSeeds.GoldenSeeds", 5, 35);
+	PlayerStorage->AddItem(GoldenSeeds);
+	//Silver Seed
+	AItem* SilverSeeds = NewObject<AItem>();
+	SilverSeeds->CreateItem(EItemType::IT_Seed, "SilverSeeds", "/Game/User_Interface/Storage/StorageAssets/SilverSeeds.SilverSeeds", 5, 35);
+	PlayerStorage->AddItem(SilverSeeds);
+#pragma endregion
+
+	//Scarlet Seed
+	AItem* BouquetExample = NewObject<AItem>();
+	BouquetExample->CreateItem(EItemType::IT_Seed, "BouquetExample", "/Game/User_Interface/Storage/StorageAssets/ScarletSeeds.ScarletSeeds", 1, 70, false);
+	PlayerStorage->AddItem(BouquetExample);
+
+	PlayerStorage->IncreaseStacks(10, BouquetExample);
 }
 
 void AMoonFloristCharacter::Tick(float DeltaTime)
@@ -109,9 +162,7 @@ void AMoonFloristCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 	// set up gameplay key bindings
 	check(PlayerInputComponent);
 
-	// Bind jump events
-	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
-	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+
 
 	// Bind movement events
 	PlayerInputComponent->BindAxis("MoveForward", this, &AMoonFloristCharacter::MoveForward);
@@ -148,13 +199,13 @@ void AMoonFloristCharacter::MoveRight(float Value)
 void AMoonFloristCharacter::TurnAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
-	AddControllerYawInput(Rate * BaseTurnRate * GetWorld()->GetDeltaSeconds());
+	AddControllerYawInput(Rate * MouseSensitivity * GetWorld()->GetDeltaSeconds());
 }
 
 void AMoonFloristCharacter::LookUpAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
-	AddControllerPitchInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
+	AddControllerPitchInput(Rate * MouseSensitivity * GetWorld()->GetDeltaSeconds());
 }
 
 

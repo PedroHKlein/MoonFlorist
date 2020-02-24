@@ -25,3 +25,19 @@ void AMyClientManager::Tick(float DeltaTime)
 
 }
 
+//Client manager init function
+void AMyClientManager::init()
+{
+	//Create list of clients and randomise their traits
+	for (int i = 0; i < 100; i++)
+	{
+		AMyClient* temp = GetWorld()->SpawnActor<AMyClient>(AMyClient::StaticClass());
+		temp->Init(i + 1, FMath::RandRange(1, 5));
+		Clients.Push(temp);
+	}
+}
+
+TArray<AMyClient*> AMyClientManager::GetClients()
+{
+	return Clients;
+}

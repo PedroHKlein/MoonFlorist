@@ -16,8 +16,10 @@ AMyGameManager::AMyGameManager()
 void AMyGameManager::BeginPlay()
 {
 	Super::BeginPlay();
-	NewClient();
-	NewBouquet();
+	init();
+
+	//NewClient();
+	//NewBouquet();
 }
 
 // Called every frame
@@ -29,19 +31,28 @@ void AMyGameManager::Tick(float DeltaTime)
 
 void AMyGameManager::NewClient()
 {
-	if (CurrentClient == NULL)
+	if (CurrClient == NULL)
 	{
-		CurrentClient = NewObject<UMyClientOrder>();
-		CurrentClient->init(FMath::RandRange(1, 100), FMath::RandRange(1, 3));
+		CurrClient = ClientList->GetClients()[FMath::RandRange(0, 99)];
+		CurrClient->SetFullDescription();
 	}
 	else
 	{
-		CurrentClient = NewObject<UMyClientOrder>();
-		CurrentClient->init(FMath::RandRange(1, 100), FMath::RandRange(1, 3));
+		CurrClient = ClientList->GetClients()[FMath::RandRange(0, 99)];
+		CurrClient->SetFullDescription();
+	}
+
+	if (CurrentClient == NULL)
+	{
+		CurrentClient = CurrClient->GetCurrentOrder();
+	}
+	else
+	{
+		CurrentClient = CurrClient->GetCurrentOrder();
 	}
 
 	//TEST
-	
+	/*
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Hi! My name is %s"), *FString(CurrentClient->GetName())), false);
 
 	for (int i = 0; i < CurrentClient->GetGoals().Num(); i++)
@@ -55,7 +66,7 @@ void AMyGameManager::NewClient()
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("and %s"), *FString(CurrentClient->GetGoals()[i]->GetGoal())), false);
 		}
 	}
-	
+	*/
 }
 
 void AMyGameManager::NewBouquet()
@@ -69,7 +80,7 @@ void AMyGameManager::NewBouquet()
 		CurrentBouquet = NewObject<UMyBouquet>();
 	}
 
-	CurrentBouquet->SetCurrOrder(CurrentClient);
+	CurrentBouquet->SetCurrOrder(CurrClient->GetCurrentOrder());
 
 	//TEST
 	/*
@@ -127,8 +138,7 @@ void AMyGameManager::Test(float delta)
 
 	if (fCurrTime >= fTimeToWait)
 	{
-		NewClient();
-		NewBouquet();
+		CompleteOrder();
 		fCurrTime = 0.0f;
 	}
 }
@@ -186,8 +196,46 @@ void AMyGameManager::CompleteOrder()
 	{
 		CurrentBouquet->GradeBouquet();
 		AddMoney(CurrentBouquet->GetWorth());
-		NewBouquet();
+		setLastBouquetWorth();
+		CurrClient->UpdateClientDescriptions();
 		NewClient();
+		NewBouquet();
 	}
 }
 
+AMyGoalManager* AMyGameManager::GetGoalList()
+{
+	return GoalLists;
+}
+
+void AMyGameManager::init()
+{
+	Instance = this;
+	GoalLists = GetWorld()->SpawnActor<AMyGoalManager>(AMyGoalManager::StaticClass());
+	GoalLists->init();
+	ClientList = GetWorld()->SpawnActor<AMyClientManager>(AMyClientManager::StaticClass());
+	ClientList->init();
+	NewClient();
+	NewBouquet();
+	EmailLists = GetWorld()->SpawnActor<AMyEmailManager>(AMyEmailManager::StaticClass());
+}
+
+AMyGameManager* AMyGameManager::GetInstance()
+{
+	return Instance;
+}
+
+void AMyGameManager::setLastBouquetWorth()
+{
+	iLastBoquetWorth = CurrentBouquet->GetWorth();
+}
+
+int AMyGameManager::getLastBouquetWorth()
+{
+	return iLastBoquetWorth;
+}
+
+AMyClient* AMyGameManager::GetCurrClient()
+{
+	return CurrClient;
+}

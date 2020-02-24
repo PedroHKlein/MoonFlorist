@@ -26,7 +26,7 @@ enum RedGoalNames
 	PASSIONATE,
 	LOVE,
 	CORAGEOUS,
-	REDRED
+	AMOROUS
 
 };
 
@@ -36,7 +36,7 @@ enum BlueGoalNames
 	TRUST,
 	SMART,
 	PEACEFUL,
-	BLUEBLUE
+	CALM
 
 };
 
@@ -46,7 +46,7 @@ enum YellowGoalNames
 	CHEERFUL,
 	BRIGHT,
 	SUNNY,
-	YELLOWYELLOW
+	BUBBLY
 
 };
 
@@ -56,7 +56,7 @@ enum PurpleGoalNames
 	MYSTERY,
 	INSPIRING,
 	SENSUAL,
-	REDBLUE
+	REGAL
 
 };
 
@@ -66,7 +66,7 @@ enum GreenGoalNames
 	DOWNTOEARTH,
 	CLEAN,
 	FORWARD,
-	YELLOWBLUE
+	ANCIENT
 };
 
 enum OrangeGoalNames
@@ -75,7 +75,7 @@ enum OrangeGoalNames
 	WARM,
 	ZESTY,
 	TANGY,
-	REDYELLOW
+	ENERGETIC
 };
 
 UCLASS()
@@ -98,12 +98,19 @@ public:
 	FString GetColour();
 	UFUNCTION(BlueprintCallable)
 	FString GetGoal();
+	UFUNCTION(BlueprintCallable)
+	void SetComplete();
 
 private:
-
+	UPROPERTY()
 	int iGoalColour;
+	UPROPERTY()
 	int iGoalNumber;
+	UPROPERTY()
 	FString sColour;
+	UPROPERTY()
 	FString sGoal;
+	UPROPERTY()
+	bool bComplete;
 	
 };
