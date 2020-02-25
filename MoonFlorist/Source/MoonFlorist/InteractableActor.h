@@ -14,9 +14,10 @@ class MOONFLORIST_API AInteractableActor : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AInteractableActor();
-	//UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	//USceneComponent* SceneComp;
-
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly)
+	class USceneComponent* SceneComp;
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite)
+	class UWidgetComponent* FloatingText;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

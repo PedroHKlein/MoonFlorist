@@ -28,16 +28,29 @@ public:
 	AMoonFloristCharacter();
 	virtual void Tick(float DeltaTime) override;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Mouse Sens")
-		float MouseSensitivity;
+	float MouseSensitivity;
 	UFUNCTION(BlueprintCallable, Category = "Raycast")
 	FHitResult RaycastCheck();
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Currency")
+	UPROPERTY(BlueprintReadWrite, VisibleDefaultsOnly, Category = "Currency")
 	int CosmoCoins;
-	UPROPERTY(BlueprintReadWrite,EditAnywhere, Category = "Currency")
+	UPROPERTY(BlueprintReadWrite, VisibleDefaultsOnly, Category = "Currency")
 	int StartCoins;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Interaction", meta = (AllowPrivateAccess = "true"))
+	FHitResult m_Hitsdata;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Interaction", meta = (AllowPrivateAccess = "true"))
+	float RayDisCheck;
+
+	class AMoonFloristHUD* HUD;
+	class APlayerController* PlayerController;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Storage")
 	class AStorage* PlayerStorage;
+
+	UFUNCTION(BlueprintCallable, Category = "Interaction")
+	void DetectInteraction();
+
 protected:
 	virtual void BeginPlay();
 	//Beginning Items that the player has
@@ -52,6 +65,7 @@ protected:
 	/** Handles strafing movement, left and right */
 	void MoveRight(float Val);
 
+	
 	
 protected:
 	// APawn interface
@@ -75,6 +89,8 @@ protected:
 	 * Called via input to turn look up/down at a given rate.
 	 * @param Rate    This is a normalized rate, i.e. 1.0 means 100% of desired turn rate
 	 */
+
+
 	void LookUpAtRate(float Rate);
 public:
 	/** Returns Mesh1P subobject **/
