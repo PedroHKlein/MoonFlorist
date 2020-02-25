@@ -12,8 +12,10 @@
 #include "MotionControllerComponent.h"
 #include "Engine.h"
 #include "MoonFloristHUD.h"
-
 #include "XRMotionControllerBase.h" // for FXRMotionControllerBase::RightHandSourceId
+#include "InteractableActor.h"
+#include "Kismet/GameplayStatics.h"
+
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -34,7 +36,7 @@ AMoonFloristCharacter::AMoonFloristCharacter()
 	FirstPersonCameraComponent->SetupAttachment(GetCapsuleComponent());
 	FirstPersonCameraComponent->RelativeLocation = FVector(-39.56f, 1.75f, 64.f); // Position the camera
 	FirstPersonCameraComponent->bUsePawnControlRotation = true;
-	CosmoCoins = 10;
+
 	// Create a mesh component that will be used when being viewed from a '1st person' view (when controlling this pawn)
 	Mesh1P = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("CharacterMesh1P"));
 	Mesh1P->SetOnlyOwnerSee(true);
@@ -58,9 +60,10 @@ void AMoonFloristCharacter::BeginPlay()
 	PlayerStorage = NewObject<AStorage>();
 	StartItems();
 	
-
-	
-
+	RayDisCheck = 200.0f;
+	PlayerController = UGameplayStatics::GetPlayerController(this, 0);
+	HUD = Cast<AMoonFloristHUD>(PlayerController->GetHUD());
+	CosmoCoins = 10;
 }
 
 void AMoonFloristCharacter::StartItems()
@@ -110,12 +113,51 @@ void AMoonFloristCharacter::StartItems()
 	PlayerStorage->IncreaseStacks(10, BouquetExample);
 }
 
+void AMoonFloristCharacter::DetectInteraction()
+{
+	AInteractableActor* Interactable = Cast<AInteractableActor>(m_Hitsdata.GetActor());
+	if (Interactable)
+	{
+		bool WithinRange = false;
+		bool flipflop = true;
+
+	
+		if ((m_Hitsdata.TraceStart - m_Hitsdata.GetActor()->GetActorLocation()).Size() <= RayDisCheck)
+		{
+			WithinRange = true;
+			flipflop = !flipflop;
+		}
+		else
+		{
+			WithinRange = false;
+		}
+
+		if (WithinRange)
+		{
+			if (flipflop)
+			{
+
+				PlayerController->SetViewTargetWithBlend(Interactable, 1.0f, VTBlend_EaseIn, 2.0f);
+				PlayerController->SetIgnoreMoveInput(true);
+				PlayerController->SetIgnoreLookInput(true);
+				PlayerController->bShowMouseCursor = true;
+				HUD->ToggleAlpha(true);
+			}
+			else
+			{
+				PlayerController->SetViewTargetWithBlend(this, 1.0f, VTBlend_EaseOut, 2.0f);
+			}
+		}
+		
+
+
+	}
+}
+
 void AMoonFloristCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-
-	RaycastCheck();
+	m_Hitsdata =  RaycastCheck();
 }
 
 FHitResult AMoonFloristCharacter::RaycastCheck()
@@ -151,8 +193,8 @@ FHitResult AMoonFloristCharacter::RaycastCheck()
 	}
 
 	return HitData;
-	
 }
+
 
 //////////////////////////////////////////////////////////////////////////
 // Input
@@ -161,8 +203,6 @@ void AMoonFloristCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 {
 	// set up gameplay key bindings
 	check(PlayerInputComponent);
-
-
 
 	// Bind movement events
 	PlayerInputComponent->BindAxis("MoveForward", this, &AMoonFloristCharacter::MoveForward);
