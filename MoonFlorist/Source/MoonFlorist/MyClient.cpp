@@ -349,30 +349,35 @@ void AMyClient::Init(int _iName, int _iNature)
 	switch (_iNature)
 	{
 	case NORMAL:
+		sTitle = "<Default>Boquet Order - " + sName;
 		sGreeting = "<Default>Hello my name is ";
 		Dialogue1 = "<Default>. I would like to order a bouquet that feels";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default> and";
 		break;
 	case FLIRTY:
+		sTitle = "<Default>Boquet Order - " + sName;
 		sGreeting = "<Default>Hey cutie uwu~ I'm ";
 		Dialogue1 = "<Default>. I would love <3 it if you could make me a bOwOquet that feels";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default>. OH OH OH and also";
 		break;
 	case SHY:
+		sTitle = "<Default>Boquet Order - " + sName;
 		sGreeting = "<Default>Um... Hi, I am ";
 		Dialogue1 = "<Default>. can I get a gathering of flowers, I don't know, that feel";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default> um and";
 		break;
 	case GRUMPY:
+		sTitle = "<Default>Boquet Order - " + sName;
 		sGreeting = "<Default>WRITE THIS DOWN, my name is ";
 		Dialogue1 = "<Default>. Give me a bouquet that feels";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default> and";
 		break;
 	case HIP:
+		sTitle = "<Default>Boquet Order - " + sName;
 		sGreeting = "<Default>Yo what up! It is ";
 		Dialogue1 = "<Default>. Can you shaka brah me a brahquet that feels";
 		Dialogue2 = "<Default>,";

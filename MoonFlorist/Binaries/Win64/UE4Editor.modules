@@ -2,10 +2,6 @@
 	"BuildId": "5660361",
 	"Modules": 
 	{
-<<<<<<< HEAD
-		"MoonFlorist": "UE4Editor-MoonFlorist-0012.dll"
-=======
-		"MoonFlorist": "UE4Editor-MoonFlorist.dll"
->>>>>>> AlphaBuild-0.1
+		"MoonFlorist": "UE4Editor-MoonFlorist-0005.dll"
 	}
 }

@@ -48,6 +48,9 @@ protected:
 	int iName;
 	UPROPERTY()
 	int iNature;
+
+	UPROPERTY()
+	FString sTitle = "<Default> URGENT EMAIL";
 	UPROPERTY()
 	FString sName = "<Default> Jobin";
 	UPROPERTY()
