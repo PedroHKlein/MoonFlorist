@@ -64,6 +64,9 @@ void AMoonFloristCharacter::BeginPlay()
 	PlayerController = UGameplayStatics::GetPlayerController(this, 0);
 	HUD = Cast<AMoonFloristHUD>(PlayerController->GetHUD());
 	CosmoCoins = 10;
+	UE_LOG(LogTemp, Warning, TEXT("Start"));
+	flipflop = true;
+	WithinRange = false;
 }
 
 void AMoonFloristCharacter::StartItems()
@@ -115,21 +118,21 @@ void AMoonFloristCharacter::StartItems()
 
 void AMoonFloristCharacter::DetectInteraction()
 {
+
 	AInteractableActor* Interactable = Cast<AInteractableActor>(m_Hitsdata.GetActor());
+	UE_LOG(LogTemp, Warning, TEXT("Detecting"));
 	if (Interactable)
 	{
-		bool WithinRange = false;
-		bool flipflop = true;
-
 	
 		if ((m_Hitsdata.TraceStart - m_Hitsdata.GetActor()->GetActorLocation()).Size() <= RayDisCheck)
 		{
 			WithinRange = true;
-			flipflop = !flipflop;
+			UE_LOG(LogTemp, Warning, TEXT("true"));
 		}
 		else
 		{
 			WithinRange = false;
+			UE_LOG(LogTemp, Warning, TEXT("false"));
 		}
 
 		if (WithinRange)
@@ -142,22 +145,33 @@ void AMoonFloristCharacter::DetectInteraction()
 				PlayerController->SetIgnoreLookInput(true);
 				PlayerController->bShowMouseCursor = true;
 				HUD->ToggleAlpha(true);
+				flipflop = false;
+				UE_LOG(LogTemp, Warning, TEXT("working"));
+				
 			}
-			else
+			else if(!flipflop)
 			{
-				PlayerController->SetViewTargetWithBlend(this, 1.0f, VTBlend_EaseOut, 2.0f);
+				PlayerController->SetViewTargetWithBlend(UGameplayStatics::GetPlayerCharacter(this,0), 1.0f, VTBlend_EaseOut, 2.0f);
+				PlayerController->SetIgnoreMoveInput(false);
+				PlayerController->SetIgnoreLookInput(false);
+				PlayerController->bShowMouseCursor = false;
+				HUD->ToggleAlpha(false);
+				flipflop = true;
+				UE_LOG(LogTemp, Warning, TEXT("working"));
 			}
 		}
-		
 
-
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Failed"));
 	}
 }
 
 void AMoonFloristCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	m_Hitsdata =  RaycastCheck();
+	m_Hitsdata = RaycastCheck();
 }
 
 FHitResult AMoonFloristCharacter::RaycastCheck()
@@ -207,7 +221,7 @@ void AMoonFloristCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 	// Bind movement events
 	PlayerInputComponent->BindAxis("MoveForward", this, &AMoonFloristCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AMoonFloristCharacter::MoveRight);
-
+	PlayerInputComponent->BindAction("Action", IE_Pressed, this, &AMoonFloristCharacter::DetectInteraction);
 	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
 	// "turn" handles devices that provide an absolute delta, such as a mouse.
 	// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick
