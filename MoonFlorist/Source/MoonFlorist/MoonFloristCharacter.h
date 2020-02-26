@@ -36,7 +36,7 @@ public:
 	UPROPERTY(BlueprintReadWrite, VisibleDefaultsOnly, Category = "Currency")
 	int StartCoins;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Interaction", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Interaction")
 	FHitResult m_Hitsdata;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Interaction", meta = (AllowPrivateAccess = "true"))
@@ -44,6 +44,8 @@ public:
 
 	class AMoonFloristHUD* HUD;
 	class APlayerController* PlayerController;
+	bool flipflop;
+	bool WithinRange;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Storage")
 	class AStorage* PlayerStorage;
