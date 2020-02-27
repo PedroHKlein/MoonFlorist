@@ -15,20 +15,6 @@ public:
 	// Sets default values for this actor's properties
 	ASlidingWindow();
 
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "SlidingWindow")
-	class USceneComponent* Root;
-
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "SlidingWindow")
-	class USceneComponent* StartLerpLoc;
-
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "SlidingWindow")
-	class USceneComponent* EndLerpLoc;
-
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "SlidingWindow")
-	class UStaticMeshComponent* Window;
-
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "SlidingWindow")
-	class UStaticMeshComponent* Switch;
 
 	bool Open;
 
@@ -36,7 +22,21 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "SlidingWindow", meta = (AllowPrivateAccess = "true"))
+		class USceneComponent* Root;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "SlidingWindow", meta = (AllowPrivateAccess = "true"))
+		class USceneComponent* StartLerpLoc;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "SlidingWindow", meta = (AllowPrivateAccess = "true"))
+		class USceneComponent* EndLerpLoc;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "SlidingWindow", meta = (AllowPrivateAccess = "true"))
+		class UStaticMeshComponent* Window;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "SlidingWindow", meta = (AllowPrivateAccess = "true"))
+		class UStaticMeshComponent* Switch;
+
 
 public:	
 	// Called every frame
