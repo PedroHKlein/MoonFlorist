@@ -17,9 +17,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "SlidingDoor")
 	class UStaticMeshComponent* LeftDoor;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "SlidingDoor")
-		class UStaticMeshComponent* RightDoor;
+	class UStaticMeshComponent* RightDoor;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "SlidingDoor")
-		class UStaticMeshComponent* DoorFrame;
+	class UStaticMeshComponent* DoorFrame;
 
 	UPROPERTY(VisibleAnywhere, Category = "SlidingDoor")
 	class UBoxComponent* TriggerBox;

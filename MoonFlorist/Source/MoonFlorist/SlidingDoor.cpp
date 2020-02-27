@@ -77,13 +77,13 @@ void ASlidingDoor::Tick(float DeltaTime)
 	FVector RightDoorLoc = RightDoor->RelativeLocation;
 	if (Open)
 	{
-		LeftDoor->SetRelativeLocation(FMath::VInterpTo(LeftDoorLoc, FVector(-115.0f, 0.0f, 0.0f), DeltaTime, 1.5f));
-		RightDoor->SetRelativeLocation(FMath::VInterpTo(RightDoorLoc, FVector(50.0f, 0.0f, 0.0f), DeltaTime, 1.5f));
+		LeftDoor->SetRelativeLocation(FMath::VInterpTo(LeftDoorLoc, FVector(-115.0f, 0.0f, 0.0f), DeltaTime, 2.0f));
+		RightDoor->SetRelativeLocation(FMath::VInterpTo(RightDoorLoc, FVector(50.0f, 0.0f, 0.0f), DeltaTime, 2.0f));
 	}
 	else 
 	{
-		LeftDoor->SetRelativeLocation(FMath::VInterpTo(LeftDoorLoc, FVector(0.0f, 0.0f, 0.0f), DeltaTime, 1.5f));
-		RightDoor->SetRelativeLocation(FMath::VInterpTo(RightDoorLoc, FVector(0.0f, 0.0f, 0.0f), DeltaTime, 1.5f));
+		LeftDoor->SetRelativeLocation(FMath::VInterpTo(LeftDoorLoc, FVector(0.0f, 0.0f, 0.0f), DeltaTime, 2.0f));
+		RightDoor->SetRelativeLocation(FMath::VInterpTo(RightDoorLoc, FVector(0.0f, 0.0f, 0.0f), DeltaTime, 2.0f));
 	}
 }
 

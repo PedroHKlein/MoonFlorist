@@ -14,6 +14,7 @@
 #include "MoonFloristHUD.h"
 #include "XRMotionControllerBase.h" // for FXRMotionControllerBase::RightHandSourceId
 #include "InteractableActor.h"
+#include "SlidingWindow.h"
 #include "Kismet/GameplayStatics.h"
 
 
@@ -128,6 +129,7 @@ void AMoonFloristCharacter::DetectInteraction()
 		{
 			WithinRange = true;
 			UE_LOG(LogTemp, Warning, TEXT("true"));
+			
 		}
 		else
 		{
@@ -166,6 +168,19 @@ void AMoonFloristCharacter::DetectInteraction()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Failed"));
 	}
+	if (m_Hitsdata.GetComponent()->ComponentHasTag(FName(TEXT("Switch"))))
+	{
+		ASlidingWindow* Window = Cast<ASlidingWindow>(m_Hitsdata.GetActor());
+		if (Window->Open)
+		{
+			Window->Open = false;
+		}
+		else
+		{
+			Window->Open = true;
+		}
+
+	}
 }
 
 void AMoonFloristCharacter::Tick(float DeltaTime)
@@ -187,13 +202,15 @@ FHitResult AMoonFloristCharacter::RaycastCheck()
 	if (isHit)
 	{
 		AMoonFloristHUD* playerHUD = (AMoonFloristHUD*)(GetWorld()->GetFirstPlayerController()->GetHUD());
-		if ((start - HitData.GetActor()->GetActorLocation()).Size() <= 200.0f && HitData.GetActor()->ActorHasTag(FName(TEXT("Interactable"))))
+		if ((start - HitData.GetActor()->GetActorLocation()).Size() <= 200.0f && HitData.GetActor()->ActorHasTag(FName(TEXT("Interactable"))) ||
+			(start - HitData.GetComponent()->GetComponentLocation()).Size() <= 200.0f && HitData.GetComponent()->ComponentHasTag(FName(TEXT("Interactable"))))
 		{
 
 			playerHUD->ChangeState(3);
 
 		}
-		else if ((start - HitData.GetActor()->GetActorLocation()).Size() > 200.0f && HitData.GetActor()->ActorHasTag(FName(TEXT("Interactable"))))
+		else if ((start - HitData.GetActor()->GetActorLocation()).Size() > 200.0f && HitData.GetActor()->ActorHasTag(FName(TEXT("Interactable"))) || 
+			(start - HitData.GetComponent()->GetComponentLocation()).Size() > 200.0f && HitData.GetComponent()->ComponentHasTag(FName(TEXT("Interactable"))))
 		{
 			playerHUD->ChangeState(2);
 
@@ -208,7 +225,6 @@ FHitResult AMoonFloristCharacter::RaycastCheck()
 
 	return HitData;
 }
-
 
 //////////////////////////////////////////////////////////////////////////
 // Input
