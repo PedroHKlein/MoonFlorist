@@ -23,7 +23,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Way Points")
 		AWaypoint* NextWaypoint;
 
-	
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Way Points")
+	bool IsMoving;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

@@ -15,7 +15,7 @@ AAI_HANDS::AAI_HANDS()
 
 	GetCharacterMovement()->bOrientRotationToMovement = true;
 	GetCharacterMovement()->RotationRate = FRotator(0.0f, 100.0f, 0.0f);
-	
+	IsMoving = false;
 
 }
 
@@ -63,8 +63,13 @@ void AAI_HANDS::MoveToWayPoint()
 		{
 			if (NextWaypoint != nullptr)
 			{
+				IsMoving = true;
 				HandsController->MoveToActor(NextWaypoint, 5.0f);
 				UE_LOG(LogTemp, Warning, TEXT("Working"));
+			}
+			else
+			{
+				IsMoving = false;
 			}
 
 		}
