@@ -350,35 +350,35 @@ void AMyClient::Init(int _iName, int _iNature)
 	{
 	case NORMAL:
 		sTitle = "Boquet Order - " + sName;
-		sGreeting = "Hello my name is ";
+		sGreeting = "<RED>Hello my name is </>";
 		Dialogue1 = ". I would like to order a bouquet that feels";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default> and";
 		break;
 	case FLIRTY:
 		sTitle = "Boquet Order - " + sName;
-		sGreeting = "Hey cutie uwu~ I'm ";
+		sGreeting = "<RED>Hey cutie uwu~ I'm </>";
 		Dialogue1 = ". I would love :D it if you could make me a bOwOquet that feels";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default>. OH OH OH and also";
 		break;
 	case SHY:
 		sTitle = "Boquet Order - " + sName;
-		sGreeting = "Um... Hi, I am ";
+		sGreeting = "<RED>Um... Hi, I am </>";
 		Dialogue1 = ". can I get a gathering of flowers, I don't know, that feel";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default> um and";
 		break;
 	case GRUMPY:
 		sTitle = "Boquet Order - " + sName;
-		sGreeting = "WRITE THIS DOWN, my name is ";
+		sGreeting = "<RED>WRITE THIS DOWN, my name is </>";
 		Dialogue1 = ". Give me a bouquet that feels";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default> and";
 		break;
 	case HIP:
 		sTitle = "Boquet Order - " + sName;
-		sGreeting = "Yo what up! It is ";
+		sGreeting = "<RED>Yo what up! It is </>";
 		Dialogue1 = ". Can you shaka brah me a brahquet that feels";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default>. YO and";
@@ -425,13 +425,13 @@ void AMyClient::SetFullDescription()
 	switch (temp)
 	{
 	case 1:
-		sFullDescription = sGreeting  + LINE_TERMINATOR + "</>" + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal();
+		sFullDescription = sGreeting + "<Default>" + LINE_TERMINATOR + "</>" + "<Default>" + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal();
 		break;
 	case 2:
-		sFullDescription = sGreeting  + LINE_TERMINATOR + "</>" + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[1]->GetGoal();
+		sFullDescription = sGreeting + "<Default>" + LINE_TERMINATOR + "</>" + "<Default>" + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[1]->GetGoal();
 		break;
 	case 3:
-		sFullDescription = sGreeting  + LINE_TERMINATOR + "</>" + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue2 + GetCurrentOrder()->GetGoals()[1]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[2]->GetGoal();
+		sFullDescription = sGreeting + "<Default>" + LINE_TERMINATOR + "</>" + "<Default>" + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue2 + GetCurrentOrder()->GetGoals()[1]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[2]->GetGoal();
 		break;
 	default:
 		break;
