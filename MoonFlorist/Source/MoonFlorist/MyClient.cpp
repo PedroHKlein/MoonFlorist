@@ -42,304 +42,304 @@ void AMyClient::Init(int _iName, int _iNature)
 	switch (_iName)
 	{
 	case MARK:
-		sName = "<Default> Mark";
+		sName = " Mark";
 		break;
 	case PEPE:
-		sName = "<Default> Pepe";
+		sName = " Pepe";
 		break;
 	case KIKI:
-		sName = "<Default> KiKi";
+		sName = " KiKi";
 		break;
 	case SHIKA:
-		sName = "<Default> Shika";
+		sName = " Shika";
 		break;
 	case STEVEN:
-		sName = "<Default> Steven";
+		sName = " Steven";
 		break;
 	case IZZIE:
-		sName = "<Default> Izzie";
+		sName = " Izzie";
 		break;
 	case JONTY:
-		sName = "<Default> Jonty";
+		sName = " Jonty";
 		break;
 	case ALEX:
-		sName = "<Default> Alex";
+		sName = " Alex";
 		break;
 	case FRASER:
-		sName = "<Default> Fraser";
+		sName = " Fraser";
 		break;
 	case ROURKE:
-		sName = "<Default> Rourke";
+		sName = " Rourke";
 		break;
 	case ROWAN:
-		sName = "<Default> Rowan";
+		sName = " Rowan";
 		break;
 	case MICHAEL:
-		sName = "<Default> Michael";
+		sName = " Michael";
 		break;
 	case SHUNI:
-		sName = "<Default> Shuni";
+		sName = " Shuni";
 		break;
 	case JESSKALOO:
-		sName = "<Default> Jesska-Loo";
+		sName = " Jesska-Loo";
 		break;
 	case CASPIAN:
-		sName = "<Default> Caspian";
+		sName = " Caspian";
 		break;
 	case MATI:
-		sName = "<Default> Mati";
+		sName = " Mati";
 		break;
 	case JEREMY:
-		sName = "<Default> Jeremy";
+		sName = " Jeremy";
 		break;
 	case ROGER:
-		sName = "<Default> Roger";
+		sName = " Roger";
 		break;
 	case KERRY:
-		sName = "<Default> Kerry";
+		sName = " Kerry";
 		break;
 	case VIVIAN:
-		sName = "<Default> Vivian";
+		sName = " Vivian";
 		break;
 	case SALLY:
-		sName = "<Default> Sally";
+		sName = " Sally";
 		break;
 	case JAMES:
-		sName = "<Default> James";
+		sName = " James";
 		break;
 	case JIMBO:
-		sName = "<Default> Jimbo";
+		sName = " Jimbo";
 		break;
 	case DONUT:
-		sName = "<Default> Donut";
+		sName = " Donut";
 		break;
 	case JIMOTHY:
-		sName = "<Default> Jimothy";
+		sName = " Jimothy";
 		break;
 	case JASPOR:
-		sName = "<Default> Jaspor";
+		sName = " Jaspor";
 		break;
 	case CARLO:
-		sName = "<Default> Carlo";
+		sName = " Carlo";
 		break;
 	case LARISSA:
-		sName = "<Default> Larissa";
+		sName = " Larissa";
 		break;
 	case MARA:
-		sName = "<Default> Mara";
+		sName = " Mara";
 		break;
 	case CAROLINE:
-		sName = "<Default> Caroline";
+		sName = " Caroline";
 		break;
 	case SAMI:
-		sName = "<Default> Sami";
+		sName = " Sami";
 		break;
 	case KATE:
-		sName = "<Default> Kate";
+		sName = " Kate";
 		break;
 	case BENNET:
-		sName = "<Default> Bennet";
+		sName = " Bennet";
 		break;
 	case RYAN:
-		sName = "<Default> Ryan";
+		sName = " Ryan";
 		break;
 	case FRANCIS:
-		sName = "<Default> Francis";
+		sName = " Francis";
 		break;
 	case ELLIE:
-		sName = "<Default> Ellie";
+		sName = " Ellie";
 		break;
 	case REBEKKAH:
-		sName = "<Default> Rebekkah";
+		sName = " Rebekkah";
 		break;
 	case SOFIE:
-		sName = "<Default> Sofie";
+		sName = " Sofie";
 		break;
 	case ZANNI:
-		sName = "<Default> Zanni";
+		sName = " Zanni";
 		break;
 	case HOLLY:
-		sName = "<Default> Holly";
+		sName = " Holly";
 		break;
 	case EMMA:
-		sName = "<Default> Emma";
+		sName = " Emma";
 		break;
 	case ROBYN:
-		sName = "<Default> Robyn";
+		sName = " Robyn";
 		break;
 	case YULI:
-		sName = "<Default> Yuli";
+		sName = " Yuli";
 		break;
 	case PAULA:
-		sName = "<Default> Paula";
+		sName = " Paula";
 		break;
 	case MEG:
-		sName = "<Default> Meg";
+		sName = " Meg";
 		break;
 	case BERT:
-		sName = "<Default> Bert";
+		sName = " Bert";
 		break;
 	case MAXWELL:
-		sName = "<Default> Maxwell";
+		sName = " Maxwell";
 		break;
 	case ABIGAIL:
-		sName = "<Default> Abigail";
+		sName = " Abigail";
 		break;
 	case ALEXANDRA:
-		sName = "<Default> Alexandra";
+		sName = " Alexandra";
 		break;
 	case AMANDA:
-		sName = "<Default> Amanda";
+		sName = " Amanda";
 		break;
 	case ARIANNE:
-		sName = "<Default> Arianne";
+		sName = " Arianne";
 		break;
 	case BAILEY:
-		sName = "<Default> Bailey";
+		sName = " Bailey";
 		break;
 	case BEN:
-		sName = "<Default> Ben";
+		sName = " Ben";
 		break;
 	case BETH:
-		sName = "<Default> Beth";
+		sName = " Beth";
 		break;
 	case BLAIR:
-		sName = "<Default> Blair";
+		sName = " Blair";
 		break;
 	case BO:
-		sName = "<Default> Bo";
+		sName = " Bo";
 		break;
 	case BRIDGET:
-		sName = "<Default> Bridget";
+		sName = " Bridget";
 		break;
 	case BROOKE:
-		sName = "<Default> Brooke";
+		sName = " Brooke";
 		break;
 	case BECKY:
-		sName = "<Default> Becky";
+		sName = " Becky";
 		break;
 	case CLAIRE:
-		sName = "<Default> Claire";
+		sName = " Claire";
 		break;
 	case DAMIEN:
-		sName = "<Default> Damien";
+		sName = " Damien";
 		break;
 	case DANNY:
-		sName = "<Default> Danny";
+		sName = " Danny";
 		break;
 	case IVAN:
-		sName = "<Default> Ivan";
+		sName = " Ivan";
 		break;
 	case SAM:
-		sName = "<Default> Sam";
+		sName = " Sam";
 		break;
 	case SID:
-		sName = "<Default> Sid";
+		sName = " Sid";
 		break;
 	case TECE:
-		sName = "<Default> Tece";
+		sName = " Tece";
 		break;
 	case ASMA:
-		sName = "<Default> Asma";
+		sName = " Asma";
 		break;
 	case SHILPA:
-		sName = "<Default> Shilpa";
+		sName = " Shilpa";
 		break;
 	case SAMAH:
-		sName = "<Default> Samah";
+		sName = " Samah";
 		break;
 	case TAMRYN:
-		sName = "<Default> Tamryn";
+		sName = " Tamryn";
 		break;
 	case CALLAN:
-		sName = "<Default> Callan";
+		sName = " Callan";
 		break;
 	case FAWAD:
-		sName = "<Default> Fawad";
+		sName = " Fawad";
 		break;
 	case DAVID:
-		sName = "<Default> David";
+		sName = " David";
 		break;
 	case ANDREW:
-		sName = "<Default> Andrew";
+		sName = " Andrew";
 		break;
 	case SHANNON:
-		sName = "<Default> Shannon";
+		sName = " Shannon";
 		break;
 	case KAITLIN:
-		sName = "<Default> Kaitlin";
+		sName = " Kaitlin";
 		break;
 	case PIGEON:
-		sName = "<Default> Pigeon";
+		sName = " Pigeon";
 		break;
 	case BOOF:
-		sName = "<Default> Boof";
+		sName = " Boof";
 		break;
 	case ANNA:
-		sName = "<Default> Anna Rose";
+		sName = " Anna Rose";
 		break;
 	case KIMBERLY:
-		sName = "<Default> Kimmi";
+		sName = " Kimmi";
 		break;
 	case SASKIA:
-		sName = "<Default> Saskia";
+		sName = " Saskia";
 		break;
 	case STEPH:
-		sName = "<Default> Steph";
+		sName = " Steph";
 		break;
 	case PINKY:
-		sName = "<Default> Pinky";
+		sName = " Pinky";
 		break;
 	case SARAH:
-		sName = "<Default> Sarah";
+		sName = " Sarah";
 		break;
 	case SERENA:
-		sName = "<Default> Serena";
+		sName = " Serena";
 		break;
 	case IDA:
-		sName = "<Default> Ida";
+		sName = " Ida";
 		break;
 	case LAUREN:
-		sName = "<Default> Lauren";
+		sName = " Lauren";
 		break;
 	case KEIRA:
-		sName = "<Default> Keira";
+		sName = " Keira";
 		break;
 	case RIANNA:
-		sName = "<Default> Rianna";
+		sName = " Rianna";
 		break;
 	case ROSARIA:
-		sName = "<Default> Rosaria";
+		sName = " Rosaria";
 		break;
 	case JHARAIZ:
-		sName = "<Default> Jharaiz";
+		sName = " Jharaiz";
 		break;
 	case AMY:
-		sName = "<Default> Amy";
+		sName = " Amy";
 		break;
 	case JANELLE:
-		sName = "<Default> Janelle";
+		sName = " Janelle";
 		break;
 	case JORDAN:
-		sName = "<Default> Jordan";
+		sName = " Jordan";
 		break;
 	case HAMISH:
-		sName = "<Default> Hamish";
+		sName = " Hamish";
 		break;
 	case NIKKI:
-		sName = "<Default> Nikki";
+		sName = " Nikki";
 		break;
 	case PITCAM:
-		sName = "<Default> Pitcam";
+		sName = " Pitcam";
 		break;
 	case JUNIPER:
-		sName = "<Default> Juniper";
+		sName = " Juniper";
 		break;
 	case LOCHIE:
-		sName = "<Default> Lochie";
+		sName = " Lochie";
 		break;
 	case CALLUM:
-		sName = "<Default> Callum";
+		sName = " Callum";
 		break;
 	default:
 		break;
@@ -349,32 +349,37 @@ void AMyClient::Init(int _iName, int _iNature)
 	switch (_iNature)
 	{
 	case NORMAL:
-		sGreeting = "<Default>Hello my name is ";
-		Dialogue1 = "<Default>. I would like to order a bouquet that feels";
+		sTitle = "Boquet Order - " + sName;
+		sGreeting = "<RED>Hello my name is </>";
+		Dialogue1 = ". I would like to order a bouquet that feels";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default> and";
 		break;
 	case FLIRTY:
-		sGreeting = "<Default>Hey cutie uwu~ I'm ";
-		Dialogue1 = "<Default>. I would love <3 it if you could make me a bOwOquet that feels";
+		sTitle = "Boquet Order - " + sName;
+		sGreeting = "<RED>Hey cutie uwu~ I'm </>";
+		Dialogue1 = ". I would love :D it if you could make me a bOwOquet that feels";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default>. OH OH OH and also";
 		break;
 	case SHY:
-		sGreeting = "<Default>Um... Hi, I am ";
-		Dialogue1 = "<Default>. can I get a gathering of flowers, I don't know, that feel";
+		sTitle = "Boquet Order - " + sName;
+		sGreeting = "<RED>Um... Hi, I am </>";
+		Dialogue1 = ". can I get a gathering of flowers, I don't know, that feel";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default> um and";
 		break;
 	case GRUMPY:
-		sGreeting = "<Default>WRITE THIS DOWN, my name is ";
-		Dialogue1 = "<Default>. Give me a bouquet that feels";
+		sTitle = "Boquet Order - " + sName;
+		sGreeting = "<RED>WRITE THIS DOWN, my name is </>";
+		Dialogue1 = ". Give me a bouquet that feels";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default> and";
 		break;
 	case HIP:
-		sGreeting = "<Default>Yo what up! It is ";
-		Dialogue1 = "<Default>. Can you shaka brah me a brahquet that feels";
+		sTitle = "Boquet Order - " + sName;
+		sGreeting = "<RED>Yo what up! It is </>";
+		Dialogue1 = ". Can you shaka brah me a brahquet that feels";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default>. YO and";
 		break;
@@ -420,13 +425,13 @@ void AMyClient::SetFullDescription()
 	switch (temp)
 	{
 	case 1:
-		sFullDescription = sGreeting + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal();
+		sFullDescription = sGreeting + "<Default>" + LINE_TERMINATOR + "</>" + "<Default>" + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal();
 		break;
 	case 2:
-		sFullDescription = sGreeting + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[1]->GetGoal();
+		sFullDescription = sGreeting + "<Default>" + LINE_TERMINATOR + "</>" + "<Default>" + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[1]->GetGoal();
 		break;
 	case 3:
-		sFullDescription = sGreeting + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue2 + GetCurrentOrder()->GetGoals()[1]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[2]->GetGoal();
+		sFullDescription = sGreeting + "<Default>" + LINE_TERMINATOR + "</>" + "<Default>" + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue2 + GetCurrentOrder()->GetGoals()[1]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[2]->GetGoal();
 		break;
 	default:
 		break;
@@ -453,32 +458,32 @@ void AMyClient::UpdateClientDescriptions()
 	switch (iNature)
 	{
 	case NORMAL:
-		sGreeting = "<Default>Hi, it is ";
-		Dialogue1 = "<Default> again. I would like a bouquet that feels";
+		sGreeting = "Hi, it is ";
+		Dialogue1 = " again. I would like a bouquet that feels";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default> and";
 		break;
 	case FLIRTY:
-		sGreeting = "<Default>xX";
-		Dialogue1 = "<Default>Xx again~ O.o need a buwuquet hehe that is";
+		sGreeting = "xX";
+		Dialogue1 = "Xx again~ O.o need a buwuquet hehe that is";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default>. oooOOOooo and";
 		break;
 	case SHY:
-		sGreeting = "<Default>Uhhh, I don't know if you remember me. I am ";
-		Dialogue1 = "<Default>. can I please have a bouquet, if you have the time, that feels";
+		sGreeting = "Uhhh, I don't know if you remember me. I am ";
+		Dialogue1 = ". can I please have a bouquet, if you have the time, that feels";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default> um and";
 		break;
 	case GRUMPY:
-		sGreeting = "<Default>IT IS ME AGAIN, ";
-		Dialogue1 = "<Default>. Give me a bouquet that feels";
+		sGreeting = "IT IS ME AGAIN, ";
+		Dialogue1 = ". Give me a bouquet that feels";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default> and";
 		break;
 	case HIP:
-		sGreeting = "<Default>Yo yo, mofo, remember ";
-		Dialogue1 = "<Default>. IT IS ME, need a broquet bro, that feels";
+		sGreeting = "Yo yo, mofo, remember ";
+		Dialogue1 = ". IT IS ME, need a broquet bro, that feels";
 		Dialogue2 = "<Default>,";
 		Dialogue3 = "<Default>. YO and";
 		break;

@@ -25,3 +25,33 @@ void AMyEmailManager::Tick(float DeltaTime)
 
 }
 
+TArray<AMyEmail*> AMyEmailManager::GetOrders()
+{
+	return Orders;
+}
+
+TArray<AMyEmail*> AMyEmailManager::GetFeedback()
+{
+	return Feedback;
+}
+
+TArray<AMyEmail*> AMyEmailManager::GetSpam()
+{
+	return Spam;
+}
+
+void AMyEmailManager::AddToOrders(AMyEmail* _email)
+{
+	Orders.Push(_email);
+}
+
+void AMyEmailManager::AddToFeedback(AMyEmail* _email)
+{
+	Feedback.Push(_email);
+}
+
+void AMyEmailManager::AddToSpam(AMyEmail* _email)
+{
+	Spam.Push(_email);
+}
+

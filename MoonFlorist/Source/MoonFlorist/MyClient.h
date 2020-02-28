@@ -48,12 +48,15 @@ protected:
 	int iName;
 	UPROPERTY()
 	int iNature;
+
 	UPROPERTY()
-	FString sName = "<Default> Jobin";
+	FString sTitle = " URGENT EMAIL";
 	UPROPERTY()
-	FString sGreeting = "<Default>Hello my name is ";
+	FString sName = " Jobin";
 	UPROPERTY()
-	FString Dialogue1 = "<Default>. I would like to order a bouquet that feels";
+	FString sGreeting = "Hello my name is ";
+	UPROPERTY()
+	FString Dialogue1 = ". I would like to order a bouquet that feels";
 	UPROPERTY()
 	FString Dialogue2 = "<Default>,";
 	UPROPERTY()

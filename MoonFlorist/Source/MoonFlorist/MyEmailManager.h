@@ -15,9 +15,18 @@ class MOONFLORIST_API AMyEmailManager : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AMyEmailManager();
+	UFUNCTION(BlueprintCallable)
 	TArray<AMyEmail*> GetOrders();
+	UFUNCTION(BlueprintCallable)
 	TArray<AMyEmail*> GetFeedback();
+	UFUNCTION(BlueprintCallable)
 	TArray<AMyEmail*> GetSpam();
+	UFUNCTION(BlueprintCallable)
+	void AddToOrders(AMyEmail* _email);
+	UFUNCTION(BlueprintCallable)
+	void AddToFeedback(AMyEmail* _email);
+	UFUNCTION(BlueprintCallable)
+	void AddToSpam(AMyEmail* _email);
 
 protected:
 	// Called when the game starts or when spawned
@@ -28,7 +37,10 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 private:
+	UPROPERTY()
 	TArray<AMyEmail*> Orders;
+	UPROPERTY()
 	TArray<AMyEmail*> Feedback;
+	UPROPERTY()
 	TArray<AMyEmail*> Spam;
 };
