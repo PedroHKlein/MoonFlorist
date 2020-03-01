@@ -425,13 +425,13 @@ void AMyClient::SetFullDescription()
 	switch (temp)
 	{
 	case 1:
-		sFullDescription = sGreeting + "<Default>" + LINE_TERMINATOR + "</>" + "<Default>" + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal();
+		sFullDescription = sGreeting + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal();
 		break;
 	case 2:
-		sFullDescription = sGreeting + "<Default>" + LINE_TERMINATOR + "</>" + "<Default>" + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[1]->GetGoal();
+		sFullDescription = sGreeting + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[1]->GetGoal();
 		break;
 	case 3:
-		sFullDescription = sGreeting + "<Default>" + LINE_TERMINATOR + "</>" + "<Default>" + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue2 + GetCurrentOrder()->GetGoals()[1]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[2]->GetGoal();
+		sFullDescription = sGreeting + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue2 + GetCurrentOrder()->GetGoals()[1]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[2]->GetGoal();
 		break;
 	default:
 		break;
