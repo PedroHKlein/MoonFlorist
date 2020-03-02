@@ -21,13 +21,15 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "SlidingDoor")
 	class UStaticMeshComponent* DoorFrame;
 
+	UPROPERTY(EditAnywhere, Category = "SlidingDoor")
+	float Speed;
 	UPROPERTY(VisibleAnywhere, Category = "SlidingDoor")
 	class UBoxComponent* TriggerBox;
 	UPROPERTY(VisibleAnywhere, Category = "SlidingDoor")
-	class UArrowComponent* LeftPoint;
+	class USceneComponent* LeftPoint;
 
 	UPROPERTY(VisibleAnywhere, Category = "SlidingDoor")
-	class UArrowComponent* RightPoint;
+	class USceneComponent* RightPoint;
 	bool Open;
 protected:
 	// Called when the game starts or when spawned
