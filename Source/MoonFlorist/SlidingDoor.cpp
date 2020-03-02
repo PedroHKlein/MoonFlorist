@@ -15,7 +15,7 @@ ASlidingDoor::ASlidingDoor()
 	PrimaryActorTick.bCanEverTick = true;
 
 	DoorFrame = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("DoorFrame"));
-	DoorFrame->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/Modular_Pieces/Obj_Doorway.Obj_Doorway")).Object);
+	DoorFrame->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/Props/SM_Doorway.SM_Doorway")).Object);
 	DoorFrame->SetupAttachment(RootComponent);
 
 	TriggerBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Trigger Box"));
@@ -25,22 +25,31 @@ ASlidingDoor::ASlidingDoor()
 	TriggerBox->OnComponentEndOverlap.AddDynamic(this, &ASlidingDoor::OnOverlapEnd);
 	
 	LeftDoor = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("LeftDoor"));
-	LeftDoor->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/Modular_Pieces/Obj_Doors_Left.Obj_Doors_Left")).Object);
+	LeftDoor->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/Props/SM_Door_L.SM_Door_L")).Object);
 	LeftDoor->SetupAttachment(DoorFrame);
 
 	RightDoor = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("RightDoor"));
-	RightDoor->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/Modular_Pieces/Obj_Doors_Right.Obj_Doors_Right")).Object);
+	RightDoor->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/Props/SM_Door_R.SM_Door_R")).Object);
 	RightDoor->SetupAttachment(DoorFrame);
 
+	LeftPoint = CreateDefaultSubobject<USceneComponent>("Left End Lerp Location");
+	LeftPoint->SetupAttachment(DoorFrame);
+	RightPoint = CreateDefaultSubobject<USceneComponent>("Right End Lerp Location");
+	RightPoint->SetupAttachment(DoorFrame);
 	FVector LeftDoorLoc = LeftDoor->RelativeLocation;
 	FVector RightDoorLoc = RightDoor->RelativeLocation;
+	
 }
 
 // Called when the game starts or when spawned
 void ASlidingDoor::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	if (Speed == 0.0f)
+	{
+		Speed = 0.03f;
+		UE_LOG(LogTemp, Warning, TEXT("Speed Not Set in Editor - Sliding Door"));
+	}
 }
 
 void ASlidingDoor::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
@@ -77,13 +86,13 @@ void ASlidingDoor::Tick(float DeltaTime)
 	FVector RightDoorLoc = RightDoor->RelativeLocation;
 	if (Open)
 	{
-		LeftDoor->SetRelativeLocation(FMath::VInterpTo(LeftDoorLoc, FVector(-115.0f, 0.0f, 0.0f), DeltaTime, 2.0f));
-		RightDoor->SetRelativeLocation(FMath::VInterpTo(RightDoorLoc, FVector(50.0f, 0.0f, 0.0f), DeltaTime, 2.0f));
+		LeftDoor->SetRelativeLocation(FMath::Lerp(LeftDoorLoc, LeftPoint->RelativeLocation, Speed));
+		RightDoor->SetRelativeLocation(FMath::Lerp(RightDoorLoc, RightPoint->RelativeLocation, Speed));
 	}
 	else 
 	{
-		LeftDoor->SetRelativeLocation(FMath::VInterpTo(LeftDoorLoc, FVector(0.0f, 0.0f, 0.0f), DeltaTime, 2.0f));
-		RightDoor->SetRelativeLocation(FMath::VInterpTo(RightDoorLoc, FVector(0.0f, 0.0f, 0.0f), DeltaTime, 2.0f));
+		LeftDoor->SetRelativeLocation(FMath::Lerp(LeftDoorLoc, FVector(0.0f, 0.0f, 0.0f), Speed));
+		RightDoor->SetRelativeLocation(FMath::Lerp(RightDoorLoc, FVector(0.0f, 0.0f, 0.0f), Speed));
 	}
 }
 
