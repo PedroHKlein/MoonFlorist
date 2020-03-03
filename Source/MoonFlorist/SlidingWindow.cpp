@@ -19,11 +19,11 @@ ASlidingWindow::ASlidingWindow()
 	Root->SetupAttachment(RootComponent);
 
 	Window = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Window Cover"));
-	Window->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/Modular_Pieces/Obj_Bed_Window_Shield.Obj_Bed_Window_Shield")).Object);
+	Window->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/ModularSet/SM_Bed_Window_Shield.SM_Bed_Window_Shield")).Object);
 	Window->SetupAttachment(Root);
 
 	Switch = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Switch"));
-	Switch->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Geometry/Meshes/1M_Cube.1M_Cube")).Object);
+	Switch->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/Props/1M_Cube.1M_Cube")).Object);
 	Switch->SetupAttachment(Root);
 
 	//Lerp points
@@ -33,10 +33,6 @@ ASlidingWindow::ASlidingWindow()
 	EndLerpLoc->SetupAttachment(Root);
 	//Audio
 
-
-
-	
-	
 }
 
 // Called when the game starts or when spawned
@@ -45,7 +41,11 @@ void ASlidingWindow::BeginPlay()
 	Super::BeginPlay(); 
 	
 	StartLerpLoc->SetRelativeLocation(Window->RelativeLocation);
-
+	if (Speed == 0.0f)
+	{
+		Speed = 0.03f;
+		UE_LOG(LogTemp, Warning, TEXT("Speed Not Set in Editor - Sliding Window"));
+	}
 }
 
 // Called every frame
