@@ -27,15 +27,31 @@ public:
 	void SetFullEmail(FString _FullEmail);
 
 private:
+	UPROPERTY()
 	int iGood;
+	UPROPERTY()
 	int iBad;
+	UPROPERTY()
 	int iScore;
-
+	UPROPERTY()
 	FString sSubject;
+	UPROPERTY()
 	FString sGood;
+	UPROPERTY()
 	FString sBad;
+	UPROPERTY()
 	FString sOverall;
+	UPROPERTY()
 	FString sClientName;
+	UPROPERTY()
 	FString sFullEmail;
+	UPROPERTY()
+	FString sGreeting = "Hello my name is ";
+	UPROPERTY()
+	FString Dialogue1 = ". I would like to order a bouquet that feels";
+	UPROPERTY()
+	FString Dialogue2 = "<Default>,";
+	UPROPERTY()
+	FString Dialogue3 = "<Default> and";
 
 };
