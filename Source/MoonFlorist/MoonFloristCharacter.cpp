@@ -13,10 +13,11 @@
 #include "Engine.h"
 #include "MoonFloristHUD.h"
 #include "XRMotionControllerBase.h" // for FXRMotionControllerBase::RightHandSourceId
-#include "InteractableActor.h"
-#include "SlidingWindow.h"
 #include "Kismet/GameplayStatics.h"
 
+#include "InteractableActor.h"
+#include "SlidingWindow.h"
+#include "DeliveryTerminal.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -120,11 +121,10 @@ void AMoonFloristCharacter::StartItems()
 void AMoonFloristCharacter::DetectInteraction()
 {
 
-	AInteractableActor* Interactable = Cast<AInteractableActor>(m_Hitsdata.GetActor());
+	CurrentInteractActor = Cast<AInteractableActor>(m_Hitsdata.GetActor());
 	UE_LOG(LogTemp, Warning, TEXT("Detecting"));
-	if (Interactable)
+	if (CurrentInteractActor)
 	{
-	
 		if ((m_Hitsdata.TraceStart - m_Hitsdata.GetActor()->GetActorLocation()).Size() <= RayDisCheck)
 		{
 			WithinRange = true;
@@ -142,12 +142,13 @@ void AMoonFloristCharacter::DetectInteraction()
 			if (flipflop)
 			{
 
-				PlayerController->SetViewTargetWithBlend(Interactable, 1.0f, VTBlend_EaseIn, 2.0f);
+				PlayerController->SetViewTargetWithBlend(CurrentInteractActor, 1.0f, VTBlend_EaseIn, 2.0f);
 				PlayerController->SetIgnoreMoveInput(true);
 				PlayerController->SetIgnoreLookInput(true);
 				PlayerController->bShowMouseCursor = true;
 				HUD->ToggleAlpha(true);
 				flipflop = false;
+				Interacting = true;
 				UE_LOG(LogTemp, Warning, TEXT("working"));
 				
 			}
@@ -159,10 +160,12 @@ void AMoonFloristCharacter::DetectInteraction()
 				PlayerController->bShowMouseCursor = false;
 				HUD->ToggleAlpha(false);
 				flipflop = true;
+				Interacting = false;
 				UE_LOG(LogTemp, Warning, TEXT("working"));
+				
 			}
 		}
-
+		
 	}
 	else
 	{
@@ -181,6 +184,25 @@ void AMoonFloristCharacter::DetectInteraction()
 		}
 
 	}
+}
+
+void AMoonFloristCharacter::LeftArrowAction()
+{
+	if (CurrentInteractActor && Interacting)
+	{
+		ADeliveryTerminal* Terminal = Cast<ADeliveryTerminal>(CurrentInteractActor);
+		if (Terminal)
+		{
+			Terminal->ChangeCapsule();
+		}
+	}
+	else
+		UE_LOG(LogTemp, Warning, TEXT("no current actor"))
+}
+
+void AMoonFloristCharacter::RightArrowAction()
+{
+	
 }
 
 void AMoonFloristCharacter::Tick(float DeltaTime)
@@ -238,6 +260,8 @@ void AMoonFloristCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 	PlayerInputComponent->BindAxis("MoveForward", this, &AMoonFloristCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AMoonFloristCharacter::MoveRight);
 	PlayerInputComponent->BindAction("Action", IE_Pressed, this, &AMoonFloristCharacter::DetectInteraction);
+	PlayerInputComponent->BindAction("LeftAction", IE_Pressed, this , &AMoonFloristCharacter::LeftArrowAction);
+	PlayerInputComponent->BindAction("RightArrow", IE_Pressed, this, &AMoonFloristCharacter::RightArrowAction);
 	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
 	// "turn" handles devices that provide an absolute delta, such as a mouse.
 	// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick

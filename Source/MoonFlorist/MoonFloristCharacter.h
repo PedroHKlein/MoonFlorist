@@ -46,12 +46,19 @@ public:
 	class APlayerController* PlayerController;
 	bool flipflop;
 	bool WithinRange;
-
+	bool Interacting;
+	class AInteractableActor* CurrentInteractActor;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Storage")
 	class AStorage* PlayerStorage;
 
 	UFUNCTION(BlueprintCallable, Category = "Interaction")
 	void DetectInteraction();
+
+	UFUNCTION(BlueprintCallable, Category = "Interaction")
+	void LeftArrowAction();
+
+	UFUNCTION(BlueprintCallable, Category = "Interaction")
+	void RightArrowAction();
 
 protected:
 	virtual void BeginPlay();
