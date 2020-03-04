@@ -15,12 +15,15 @@ public:
 	// Sets default values for this actor's properties
 	ASlidingWindow();
 
-
+	
 	bool Open;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	UPROPERTY(EditAnywhere, Category = "SlidingWindow", meta = (AllowPrivateAccess = "true"))
+		float Speed;
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "SlidingWindow", meta = (AllowPrivateAccess = "true"))
 		class USceneComponent* Root;
