@@ -350,36 +350,36 @@ void AMyClient::Init(int _iName, int _iNature)
 	{
 	case NORMAL:
 		sTitle = "Boquet Order - " + sName;
-		sGreeting = "<Deafault>Hello my name is </>";
-		Dialogue1 = "<Deafault>. I would like to order a bouquet that feels</>";
+		sGreeting = "Hello my name is ";
+		Dialogue1 = ". I would like to order a bouquet that feels";
 		Dialogue2 = "<Default>,</>";
 		Dialogue3 = "<Default> and</>";
 		break;
 	case FLIRTY:
 		sTitle = "Boquet Order - " + sName;
-		sGreeting = "<Deafault>Hey cutie uwu~ I'm </>";
-		Dialogue1 = "<Deafault>. I would love :D it if you could make me a bOwOquet that feels</>";
+		sGreeting = "Hey cutie uwu~ I'm ";
+		Dialogue1 = ". I would love :D it if you could make me a bOwOquet that feels";
 		Dialogue2 = "<Default>,</>";
 		Dialogue3 = "<Default>. OH OH OH and also</>";
 		break;
 	case SHY:
 		sTitle = "Boquet Order - " + sName;
-		sGreeting = "<Deafault>Um... Hi, I am </>";
-		Dialogue1 = "<Deafault>. can I get a gathering of flowers, I don't know, that feel</>";
+		sGreeting = "Um... Hi, I am ";
+		Dialogue1 = ". can I get a gathering of flowers, I don't know, that feel";
 		Dialogue2 = "<Default>,</>";
 		Dialogue3 = "<Default> um and</>";
 		break;
 	case GRUMPY:
 		sTitle = "Boquet Order - " + sName;
-		sGreeting = "<Deafault>WRITE THIS DOWN, my name is </>";
-		Dialogue1 = "<Deafault>. Give me a bouquet that feels</>";
+		sGreeting = "WRITE THIS DOWN, my name is ";
+		Dialogue1 = ". Give me a bouquet that feels";
 		Dialogue2 = "<Default>,</>";
 		Dialogue3 = "<Default> and</>";
 		break;
 	case HIP:
 		sTitle = "Boquet Order - " + sName;
-		sGreeting = "<Deafault>Yo what up! It is </>";
-		Dialogue1 = "<Deafault>. Can you shaka brah me a brahquet that feels</>";
+		sGreeting = "Yo what up! It is ";
+		Dialogue1 = ". Can you shaka brah me a brahquet that feels";
 		Dialogue2 = "<Default>,</>";
 		Dialogue3 = "<Default>. YO and</>";
 		break;
@@ -425,13 +425,13 @@ void AMyClient::SetFullDescription()
 	switch (temp)
 	{
 	case 1:
-		  sFullDescription = sGreeting + LINE_TERMINATOR + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal();
+		  sFullDescription = sGreeting + LINE_TERMINATOR + LINE_TERMINATOR + sName + LINE_TERMINATOR + LINE_TERMINATOR + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal();
 		break;
 	case 2:
-		  sFullDescription = sGreeting + LINE_TERMINATOR + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[1]->GetGoal();
+		  sFullDescription = sGreeting + LINE_TERMINATOR + LINE_TERMINATOR + sName + LINE_TERMINATOR + LINE_TERMINATOR + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[1]->GetGoal();
 		break;
 	case 3:
-		  sFullDescription = sGreeting + LINE_TERMINATOR + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue2 + GetCurrentOrder()->GetGoals()[1]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[2]->GetGoal();
+		  sFullDescription = sGreeting + LINE_TERMINATOR + LINE_TERMINATOR + sName + LINE_TERMINATOR + LINE_TERMINATOR + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue2 + GetCurrentOrder()->GetGoals()[1]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[2]->GetGoal();
 		break;
 	default:
 		break;
@@ -460,32 +460,32 @@ void AMyClient::UpdateClientDescriptions()
 	case NORMAL:
 		sGreeting = "Hi, it is ";
 		Dialogue1 = " again. I would like a bouquet that feels";
-		Dialogue2 = "<Default>,";
-		Dialogue3 = "<Default> and";
+		Dialogue2 = "<Default>,</>";
+		Dialogue3 = "<Default> and</>";
 		break;
 	case FLIRTY:
 		sGreeting = "xX";
 		Dialogue1 = "Xx again~ O.o need a buwuquet hehe that is";
-		Dialogue2 = "<Default>,";
-		Dialogue3 = "<Default>. oooOOOooo and";
+		Dialogue2 = "<Default>,</>";
+		Dialogue3 = "<Default>. oooOOOooo and</>";
 		break;
 	case SHY:
 		sGreeting = "Uhhh, I don't know if you remember me. I am ";
 		Dialogue1 = ". can I please have a bouquet, if you have the time, that feels";
-		Dialogue2 = "<Default>,";
-		Dialogue3 = "<Default> um and";
+		Dialogue2 = "<Default>,</>";
+		Dialogue3 = "<Default> um and</>";
 		break;
 	case GRUMPY:
 		sGreeting = "IT IS ME AGAIN, ";
 		Dialogue1 = ". Give me a bouquet that feels";
-		Dialogue2 = "<Default>,";
-		Dialogue3 = "<Default> and";
+		Dialogue2 = "<Default>,</>";
+		Dialogue3 = "<Default> and</>";
 		break;
 	case HIP:
 		sGreeting = "Yo yo, mofo, remember ";
 		Dialogue1 = ". IT IS ME, need a broquet bro, that feels";
-		Dialogue2 = "<Default>,";
-		Dialogue3 = "<Default>. YO and";
+		Dialogue2 = "<Default>,</>";
+		Dialogue3 = "<Default>. YO and</>";
 		break;
 	default:
 		break;
@@ -493,5 +493,15 @@ void AMyClient::UpdateClientDescriptions()
 
 	//Set new full description
 	SetFullDescription();
+}
+
+int AMyClient::GetNature()
+{
+	return iNature;
+}
+
+FString AMyClient::GetName()
+{
+	return sName;
 }
 

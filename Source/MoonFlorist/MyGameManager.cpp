@@ -186,6 +186,9 @@ void AMyGameManager::CompleteOrder()
 		CurrentBouquet->GradeBouquet();
 		AddMoney(CurrentBouquet->GetWorth());
 		setLastBouquetWorth();
+		AMyEmail* temp = GetWorld()->SpawnActor<AMyEmail>(AMyEmail::StaticClass());
+		temp->Feedbackinit(CurrClient, CurrentBouquet->GetSuccess(), CurrentBouquet->GetFailure(), (CurrentBouquet->GetWorth() - 70) / 10);
+		EmailLists->AddToFeedback(temp);
 		CurrClient->UpdateClientDescriptions();
 		NewClient();
 		NewBouquet();
@@ -227,4 +230,9 @@ int AMyGameManager::getLastBouquetWorth()
 AMyClient* AMyGameManager::GetCurrClient()
 {
 	return CurrClient;
+}
+
+AMyEmailManager* AMyGameManager::GetEmailManager()
+{
+	return EmailLists;
 }

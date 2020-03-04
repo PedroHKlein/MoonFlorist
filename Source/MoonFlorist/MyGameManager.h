@@ -62,6 +62,8 @@ public:
 	int getLastBouquetWorth();
 	UFUNCTION(BlueprintCallable)
 	AMyClient* GetCurrClient();
+	UFUNCTION(BlueprintCallable)
+	AMyEmailManager* GetEmailManager();
 
 private:
 	UPROPERTY()
