@@ -193,8 +193,7 @@ void AMoonFloristCharacter::LeftArrowAction()
 		ADeliveryTerminal* Terminal = Cast<ADeliveryTerminal>(CurrentInteractActor);
 		if (Terminal)
 		{
-			Terminal->RotateLeft = true;
-			UE_LOG(LogTemp, Warning,TEXT("Turnning"))
+			Terminal->ChangeCapsule();
 		}
 	}
 	else

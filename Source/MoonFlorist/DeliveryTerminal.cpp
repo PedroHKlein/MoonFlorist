@@ -6,7 +6,8 @@
 #include "Engine/StaticMesh.h"
 #include "Engine/Engine.h"
 #include "Engine/World.h"
-#include "TimerManager.h"
+#include "Kismet/KismetMathLibrary.h"
+#include "Kismet/GameplayStatics.h"
 
 ADeliveryTerminal::ADeliveryTerminal()
 {
@@ -41,72 +42,128 @@ ADeliveryTerminal::ADeliveryTerminal()
 	StandMagnet->SetupAttachment(StandBaseArm);
 	StandMagnet->SetRelativeLocation(FVector(0.f, 0.f, 0.f));
 
-	Pos1 = CreateDefaultSubobject<USceneComponent>("Position 1");
-	Pos1->SetupAttachment(StandBase);
-	Pos2 = CreateDefaultSubobject<USceneComponent>("Position 2");
-	Pos2->SetupAttachment(StandBase);
-	Pos3 = CreateDefaultSubobject<USceneComponent>("Position 3");
-	Pos3->SetupAttachment(StandBase);
+	//Pos1 = CreateDefaultSubobject<USceneComponent>("Position 1");
+	//Pos1->SetupAttachment(Root);
+	//Pos2 = CreateDefaultSubobject<USceneComponent>("Position 2");
+	//Pos2->SetupAttachment(Root);
+	//Pos3 = CreateDefaultSubobject<USceneComponent>("Position 3");
+	//Pos3->SetupAttachment(Root);
+	
 
 }
 void ADeliveryTerminal::BeginPlay()
 {
 	Super::BeginPlay();
-	RotateRight = false;
-	RotateLeft = false; 
-	
+	AtPos1 = true;
+	AtPos2 = false;
+	AtOrigin = false;
+	//Check if time line exist
+	if (Pos1Curve && Pos2Curve && OriginCurve)
+	{
+		FOnTimelineFloat TimelineCallback_1;
+		FOnTimelineEventStatic TimelineFinishedCallback_1;
+		
+		TimelineCallback_1.BindUFunction(this, FName("RotateArm"));
+		TimelineFinishedCallback_1.BindUFunction(this, FName("SetState"));
+		Pos1_TL.AddInterpFloat(Pos1Curve, TimelineCallback_1);
+		Pos1_TL.SetTimelineFinishedFunc(TimelineFinishedCallback_1);
+
+		Pos2_TL.AddInterpFloat(Pos2Curve, TimelineCallback_1);
+		Pos2_TL.SetTimelineFinishedFunc(TimelineFinishedCallback_1);
+
+		BackToOrigin_TL.AddInterpFloat(OriginCurve, TimelineCallback_1);
+		BackToOrigin_TL.SetTimelineFinishedFunc(TimelineFinishedCallback_1);
+
+	}
 }
 
-void ADeliveryTerminal::PrimaryRotate()
+void ADeliveryTerminal::SetState()
 {
-	FirstAction = true;
-	GetWorldTimerManager().ClearTimer(TimerHandle);
-	UE_LOG(LogTemp, Warning, TEXT("First"));
+	if (AtPos1)
+	{
+		AtPos1 = false;
+		AtPos2 = true;
+		AtOrigin = false;
+		Pos2_TL.PlayFromStart();
+		return;
+	}
+	else if (AtPos2)
+	{
+
+		AtPos1 = false;
+		AtPos2 = false;
+		AtOrigin = true;
+		BackToOrigin_TL.PlayFromStart();
+		return;
+	}
+	else if (AtOrigin)
+	{
+		AtPos1 = true;
+		AtPos2 = false;
+		AtOrigin = false;
+	}
 }
 
-void ADeliveryTerminal::SecondaryRotate()
-{
-	SecondAction = true;
-	GetWorldTimerManager().ClearTimer(TimerHandle);
-	UE_LOG(LogTemp, Warning, TEXT("Second")); 
-}
 
 void ADeliveryTerminal::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	 current = StandBody->RelativeRotation.Yaw;
-	if (RotateLeft)
-	{
-		UE_LOG(LogTemp, Warning, TEXT(" %f"), StandBody->RelativeRotation.Yaw);
-		if (current >= 0.0f && current <= 89.0f)
-		{
-			StandBody->SetRelativeRotation(FMath::RInterpTo(StandBody->RelativeRotation, Pos1->RelativeRotation, DeltaTime,  Speed));
-			
-		}
-		if (current > 89.0f && current <= 179.0f)
-		{
-		//	StandBody->SetRelativeRotation(FRotator(0.f, 90.0f, 0.f));
-			StandBody->SetRelativeRotation(FMath::RInterpTo(StandBody->RelativeRotation, Pos2->RelativeRotation, DeltaTime,  Speed));
-		
-		}
-		if (current > 179.0f )
-		{
-			//StandBody->SetRelativeRotation(FRotator(0.f, 270.0f, 0.f));
-			StandBody->SetRelativeRotation(FMath::RInterpTo(StandBody->RelativeRotation, Pos3->RelativeRotation, DeltaTime, Speed));
-		
-			
-		}
-		if (current > 359.0f)
-		{
-			StandBody->SetRelativeRotation(FRotator(0.f, 0.0f, 0.f));
-			
-			RotateLeft = false;
-		}
-	/*	else if(StandBody->RelativeRotation == FRotator(0.0f,0.0f,0.0f))
-		{
-			RotateLeft = false;
-		}*/
-
-	}
-	
+	Pos1_TL.TickTimeline(DeltaTime);
+	Pos2_TL.TickTimeline(DeltaTime);
+	BackToOrigin_TL.TickTimeline(DeltaTime);
 }
+
+void ADeliveryTerminal::ChangeCapsule()
+{
+	if (AtPos1)
+	{
+		Pos1_TL.PlayFromStart();
+		UE_LOG(LogTemp, Warning, TEXT("Playing 1st"));
+	}
+}
+
+void ADeliveryTerminal::PlayArmAnmi()
+{
+	if (AtPos1)
+	{
+		//Play Animation this
+	}
+	else if (AtPos2)
+	{
+		//play animation this
+	}
+	else if (AtOrigin)
+	{
+		//Play animation this
+	}
+}
+
+void ADeliveryTerminal::RotateArm()
+{
+	if (AtPos1)
+	{
+		TimelineVal = Pos1_TL.GetPlaybackPosition();
+		CurveVal =  Pos1Curve->GetFloatValue(TimelineVal);
+		FQuat Pos1_Rotation = FQuat(FRotator(0.f, CurveVal, 0.f));
+
+		StandBody->SetRelativeRotation(Pos1_Rotation);
+		
+	}
+	else if (AtPos2)
+	{
+		TimelineVal = Pos2_TL.GetPlaybackPosition();
+		CurveVal = Pos2Curve->GetFloatValue(TimelineVal);
+		FQuat Pos2_Rotation = FQuat(FRotator(0.f, CurveVal, 0.f));
+
+		StandBody->SetRelativeRotation(Pos2_Rotation);
+	}
+	else if (AtOrigin)
+	{
+		TimelineVal = BackToOrigin_TL.GetPlaybackPosition();
+		CurveVal = OriginCurve->GetFloatValue(TimelineVal);
+		FQuat BackToOrigin_Rotation = FQuat(FRotator(0.f, CurveVal, 0.f));
+
+		StandBody->SetRelativeRotation(BackToOrigin_Rotation);
+	}
+}
+

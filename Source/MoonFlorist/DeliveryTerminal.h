@@ -5,7 +5,9 @@
 #include "CoreMinimal.h"
 #include "InteractableActor.h"
 #include "Engine/EngineTypes.h"
+#include "Components/TimelineComponent.h"
 #include "DeliveryTerminal.generated.h"
+
 
 /**
  * 
@@ -32,14 +34,6 @@ class MOONFLORIST_API ADeliveryTerminal : public AInteractableActor
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "DeliveryTerminal", meta = (AllowPrivateAccess = "true"))
 	class UStaticMeshComponent* StandBaseArm;
 
-	//3 Postions of the capsules
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "DeliveryTerminal", meta = (AllowPrivateAccess = "true"))
-	class USceneComponent* Pos1; //90 Degree(Deg) Clockwise(CW)
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "DeliveryTerminal", meta = (AllowPrivateAccess = "true"))
-	class USceneComponent* Pos2; //180 Deg CW
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "DeliveryTerminal", meta = (AllowPrivateAccess = "true"))
-	class USceneComponent* Pos3; //270 Deg CW
-
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "DeliveryTerminal", meta = (AllowPrivateAccess = "true"))
 	class USceneComponent* Root;
 	UPROPERTY(EditAnywhere, Category = "DeliveryTerminal", meta = (AllowPrivateAccess = "true"))
@@ -49,21 +43,33 @@ class MOONFLORIST_API ADeliveryTerminal : public AInteractableActor
 protected:
 	virtual void BeginPlay() override;
 
-	void SwitchCapsules(float DeltaTime);
-	float threshHold;
-	float current;
-	FTimerHandle TimerHandle;
+	bool ReadyToRot;
+	bool AtPos1;
+	bool AtPos2;
+	bool AtOrigin;
+	float TimelineVal;
+	float CurveVal;
+	FTimeline Pos1_TL;
+	FTimeline Pos2_TL;
+	FTimeline BackToOrigin_TL;
+	UPROPERTY(EditAnywhere)
+	UCurveFloat* Pos1Curve;
+
+	UPROPERTY(EditAnywhere)
+	UCurveFloat* Pos2Curve;
+
+	UPROPERTY(EditAnywhere)
+	UCurveFloat* OriginCurve;
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	UFUNCTION(BlueprintCallable, Category = "Interaction")
-		void PrimaryRotate();
-	UFUNCTION(BlueprintCallable, Category = "Interaction")
-		void SecondaryRotate();
-
-	bool RotateRight;
-	UPROPERTY(BlueprintReadWrite, Category = "DeliveryTerminal")
-	bool RotateLeft;
-	bool FirstAction;
-	bool SecondAction;
+	void ChangeCapsule();
+	UFUNCTION()
+	void PlayArmAnmi();
+	UFUNCTION()
+	void RotateArm();
+	UFUNCTION()
+	void SetState();
+	
 };
