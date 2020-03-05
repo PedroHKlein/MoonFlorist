@@ -40,7 +40,14 @@ void AAI_HANDS::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	
+	if (!(this->GetActorLocation() + CurrentWaypoint->GetActorLocation()).IsNearlyZero())
+	{
+		IsMoving = true;
+	}
+	else
+	{
+		IsMoving = false;
+	}
 	
 }
 
@@ -63,14 +70,11 @@ void AAI_HANDS::MoveToWayPoint()
 		{
 			if (NextWaypoint != nullptr)
 			{
-				IsMoving = true;
+				
 				HandsController->MoveToActor(NextWaypoint, 5.0f);
 				UE_LOG(LogTemp, Warning, TEXT("Working"));
 			}
-			else
-			{
-				IsMoving = false;
-			}
+		
 
 		}
 
