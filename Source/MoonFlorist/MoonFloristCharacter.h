@@ -47,6 +47,7 @@ public:
 	bool flipflop;
 	bool WithinRange;
 	bool Interacting;
+	bool IsOutlining;
 	class AInteractableActor* CurrentInteractActor;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Storage")
 	class AStorage* PlayerStorage;

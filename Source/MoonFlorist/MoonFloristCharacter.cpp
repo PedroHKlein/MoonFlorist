@@ -48,7 +48,7 @@ AMoonFloristCharacter::AMoonFloristCharacter()
 	Mesh1P->RelativeRotation = FRotator(1.9f, -19.19f, 5.2f);
 	Mesh1P->RelativeLocation = FVector(-0.5f, -4.4f, -155.7f);
 
-
+	IsOutlining = false;
 	
 }
 
@@ -130,11 +130,14 @@ void AMoonFloristCharacter::DetectInteraction()
 			WithinRange = true;
 			UE_LOG(LogTemp, Warning, TEXT("true"));
 			
+			
 		}
 		else
 		{
 			WithinRange = false;
 			UE_LOG(LogTemp, Warning, TEXT("false"));
+
+	
 		}
 
 		if (WithinRange)
@@ -229,17 +232,19 @@ FHitResult AMoonFloristCharacter::RaycastCheck()
 		{
 
 			playerHUD->ChangeState(3);
+			IsOutlining = true;
 
 		}
 		else if ((start - HitData.GetActor()->GetActorLocation()).Size() > 200.0f && HitData.GetActor()->ActorHasTag(FName(TEXT("Interactable"))) || 
 			(start - HitData.GetComponent()->GetComponentLocation()).Size() > 200.0f && HitData.GetComponent()->ComponentHasTag(FName(TEXT("Interactable"))))
 		{
 			playerHUD->ChangeState(2);
-
+			IsOutlining = true;
 		}
 		else
 		{
 			playerHUD->ChangeState(1);
+			IsOutlining = false;
 		}
 		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, FString::Printf(TEXT("Size: %f "), (start - HitData.GetActor()->GetActorLocation()).Size()));
 	
