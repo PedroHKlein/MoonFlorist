@@ -45,6 +45,11 @@ public:
 	bool CheckFull();
 	UFUNCTION(BlueprintCallable)
 	void GradeBouquetWithoutMoney();
+	UFUNCTION(BlueprintCallable)
+	TArray<UMyGoal*> GetSuccess();
+	UFUNCTION(BlueprintCallable)
+	TArray<UMyGoal*> GetFailure();
+
 
 
 

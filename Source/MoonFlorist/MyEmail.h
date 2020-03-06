@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "MyClient.h"
 #include "GameFramework/Actor.h"
 #include "MyEmail.generated.h"
 
@@ -22,20 +23,41 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	void init();
+	void Feedbackinit(AMyClient* _client ,TArray<UMyGoal*> _gSuccess, TArray<UMyGoal*> _gFailure, int _iScore);
+	void Orderinit();
+	void Spaminit();
+	UFUNCTION(BlueprintCallable)
 	FString GetFullEmail();
 	void SetFullEmail(FString _FullEmail);
+	void GenerateFeedbackEmail();
+
 
 private:
+	UPROPERTY()
 	int iGood;
+	UPROPERTY()
 	int iBad;
+	UPROPERTY()
 	int iScore;
-
+	UPROPERTY()
 	FString sSubject;
+	UPROPERTY()
 	FString sGood;
+	UPROPERTY()
 	FString sBad;
+	UPROPERTY()
 	FString sOverall;
+	UPROPERTY()
 	FString sClientName;
+	UPROPERTY()
 	FString sFullEmail;
+
+	UPROPERTY()
+	TArray<UMyGoal*> GoalSuccess;
+	UPROPERTY()
+	TArray<UMyGoal*> GoalFailure;
+
+	UPROPERTY()
+	AMyClient* Client;
 
 };

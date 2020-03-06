@@ -141,6 +141,7 @@ void UMyBouquet::GradeBouquet()
 				Temp[i]->SetComplete();
 				//EMAIL GOAL SUCCESS UPDATE HERE
 				GoalSuccess.Push(Temp[i]);
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Success %s"), *FString(Temp[i]->GetGoal()), false));
 			}
 			else
 			{
@@ -156,11 +157,13 @@ void UMyBouquet::GradeBouquet()
 				Temp[i]->SetComplete();
 				//EMAIL GOAL SUCCESS UPDATE HERE
 				GoalSuccess.Push(Temp[i]);
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Success %s"), *FString(Temp[i]->GetName()), false));
 			}
 			else
 			{
 				//EMAIL GOAL FAIL UPDATE HERE
 				GoalFailure.Push(Temp[i]);
+
 			}
 			break;
 		case YELLOW:
@@ -171,6 +174,7 @@ void UMyBouquet::GradeBouquet()
 				Temp[i]->SetComplete();
 				//EMAIL GOAL SUCCESS UPDATE HERE
 				GoalSuccess.Push(Temp[i]);
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Success %s"), *FString(Temp[i]->GetName()), false));
 			}
 			else
 			{
@@ -186,6 +190,7 @@ void UMyBouquet::GradeBouquet()
 				Temp[i]->SetComplete();
 				//EMAIL GOAL SUCCESS UPDATE HERE
 				GoalSuccess.Push(Temp[i]);
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Success %s"), *FString(Temp[i]->GetName()), false));
 			}
 			else
 			{
@@ -201,6 +206,7 @@ void UMyBouquet::GradeBouquet()
 				Temp[i]->SetComplete();
 				//EMAIL GOAL SUCCESS UPDATE HERE
 				GoalSuccess.Push(Temp[i]);
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Success %s"), *FString(Temp[i]->GetName()), false));
 			}
 			else
 			{
@@ -216,6 +222,7 @@ void UMyBouquet::GradeBouquet()
 				Temp[i]->SetComplete();
 				//EMAIL GOAL SUCCESS UPDATE HERE
 				GoalSuccess.Push(Temp[i]);
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Success %s"), *FString(Temp[i]->GetName()), false));
 			}
 			else
 			{
@@ -250,6 +257,7 @@ void UMyBouquet::GradeBouquetWithoutMoney()
 				Temp[i]->SetComplete();
 				//EMAIL GOAL SUCCESS UPDATE HERE
 				GoalSuccess.Push(Temp[i]);
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Success %s"), *FString(Temp[i]->GetGoal()), false));
 			}
 			else
 			{
@@ -265,11 +273,13 @@ void UMyBouquet::GradeBouquetWithoutMoney()
 				Temp[i]->SetComplete();
 				//EMAIL GOAL SUCCESS UPDATE HERE
 				GoalSuccess.Push(Temp[i]);
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Success %s"), *FString(Temp[i]->GetName()), false));
 			}
 			else
 			{
 				//EMAIL GOAL FAIL UPDATE HERE
 				GoalFailure.Push(Temp[i]);
+
 			}
 			break;
 		case YELLOW:
@@ -280,6 +290,7 @@ void UMyBouquet::GradeBouquetWithoutMoney()
 				Temp[i]->SetComplete();
 				//EMAIL GOAL SUCCESS UPDATE HERE
 				GoalSuccess.Push(Temp[i]);
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Success %s"), *FString(Temp[i]->GetName()), false));
 			}
 			else
 			{
@@ -295,6 +306,7 @@ void UMyBouquet::GradeBouquetWithoutMoney()
 				Temp[i]->SetComplete();
 				//EMAIL GOAL SUCCESS UPDATE HERE
 				GoalSuccess.Push(Temp[i]);
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Success %s"), *FString(Temp[i]->GetName()), false));
 			}
 			else
 			{
@@ -310,6 +322,7 @@ void UMyBouquet::GradeBouquetWithoutMoney()
 				Temp[i]->SetComplete();
 				//EMAIL GOAL SUCCESS UPDATE HERE
 				GoalSuccess.Push(Temp[i]);
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Success %s"), *FString(Temp[i]->GetName()), false));
 			}
 			else
 			{
@@ -325,6 +338,7 @@ void UMyBouquet::GradeBouquetWithoutMoney()
 				Temp[i]->SetComplete();
 				//EMAIL GOAL SUCCESS UPDATE HERE
 				GoalSuccess.Push(Temp[i]);
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Success %s"), *FString(Temp[i]->GetName()), false));
 			}
 			else
 			{
@@ -393,4 +407,14 @@ bool UMyBouquet::CheckFull()
 	}
 
 	return temp;
+}
+
+TArray<UMyGoal*> UMyBouquet::GetSuccess()
+{
+	return GoalSuccess;
+}
+
+TArray<UMyGoal*> UMyBouquet::GetFailure()
+{
+	return GoalFailure;
 }
