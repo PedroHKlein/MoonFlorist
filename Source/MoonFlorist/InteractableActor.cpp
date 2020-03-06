@@ -3,6 +3,8 @@
 
 #include "InteractableActor.h"
 #include "Components/WidgetComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "MoonFloristCharacter.h"
 #include "Components/SceneComponent.h"
 
 // Sets default values
@@ -15,20 +17,31 @@ AInteractableActor::AInteractableActor()
 	FloatingText = CreateDefaultSubobject<UWidgetComponent>(TEXT("Floating Text"));
 	FloatingText->SetupAttachment(SceneComp);
 
-
+	
 }
 
 // Called when the game starts or when spawned
 void AInteractableActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	PlayerRef = Cast<AMoonFloristCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(),0));
 }
 
 // Called every frame
 void AInteractableActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	if (PlayerRef)
+	{
+		if (PlayerRef->IsOutlining && PlayerRef->m_Hitsdata.GetActor() == this)
+		{
+			ShowOutline = true;
+		}
+		else
+		{
+			ShowOutline = false;
+		}
 
+	}
 }
 

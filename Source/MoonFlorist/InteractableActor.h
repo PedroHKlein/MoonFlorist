@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+
 #include "InteractableActor.generated.h"
 
 UCLASS()
@@ -18,10 +19,13 @@ public:
 	class USceneComponent* SceneComp;
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite)
 	class UWidgetComponent* FloatingText;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly)
+	bool ShowOutline;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
+	class AMoonFloristCharacter* PlayerRef;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

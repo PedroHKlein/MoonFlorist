@@ -3,11 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "InteractableActor.h"
 #include "SlidingWindow.generated.h"
 
 UCLASS()
-class MOONFLORIST_API ASlidingWindow : public AActor
+class MOONFLORIST_API ASlidingWindow : public AInteractableActor
 {
 	GENERATED_BODY()
 	
