@@ -138,6 +138,10 @@ public:
 	FString GetFullDescription();
 	UFUNCTION(BlueprintCallable)
 	void SetDescription(FString _Description);
+	UFUNCTION(BlueprintCallable)
+	AMyClient* GetClient();
+	UFUNCTION(BlueprintCallable)
+	void SetClient(AMyClient* _client);
 
 private:
 	UPROPERTY()
@@ -160,5 +164,7 @@ private:
 	UWorld* World;
 	UPROPERTY()
 	class AMyGameManager* GameManager;
+	UPROPERTY()
+	AMyClient* Client;
 
 };

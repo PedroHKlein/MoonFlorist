@@ -47,7 +47,7 @@ void AMyEmailManager::AddToOrders(AMyEmail* _email)
 
 void AMyEmailManager::AddToFeedback(AMyEmail* _email)
 {
-	Feedback.Push(_email);
+	Feedback.Insert(_email, 0);
 }
 
 void AMyEmailManager::AddToSpam(AMyEmail* _email)
