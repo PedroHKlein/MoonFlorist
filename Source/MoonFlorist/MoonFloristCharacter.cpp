@@ -205,7 +205,16 @@ void AMoonFloristCharacter::LeftArrowAction()
 
 void AMoonFloristCharacter::RightArrowAction()
 {
-	
+	if (CurrentInteractActor && Interacting)
+	{
+		ADeliveryTerminal* Terminal = Cast<ADeliveryTerminal>(CurrentInteractActor);
+		if (Terminal )
+		{
+			Terminal->MakeCapsule = true;
+		}
+	}
+	else
+		UE_LOG(LogTemp, Warning, TEXT("no current actor"))
 }
 
 void AMoonFloristCharacter::Tick(float DeltaTime)

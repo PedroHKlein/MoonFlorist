@@ -9,8 +9,14 @@ AItem::AItem()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+	Root->SetupAttachment(RootComponent);
+	Root->bEditableWhenInherited = true;
+	Root->SetRelativeLocation(FVector(0.f, 0.f, 0.f));
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
-	Mesh->SetupAttachment(RootComponent);
+	Mesh->SetupAttachment(Root);
+	Mesh->bEditableWhenInherited = true;
+	Mesh->SetRelativeLocation(FVector(0.f, 0.f, 0.f));
 	Name = "Item Name";
 	Price = 0;
 	CanBeSold = true;
