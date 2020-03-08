@@ -26,7 +26,7 @@ void AMyGameManager::BeginPlay()
 void AMyGameManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	Test(DeltaTime);
+	//Test(DeltaTime);
 }
 
 void AMyGameManager::NewClient()
@@ -72,7 +72,7 @@ void AMyGameManager::NewBouquet()
 	CurrentBouquet->SetCurrOrder(CurrClient->GetCurrentOrder());
 
 	//TEST
-	
+	/*
 	for (int i = 0; i < 7; i++)
 	{
 		if (i < 2)
@@ -109,7 +109,7 @@ void AMyGameManager::NewBouquet()
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Row3:  %s"), *FString(CurrentBouquet->GetRow(3)[i]->GetFlowerName())), false);
 	}
-	
+	*/
 	/*
 	CurrentBouquet->GradeBouquet();
 
