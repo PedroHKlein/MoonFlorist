@@ -66,6 +66,8 @@ public:
 	AMyEmailManager* GetEmailManager();
 
 private:
+	UPROPERTY(BlueprintReadWrite, Category= "Bouquet Capsule", meta= (AllowPrivateAccess = "true"))
+	bool ConstructCapsule;
 	UPROPERTY()
 	AMyGoalManager* GoalLists;
 	UPROPERTY()
