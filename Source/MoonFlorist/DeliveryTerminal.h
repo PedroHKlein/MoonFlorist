@@ -39,7 +39,8 @@ class MOONFLORIST_API ADeliveryTerminal : public AInteractableActor
 	UPROPERTY(EditAnywhere, Category = "DeliveryTerminal", meta = (AllowPrivateAccess = "true"))
 	float Speed;// Speed of arm rotation
 
-
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "DeliveryTerminal", meta = (AllowPrivateAccess = "true"))
+		class USceneComponent* Position1;
 protected:
 	virtual void BeginPlay() override;
 
@@ -71,5 +72,7 @@ public:
 	void RotateArm();
 	UFUNCTION()
 	void SetState();
-	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Capsule")
+	bool MakeCapsule;
+
 };
