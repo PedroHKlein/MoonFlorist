@@ -89,8 +89,16 @@ void ASlidingDoor::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* O
 		{
 			GEngine->AddOnScreenDebugMessage(0, 2.0f, FColor::Purple, TEXT("Actor Begin Overlap"));
 		}
-		Open = true;
-		OpenSound->Play();
+
+		if (bLocked)
+		{
+
+		}
+		else
+		{
+			Open = true;
+			OpenSound->Play();
+		}
 	}
 }
 
