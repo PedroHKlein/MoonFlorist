@@ -41,14 +41,18 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Interaction", meta = (AllowPrivateAccess = "true"))
 	float RayDisCheck;
-
+	bool CanClick;
 	class AMoonFloristHUD* HUD;
 	class APlayerController* PlayerController;
 	bool flipflop;
 	bool WithinRange;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Interaction")
 	bool Interacting;
 	bool IsOutlining;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Interaction")
 	class AInteractableActor* CurrentInteractActor;
+
+
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Storage")
 	class AStorage* PlayerStorage;
 
@@ -60,6 +64,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Interaction")
 	void RightArrowAction();
+
+	UFUNCTION(BlueprintCallable, Category = "Interaction")
+	void OnClick();
 
 protected:
 	virtual void BeginPlay();
