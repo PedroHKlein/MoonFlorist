@@ -17,6 +17,7 @@ enum EItemType
 	IT_Seed 	UMETA(DisplayName = "Seed"),
 	IT_Bouquet	UMETA(DisplayName = "Bouquet"),
 	IT_Fertilizer	UMETA(DisplayName = "Fertilizer"),
+	IT_CapsuleBouquet UMETA(DisplayName = "Capsule"),
 };
 
 UCLASS()
@@ -59,11 +60,11 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UPROPERTY(BlueprintReadOnly, Category = ItemVar, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(BlueprintReadOnly, Category = ItemVar)
 		bool InStorage;
-	UPROPERTY(BlueprintReadOnly, Category = ItemVar, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(BlueprintReadOnly, Category = ItemVar)
 		bool CanBeSold;
-	UPROPERTY(BlueprintReadOnly, Category = ItemVar, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(BlueprintReadOnly, Category = ItemVar)
 		bool Stackable;
 protected:
 	// Called when the game starts or when spawned
@@ -71,7 +72,7 @@ protected:
 
 
 #pragma region Variables
-private:
+protected:
 	
 
 	UPROPERTY(BlueprintReadOnly, Category = ItemVar, meta = (AllowPrivateAccess = "true"))
@@ -91,8 +92,9 @@ private:
 	//Icon used when displayed in storage
 	UPROPERTY(BlueprintReadOnly, Category = ItemVar, meta = (AllowPrivateAccess = "true"))
 	UTexture2D* Icon;
-
-	UPROPERTY(BlueprintReadOnly, Category = ItemVar, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = ItemVar, meta = (AllowPrivateAccess = "true"))
+		USceneComponent* Root;
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly, Category = ItemVar, meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* Mesh;
 
 

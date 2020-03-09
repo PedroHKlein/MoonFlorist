@@ -18,6 +18,7 @@
 #include "InteractableActor.h"
 #include "SlidingWindow.h"
 #include "DeliveryTerminal.h"
+#include "ManualPlantingArea.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -49,8 +50,10 @@ AMoonFloristCharacter::AMoonFloristCharacter()
 	Mesh1P->RelativeLocation = FVector(-0.5f, -4.4f, -155.7f);
 
 	IsOutlining = false;
-	
+	CanClick = false;
 }
+
+
 
 void AMoonFloristCharacter::BeginPlay()
 {
@@ -205,8 +208,32 @@ void AMoonFloristCharacter::LeftArrowAction()
 
 void AMoonFloristCharacter::RightArrowAction()
 {
-	
+	if (CurrentInteractActor && Interacting)
+	{
+		ADeliveryTerminal* Terminal = Cast<ADeliveryTerminal>(CurrentInteractActor);
+		if (Terminal )
+		{
+			Terminal->MakeCapsule = true;
+		}
+	}
+	else
+		UE_LOG(LogTemp, Warning, TEXT("no current actor"))
 }
+
+void AMoonFloristCharacter::OnClick()
+{
+	/*if (CurrentInteractActor && Interacting)
+	{
+		AManualPlantingArea* Area = Cast<AManualPlantingArea>(CurrentInteractActor);
+		if (Area)
+		{
+			CanClick = true;
+		}
+	
+	}*/
+}
+
+
 
 void AMoonFloristCharacter::Tick(float DeltaTime)
 {
@@ -267,6 +294,7 @@ void AMoonFloristCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 	PlayerInputComponent->BindAction("Action", IE_Pressed, this, &AMoonFloristCharacter::DetectInteraction);
 	PlayerInputComponent->BindAction("LeftAction", IE_Pressed, this , &AMoonFloristCharacter::LeftArrowAction);
 	PlayerInputComponent->BindAction("RightArrow", IE_Pressed, this, &AMoonFloristCharacter::RightArrowAction);
+	PlayerInputComponent->BindAction("Click", IE_Pressed, this, &AMoonFloristCharacter::OnClick);
 	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
 	// "turn" handles devices that provide an absolute delta, such as a mouse.
 	// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick
