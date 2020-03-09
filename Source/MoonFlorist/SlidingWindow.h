@@ -3,11 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "InteractableActor.h"
 #include "SlidingWindow.generated.h"
 
 UCLASS()
-class MOONFLORIST_API ASlidingWindow : public AActor
+class MOONFLORIST_API ASlidingWindow : public AInteractableActor
 {
 	GENERATED_BODY()
 	
@@ -15,7 +15,7 @@ public:
 	// Sets default values for this actor's properties
 	ASlidingWindow();
 
-	
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly, Category = "SlidingWindow")
 	bool Open;
 
 protected:
@@ -39,8 +39,7 @@ protected:
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "SlidingWindow", meta = (AllowPrivateAccess = "true"))
 		class UStaticMeshComponent* Switch;
-
-
+	
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

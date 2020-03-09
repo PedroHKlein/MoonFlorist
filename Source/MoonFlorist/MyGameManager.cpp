@@ -17,7 +17,7 @@ void AMyGameManager::BeginPlay()
 {
 	Super::BeginPlay();
 	init();
-
+	ConstructCapsule = false;
 	//NewClient();
 	//NewBouquet();
 }
