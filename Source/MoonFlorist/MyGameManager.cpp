@@ -53,7 +53,7 @@ void AMyGameManager::NewClient()
 
 	//TEST
 	
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(*FString(CurrentClient->GetFullDescription()), false));
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(*FString(CurrentClient->GetFullDescription()), false));
 
 	
 }
