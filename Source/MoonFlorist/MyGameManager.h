@@ -62,8 +62,12 @@ public:
 	int getLastBouquetWorth();
 	UFUNCTION(BlueprintCallable)
 	AMyClient* GetCurrClient();
+	UFUNCTION(BlueprintCallable)
+	AMyEmailManager* GetEmailManager();
 
 private:
+	UPROPERTY(BlueprintReadWrite, Category= "Bouquet Capsule", meta= (AllowPrivateAccess = "true"))
+	bool ConstructCapsule;
 	UPROPERTY()
 	AMyGoalManager* GoalLists;
 	UPROPERTY()

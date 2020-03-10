@@ -17,6 +17,8 @@ ADeliveryTerminal::ADeliveryTerminal()
 	Root->SetupAttachment(RootComponent);
 	Root->SetRelativeLocation(FVector(0.f, 0.f, 0.f));
 
+
+
 	StandBase = CreateDefaultSubobject<UStaticMeshComponent>("Base");
 	StandBase->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/Props/SM_HandStand_SM_Stand_Base.SM_HandStand_SM_Stand_Base")).Object);
 	StandBase->SetupAttachment(Root);
@@ -41,6 +43,9 @@ ADeliveryTerminal::ADeliveryTerminal()
 	StandMagnet->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/Props/SM_HandStand_Stand_Arm_002_Magnet.SM_HandStand_Stand_Arm_002_Magnet")).Object);
 	StandMagnet->SetupAttachment(StandBaseArm);
 	StandMagnet->SetRelativeLocation(FVector(0.f, 0.f, 0.f));
+
+	Position1 = CreateDefaultSubobject<USceneComponent>("Position 1");
+	Position1->SetupAttachment(StandMagnet);
 
 	//Pos1 = CreateDefaultSubobject<USceneComponent>("Position 1");
 	//Pos1->SetupAttachment(Root);

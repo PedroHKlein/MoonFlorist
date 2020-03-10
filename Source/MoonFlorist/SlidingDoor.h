@@ -40,6 +40,9 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = "SlidingDoor")
 	class USoundCue* CloseCue;
 
+	UPROPERTY(EditAnywhere, Category = "SlidingDoor")
+	bool bLocked = false;
+
 	bool Open;
 protected:
 	// Called when the game starts or when spawned

@@ -17,7 +17,7 @@ void AMyGameManager::BeginPlay()
 {
 	Super::BeginPlay();
 	init();
-
+	ConstructCapsule = false;
 	//NewClient();
 	//NewBouquet();
 }
@@ -52,21 +52,10 @@ void AMyGameManager::NewClient()
 	}
 
 	//TEST
-	/*
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Hi! My name is %s"), *FString(CurrentClient->GetName())), false);
+	
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(*FString(CurrentClient->GetFullDescription()), false));
 
-	for (int i = 0; i < CurrentClient->GetGoals().Num(); i++)
-	{
-		if (i == 0)
-		{
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("I would like to order a boquet that feels %s"), *FString(CurrentClient->GetGoals()[i]->GetGoal())), false);
-		}
-		else
-		{
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("and %s"), *FString(CurrentClient->GetGoals()[i]->GetGoal())), false);
-		}
-	}
-	*/
+	
 }
 
 void AMyGameManager::NewBouquet()
@@ -120,7 +109,8 @@ void AMyGameManager::NewBouquet()
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Row3:  %s"), *FString(CurrentBouquet->GetRow(3)[i]->GetFlowerName())), false);
 	}
-
+	*/
+	/*
 	CurrentBouquet->GradeBouquet();
 
 	FString Debug = FString::FromInt(CurrentBouquet->GetWorth());
@@ -197,6 +187,9 @@ void AMyGameManager::CompleteOrder()
 		CurrentBouquet->GradeBouquet();
 		AddMoney(CurrentBouquet->GetWorth());
 		setLastBouquetWorth();
+		AMyEmail* temp = GetWorld()->SpawnActor<AMyEmail>(AMyEmail::StaticClass());
+		temp->Feedbackinit(CurrClient, CurrentBouquet->GetSuccess(), CurrentBouquet->GetFailure(), (CurrentBouquet->GetWorth() - 70) / 10);
+		EmailLists->AddToFeedback(temp);
 		CurrClient->UpdateClientDescriptions();
 		NewClient();
 		NewBouquet();
@@ -238,4 +231,9 @@ int AMyGameManager::getLastBouquetWorth()
 AMyClient* AMyGameManager::GetCurrClient()
 {
 	return CurrClient;
+}
+
+AMyEmailManager* AMyGameManager::GetEmailManager()
+{
+	return EmailLists;
 }
