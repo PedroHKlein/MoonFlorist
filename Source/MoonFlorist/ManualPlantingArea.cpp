@@ -5,7 +5,7 @@
 #include "Engine/StaticMesh.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Camera/CameraComponent.h"
-
+#include "Components/WidgetComponent.h"
 // Sets default values
 AManualPlantingArea::AManualPlantingArea()
 {
@@ -19,7 +19,8 @@ AManualPlantingArea::AManualPlantingArea()
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	Camera->SetupAttachment(RootComponent);
 
-
+	WidgetComp = CreateDefaultSubobject<UWidgetComponent>(TEXT("Radial Menu"));
+	WidgetComp->SetupAttachment(Camera);
 }
 
 // Called when the game starts or when spawned

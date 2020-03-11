@@ -24,6 +24,9 @@ protected:
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
 		class UCameraComponent* Camera;
 
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
+	class UWidgetComponent* WidgetComp;
+
 
 public:	
 	// Called every frame
