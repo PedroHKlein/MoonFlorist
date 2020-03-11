@@ -17,7 +17,7 @@ ASlidingDoor::ASlidingDoor()
 	PrimaryActorTick.bCanEverTick = true;
 
 	DoorFrame = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("DoorFrame"));
-	DoorFrame->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/Props/SM_Doorway.SM_Doorway")).Object);
+	DoorFrame->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/ModularSet/SM_Doorway.SM_Doorway")).Object);
 	DoorFrame->SetupAttachment(RootComponent);
 
 	TriggerBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Trigger Box"));
@@ -27,11 +27,11 @@ ASlidingDoor::ASlidingDoor()
 	TriggerBox->OnComponentEndOverlap.AddDynamic(this, &ASlidingDoor::OnOverlapEnd);
 	
 	LeftDoor = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("LeftDoor"));
-	LeftDoor->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/Props/SM_Door_L.SM_Door_L")).Object);
+	LeftDoor->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/ModularSet/SM_Door_Left.SM_Door_Left")).Object);
 	LeftDoor->SetupAttachment(DoorFrame);
 
 	RightDoor = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("RightDoor"));
-	RightDoor->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/Props/SM_Door_R.SM_Door_R")).Object);
+	RightDoor->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/ModularSet/SM_Door_Right.SM_Door_Right")).Object);
 	RightDoor->SetupAttachment(DoorFrame);
 
 	LeftPoint = CreateDefaultSubobject<USceneComponent>("Left End Lerp Location");
@@ -89,8 +89,12 @@ void ASlidingDoor::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* O
 		{
 			GEngine->AddOnScreenDebugMessage(0, 2.0f, FColor::Purple, TEXT("Actor Begin Overlap"));
 		}
-		Open = true;
-		OpenSound->Play();
+
+		if (!bLocked)
+		{
+			Open = true;
+			OpenSound->Play();
+		}
 	}
 }
 
