@@ -37,7 +37,7 @@ void AInteractableActor::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	if (PlayerRef)
 	{
-		if (PlayerRef->IsOutlining && PlayerRef->m_Hitsdata.GetActor() == this)
+		if (PlayerRef->IsOutlining && PlayerRef->m_Hitsdata.GetActor() == this && !PlayerRef->Interacting)
 		{
 			ShowOutline = true;
 		}

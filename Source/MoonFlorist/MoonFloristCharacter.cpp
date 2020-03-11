@@ -48,12 +48,10 @@ AMoonFloristCharacter::AMoonFloristCharacter()
 	Mesh1P->CastShadow = false;
 	Mesh1P->RelativeRotation = FRotator(1.9f, -19.19f, 5.2f);
 	Mesh1P->RelativeLocation = FVector(-0.5f, -4.4f, -155.7f);
-
+	RayCastAcceptanceDis = 300.0f;
 	IsOutlining = false;
 	CanClick = false;
 }
-
-
 
 void AMoonFloristCharacter::BeginPlay()
 {
@@ -233,8 +231,6 @@ void AMoonFloristCharacter::OnClick()
 	}*/
 }
 
-
-
 void AMoonFloristCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -254,16 +250,16 @@ FHitResult AMoonFloristCharacter::RaycastCheck()
 	if (isHit)
 	{
 		AMoonFloristHUD* playerHUD = (AMoonFloristHUD*)(GetWorld()->GetFirstPlayerController()->GetHUD());
-		if ((start - HitData.GetActor()->GetActorLocation()).Size() <= 200.0f && HitData.GetActor()->ActorHasTag(FName(TEXT("Interactable"))) ||
-			(start - HitData.GetComponent()->GetComponentLocation()).Size() <= 200.0f && HitData.GetComponent()->ComponentHasTag(FName(TEXT("Interactable"))))
+		if ((start - HitData.GetActor()->GetActorLocation()).Size() <= RayCastAcceptanceDis && HitData.GetActor()->ActorHasTag(FName(TEXT("Interactable"))) ||
+			(start - HitData.GetComponent()->GetComponentLocation()).Size() <= RayCastAcceptanceDis && HitData.GetComponent()->ComponentHasTag(FName(TEXT("Interactable"))))
 		{
 
 			playerHUD->ChangeState(3);
 			IsOutlining = true;
 
 		}
-		else if ((start - HitData.GetActor()->GetActorLocation()).Size() > 200.0f && HitData.GetActor()->ActorHasTag(FName(TEXT("Interactable"))) || 
-			(start - HitData.GetComponent()->GetComponentLocation()).Size() > 200.0f && HitData.GetComponent()->ComponentHasTag(FName(TEXT("Interactable"))))
+		else if ((start - HitData.GetActor()->GetActorLocation()).Size() > RayCastAcceptanceDis&& HitData.GetActor()->ActorHasTag(FName(TEXT("Interactable"))) ||
+			(start - HitData.GetComponent()->GetComponentLocation()).Size() > RayCastAcceptanceDis&& HitData.GetComponent()->ComponentHasTag(FName(TEXT("Interactable"))))
 		{
 			playerHUD->ChangeState(2);
 			IsOutlining = true;

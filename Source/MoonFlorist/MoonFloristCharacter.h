@@ -52,6 +52,8 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Interaction")
 	class AInteractableActor* CurrentInteractActor;
 
+	UPROPERTY(EditAnywhere, Category = "Interaction")
+		float RayCastAcceptanceDis;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Storage")
 	class AStorage* PlayerStorage;
