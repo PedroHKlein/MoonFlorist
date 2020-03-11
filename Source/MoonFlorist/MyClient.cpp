@@ -505,3 +505,7 @@ FString AMyClient::GetName()
 	return sName;
 }
 
+FString AMyClient::GetFullDescription()
+{
+	return sFullDescription;
+}

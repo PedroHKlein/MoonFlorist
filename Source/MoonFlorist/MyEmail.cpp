@@ -469,6 +469,18 @@ void AMyEmail::Feedbackinit(AMyClient* _client, TArray<UMyGoal*> _gSuccess, TArr
 	GenerateFeedbackEmail();
 }
 
+void AMyEmail::Orderinit(AMyClient* _client)
+{
+	Client = _client;
+
+	SetFullEmail(Client->GetFullDescription());
+}
+
+void AMyEmail::Spaminit(FString _spam)
+{
+	SetFullEmail(_spam);
+}
+
 void AMyEmail::GenerateFeedbackEmail()
 {
 	if (GoalFailure.Num() == 0)
