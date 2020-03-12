@@ -34,6 +34,8 @@ void AMyEmail::Feedbackinit(AMyClient* _client, TArray<UMyGoal*> _gSuccess, TArr
 	int temp = 1;
 	float scoretemp = 1;
 
+	sClientName = Client->GetName();
+
 	switch (Client->GetNature())
 	{
 	case NORMAL:
@@ -473,6 +475,8 @@ void AMyEmail::Orderinit(AMyClient* _client)
 {
 	Client = _client;
 
+	sClientName = Client->GetName();
+
 	SetFullEmail(Client->GetFullDescription());
 }
 
@@ -508,5 +512,10 @@ FString AMyEmail::GetFullEmail()
 void AMyEmail::SetFullEmail(FString _FullEmail)
 {
 	sFullEmail = _FullEmail;
+}
+
+FString AMyEmail::GetClientName()
+{
+	return sClientName;
 }
 

@@ -35,6 +35,8 @@ public:
 	void SetFullEmail(FString _FullEmail);
 	UFUNCTION(BlueprintCallable)
 	void GenerateFeedbackEmail();
+	UFUNCTION(BlueprintCallable)
+	FString GetClientName();
 
 
 private:
