@@ -116,7 +116,8 @@ void AMoonFloristCharacter::StartItems()
 	BouquetExample->CreateItem(EItemType::IT_Seed, "BouquetExample", "/Game/User_Interface/Storage/StorageAssets/ScarletSeeds.ScarletSeeds", 1, 70, false);
 	PlayerStorage->AddItem(BouquetExample);
 
-	PlayerStorage->IncreaseStacks(10, BouquetExample);
+	PlayerStorage->IncreaseStacks(10, SilverSeeds);
+	PlayerStorage->DecreaseStacks(10, SilverSeeds);
 }
 
 void AMoonFloristCharacter::DetectInteraction()

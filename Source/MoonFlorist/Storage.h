@@ -28,6 +28,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = ItemFunc)
 	void IncreaseStacks(int _Amount, AItem* _Item);
 
+	UFUNCTION(BlueprintCallable, Category = ItemFunc)
+		void DecreaseStacks(int _Amount, AItem* _Item);
+
 	UPROPERTY(BlueprintReadWrite,Category = StorageVar)
 	 TArray<AItem*> StorageArray; 
 public:	
