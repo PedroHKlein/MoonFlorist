@@ -22,7 +22,18 @@ void AMyEmail::BeginPlay()
 void AMyEmail::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	if (bDelivered)
+	{
 
+	}
+	else
+	{
+		fTime = fTime - DeltaTime;
+		if (fTime <= 0)
+		{
+			bDelivered = true;
+		}
+	}
 }
 
 void AMyEmail::Feedbackinit(AMyClient* _client, TArray<UMyGoal*> _gSuccess, TArray<UMyGoal*> _gFailure, int _iScore)
@@ -33,6 +44,8 @@ void AMyEmail::Feedbackinit(AMyClient* _client, TArray<UMyGoal*> _gSuccess, TArr
 	iScore = _iScore;
 	int temp = 1;
 	float scoretemp = 1;
+	bDelivered = false;
+	fTime = FMath::RandRange(60, 180);
 
 	sClientName = Client->GetName();
 
@@ -517,5 +530,10 @@ void AMyEmail::SetFullEmail(FString _FullEmail)
 FString AMyEmail::GetClientName()
 {
 	return sClientName;
+}
+
+bool AMyEmail::GetDelivered()
+{
+	return bDelivered;
 }
 

@@ -37,6 +37,8 @@ public:
 	void GenerateFeedbackEmail();
 	UFUNCTION(BlueprintCallable)
 	FString GetClientName();
+	UFUNCTION(BlueprintCallable)
+	bool GetDelivered();
 
 
 private:
@@ -58,6 +60,11 @@ private:
 	FString sClientName;
 	UPROPERTY()
 	FString sFullEmail;
+	UPROPERTY()
+	float fTime;
+	UPROPERTY()
+	bool bDelivered = true;
+
 
 	UPROPERTY()
 	TArray<UMyGoal*> GoalSuccess;
