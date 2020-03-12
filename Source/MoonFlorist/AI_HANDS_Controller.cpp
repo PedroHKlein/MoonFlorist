@@ -63,13 +63,6 @@ FRotator AAI_HANDS_Controller::GetControlRotation() const
 	//Returns the y axis
 	return FRotator(0.0f, GetPawn()->GetActorRotation().Yaw, 0.0f);
 }
-//
-//void AAI_HANDS_Controller::OnMoveCompleted(FAIRequestID RequestID, EPathFollowingResult::Type Result)
-//{
-//	
-//
-//}
-
 
 void AAI_HANDS_Controller::OnPawnDetected(const TArray<AActor*>& DetectedPawns)
 {

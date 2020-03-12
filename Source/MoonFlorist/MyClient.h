@@ -35,6 +35,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void SetFullDescription();
 	UFUNCTION(BlueprintCallable)
+	FString GetFullDescription();
+	UFUNCTION(BlueprintCallable)
 	UMyClientOrder* GetCurrentOrder();
 	UFUNCTION(BlueprintCallable)
 	UMyClientOrder* GetPreviousOrder();

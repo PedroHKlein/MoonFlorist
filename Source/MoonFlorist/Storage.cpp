@@ -65,6 +65,16 @@ void AStorage::IncreaseStacks(int _Amount, AItem* _Item)
 
 }
 
+void AStorage::DecreaseStacks(int _Amount, AItem* _Item)
+{
+	if (_Item->Stackable)
+	{
+		int temp = _Item->GetStacks();
+		_Item->SetStacks(temp - _Amount);
+		AddItem(_Item);
+	}
+}
+
 // Called every frame
 void AStorage::Tick(float DeltaTime)
 {
