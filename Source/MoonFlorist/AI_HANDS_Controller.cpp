@@ -1,12 +1,16 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "AI_HANDS_Controller.h"
 #include "AI_HANDS.h"
+
+/* AI Specific includes */
 #include "Perception/AIPerceptionComponent.h"
 #include "Perception/AISenseConfig_Sight.h"
+#include "BehaviorTree/BehaviorTree.h"
+#include "BehaviorTree/BehaviorTreeComponent.h"
+#include "BehaviorTree/BlackboardComponent.h"
 
-AAI_HANDS_Controller::AAI_HANDS_Controller()
+AAI_HANDS_Controller::AAI_HANDS_Controller(const FObjectInitializer& ObjectInitializer)
+	: Super(ObjectInitializer)
 {
 	PrimaryActorTick.bCanEverTick = true;
 		
@@ -27,6 +31,11 @@ AAI_HANDS_Controller::AAI_HANDS_Controller()
 	GetPerceptionComponent()->OnPerceptionUpdated.AddDynamic(this, &AAI_HANDS_Controller::OnPawnDetected);
 	GetPerceptionComponent()->ConfigureSense(*SightConfig);
 
+	//Setting them to the same names as on the blackboard variables	
+	PatrolLocationKeyName = "PatrolLocation";
+	CurrentStateKeyName = "CurrentState";
+	CurrentPatrolPointKeyName = "CurrentPatrolPoint";
+	PlayerKeyName = "Player";
 }
 
 void AAI_HANDS_Controller::BeginPlay()
@@ -48,6 +57,11 @@ void AAI_HANDS_Controller::OnPossess(APawn* _Pawn)
 	}
 }
 
+void AAI_HANDS_Controller::OnUnPossess()
+{
+	Super::OnUnPossess();
+}
+
 void AAI_HANDS_Controller::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -66,4 +80,24 @@ FRotator AAI_HANDS_Controller::GetControlRotation() const
 
 void AAI_HANDS_Controller::OnPawnDetected(const TArray<AActor*>& DetectedPawns)
 {
+}
+
+APatrolPoint* AAI_HANDS_Controller::GetPatrolPoint()
+{
+	if (BlackboardComp)
+	{
+		return Cast<APatrolPoint>(BlackboardComp->GetValueAsObject(CurrentPatrolPointKeyName));
+	}
+	UE_LOG(LogTemp, Warning, TEXT("BlackboardComp Doesnt Exist : GetWaypoint"));
+	return nullptr;
+}
+
+AMoonFloristCharacter* AAI_HANDS_Controller::GetPlayer()
+{
+	if (BlackboardComp)
+	{
+		return Cast<AMoonFloristCharacter>(BlackboardComp->GetValueAsObject(PlayerKeyName));
+	}
+	UE_LOG(LogTemp, Warning, TEXT("BlackboardComp Doesnt Exist : GetPlayer"));
+	return nullptr;
 }
