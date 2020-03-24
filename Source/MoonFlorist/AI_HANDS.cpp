@@ -81,3 +81,15 @@ void AAI_HANDS::MoveToWayPoint()
 	}
 }
 
+void AAI_HANDS::SetHandsState(EHandsStates NewState)
+{
+	/* Set hands states to the new one for both in character and on the controller*/
+	HandsState = NewState;
+	AAI_HANDS_Controller* HandsController = Cast<AAI_HANDS_Controller>(GetController());
+
+	if (HandsController)
+	{
+		HandsController->SetBlackBoardHandsState(NewState);
+	}
+}
+

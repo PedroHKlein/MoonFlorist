@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Waypoint.h"
+#include "Types.h"
 #include "AI_HANDS.generated.h"
 
 UCLASS()
@@ -25,6 +26,15 @@ public:
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Way Points")
 	bool IsMoving;
+
+	/*Hands different behaviors are executed depending on his current states, (passive, patrolling,park, deliverymode ) */
+	UPROPERTY(EditAnywhere, Category = "AI")
+	EHandsStates HandsState;
+
+	/*BehaviorTree for hands. Allows hands to make decisions based on the data feed into it through the blackboard. Created here so we can have mutliple behaviors for hands while only needing one controller*/
+	UPROPERTY(EditAnywhere, Category = "AI")
+		class UBehaviorTree* HandsBehaviorTree;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -36,4 +46,7 @@ public:
 	AWaypoint* RandomiseWP();
 
 	void MoveToWayPoint();
+
+	/*Change the state of hands while in gameplay*/
+	void SetHandsState(EHandsStates NewState);
 };

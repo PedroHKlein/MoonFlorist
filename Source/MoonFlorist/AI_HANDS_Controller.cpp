@@ -47,19 +47,22 @@ void AAI_HANDS_Controller::OnPossess(APawn* _Pawn)
 {
 	Super::OnPossess(_Pawn);
 	
-	if (GetPerceptionComponent() != nullptr)
+	AAI_HANDS* Hands = Cast<AAI_HANDS>(_Pawn);
+	if (Hands)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("AI System Ready"));
-	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("Percetion Component MISSING"));
+		if (Hands->HandsBehaviorTree->BlackboardAsset)
+		{
+			BlackboardComp->InitializeBlackboard(*Hands->HandsBehaviorTree->BlackboardAsset);
+			SetBlackBoardHandsState(Hands->HandsState);
+		}
+		BehaviorComp->StartTree(*Hands->HandsBehaviorTree);
 	}
 }
 
 void AAI_HANDS_Controller::OnUnPossess()
 {
 	Super::OnUnPossess();
+	BehaviorComp->StopTree();
 }
 
 void AAI_HANDS_Controller::Tick(float DeltaTime)
@@ -100,4 +103,28 @@ AMoonFloristCharacter* AAI_HANDS_Controller::GetPlayer()
 	}
 	UE_LOG(LogTemp, Warning, TEXT("BlackboardComp Doesnt Exist : GetPlayer"));
 	return nullptr;
+}
+
+void AAI_HANDS_Controller::SetPatrolPoint(APatrolPoint* NewPatrolPoint)
+{
+	if (BlackboardComp)
+	{
+		BlackboardComp->SetValueAsObject(CurrentPatrolPointKeyName, NewPatrolPoint);
+	}
+}
+
+void AAI_HANDS_Controller::SetPlayer(AMoonFloristCharacter* Player)
+{
+	if (BlackboardComp)
+	{
+		BlackboardComp->SetValueAsObject(PlayerKeyName, Player);
+	}
+}
+
+void AAI_HANDS_Controller::SetBlackBoardHandsState(EHandsStates NewState)
+{
+	if (BlackboardComp)
+	{
+		BlackboardComp->SetValueAsObject(CurrentStateKeyName, (uint8)NewState);
+	}
 }

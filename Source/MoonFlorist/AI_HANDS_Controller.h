@@ -6,6 +6,7 @@
 #include "AIController.h"
 #include "PatrolPoint.h"
 #include "MoonFloristCharacter.h"
+#include "Types.h"
 #include "AI_HANDS_Controller.generated.h"
 
 /**
@@ -41,7 +42,11 @@ public:
 
 	AMoonFloristCharacter* GetPlayer();
 
+	void SetPatrolPoint(APatrolPoint* NewPatrolPoint);
 
+	void SetPlayer(AMoonFloristCharacter* Player);
+
+	void SetBlackBoardHandsState(EHandsStates NewState);
 public:
 	//How far HANDS can see
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = AI_HANDS)
