@@ -35,8 +35,8 @@ public:
 
 //	void OnMoveCompleted(FAIRequestID RequestID, EPathFollowingResult::Type Result);
 
-	UFUNCTION()
-	void OnPawnDetected(const TArray<AActor*> &DetectedPawns);
+	/*UFUNCTION()
+	void OnPawnDetected(const TArray<AActor*> &DetectedPawns);*/
 
 	APatrolPoint* GetPatrolPoint();
 
@@ -44,7 +44,7 @@ public:
 
 	void SetPatrolPoint(APatrolPoint* NewPatrolPoint);
 
-	void SetPlayer(AMoonFloristCharacter* Player);
+	void SetPlayer(APawn* Player);
 
 	void SetBlackBoardHandsState(EHandsStates NewState);
 public:

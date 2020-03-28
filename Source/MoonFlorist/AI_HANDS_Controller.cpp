@@ -3,8 +3,8 @@
 #include "AI_HANDS.h"
 
 /* AI Specific includes */
-#include "Perception/AIPerceptionComponent.h"
-#include "Perception/AISenseConfig_Sight.h"
+//#include "Perception/AIPerceptionComponent.h"
+//#include "Perception/AISenseConfig_Sight.h"
 #include "BehaviorTree/BehaviorTree.h"
 #include "BehaviorTree/BehaviorTreeComponent.h"
 #include "BehaviorTree/BlackboardComponent.h"
@@ -14,27 +14,30 @@ AAI_HANDS_Controller::AAI_HANDS_Controller(const FObjectInitializer& ObjectIniti
 {
 	PrimaryActorTick.bCanEverTick = true;
 		
-	SightConfig = CreateDefaultSubobject<UAISenseConfig_Sight>(TEXT("Sight Config"));
-	SetPerceptionComponent(*CreateDefaultSubobject<UAIPerceptionComponent>(("Perception Component")));
-	//Setting Configurations
-	SightConfig->SightRadius = SightRadius;
-	SightConfig->LoseSightRadius = LoseSightRadius;
-	SightConfig->PeripheralVisionAngleDegrees = FOV;
-	SightConfig->SetMaxAge(SightAge);
+	//SightConfig = CreateDefaultSubobject<UAISenseConfig_Sight>(TEXT("Sight Config"));
+	//SetPerceptionComponent(*CreateDefaultSubobject<UAIPerceptionComponent>(("Perception Component")));
+	////Setting Configurations
+	//SightConfig->SightRadius = SightRadius;
+	//SightConfig->LoseSightRadius = LoseSightRadius;
+	//SightConfig->PeripheralVisionAngleDegrees = FOV;
+	//SightConfig->SetMaxAge(SightAge);
 
-	//This allows hands to be able to detect these different types of entities
-	SightConfig->DetectionByAffiliation.bDetectEnemies = true;
-	SightConfig->DetectionByAffiliation.bDetectFriendlies = true;
-	SightConfig->DetectionByAffiliation.bDetectNeutrals = true;
+	////This allows hands to be able to detect these different types of entities
+	//SightConfig->DetectionByAffiliation.bDetectEnemies = true;
+	//SightConfig->DetectionByAffiliation.bDetectFriendlies = true;
+	//SightConfig->DetectionByAffiliation.bDetectNeutrals = true;
 
-	GetPerceptionComponent()->SetDominantSense(*SightConfig->GetSenseImplementation());
-	GetPerceptionComponent()->OnPerceptionUpdated.AddDynamic(this, &AAI_HANDS_Controller::OnPawnDetected);
-	GetPerceptionComponent()->ConfigureSense(*SightConfig);
+	//GetPerceptionComponent()->SetDominantSense(*SightConfig->GetSenseImplementation());
+	//GetPerceptionComponent()->OnPerceptionUpdated.AddDynamic(this, &AAI_HANDS_Controller::OnPawnDetected);
+	//GetPerceptionComponent()->ConfigureSense(*SightConfig);
+
+	BehaviorComp = ObjectInitializer.CreateDefaultSubobject<UBehaviorTreeComponent>(this, TEXT("BehaviorComp"));
+	BlackboardComp = ObjectInitializer.CreateDefaultSubobject<UBlackboardComponent>(this, TEXT("BlackboardComp"));
 
 	//Setting them to the same names as on the blackboard variables	
 	PatrolLocationKeyName = "PatrolLocation";
-	CurrentStateKeyName = "CurrentState";
 	CurrentPatrolPointKeyName = "CurrentPatrolPoint";
+	CurrentStateKeyName = "CurrentState";
 	PlayerKeyName = "Player";
 }
 
@@ -54,6 +57,7 @@ void AAI_HANDS_Controller::OnPossess(APawn* _Pawn)
 		{
 			BlackboardComp->InitializeBlackboard(*Hands->HandsBehaviorTree->BlackboardAsset);
 			SetBlackBoardHandsState(Hands->HandsState);
+			UE_LOG(LogTemp, Warning, TEXT("asdasdad"));
 		}
 		BehaviorComp->StartTree(*Hands->HandsBehaviorTree);
 	}
@@ -81,9 +85,9 @@ FRotator AAI_HANDS_Controller::GetControlRotation() const
 	return FRotator(0.0f, GetPawn()->GetActorRotation().Yaw, 0.0f);
 }
 
-void AAI_HANDS_Controller::OnPawnDetected(const TArray<AActor*>& DetectedPawns)
-{
-}
+//void AAI_HANDS_Controller::OnPawnDetected(const TArray<AActor*>& DetectedPawns)
+//{
+//}
 
 APatrolPoint* AAI_HANDS_Controller::GetPatrolPoint()
 {
@@ -113,7 +117,7 @@ void AAI_HANDS_Controller::SetPatrolPoint(APatrolPoint* NewPatrolPoint)
 	}
 }
 
-void AAI_HANDS_Controller::SetPlayer(AMoonFloristCharacter* Player)
+void AAI_HANDS_Controller::SetPlayer(APawn* Player)
 {
 	if (BlackboardComp)
 	{
@@ -125,6 +129,7 @@ void AAI_HANDS_Controller::SetBlackBoardHandsState(EHandsStates NewState)
 {
 	if (BlackboardComp)
 	{
-		BlackboardComp->SetValueAsObject(CurrentStateKeyName, (uint8)NewState);
+		//Setting state from a Enum
+		BlackboardComp->SetValueAsEnum(CurrentStateKeyName, (uint8)NewState);
 	}
 }
