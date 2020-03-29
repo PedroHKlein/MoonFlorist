@@ -95,19 +95,19 @@ void AMoonFloristCharacter::StartItems()
 #pragma region SEEDS
 	//Scarlet Seed
 	AItem* ScarletSeeds = NewObject<AItem>();
-	ScarletSeeds->CreateItem(EItemType::IT_Seed, "ScarletSeeds", "/Game/User_Interface/Storage/StorageAssets/ScarletSeeds.ScarletSeeds", 5, 15);
+	ScarletSeeds->CreateItem(EItemType::IT_Seed, "Red Seed", "/Game/User_Interface/Storage/StorageAssets/ScarletSeeds.ScarletSeeds", 5, 15);
 	PlayerStorage->AddItem(ScarletSeeds);
 	//Cobalt Seed
 	AItem* CobaltSeeds = NewObject<AItem>();
-	CobaltSeeds->CreateItem(EItemType::IT_Seed, "CobaltSeeds", "/Game/User_Interface/Storage/StorageAssets/CobaltSeeds.CobaltSeeds", 5, 15);
+	CobaltSeeds->CreateItem(EItemType::IT_Seed, "Blue Seed", "/Game/User_Interface/Storage/StorageAssets/CobaltSeeds.CobaltSeeds", 5, 15);
 	PlayerStorage->AddItem(CobaltSeeds);
 	//Golden Seed
 	AItem* GoldenSeeds = NewObject<AItem>();
-	GoldenSeeds->CreateItem(EItemType::IT_Seed, "GoldenSeeds", "/Game/User_Interface/Storage/StorageAssets/GoldenSeeds.GoldenSeeds", 5, 35);
+	GoldenSeeds->CreateItem(EItemType::IT_Seed, "Yellow Seed", "/Game/User_Interface/Storage/StorageAssets/GoldenSeeds.GoldenSeeds", 5, 35);
 	PlayerStorage->AddItem(GoldenSeeds);
 	//Silver Seed
 	AItem* SilverSeeds = NewObject<AItem>();
-	SilverSeeds->CreateItem(EItemType::IT_Seed, "SilverSeeds", "/Game/User_Interface/Storage/StorageAssets/SilverSeeds.SilverSeeds", 5, 35);
+	SilverSeeds->CreateItem(EItemType::IT_Seed, "White Seed", "/Game/User_Interface/Storage/StorageAssets/SilverSeeds.SilverSeeds", 5, 35);
 	PlayerStorage->AddItem(SilverSeeds);
 #pragma endregion
 
