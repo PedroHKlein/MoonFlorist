@@ -35,7 +35,6 @@ EBTNodeResult::Type UBTTask_FindPatrolLocation::ExecuteTask(UBehaviorTreeCompone
 		if (NavSystem && NavSystem->GetRandomPointInNavigableRadius(SearchDestination, SearchRadius, ResultLoc))
 		{
 			/* GetSelectedKey is set outside in the BehaviorTree. Should be set to "PatrolLocation" */
-			ResultLoc.Location.Z = 80.0f;
 			OwnerComp.GetBlackboardComponent()->SetValue<UBlackboardKeyType_Vector>(BlackboardKey.GetSelectedKeyID(),ResultLoc.Location);
 			/* Task Returns Succeeded State */
 			UE_LOG(LogTemp, Error, TEXT("BTTask_FindPatrolLocation: Found Patrol Location"));

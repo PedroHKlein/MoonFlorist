@@ -82,6 +82,7 @@ void AAI_HANDS::Tick(float DeltaTime)
 			}
 		}
 	}
+
 }
 //
 //AWaypoint* AAI_HANDS::RandomiseWP()
