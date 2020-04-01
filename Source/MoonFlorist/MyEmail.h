@@ -23,13 +23,22 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	UFUNCTION(BlueprintCallable)
 	void Feedbackinit(AMyClient* _client ,TArray<UMyGoal*> _gSuccess, TArray<UMyGoal*> _gFailure, int _iScore);
-	void Orderinit();
-	void Spaminit();
+	UFUNCTION(BlueprintCallable)
+	void Orderinit(AMyClient* _client);
+	UFUNCTION(BlueprintCallable)
+	void Spaminit(FString _spam);
 	UFUNCTION(BlueprintCallable)
 	FString GetFullEmail();
+	UFUNCTION(BlueprintCallable)
 	void SetFullEmail(FString _FullEmail);
+	UFUNCTION(BlueprintCallable)
 	void GenerateFeedbackEmail();
+	UFUNCTION(BlueprintCallable)
+	FString GetClientName();
+	UFUNCTION(BlueprintCallable)
+	bool GetDelivered();
 
 
 private:
@@ -51,6 +60,11 @@ private:
 	FString sClientName;
 	UPROPERTY()
 	FString sFullEmail;
+	UPROPERTY()
+	float fTime;
+	UPROPERTY()
+	bool bDelivered = true;
+
 
 	UPROPERTY()
 	TArray<UMyGoal*> GoalSuccess;

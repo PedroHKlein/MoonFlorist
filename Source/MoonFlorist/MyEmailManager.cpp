@@ -42,7 +42,7 @@ TArray<AMyEmail*> AMyEmailManager::GetSpam()
 
 void AMyEmailManager::AddToOrders(AMyEmail* _email)
 {
-	Orders.Push(_email);
+	Orders.Insert(_email, 0);
 }
 
 void AMyEmailManager::AddToFeedback(AMyEmail* _email)
