@@ -29,9 +29,9 @@ class MOONFLORIST_API AAI_HANDS : public ACharacter
 	class UPawnSensingComponent* PawnSensingComp;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Hands AI")
-		float VisionAngle = 60.0f;
+		float VisionAngle;
 	UPROPERTY(EditDefaultsOnly, Category = "Hands AI")
-		float SightRadius = 2000.0f;
+		float SightRadius;
 
 protected:
 	// Called when the game starts or when spawned

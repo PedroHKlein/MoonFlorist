@@ -25,11 +25,9 @@ AAI_HANDS::AAI_HANDS(const class FObjectInitializer& ObjectInitializer)
 	PawnSensingComp = CreateDefaultSubobject<UPawnSensingComponent>(TEXT("PawnSensingComp"));
 	PawnSensingComp->SetPeripheralVisionAngle(VisionAngle);
 	PawnSensingComp->SightRadius = SightRadius;
-
-
 	SenseTimeOut = 2.5f;
 
-
+	HandsState = EHandsStates::HS_Patrolling;
 }
 
 // Called when the game starts or when spawned
