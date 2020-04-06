@@ -6,6 +6,8 @@
 #include "Engine/Engine.h"
 #include "AI_HANDS_Controller.h"
 #include "EngineUtils.h"
+#include "MyGameManager.h"
+#include "Kismet/GameplayStatics.h"
 
 /* AI Specific includes */
 #include "Perception/PawnSensingComponent.h"
@@ -26,8 +28,9 @@ AAI_HANDS::AAI_HANDS(const class FObjectInitializer& ObjectInitializer)
 	PawnSensingComp->SetPeripheralVisionAngle(VisionAngle);
 	PawnSensingComp->SightRadius = SightRadius;
 	SenseTimeOut = 2.5f;
-
 	HandsState = EHandsStates::HS_Patrolling;
+
+
 }
 
 // Called when the game starts or when spawned
@@ -50,7 +53,6 @@ void AAI_HANDS::BeginPlay()
 	{
 		PawnSensingComp->OnSeePawn.AddDynamic(this, &AAI_HANDS::SeenPlayer);
 	}
-
 	HandsState = EHandsStates::HS_Patrolling;
 }
 
@@ -59,14 +61,6 @@ void AAI_HANDS::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	//if (!(this->GetActorLocation() + CurrentWaypoint->GetActorLocation()).IsNearlyZero())
-	//{
-	//	IsMoving = true;
-	//}
-	//else
-	//{
-	//	IsMoving = false;
-	//}
 	if (SensedPlayer && (GetWorld()->TimeSeconds - LastSeenTime) > SenseTimeOut)
 	{
 		AAI_HANDS_Controller* AIController = Cast<AAI_HANDS_Controller>(GetController());
@@ -80,38 +74,7 @@ void AAI_HANDS::Tick(float DeltaTime)
 			}
 		}
 	}
-
 }
-//
-//AWaypoint* AAI_HANDS::RandomiseWP()
-//{
-//	int index = FMath::RandRange(0, WaypointArray.Num() - 1);
-//	if (GEngine)
-//	{
-//		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, FString::Printf(TEXT("Rand Value: %f"), index));
-//	}
-//	return (WaypointArray[index]);
-//}
-
-//void AAI_HANDS::MoveToWayPoint()
-//{
-//	AAI_HANDS_Controller* HandsController = Cast<AAI_HANDS_Controller>(GetController());
-//	if (HandsController)
-//	{
-//		if (CurrentWaypoint != nullptr)
-//		{
-//			if (NextWaypoint != nullptr)
-//			{
-//				
-//				HandsController->MoveToActor(NextWaypoint, 5.0f);
-//				UE_LOG(LogTemp, Warning, TEXT("Working"));
-//			}
-//		
-//
-//		}
-//
-//	}
-//}
 
 void AAI_HANDS::SetHandsState(EHandsStates NewState)
 {

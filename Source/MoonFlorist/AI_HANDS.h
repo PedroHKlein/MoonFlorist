@@ -42,7 +42,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	/*Hands different behaviors are executed depending on his current states, (passive, patrolling,park, deliverymode ) */
-	UPROPERTY(EditAnywhere, Category = "Hands AI")
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Hands AI")
 		EHandsStates HandsState;
 
 	/*BehaviorTree for hands. Allows hands to make decisions based on the data feed into it through the blackboard. Created here so we can have mutliple behaviors for hands while only needing one controller*/

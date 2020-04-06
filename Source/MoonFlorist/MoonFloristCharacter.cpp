@@ -202,7 +202,8 @@ void AMoonFloristCharacter::LeftArrowAction()
 		}
 	}
 	else
-		UE_LOG(LogTemp, Warning, TEXT("no current actor"))
+		UE_LOG(LogTemp, Warning, TEXT("no current actor"));
+
 }
 
 void AMoonFloristCharacter::RightArrowAction()
@@ -210,13 +211,13 @@ void AMoonFloristCharacter::RightArrowAction()
 	if (CurrentInteractActor && Interacting)
 	{
 		ADeliveryTerminal* Terminal = Cast<ADeliveryTerminal>(CurrentInteractActor);
-		if (Terminal )
+		if (Terminal)
 		{
 			Terminal->MakeCapsule = true;
 		}
 	}
 	else
-		UE_LOG(LogTemp, Warning, TEXT("no current actor"))
+		UE_LOG(LogTemp, Warning, TEXT("no current actor"));
 }
 
 void AMoonFloristCharacter::OnClick()

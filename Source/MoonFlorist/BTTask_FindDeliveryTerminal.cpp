@@ -25,7 +25,16 @@ EBTNodeResult::Type UBTTask_FindDeliveryTerminal::ExecuteTask(UBehaviorTreeCompo
 	}
 	TArray<AActor*> Array;
 	UGameplayStatics::GetAllActorsOfClass(HandsController, APatrolPoint::StaticClass(), Array);
-	AActor* PointToGo = Array[0];
+	AActor* PointToGo = nullptr;
+	for (AActor* i : Array)
+	{
+		if (i->ActorHasTag("DeliveryTerminalLocation"))
+		{
+			PointToGo = i;
+			UE_LOG(LogTemp, Error, TEXT("Found It"));
+		}
+	}
+	
 
 	if (Array.Num() == 0)
 	{
@@ -37,18 +46,26 @@ EBTNodeResult::Type UBTTask_FindDeliveryTerminal::ExecuteTask(UBehaviorTreeCompo
 	if (PointToGo)
 	{
 		/* Finds a position which is close to the destination. Adding Random to making AI feel less Automated */
-		const FVector SeachDestination = PointToGo->GetActorLocation();
+		const FVector SearchDestination = PointToGo->GetActorLocation();
 		FNavLocation ResultLocation;
-		UNavigationSystemV1* NavSystem = UNavigationSystemV1::GetNavigationSystem(HandsController);
-		if (NavSystem && NavSystem->GetRandomPointInNavigableRadius(SeachDestination, SearchRadius, ResultLocation))
+		//UNavigationSystemV1* NavSystem = UNavigationSystemV1::GetNavigationSystem(HandsController);
+		//if (NavSystem && NavSystem->GetRandomPointInNavigableRadius(SeachDestination, SearchRadius, ResultLocation))
+		//{
+		//	/* GetSelectedKey is set outside in the BehaviorTree. Should be set to "DeliveryTerminalLocation" */
+		//	OwnerComp.GetBlackboardComponent()->SetValue<UBlackboardKeyType_Vector>(BlackboardKey.GetSelectedKeyID(), ResultLocation.Location);
+		//	/* Task Returns Succeeded State */
+		//	UE_LOG(LogTemp, Error, TEXT("BTTask_FindPatrolLocation: Found Delivery Terminal Location"));
+		//	return  EBTNodeResult::Succeeded;
+		//}
+		if (OwnerComp.GetOwner()->GetActorLocation() != SearchDestination)
 		{
 			/* GetSelectedKey is set outside in the BehaviorTree. Should be set to "DeliveryTerminalLocation" */
 			OwnerComp.GetBlackboardComponent()->SetValue<UBlackboardKeyType_Vector>(BlackboardKey.GetSelectedKeyID(), ResultLocation.Location);
+			OwnerComp.GetOwner()->TeleportTo(SearchDestination, FRotator::ZeroRotator);
 			/* Task Returns Succeeded State */
-			UE_LOG(LogTemp, Error, TEXT("BTTask_FindPatrolLocation: Found Delivery Terminal Location"));
+			UE_LOG(LogTemp, Error, TEXT("BTTask_FindPatrolLocation:Teleported"));
 			return  EBTNodeResult::Succeeded;
 		}
-
 	}
 
 	/* Task Returns Fail State */

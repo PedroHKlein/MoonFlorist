@@ -64,10 +64,15 @@ public:
 	AMyClient* GetCurrClient();
 	UFUNCTION(BlueprintCallable)
 	AMyEmailManager* GetEmailManager();
+	UPROPERTY(BlueprintReadWrite, Category = "Hands AI")
+	bool HandsCanDeliver;
+	UPROPERTY(BlueprintReadWrite, Category = "Bouquet Capsule")
+	bool ConstructCapsule;
+	
+
 
 private:
-	UPROPERTY(BlueprintReadWrite, Category= "Bouquet Capsule", meta= (AllowPrivateAccess = "true"))
-	bool ConstructCapsule;
+
 	UPROPERTY()
 	AMyGoalManager* GoalLists;
 	UPROPERTY()
