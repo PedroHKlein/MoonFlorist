@@ -50,6 +50,7 @@ public:
 		class UBehaviorTree* HandsBehaviorTree;
 
 	/*Change the state of hands while in gameplay*/
+	UFUNCTION(BlueprintCallable, Category = "Hands AI")
 	void SetHandsState(EHandsStates NewState);
 
 	/*Triggered by pawn sensing comp when a pawn is spotted*/
