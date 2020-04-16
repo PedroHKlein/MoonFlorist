@@ -18,7 +18,7 @@ void AMyGameManager::BeginPlay()
 	Super::BeginPlay();
 	init();
 	ConstructCapsule = false;
-
+	HandsCanDeliver = false;
 }
 
 // Called every frame

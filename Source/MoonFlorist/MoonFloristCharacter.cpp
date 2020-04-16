@@ -19,6 +19,7 @@
 #include "SlidingWindow.h"
 #include "DeliveryTerminal.h"
 #include "ManualPlantingArea.h"
+#include "AI_HANDS.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -202,7 +203,8 @@ void AMoonFloristCharacter::LeftArrowAction()
 		}
 	}
 	else
-		UE_LOG(LogTemp, Warning, TEXT("no current actor"))
+		UE_LOG(LogTemp, Warning, TEXT("no current actor"));
+
 }
 
 void AMoonFloristCharacter::RightArrowAction()
@@ -210,13 +212,17 @@ void AMoonFloristCharacter::RightArrowAction()
 	if (CurrentInteractActor && Interacting)
 	{
 		ADeliveryTerminal* Terminal = Cast<ADeliveryTerminal>(CurrentInteractActor);
-		if (Terminal )
+		TArray<AActor*>Array;
+		UGameplayStatics::GetAllActorsOfClass(GetWorld(), AAI_HANDS::StaticClass(), Array);
+		AAI_HANDS* Hands = Cast<AAI_HANDS>(Array[0]);
+		if (Terminal)
 		{
 			Terminal->MakeCapsule = true;
+			Hands->SetHandsState(EHandsStates::HS_DeliveryMode);
 		}
 	}
 	else
-		UE_LOG(LogTemp, Warning, TEXT("no current actor"))
+		UE_LOG(LogTemp, Warning, TEXT("no current actor"));
 }
 
 void AMoonFloristCharacter::OnClick()
