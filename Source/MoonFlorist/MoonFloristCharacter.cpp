@@ -215,7 +215,7 @@ void AMoonFloristCharacter::RightArrowAction()
 		TArray<AActor*>Array;
 		UGameplayStatics::GetAllActorsOfClass(GetWorld(), AAI_HANDS::StaticClass(), Array);
 		AAI_HANDS* Hands = Cast<AAI_HANDS>(Array[0]);
-		if (Terminal)
+		if (Terminal && (Hands->HandsState != EHandsStates::HS_DeliveryMode))
 		{
 			Terminal->MakeCapsule = true;
 			Hands->SetHandsState(EHandsStates::HS_DeliveryMode);
