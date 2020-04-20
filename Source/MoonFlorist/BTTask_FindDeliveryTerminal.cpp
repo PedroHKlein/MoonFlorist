@@ -4,7 +4,9 @@
 #include "BTTask_FindDeliveryTerminal.h"
 #include "PatrolPoint.h"
 #include "AI_HANDS_Controller.h"
+#include "AI_HANDS.h"
 #include "Kismet/GameplayStatics.h"
+#include "MyGameManager.h"
 
 
 /* AI Module includes */
@@ -17,6 +19,15 @@
 EBTNodeResult::Type UBTTask_FindDeliveryTerminal::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
 	AAI_HANDS_Controller* HandsController = Cast<AAI_HANDS_Controller>(OwnerComp.GetAIOwner());
+	AAI_HANDS* Hands = Cast<AAI_HANDS>(HandsController->GetPawn());
+	TArray<AActor*> GMArray;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AMyGameManager::StaticClass(), GMArray);
+	if (GMArray.Num() == 0)
+	{
+		return EBTNodeResult::Aborted;
+	}
+	AMyGameManager* GameManager = Cast<AMyGameManager>(GMArray[0]);
+
 	if (HandsController == nullptr)
 	{
 		/* Task Returns Fail State */
@@ -25,7 +36,16 @@ EBTNodeResult::Type UBTTask_FindDeliveryTerminal::ExecuteTask(UBehaviorTreeCompo
 	}
 	TArray<AActor*> Array;
 	UGameplayStatics::GetAllActorsOfClass(HandsController, APatrolPoint::StaticClass(), Array);
-	AActor* PointToGo = Array[0];
+	AActor* PointToGo = nullptr;
+	for (AActor* i : Array)
+	{
+		if (i->ActorHasTag("DeliveryTerminalLocation"))
+		{
+			PointToGo = i;
+			UE_LOG(LogTemp, Error, TEXT("Found It"));
+		}
+	}
+	
 
 	if (Array.Num() == 0)
 	{
@@ -33,22 +53,32 @@ EBTNodeResult::Type UBTTask_FindDeliveryTerminal::ExecuteTask(UBehaviorTreeCompo
 		UE_LOG(LogTemp, Error, TEXT("BTTask_FindDeliveryTerminal: No Delivery Terminal Patrol Point"));
 		return EBTNodeResult::Failed;
 	}
-
+	
 	if (PointToGo)
 	{
 		/* Finds a position which is close to the destination. Adding Random to making AI feel less Automated */
-		const FVector SeachDestination = PointToGo->GetActorLocation();
-		FNavLocation ResultLocation;
-		UNavigationSystemV1* NavSystem = UNavigationSystemV1::GetNavigationSystem(HandsController);
-		if (NavSystem && NavSystem->GetRandomPointInNavigableRadius(SeachDestination, SearchRadius, ResultLocation))
+		const FVector SearchDestination = PointToGo->GetActorLocation();
+
+		if (Hands)
 		{
-			/* GetSelectedKey is set outside in the BehaviorTree. Should be set to "DeliveryTerminalLocation" */
-			OwnerComp.GetBlackboardComponent()->SetValue<UBlackboardKeyType_Vector>(BlackboardKey.GetSelectedKeyID(), ResultLocation.Location);
+			OwnerComp.GetBlackboardComponent()->SetValue<UBlackboardKeyType_Vector>(BlackboardKey.GetSelectedKeyID(), SearchDestination);
+			//OwnerComp.GetOwner()->TeleportTo(SearchDestination, Hands->GetActorRotation());
+			Hands->SetActorLocation(SearchDestination);
+			GameManager->HandsCanDeliver = false;
+			Hands->SetHandsState(EHandsStates::HS_Passive);
+		
 			/* Task Returns Succeeded State */
-			UE_LOG(LogTemp, Error, TEXT("BTTask_FindPatrolLocation: Found Delivery Terminal Location"));
+			UE_LOG(LogTemp, Error, TEXT("BTTask_FindPatrolLocation:Teleported"));
 			return  EBTNodeResult::Succeeded;
 		}
-
+		else
+		{
+			/* Task Returns Fail State */
+			UE_LOG(LogTemp, Error, TEXT("BTTask_FindDeliveryTerminal: No Hands"));
+			return EBTNodeResult::Failed;
+		}
+			
+		
 	}
 
 	/* Task Returns Fail State */
