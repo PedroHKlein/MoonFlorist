@@ -64,7 +64,7 @@ void AMoonFloristCharacter::BeginPlay()
 	PlayerStorage = NewObject<AStorage>();
 	StartItems();
 	
-	RayDisCheck = 200.0f;
+	RayDisCheck = 300.0f;
 	PlayerController = UGameplayStatics::GetPlayerController(this, 0);
 	HUD = Cast<AMoonFloristHUD>(PlayerController->GetHUD());
 	CosmoCoins = 10;
@@ -133,14 +133,11 @@ void AMoonFloristCharacter::DetectInteraction()
 			WithinRange = true;
 			UE_LOG(LogTemp, Warning, TEXT("true"));
 			
-			
 		}
 		else
 		{
 			WithinRange = false;
 			UE_LOG(LogTemp, Warning, TEXT("false"));
-
-	
 		}
 
 		if (WithinRange)
@@ -170,26 +167,27 @@ void AMoonFloristCharacter::DetectInteraction()
 				UE_LOG(LogTemp, Warning, TEXT("working"));
 				
 			}
+			
 		}
-		
+		if (m_Hitsdata.GetComponent()->ComponentHasTag(FName(TEXT("Switch"))) && (m_Hitsdata.TraceStart - m_Hitsdata.GetComponent()->GetComponentLocation()).Size() <= RayDisCheck)
+		{
+			ASlidingWindow* Window = Cast<ASlidingWindow>(m_Hitsdata.GetActor());
+			if (Window->Open)
+			{
+				Window->Open = false;
+			}
+			else
+			{
+				Window->Open = true;
+			}
+
+		}
 	}
 	else
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Failed"));
 	}
-	if (m_Hitsdata.GetComponent()->ComponentHasTag(FName(TEXT("Switch"))))
-	{
-		ASlidingWindow* Window = Cast<ASlidingWindow>(m_Hitsdata.GetActor());
-		if (Window->Open)
-		{
-			Window->Open = false;
-		}
-		else
-		{
-			Window->Open = true;
-		}
 
-	}
 }
 
 void AMoonFloristCharacter::LeftArrowAction()
