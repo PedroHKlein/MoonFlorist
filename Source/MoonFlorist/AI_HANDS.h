@@ -29,9 +29,9 @@ class MOONFLORIST_API AAI_HANDS : public ACharacter
 	class UPawnSensingComponent* PawnSensingComp;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Hands AI")
-		float VisionAngle = 60.0f;
+		float VisionAngle;
 	UPROPERTY(EditDefaultsOnly, Category = "Hands AI")
-		float SightRadius = 2000.0f;
+		float SightRadius;
 
 protected:
 	// Called when the game starts or when spawned
@@ -42,7 +42,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	/*Hands different behaviors are executed depending on his current states, (passive, patrolling,park, deliverymode ) */
-	UPROPERTY(EditAnywhere, Category = "Hands AI")
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Hands AI")
 		EHandsStates HandsState;
 
 	/*BehaviorTree for hands. Allows hands to make decisions based on the data feed into it through the blackboard. Created here so we can have mutliple behaviors for hands while only needing one controller*/
@@ -50,6 +50,7 @@ public:
 		class UBehaviorTree* HandsBehaviorTree;
 
 	/*Change the state of hands while in gameplay*/
+	UFUNCTION(BlueprintCallable, Category = "Hands AI")
 	void SetHandsState(EHandsStates NewState);
 
 	/*Triggered by pawn sensing comp when a pawn is spotted*/

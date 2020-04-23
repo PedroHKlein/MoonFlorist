@@ -80,6 +80,12 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Hands AI")
 	FName PlayerKeyName;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Hands AI")
+	FName DeliveryTerminalLocationKeyName;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Hands AI")
+	FName DeliveryKeyName;
+
 	/** Returns BehaviorComp subobject **/
 	FORCEINLINE UBehaviorTreeComponent* GetBehaviorComp() const { return BehaviorComp; }
 

@@ -19,6 +19,7 @@
 #include "SlidingWindow.h"
 #include "DeliveryTerminal.h"
 #include "ManualPlantingArea.h"
+#include "AI_HANDS.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -63,7 +64,7 @@ void AMoonFloristCharacter::BeginPlay()
 	PlayerStorage = NewObject<AStorage>();
 	StartItems();
 	
-	RayDisCheck = 200.0f;
+	RayDisCheck = 300.0f;
 	PlayerController = UGameplayStatics::GetPlayerController(this, 0);
 	HUD = Cast<AMoonFloristHUD>(PlayerController->GetHUD());
 	CosmoCoins = 10;
@@ -132,14 +133,11 @@ void AMoonFloristCharacter::DetectInteraction()
 			WithinRange = true;
 			UE_LOG(LogTemp, Warning, TEXT("true"));
 			
-			
 		}
 		else
 		{
 			WithinRange = false;
 			UE_LOG(LogTemp, Warning, TEXT("false"));
-
-	
 		}
 
 		if (WithinRange)
@@ -169,26 +167,27 @@ void AMoonFloristCharacter::DetectInteraction()
 				UE_LOG(LogTemp, Warning, TEXT("working"));
 				
 			}
+			
 		}
-		
+		if (m_Hitsdata.GetComponent()->ComponentHasTag(FName(TEXT("Switch"))) && (m_Hitsdata.TraceStart - m_Hitsdata.GetComponent()->GetComponentLocation()).Size() <= RayDisCheck)
+		{
+			ASlidingWindow* Window = Cast<ASlidingWindow>(m_Hitsdata.GetActor());
+			if (Window->Open)
+			{
+				Window->Open = false;
+			}
+			else
+			{
+				Window->Open = true;
+			}
+
+		}
 	}
 	else
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Failed"));
 	}
-	if (m_Hitsdata.GetComponent()->ComponentHasTag(FName(TEXT("Switch"))))
-	{
-		ASlidingWindow* Window = Cast<ASlidingWindow>(m_Hitsdata.GetActor());
-		if (Window->Open)
-		{
-			Window->Open = false;
-		}
-		else
-		{
-			Window->Open = true;
-		}
 
-	}
 }
 
 void AMoonFloristCharacter::LeftArrowAction()
@@ -202,7 +201,8 @@ void AMoonFloristCharacter::LeftArrowAction()
 		}
 	}
 	else
-		UE_LOG(LogTemp, Warning, TEXT("no current actor"))
+		UE_LOG(LogTemp, Warning, TEXT("no current actor"));
+
 }
 
 void AMoonFloristCharacter::RightArrowAction()
@@ -210,13 +210,17 @@ void AMoonFloristCharacter::RightArrowAction()
 	if (CurrentInteractActor && Interacting)
 	{
 		ADeliveryTerminal* Terminal = Cast<ADeliveryTerminal>(CurrentInteractActor);
-		if (Terminal )
+		TArray<AActor*>Array;
+		UGameplayStatics::GetAllActorsOfClass(GetWorld(), AAI_HANDS::StaticClass(), Array);
+		AAI_HANDS* Hands = Cast<AAI_HANDS>(Array[0]);
+		if (Terminal && (Hands->HandsState != EHandsStates::HS_DeliveryMode))
 		{
 			Terminal->MakeCapsule = true;
+			Hands->SetHandsState(EHandsStates::HS_DeliveryMode);
 		}
 	}
 	else
-		UE_LOG(LogTemp, Warning, TEXT("no current actor"))
+		UE_LOG(LogTemp, Warning, TEXT("no current actor"));
 }
 
 void AMoonFloristCharacter::OnClick()

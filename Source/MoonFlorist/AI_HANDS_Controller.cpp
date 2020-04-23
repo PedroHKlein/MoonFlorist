@@ -39,6 +39,8 @@ AAI_HANDS_Controller::AAI_HANDS_Controller(const FObjectInitializer& ObjectIniti
 	CurrentPatrolPointKeyName = "CurrentPatrolPoint";
 	CurrentStateKeyName = "CurrentState";
 	PlayerKeyName = "Player";
+	DeliveryTerminalLocationKeyName = "DeliveryTerminalLocation";
+	DeliveryKeyName = "DeliveryLocation";
 }
 
 void AAI_HANDS_Controller::BeginPlay()
