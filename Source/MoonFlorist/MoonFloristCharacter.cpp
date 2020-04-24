@@ -111,14 +111,22 @@ void AMoonFloristCharacter::StartItems()
 	SilverSeeds->CreateItem(EItemType::IT_Seed, "White Seed", "/Game/User_Interface/Storage/StorageAssets/SilverSeeds.SilverSeeds", 5, 35);
 	PlayerStorage->AddItem(SilverSeeds);
 #pragma endregion
+#pragma region FERTILIZER
+	//Terran(Earth)
+	AItem* Terran = NewObject<AItem>();
+	Terran->CreateItem(EItemType::IT_Fertilizer, "Terran Fertilizer", "/Game/User_Interface/Storage/StorageAssets/EarthFertiliser.EarthFertiliser", 5, 15);
+	PlayerStorage->AddItem(Terran);
+	//Moon
+	AItem* Moon = NewObject<AItem>(); 
+	Moon->CreateItem(EItemType::IT_Fertilizer, "Moon Fertilizer", "/Game/User_Interface/Storage/StorageAssets/MoonFertiliser.MoonFertiliser", 3, 25);
+	PlayerStorage->AddItem(Moon);
+	//Comet
+	AItem* Comet = NewObject<AItem>();
+	Comet->CreateItem(EItemType::IT_Fertilizer, "Comet Fertilizer", "/Game/User_Interface/Storage/StorageAssets/CometFertiliser.CometFertiliser", 1, 40);
+	PlayerStorage->AddItem(Comet);
+	
+#pragma endregion
 
-	//Scarlet Seed
-	AItem* BouquetExample = NewObject<AItem>();
-	BouquetExample->CreateItem(EItemType::IT_Seed, "BouquetExample", "/Game/User_Interface/Storage/StorageAssets/ScarletSeeds.ScarletSeeds", 1, 70, false);
-	PlayerStorage->AddItem(BouquetExample);
-
-	PlayerStorage->IncreaseStacks(10, SilverSeeds);
-	PlayerStorage->DecreaseStacks(10, SilverSeeds);
 }
 
 void AMoonFloristCharacter::DetectInteraction()
