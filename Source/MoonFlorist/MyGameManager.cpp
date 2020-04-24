@@ -18,8 +18,7 @@ void AMyGameManager::BeginPlay()
 	Super::BeginPlay();
 	init();
 	ConstructCapsule = false;
-	//NewClient();
-	//NewBouquet();
+	HandsCanDeliver = false;
 }
 
 // Called every frame
@@ -193,6 +192,9 @@ void AMyGameManager::CompleteOrder()
 		CurrClient->UpdateClientDescriptions();
 		NewClient();
 		NewBouquet();
+		temp = GetWorld()->SpawnActor<AMyEmail>(AMyEmail::StaticClass());
+		temp->Orderinit(CurrClient);
+		EmailLists->AddToOrders(temp);
 	}
 }
 
@@ -211,6 +213,9 @@ void AMyGameManager::init()
 	NewClient();
 	NewBouquet();
 	EmailLists = GetWorld()->SpawnActor<AMyEmailManager>(AMyEmailManager::StaticClass());
+	AMyEmail* temp = GetWorld()->SpawnActor<AMyEmail>(AMyEmail::StaticClass());
+	temp->Orderinit(CurrClient);
+	EmailLists->AddToOrders(temp);
 }
 
 AMyGameManager* AMyGameManager::GetInstance()

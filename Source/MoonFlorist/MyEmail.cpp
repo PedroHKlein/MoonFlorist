@@ -22,7 +22,18 @@ void AMyEmail::BeginPlay()
 void AMyEmail::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	if (bDelivered)
+	{
 
+	}
+	else
+	{
+		fTime = fTime - DeltaTime;
+		if (fTime <= 0)
+		{
+			bDelivered = true;
+		}
+	}
 }
 
 void AMyEmail::Feedbackinit(AMyClient* _client, TArray<UMyGoal*> _gSuccess, TArray<UMyGoal*> _gFailure, int _iScore)
@@ -33,6 +44,10 @@ void AMyEmail::Feedbackinit(AMyClient* _client, TArray<UMyGoal*> _gSuccess, TArr
 	iScore = _iScore;
 	int temp = 1;
 	float scoretemp = 1;
+	bDelivered = false;
+	fTime = FMath::RandRange(60, 180);
+
+	sClientName = Client->GetName();
 
 	switch (Client->GetNature())
 	{
@@ -469,6 +484,20 @@ void AMyEmail::Feedbackinit(AMyClient* _client, TArray<UMyGoal*> _gSuccess, TArr
 	GenerateFeedbackEmail();
 }
 
+void AMyEmail::Orderinit(AMyClient* _client)
+{
+	Client = _client;
+
+	sClientName = Client->GetName();
+
+	SetFullEmail(Client->GetFullDescription());
+}
+
+void AMyEmail::Spaminit(FString _spam)
+{
+	SetFullEmail(_spam);
+}
+
 void AMyEmail::GenerateFeedbackEmail()
 {
 	if (GoalFailure.Num() == 0)
@@ -496,5 +525,15 @@ FString AMyEmail::GetFullEmail()
 void AMyEmail::SetFullEmail(FString _FullEmail)
 {
 	sFullEmail = _FullEmail;
+}
+
+FString AMyEmail::GetClientName()
+{
+	return sClientName;
+}
+
+bool AMyEmail::GetDelivered()
+{
+	return bDelivered;
 }
 

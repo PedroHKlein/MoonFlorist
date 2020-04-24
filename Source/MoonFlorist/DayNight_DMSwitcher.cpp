@@ -18,11 +18,10 @@ ADayNight_DMSwitcher::ADayNight_DMSwitcher()
 
 	DayNightDecal = CreateDefaultSubobject<UDecalComponent>("DayNight Decal");
 	DayNightDecal->SetupAttachment(Root);
-	DayNightDecal->SetDecalMaterial(ConstructorHelpers::FObjectFinder<UMaterialInterface>(TEXT("/Game/Materials/MI_WindowSwitch.MI_WindowSwitch")).Object);
+	DayNightDecal->SetDecalMaterial(ConstructorHelpers::FObjectFinder<UMaterialInterface>(TEXT("/Game/Materials/Decals/MI_WindowSwitch.MI_WindowSwitch")).Object);
 	DayNightDecal->DecalSize = FVector(128.0f, 256.0f, 256.0f);
 	DayNightDecal->FadeScreenSize = 0.01f;
 	DayNightDecal->bDestroyOwnerAfterFade = true;
-	
 }
 
 // Called when the game starts or when spawned
