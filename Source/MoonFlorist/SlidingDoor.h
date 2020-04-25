@@ -30,10 +30,24 @@ public:
 
 	UPROPERTY(VisibleAnywhere, Category = "SlidingDoor")
 	class USceneComponent* RightPoint;
+
+	UPROPERTY(VisibleAnywhere, Category = "SlidingDoor")
+	class UAudioComponent* OpenSound;
+	UPROPERTY(VisibleAnywhere, Category = "SlidingDoor")
+	class UAudioComponent* CloseSound;
+	UPROPERTY(VisibleAnywhere, Category = "SlidingDoor")
+	class USoundCue* OpenCue;
+	UPROPERTY(VisibleAnywhere, Category = "SlidingDoor")
+	class USoundCue* CloseCue;
+
+	UPROPERTY(EditAnywhere, Category = "SlidingDoor")
+	bool bLocked = false;
+
 	bool Open;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	virtual void PostInitializeComponents() override;
 	UFUNCTION()
 	void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 

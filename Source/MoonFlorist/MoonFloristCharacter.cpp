@@ -13,10 +13,13 @@
 #include "Engine.h"
 #include "MoonFloristHUD.h"
 #include "XRMotionControllerBase.h" // for FXRMotionControllerBase::RightHandSourceId
-#include "InteractableActor.h"
-#include "SlidingWindow.h"
 #include "Kismet/GameplayStatics.h"
 
+#include "InteractableActor.h"
+#include "SlidingWindow.h"
+#include "DeliveryTerminal.h"
+#include "ManualPlantingArea.h"
+#include "AI_HANDS.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -46,9 +49,9 @@ AMoonFloristCharacter::AMoonFloristCharacter()
 	Mesh1P->CastShadow = false;
 	Mesh1P->RelativeRotation = FRotator(1.9f, -19.19f, 5.2f);
 	Mesh1P->RelativeLocation = FVector(-0.5f, -4.4f, -155.7f);
-
-
-	
+	RayCastAcceptanceDis = 300.0f;
+	IsOutlining = false;
+	CanClick = false;
 }
 
 void AMoonFloristCharacter::BeginPlay()
@@ -61,7 +64,7 @@ void AMoonFloristCharacter::BeginPlay()
 	PlayerStorage = NewObject<AStorage>();
 	StartItems();
 	
-	RayDisCheck = 200.0f;
+	RayDisCheck = 300.0f;
 	PlayerController = UGameplayStatics::GetPlayerController(this, 0);
 	HUD = Cast<AMoonFloristHUD>(PlayerController->GetHUD());
 	CosmoCoins = 10;
@@ -93,38 +96,46 @@ void AMoonFloristCharacter::StartItems()
 #pragma region SEEDS
 	//Scarlet Seed
 	AItem* ScarletSeeds = NewObject<AItem>();
-	ScarletSeeds->CreateItem(EItemType::IT_Seed, "ScarletSeeds", "/Game/User_Interface/Storage/StorageAssets/ScarletSeeds.ScarletSeeds", 5, 15);
+	ScarletSeeds->CreateItem(EItemType::IT_Seed, "Red Seed", "/Game/User_Interface/Storage/StorageAssets/ScarletSeeds.ScarletSeeds", 5, 15);
 	PlayerStorage->AddItem(ScarletSeeds);
 	//Cobalt Seed
 	AItem* CobaltSeeds = NewObject<AItem>();
-	CobaltSeeds->CreateItem(EItemType::IT_Seed, "CobaltSeeds", "/Game/User_Interface/Storage/StorageAssets/CobaltSeeds.CobaltSeeds", 5, 15);
+	CobaltSeeds->CreateItem(EItemType::IT_Seed, "Blue Seed", "/Game/User_Interface/Storage/StorageAssets/CobaltSeeds.CobaltSeeds", 5, 15);
 	PlayerStorage->AddItem(CobaltSeeds);
 	//Golden Seed
 	AItem* GoldenSeeds = NewObject<AItem>();
-	GoldenSeeds->CreateItem(EItemType::IT_Seed, "GoldenSeeds", "/Game/User_Interface/Storage/StorageAssets/GoldenSeeds.GoldenSeeds", 5, 35);
+	GoldenSeeds->CreateItem(EItemType::IT_Seed, "Yellow Seed", "/Game/User_Interface/Storage/StorageAssets/GoldenSeeds.GoldenSeeds", 5, 35);
 	PlayerStorage->AddItem(GoldenSeeds);
 	//Silver Seed
 	AItem* SilverSeeds = NewObject<AItem>();
-	SilverSeeds->CreateItem(EItemType::IT_Seed, "SilverSeeds", "/Game/User_Interface/Storage/StorageAssets/SilverSeeds.SilverSeeds", 5, 35);
+	SilverSeeds->CreateItem(EItemType::IT_Seed, "White Seed", "/Game/User_Interface/Storage/StorageAssets/SilverSeeds.SilverSeeds", 5, 35);
 	PlayerStorage->AddItem(SilverSeeds);
 #pragma endregion
+#pragma region FERTILIZER
+	//Terran(Earth)
+	AItem* Terran = NewObject<AItem>();
+	Terran->CreateItem(EItemType::IT_Fertilizer, "Terran Fertilizer", "/Game/User_Interface/Storage/StorageAssets/EarthFertiliser.EarthFertiliser", 5, 15);
+	PlayerStorage->AddItem(Terran);
+	//Moon
+	AItem* Moon = NewObject<AItem>(); 
+	Moon->CreateItem(EItemType::IT_Fertilizer, "Moon Fertilizer", "/Game/User_Interface/Storage/StorageAssets/MoonFertiliser.MoonFertiliser", 3, 25);
+	PlayerStorage->AddItem(Moon);
+	//Comet
+	AItem* Comet = NewObject<AItem>();
+	Comet->CreateItem(EItemType::IT_Fertilizer, "Comet Fertilizer", "/Game/User_Interface/Storage/StorageAssets/CometFertiliser.CometFertiliser", 1, 40);
+	PlayerStorage->AddItem(Comet);
+	
+#pragma endregion
 
-	//Scarlet Seed
-	AItem* BouquetExample = NewObject<AItem>();
-	BouquetExample->CreateItem(EItemType::IT_Seed, "BouquetExample", "/Game/User_Interface/Storage/StorageAssets/ScarletSeeds.ScarletSeeds", 1, 70, false);
-	PlayerStorage->AddItem(BouquetExample);
-
-	PlayerStorage->IncreaseStacks(10, BouquetExample);
 }
 
 void AMoonFloristCharacter::DetectInteraction()
 {
 
-	AInteractableActor* Interactable = Cast<AInteractableActor>(m_Hitsdata.GetActor());
+	CurrentInteractActor = Cast<AInteractableActor>(m_Hitsdata.GetActor());
 	UE_LOG(LogTemp, Warning, TEXT("Detecting"));
-	if (Interactable)
+	if (CurrentInteractActor)
 	{
-	
 		if ((m_Hitsdata.TraceStart - m_Hitsdata.GetActor()->GetActorLocation()).Size() <= RayDisCheck)
 		{
 			WithinRange = true;
@@ -142,12 +153,13 @@ void AMoonFloristCharacter::DetectInteraction()
 			if (flipflop)
 			{
 
-				PlayerController->SetViewTargetWithBlend(Interactable, 1.0f, VTBlend_EaseIn, 2.0f);
+				PlayerController->SetViewTargetWithBlend(CurrentInteractActor, 1.0f, VTBlend_EaseIn, 2.0f);
 				PlayerController->SetIgnoreMoveInput(true);
 				PlayerController->SetIgnoreLookInput(true);
 				PlayerController->bShowMouseCursor = true;
 				HUD->ToggleAlpha(true);
 				flipflop = false;
+				Interacting = true;
 				UE_LOG(LogTemp, Warning, TEXT("working"));
 				
 			}
@@ -159,28 +171,77 @@ void AMoonFloristCharacter::DetectInteraction()
 				PlayerController->bShowMouseCursor = false;
 				HUD->ToggleAlpha(false);
 				flipflop = true;
+				Interacting = false;
 				UE_LOG(LogTemp, Warning, TEXT("working"));
+				
 			}
+			
 		}
+		if (m_Hitsdata.GetComponent()->ComponentHasTag(FName(TEXT("Switch"))) && (m_Hitsdata.TraceStart - m_Hitsdata.GetComponent()->GetComponentLocation()).Size() <= RayDisCheck)
+		{
+			ASlidingWindow* Window = Cast<ASlidingWindow>(m_Hitsdata.GetActor());
+			if (Window->Open)
+			{
+				Window->Open = false;
+			}
+			else
+			{
+				Window->Open = true;
+			}
 
+		}
 	}
 	else
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Failed"));
 	}
-	if (m_Hitsdata.GetComponent()->ComponentHasTag(FName(TEXT("Switch"))))
-	{
-		ASlidingWindow* Window = Cast<ASlidingWindow>(m_Hitsdata.GetActor());
-		if (Window->Open)
-		{
-			Window->Open = false;
-		}
-		else
-		{
-			Window->Open = true;
-		}
 
+}
+
+void AMoonFloristCharacter::LeftArrowAction()
+{
+	if (CurrentInteractActor && Interacting)
+	{
+		ADeliveryTerminal* Terminal = Cast<ADeliveryTerminal>(CurrentInteractActor);
+		if (Terminal)
+		{
+			Terminal->ChangeCapsule();
+		}
 	}
+	else
+		UE_LOG(LogTemp, Warning, TEXT("no current actor"));
+
+}
+
+void AMoonFloristCharacter::RightArrowAction()
+{
+	if (CurrentInteractActor && Interacting)
+	{
+		ADeliveryTerminal* Terminal = Cast<ADeliveryTerminal>(CurrentInteractActor);
+		TArray<AActor*>Array;
+		UGameplayStatics::GetAllActorsOfClass(GetWorld(), AAI_HANDS::StaticClass(), Array);
+		AAI_HANDS* Hands = Cast<AAI_HANDS>(Array[0]);
+		if (Terminal && (Hands->HandsState != EHandsStates::HS_DeliveryMode))
+		{
+			Terminal->MakeCapsule = true;
+			Hands->SetHandsState(EHandsStates::HS_DeliveryMode);
+		}
+	}
+	else
+		UE_LOG(LogTemp, Warning, TEXT("no current actor"));
+}
+
+void AMoonFloristCharacter::OnClick()
+{
+	/*if (CurrentInteractActor && Interacting)
+	{
+		AManualPlantingArea* Area = Cast<AManualPlantingArea>(CurrentInteractActor);
+		if (Area)
+		{
+			CanClick = true;
+		}
+	
+	}*/
 }
 
 void AMoonFloristCharacter::Tick(float DeltaTime)
@@ -202,22 +263,24 @@ FHitResult AMoonFloristCharacter::RaycastCheck()
 	if (isHit)
 	{
 		AMoonFloristHUD* playerHUD = (AMoonFloristHUD*)(GetWorld()->GetFirstPlayerController()->GetHUD());
-		if ((start - HitData.GetActor()->GetActorLocation()).Size() <= 200.0f && HitData.GetActor()->ActorHasTag(FName(TEXT("Interactable"))) ||
-			(start - HitData.GetComponent()->GetComponentLocation()).Size() <= 200.0f && HitData.GetComponent()->ComponentHasTag(FName(TEXT("Interactable"))))
+		if ((start - HitData.GetActor()->GetActorLocation()).Size() <= RayCastAcceptanceDis && HitData.GetActor()->ActorHasTag(FName(TEXT("Interactable"))) ||
+			(start - HitData.GetComponent()->GetComponentLocation()).Size() <= RayCastAcceptanceDis && HitData.GetComponent()->ComponentHasTag(FName(TEXT("Interactable"))))
 		{
 
 			playerHUD->ChangeState(3);
+			IsOutlining = true;
 
 		}
-		else if ((start - HitData.GetActor()->GetActorLocation()).Size() > 200.0f && HitData.GetActor()->ActorHasTag(FName(TEXT("Interactable"))) || 
-			(start - HitData.GetComponent()->GetComponentLocation()).Size() > 200.0f && HitData.GetComponent()->ComponentHasTag(FName(TEXT("Interactable"))))
+		else if ((start - HitData.GetActor()->GetActorLocation()).Size() > RayCastAcceptanceDis&& HitData.GetActor()->ActorHasTag(FName(TEXT("Interactable"))) ||
+			(start - HitData.GetComponent()->GetComponentLocation()).Size() > RayCastAcceptanceDis&& HitData.GetComponent()->ComponentHasTag(FName(TEXT("Interactable"))))
 		{
 			playerHUD->ChangeState(2);
-
+			IsOutlining = true;
 		}
 		else
 		{
 			playerHUD->ChangeState(1);
+			IsOutlining = false;
 		}
 		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, FString::Printf(TEXT("Size: %f "), (start - HitData.GetActor()->GetActorLocation()).Size()));
 	
@@ -238,6 +301,9 @@ void AMoonFloristCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 	PlayerInputComponent->BindAxis("MoveForward", this, &AMoonFloristCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AMoonFloristCharacter::MoveRight);
 	PlayerInputComponent->BindAction("Action", IE_Pressed, this, &AMoonFloristCharacter::DetectInteraction);
+	PlayerInputComponent->BindAction("LeftAction", IE_Pressed, this , &AMoonFloristCharacter::LeftArrowAction);
+	PlayerInputComponent->BindAction("RightArrow", IE_Pressed, this, &AMoonFloristCharacter::RightArrowAction);
+	PlayerInputComponent->BindAction("Click", IE_Pressed, this, &AMoonFloristCharacter::OnClick);
 	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
 	// "turn" handles devices that provide an absolute delta, such as a mouse.
 	// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick

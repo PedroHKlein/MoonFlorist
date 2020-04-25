@@ -9,9 +9,15 @@ AItem::AItem()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+	Root->SetupAttachment(RootComponent);
+	Root->bEditableWhenInherited = true;
+	Root->SetRelativeLocation(FVector(0.f, 0.f, 0.f));
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
-	Mesh->SetupAttachment(RootComponent);
-	Name = "Item Name";
+	Mesh->SetupAttachment(Root);
+	Mesh->bEditableWhenInherited = true;
+	Mesh->SetRelativeLocation(FVector(0.f, 0.f, 0.f));
+	Name = "Test";
 	Price = 0;
 	CanBeSold = true;
 	Stacks = 1;
@@ -25,13 +31,13 @@ void AItem::BeginPlay()
 	
 }
 
-AItem* AItem::CreateItem( EItemType _ItemType, FString _Name,FString _IconPath, int _Stacks, int _Price, bool _Stackable, bool _InStorage)
+AItem* AItem::CreateItem( EItemType _ItemType, FName _Name,FString _IconPath, int _Stacks, int _Price, bool _Stackable, bool _InStorage)
 { 
 	if (this != nullptr)
 	{
 		this->Icon = LoadObject<UTexture2D>(NULL, *_IconPath, NULL, LOAD_None, NULL);
 		this->ItemType = _ItemType;
-		this->Name.ToString(_Name);
+		this->Name = _Name;
 		this->Stacks = _Stacks;
 		this->Price = _Price;
 		this->Stackable = _Stackable;

@@ -35,11 +35,17 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void SetFullDescription();
 	UFUNCTION(BlueprintCallable)
+	FString GetFullDescription();
+	UFUNCTION(BlueprintCallable)
 	UMyClientOrder* GetCurrentOrder();
 	UFUNCTION(BlueprintCallable)
 	UMyClientOrder* GetPreviousOrder();
 	UFUNCTION(BlueprintCallable)
 	void UpdateClientDescriptions();
+	UFUNCTION(BlueprintCallable)
+	int GetNature();
+	UFUNCTION(BlueprintCallable)
+	FString GetName();
 
 protected:
 	// Called when the game starts or when spawned

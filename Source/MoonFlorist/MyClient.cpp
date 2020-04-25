@@ -42,304 +42,404 @@ void AMyClient::Init(int _iName, int _iNature)
 	switch (_iName)
 	{
 	case MARK:
-		sName = " Mark";
+		sName = "<Default> Mark</>";
+		sTitle = "";
 		break;
 	case PEPE:
-		sName = " Pepe";
+		sName = "<Default> Pepe</>";
+		sTitle = "";
 		break;
 	case KIKI:
-		sName = " KiKi";
+		sName = "<Default> KiKi</>";
+		sTitle = "";
 		break;
 	case SHIKA:
-		sName = " Shika";
+		sName = "<Default> Shika</>";
+		sTitle = "";
 		break;
 	case STEVEN:
-		sName = " Steven";
+		sName = "<Default> Steven</>";
+		sTitle = "";
 		break;
 	case IZZIE:
-		sName = " Izzie";
+		sName = "<Default> Izzie</>";
+		sTitle = "";
 		break;
 	case JONTY:
-		sName = " Jonty";
+		sName = "<Default> Jonty</>";
+		sTitle = "";
 		break;
 	case ALEX:
-		sName = " Alex";
+		sName = "<Default> Alex</>";
+		sTitle = "";
 		break;
 	case FRASER:
-		sName = " Fraser";
+		sName = "<Default> Fraser</>";
+		sTitle = "";
 		break;
 	case ROURKE:
-		sName = " Rourke";
+		sName = "<Default> Rourke</>";
+		sTitle = "";
 		break;
 	case ROWAN:
-		sName = " Rowan";
+		sName = "<Default> Rowan</>";
+		sTitle = "";
 		break;
 	case MICHAEL:
-		sName = " Michael";
+		sName = "<Default> Michael</>";
+		sTitle = "";
 		break;
 	case SHUNI:
-		sName = " Shuni";
+		sName = "<Default> Shuni</>";
+		sTitle = "";
 		break;
 	case JESSKALOO:
-		sName = " Jesska-Loo";
+		sName = "<Default> Jesska-Loo</>";
+		sTitle = "";
 		break;
 	case CASPIAN:
-		sName = " Caspian";
+		sName = "<Default> Caspian</>";
+		sTitle = "";
 		break;
 	case MATI:
-		sName = " Mati";
+		sName = "<Default> Mati</>";
+		sTitle = "";
 		break;
 	case JEREMY:
-		sName = " Jeremy";
+		sName = "<Default> Jeremy</>";
+		sTitle = "";
 		break;
 	case ROGER:
-		sName = " Roger";
+		sName = "<Default> Roger</>";
+		sTitle = "";
 		break;
 	case KERRY:
-		sName = " Kerry";
+		sName = "<Default> Kerry</>";
+		sTitle = "";
 		break;
 	case VIVIAN:
-		sName = " Vivian";
+		sName = "<Default> Vivian</>";
+		sTitle = "";
 		break;
 	case SALLY:
-		sName = " Sally";
+		sName = "<Default> Sally</>";
+		sTitle = "";
 		break;
 	case JAMES:
-		sName = " James";
+		sName = "<Default> James</>";
+		sTitle = "";
 		break;
 	case JIMBO:
-		sName = " Jimbo";
+		sName = "<Default> Jimbo</>";
+		sTitle = "";
 		break;
 	case DONUT:
-		sName = " Donut";
+		sName = "<Default> Donut</>";
+		sTitle = "";
 		break;
 	case JIMOTHY:
-		sName = " Jimothy";
+		sName = "<Default> Jimothy</>";
+		sTitle = "";
 		break;
 	case JASPOR:
-		sName = " Jaspor";
+		sName = "<Default> Jaspor</>";
+		sTitle = "";
 		break;
 	case CARLO:
-		sName = " Carlo";
+		sName = "<Default> Carlo</>";
+		sTitle = "";
 		break;
 	case LARISSA:
-		sName = " Larissa";
+		sName = "<Default> Larissa</>";
+		sTitle = "";
 		break;
 	case MARA:
-		sName = " Mara";
+		sName = "<Default> Mara</>";
+		sTitle = "";
 		break;
 	case CAROLINE:
-		sName = " Caroline";
+		sName = "<Default> Caroline</>";
+		sTitle = "";
 		break;
 	case SAMI:
-		sName = " Sami";
+		sName = "<Default> Sami</>";
+		sTitle = "";
 		break;
 	case KATE:
-		sName = " Kate";
+		sName = "<Default> Kate</>";
+		sTitle = "";
 		break;
 	case BENNET:
-		sName = " Bennet";
+		sName = "<Default> Bennet</>";
+		sTitle = "";
 		break;
 	case RYAN:
-		sName = " Ryan";
+		sName = "<Default> Ryan</>";
+		sTitle = "";
 		break;
 	case FRANCIS:
-		sName = " Francis";
+		sName = "<Default> Francis</>";
+		sTitle = "";
 		break;
 	case ELLIE:
-		sName = " Ellie";
+		sName = "<Default> Ellie</>";
+		sTitle = "";
 		break;
 	case REBEKKAH:
-		sName = " Rebekkah";
+		sName = "<Default> Rebekkah</>";
+		sTitle = "";
 		break;
 	case SOFIE:
-		sName = " Sofie";
+		sName = "<Default> Sofie</>";
+		sTitle = "";
 		break;
 	case ZANNI:
-		sName = " Zanni";
+		sName = "<Default> Zanni</>";
+		sTitle = "";
 		break;
 	case HOLLY:
-		sName = " Holly";
+		sName = "<Default> Holly</>";
+		sTitle = "";
 		break;
 	case EMMA:
-		sName = " Emma";
+		sName = "<Default> Emma</>";
+		sTitle = "";
 		break;
 	case ROBYN:
-		sName = " Robyn";
+		sName = "<Default> Robyn</>";
+		sTitle = "";
 		break;
 	case YULI:
-		sName = " Yuli";
+		sName = "<Default> Yuli</>";
+		sTitle = "";
 		break;
 	case PAULA:
-		sName = " Paula";
+		sName = "<Default> Paula</>";
+		sTitle = "";
 		break;
 	case MEG:
-		sName = " Meg";
+		sName = "<Default> Meg</>";
+		sTitle = "";
 		break;
 	case BERT:
-		sName = " Bert";
+		sName = "<Default> Bert</>";
+		sTitle = "";
 		break;
 	case MAXWELL:
-		sName = " Maxwell";
+		sName = "<Default> Maxwell</>";
+		sTitle = "";
 		break;
 	case ABIGAIL:
-		sName = " Abigail";
+		sName = "<Default> Abigail</>";
+		sTitle = "";
 		break;
 	case ALEXANDRA:
-		sName = " Alexandra";
+		sName = "<Default> Alexandra</>";
+		sTitle = "";
 		break;
 	case AMANDA:
-		sName = " Amanda";
+		sName = "<Default> Amanda</>";
+		sTitle = "";
 		break;
 	case ARIANNE:
-		sName = " Arianne";
+		sName = "<Default> Arianne</>";
+		sTitle = "";
 		break;
 	case BAILEY:
-		sName = " Bailey";
+		sName = "<Default> Bailey</>";
+		sTitle = "";
 		break;
 	case BEN:
-		sName = " Ben";
+		sName = "<Default> Ben</>";
+		sTitle = "";
 		break;
 	case BETH:
-		sName = " Beth";
+		sName = "<Default> Beth</>";
+		sTitle = "";
 		break;
 	case BLAIR:
-		sName = " Blair";
+		sName = "<Default> Blair</>";
+		sTitle = "";
 		break;
 	case BO:
-		sName = " Bo";
+		sName = "<Default>Bo</>";
+		sTitle = "";
 		break;
 	case BRIDGET:
-		sName = " Bridget";
+		sName = "<Default>Bridget</>";
+		sTitle = "";
 		break;
 	case BROOKE:
-		sName = " Brooke";
+		sName = "<Default> Brooke</>";
+		sTitle = "";
 		break;
 	case BECKY:
-		sName = " Becky";
+		sName = "<Default> Becky</>";
+		sTitle = "";
 		break;
 	case CLAIRE:
-		sName = " Claire";
+		sName = "<Default> Claire</>";
+		sTitle = "";
 		break;
 	case DAMIEN:
-		sName = " Damien";
+		sName = "<Default> Damien</>";
+		sTitle = "";
 		break;
 	case DANNY:
-		sName = " Danny";
+		sName = "<Default> Danny</>";
+		sTitle = "";
 		break;
 	case IVAN:
-		sName = " Ivan";
+		sName = "<Default> Ivan</>";
+		sTitle = "";
 		break;
 	case SAM:
-		sName = " Sam";
+		sName = "<Default> Sam</>";
+		sTitle = "";
 		break;
 	case SID:
-		sName = " Sid";
+		sName = "<Default> Sid</>";
+		sTitle = "";
 		break;
 	case TECE:
-		sName = " Tece";
+		sName = "<Default> Tece</>";
+		sTitle = "";
 		break;
 	case ASMA:
-		sName = " Asma";
+		sName = "<Default> Asma</>";
+		sTitle = "";
 		break;
 	case SHILPA:
-		sName = " Shilpa";
+		sName = "<Default> Shilpa</>";
+		sTitle = "";
 		break;
 	case SAMAH:
-		sName = " Samah";
+		sName = "<Default> Samah</>";
+		sTitle = "";
 		break;
 	case TAMRYN:
-		sName = " Tamryn";
+		sName = "<Default> Tamryn</>";
+		sTitle = "";
 		break;
 	case CALLAN:
-		sName = " Callan";
+		sName = "<Default> Callan</>";
+		sTitle = "";
 		break;
 	case FAWAD:
-		sName = " Fawad";
+		sName = "<Default> Fawad</>";
+		sTitle = "";
 		break;
 	case DAVID:
-		sName = " David";
+		sName = "<Default> David</>";
+		sTitle = "";
 		break;
 	case ANDREW:
-		sName = " Andrew";
+		sName = "<Default> Andrew</>";
+		sTitle = "";
 		break;
 	case SHANNON:
-		sName = " Shannon";
+		sName = "<Default> Shannon</>";
+		sTitle = "";
 		break;
 	case KAITLIN:
-		sName = " Kaitlin";
+		sName = "<Default> Kaitlin</>";
+		sTitle = "";
 		break;
 	case PIGEON:
-		sName = " Pigeon";
+		sName = "<Default> Pigeon</>";
+		sTitle = "";
 		break;
 	case BOOF:
-		sName = " Boof";
+		sName = "<Default> Boof</>";
+		sTitle = "";
 		break;
 	case ANNA:
-		sName = " Anna Rose";
+		sName = "<Default> Anna Rose</>";
+		sTitle = "";
 		break;
 	case KIMBERLY:
-		sName = " Kimmi";
+		sName = "<Default> Kimmi</>";
+		sTitle = "";
 		break;
 	case SASKIA:
-		sName = " Saskia";
+		sName = "<Default> Saskia</>";
+		sTitle = "";
 		break;
 	case STEPH:
-		sName = " Steph";
+		sName = "<Default> Steph</>";
+		sTitle = "";
 		break;
 	case PINKY:
-		sName = " Pinky";
+		sName = "<Default> Pinky</>";
+		sTitle = "";
 		break;
 	case SARAH:
-		sName = " Sarah";
+		sName = "<Default> Sarah</>";
+		sTitle = "";
 		break;
 	case SERENA:
-		sName = " Serena";
+		sName = "<Default> Serena</>";
+		sTitle = "";
 		break;
 	case IDA:
-		sName = " Ida";
+		sName = "<Default> Ida</>";
+		sTitle = "";
 		break;
 	case LAUREN:
-		sName = " Lauren";
+		sName = "<Default> Lauren</>";
+		sTitle = "";
 		break;
 	case KEIRA:
-		sName = " Keira";
+		sName = "<Default> Keira</>";
+		sTitle = "";
 		break;
 	case RIANNA:
-		sName = " Rianna";
+		sName = "<Default> Rianna</>";
+		sTitle = "";
 		break;
 	case ROSARIA:
-		sName = " Rosaria";
+		sName = "<Default> Rosaria</>";
+		sTitle = "";
 		break;
 	case JHARAIZ:
-		sName = " Jharaiz";
+		sName = "<Default> Jharaiz</>";
+		sTitle = "";
 		break;
 	case AMY:
-		sName = " Amy";
+		sName = "<Default> Amy</>";
+		sTitle = "";
 		break;
 	case JANELLE:
-		sName = " Janelle";
+		sName = "<Default> Janelle</>";
+		sTitle = "";
 		break;
 	case JORDAN:
-		sName = " Jordan";
+		sName = "<Default> Jordan</>";
+		sTitle = "";
 		break;
 	case HAMISH:
-		sName = " Hamish";
+		sName = "<Default> Hamish</>";
+		sTitle = "";
 		break;
 	case NIKKI:
-		sName = " Nikki";
+		sName = "<Default> Nikki</>";
+		sTitle = "";
 		break;
 	case PITCAM:
-		sName = " Pitcam";
+		sName = "<Default> Pitcam</>";
+		sTitle = "";
 		break;
 	case JUNIPER:
-		sName = " Juniper";
+		sName = "<Default> Juniper</>";
+		sTitle = "";
 		break;
 	case LOCHIE:
-		sName = " Lochie";
+		sName = "<Default> Lochie</>";
+		sTitle = "";
 		break;
 	case CALLUM:
-		sName = " Callum";
+		sName = "<Default> Callum</>";
+		sTitle = "";
 		break;
 	default:
 		break;
@@ -350,38 +450,38 @@ void AMyClient::Init(int _iName, int _iNature)
 	{
 	case NORMAL:
 		sTitle = "Boquet Order - " + sName;
-		sGreeting = "<RED>Hello my name is </>";
+		sGreeting = "Hello my name is ";
 		Dialogue1 = ". I would like to order a bouquet that feels";
-		Dialogue2 = "<Default>,";
-		Dialogue3 = "<Default> and";
+		Dialogue2 = "<Default>,</>";
+		Dialogue3 = "<Default> and</>";
 		break;
 	case FLIRTY:
 		sTitle = "Boquet Order - " + sName;
-		sGreeting = "<RED>Hey cutie uwu~ I'm </>";
+		sGreeting = "Hey cutie uwu~ I'm ";
 		Dialogue1 = ". I would love :D it if you could make me a bOwOquet that feels";
-		Dialogue2 = "<Default>,";
-		Dialogue3 = "<Default>. OH OH OH and also";
+		Dialogue2 = "<Default>,</>";
+		Dialogue3 = "<Default>. OH OH OH and also</>";
 		break;
 	case SHY:
 		sTitle = "Boquet Order - " + sName;
-		sGreeting = "<RED>Um... Hi, I am </>";
+		sGreeting = "Um... Hi, I am ";
 		Dialogue1 = ". can I get a gathering of flowers, I don't know, that feel";
-		Dialogue2 = "<Default>,";
-		Dialogue3 = "<Default> um and";
+		Dialogue2 = "<Default>,</>";
+		Dialogue3 = "<Default> um and</>";
 		break;
 	case GRUMPY:
 		sTitle = "Boquet Order - " + sName;
-		sGreeting = "<RED>WRITE THIS DOWN, my name is </>";
+		sGreeting = "WRITE THIS DOWN, my name is ";
 		Dialogue1 = ". Give me a bouquet that feels";
-		Dialogue2 = "<Default>,";
-		Dialogue3 = "<Default> and";
+		Dialogue2 = "<Default>,</>";
+		Dialogue3 = "<Default> and</>";
 		break;
 	case HIP:
 		sTitle = "Boquet Order - " + sName;
-		sGreeting = "<RED>Yo what up! It is </>";
+		sGreeting = "Yo what up! It is ";
 		Dialogue1 = ". Can you shaka brah me a brahquet that feels";
-		Dialogue2 = "<Default>,";
-		Dialogue3 = "<Default>. YO and";
+		Dialogue2 = "<Default>,</>";
+		Dialogue3 = "<Default>. YO and</>";
 		break;
 	default:
 		break;
@@ -425,13 +525,13 @@ void AMyClient::SetFullDescription()
 	switch (temp)
 	{
 	case 1:
-		sFullDescription = sGreeting + "<Default>" + LINE_TERMINATOR + "</>" + "<Default>" + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal();
+		  sFullDescription = sGreeting +  sName  + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal();
 		break;
 	case 2:
-		sFullDescription = sGreeting + "<Default>" + LINE_TERMINATOR + "</>" + "<Default>" + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[1]->GetGoal();
+		  sFullDescription = sGreeting + sName  + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[1]->GetGoal();
 		break;
 	case 3:
-		sFullDescription = sGreeting + "<Default>" + LINE_TERMINATOR + "</>" + "<Default>" + sName + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue2 + GetCurrentOrder()->GetGoals()[1]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[2]->GetGoal();
+		  sFullDescription = sGreeting + sName  + Dialogue1 + GetCurrentOrder()->GetGoals()[0]->GetGoal() + Dialogue2 + GetCurrentOrder()->GetGoals()[1]->GetGoal() + Dialogue3 + GetCurrentOrder()->GetGoals()[2]->GetGoal();
 		break;
 	default:
 		break;
@@ -460,32 +560,32 @@ void AMyClient::UpdateClientDescriptions()
 	case NORMAL:
 		sGreeting = "Hi, it is ";
 		Dialogue1 = " again. I would like a bouquet that feels";
-		Dialogue2 = "<Default>,";
-		Dialogue3 = "<Default> and";
+		Dialogue2 = "<Default>,</>";
+		Dialogue3 = "<Default> and</>";
 		break;
 	case FLIRTY:
 		sGreeting = "xX";
 		Dialogue1 = "Xx again~ O.o need a buwuquet hehe that is";
-		Dialogue2 = "<Default>,";
-		Dialogue3 = "<Default>. oooOOOooo and";
+		Dialogue2 = "<Default>,</>";
+		Dialogue3 = "<Default>. oooOOOooo and</>";
 		break;
 	case SHY:
 		sGreeting = "Uhhh, I don't know if you remember me. I am ";
 		Dialogue1 = ". can I please have a bouquet, if you have the time, that feels";
-		Dialogue2 = "<Default>,";
-		Dialogue3 = "<Default> um and";
+		Dialogue2 = "<Default>,</>";
+		Dialogue3 = "<Default> um and</>";
 		break;
 	case GRUMPY:
 		sGreeting = "IT IS ME AGAIN, ";
 		Dialogue1 = ". Give me a bouquet that feels";
-		Dialogue2 = "<Default>,";
-		Dialogue3 = "<Default> and";
+		Dialogue2 = "<Default>,</>";
+		Dialogue3 = "<Default> and</>";
 		break;
 	case HIP:
 		sGreeting = "Yo yo, mofo, remember ";
 		Dialogue1 = ". IT IS ME, need a broquet bro, that feels";
-		Dialogue2 = "<Default>,";
-		Dialogue3 = "<Default>. YO and";
+		Dialogue2 = "<Default>,</>";
+		Dialogue3 = "<Default>. YO and</>";
 		break;
 	default:
 		break;
@@ -495,3 +595,17 @@ void AMyClient::UpdateClientDescriptions()
 	SetFullDescription();
 }
 
+int AMyClient::GetNature()
+{
+	return iNature;
+}
+
+FString AMyClient::GetName()
+{
+	return sName;
+}
+
+FString AMyClient::GetFullDescription()
+{
+	return sFullDescription;
+}
