@@ -27,6 +27,12 @@ public:
 	void AddToFeedback(AMyEmail* _email);
 	UFUNCTION(BlueprintCallable)
 	void AddToSpam(AMyEmail* _email);
+	UFUNCTION(BlueprintCallable)
+	void RemoveFromOrders(int _id);
+	UFUNCTION(BlueprintCallable)
+	void RemoveFromFeedback(int _id);
+	UFUNCTION(BlueprintCallable)
+	void RemoveFromSpam(int _id);
 
 protected:
 	// Called when the game starts or when spawned

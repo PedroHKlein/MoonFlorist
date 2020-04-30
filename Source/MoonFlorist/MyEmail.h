@@ -24,7 +24,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	UFUNCTION(BlueprintCallable)
-	void Feedbackinit(AMyClient* _client ,TArray<UMyGoal*> _gSuccess, TArray<UMyGoal*> _gFailure, int _iScore);
+	void Feedbackinit(AMyClient* _client ,TArray<UMyGoal*> _gSuccess, TArray<UMyGoal*> _gFailure, int _iScore, int _iWorth);
 	UFUNCTION(BlueprintCallable)
 	void Orderinit(AMyClient* _client);
 	UFUNCTION(BlueprintCallable)
@@ -39,6 +39,8 @@ public:
 	FString GetClientName();
 	UFUNCTION(BlueprintCallable)
 	bool GetDelivered();
+	UFUNCTION(BlueprintCallable)
+	int GetWorth();
 
 
 private:
@@ -64,6 +66,8 @@ private:
 	float fTime;
 	UPROPERTY()
 	bool bDelivered = true;
+	UPROPERTY()
+	int iWorth;
 
 
 	UPROPERTY()

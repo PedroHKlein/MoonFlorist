@@ -55,3 +55,17 @@ void AMyEmailManager::AddToSpam(AMyEmail* _email)
 	Spam.Push(_email);
 }
 
+void AMyEmailManager::RemoveFromOrders(int _id)
+{
+	Orders.RemoveAt(_id);
+}
+
+void AMyEmailManager::RemoveFromFeedback(int _id)
+{
+	Feedback.RemoveAt(_id);
+}
+
+void AMyEmailManager::RemoveFromSpam(int _id)
+{
+	Spam.RemoveAt(_id);
+}
