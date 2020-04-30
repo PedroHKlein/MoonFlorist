@@ -14,7 +14,7 @@ ABedroomPanel::ABedroomPanel()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	Root = CreateDefaultSubobject<USceneComponent>("Root");
-	Root->SetupAttachment(RootComponent);
+	SetRootComponent(Root);
 	Root->SetRelativeLocation(FVector(0.f, 0.f, 0.f));
 
 	Hours = CreateDefaultSubobject<UTextRenderComponent>("Hours Text");
