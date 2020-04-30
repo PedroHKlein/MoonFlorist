@@ -47,7 +47,7 @@ void AMyEmail::Feedbackinit(AMyClient* _client, TArray<UMyGoal*> _gSuccess, TArr
 	float scoretemp = 1;
 	bDelivered = false;
 	//Randomise delivery times
-	fTime = FMath::RandRange(60, 61);
+	fTime = FMath::RandRange(120, 180);
 
 	sClientName = Client->GetName();
 
@@ -504,17 +504,17 @@ void AMyEmail::GenerateFeedbackEmail()
 {
 	if (GoalFailure.Num() == 0)
 	{
-		sFullEmail = sGood + LINE_TERMINATOR + LINE_TERMINATOR + sOverall + LINE_TERMINATOR + LINE_TERMINATOR + Client->GetName() + LINE_TERMINATOR + "Worth: " + FString::FromInt(iWorth);
+		sFullEmail = sGood + LINE_TERMINATOR + LINE_TERMINATOR + sOverall + LINE_TERMINATOR + LINE_TERMINATOR + Client->GetName() + LINE_TERMINATOR + "Worth: $" + FString::FromInt(iWorth);
 	}
 	else
 	{
 		if (GoalSuccess.Num() == 0)
 		{
-			sFullEmail = sBad + LINE_TERMINATOR + LINE_TERMINATOR + sOverall + LINE_TERMINATOR + LINE_TERMINATOR + Client->GetName() + LINE_TERMINATOR + "Worth: " + FString::FromInt(iWorth);
+			sFullEmail = sBad + LINE_TERMINATOR + LINE_TERMINATOR + sOverall + LINE_TERMINATOR + LINE_TERMINATOR + Client->GetName() + LINE_TERMINATOR + "Worth: $" + FString::FromInt(iWorth);
 		}
 		else
 		{
-			sFullEmail = sBad + LINE_TERMINATOR + LINE_TERMINATOR + sGood + LINE_TERMINATOR + LINE_TERMINATOR + sOverall + LINE_TERMINATOR + LINE_TERMINATOR + Client->GetName() + LINE_TERMINATOR + "Worth: " + FString::FromInt(iWorth);
+			sFullEmail = sBad + LINE_TERMINATOR + LINE_TERMINATOR + sGood + LINE_TERMINATOR + LINE_TERMINATOR + sOverall + LINE_TERMINATOR + LINE_TERMINATOR + Client->GetName() + LINE_TERMINATOR + "Worth: $" + FString::FromInt(iWorth);
 		}
 	}
 }

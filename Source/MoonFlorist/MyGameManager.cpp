@@ -185,7 +185,7 @@ void AMyGameManager::CompleteOrder()
 	if (CurrentBouquet->CheckFull())
 	{
 		CurrentBouquet->GradeBouquet();
-		AddMoney(CurrentBouquet->GetWorth());
+		//AddMoney(CurrentBouquet->GetWorth());
 		setLastBouquetWorth();
 		AMyEmail* temp = GetWorld()->SpawnActor<AMyEmail>(AMyEmail::StaticClass());
 		temp->Feedbackinit(CurrClient, CurrentBouquet->GetSuccess(), CurrentBouquet->GetFailure(), (CurrentBouquet->GetWorth() - 70) / 10, CurrentBouquet->GetWorth());
