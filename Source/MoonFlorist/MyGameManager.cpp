@@ -26,6 +26,7 @@ void AMyGameManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	//Test(DeltaTime);
+	ProcessMoney();
 }
 
 void AMyGameManager::NewClient()
@@ -156,7 +157,7 @@ void AMyGameManager::BuySeed(int _iID)
 
 void AMyGameManager::AddMoney(int _iMoolah)
 {
-	iMoney = iMoney + _iMoolah;
+	iTempMoney = iTempMoney + _iMoolah;
 }
 
 UMyClientOrder* AMyGameManager::GetOrder()
@@ -184,10 +185,10 @@ void AMyGameManager::CompleteOrder()
 	if (CurrentBouquet->CheckFull())
 	{
 		CurrentBouquet->GradeBouquet();
-		AddMoney(CurrentBouquet->GetWorth());
+		//AddMoney(CurrentBouquet->GetWorth());
 		setLastBouquetWorth();
 		AMyEmail* temp = GetWorld()->SpawnActor<AMyEmail>(AMyEmail::StaticClass());
-		temp->Feedbackinit(CurrClient, CurrentBouquet->GetSuccess(), CurrentBouquet->GetFailure(), (CurrentBouquet->GetWorth() - 70) / 10);
+		temp->Feedbackinit(CurrClient, CurrentBouquet->GetSuccess(), CurrentBouquet->GetFailure(), (CurrentBouquet->GetWorth() - 70) / 10, CurrentBouquet->GetWorth());
 		EmailLists->AddToFeedback(temp);
 		CurrClient->UpdateClientDescriptions();
 		NewClient();
@@ -241,4 +242,30 @@ AMyClient* AMyGameManager::GetCurrClient()
 AMyEmailManager* AMyGameManager::GetEmailManager()
 {
 	return EmailLists;
+}
+
+void AMyGameManager::ProcessMoney()
+{
+	if (iTempMoney > 0)
+	{
+		iTempMoney--;
+		iMoney++;
+	}
+}
+
+int AMyGameManager::GetTempMoney()
+{
+	return iTempMoney;
+}
+
+FString AMyGameManager::MoneyString()
+{
+	if (iTempMoney > 0)
+	{
+		return "$" + FString::FromInt(iTempMoney) + " + $" + FString::FromInt(iMoney);
+	}
+	else
+	{
+		return "$" + FString::FromInt(iMoney);
+	}
 }
