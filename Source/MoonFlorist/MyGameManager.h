@@ -68,6 +68,12 @@ public:
 	bool HandsCanDeliver;
 	UPROPERTY(BlueprintReadWrite, Category = "Bouquet Capsule")
 	bool ConstructCapsule;
+	UFUNCTION(BlueprintCallable)
+	void ProcessMoney();
+	UFUNCTION(BlueprintCallable)
+	int GetTempMoney();
+	UFUNCTION(BlueprintCallable)
+	FString MoneyString();
 	
 
 
@@ -97,4 +103,6 @@ private:
 	int iLastBoquetWorth;
 	UPROPERTY()
 	AMyEmailManager* EmailLists;
+	UPROPERTY()
+	int iTempMoney = 0;
 };
