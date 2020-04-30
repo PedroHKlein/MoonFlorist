@@ -25,6 +25,8 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite)
 	class AMoonFloristCharacter* PlayerRef;
 public:	
 	// Called every frame
