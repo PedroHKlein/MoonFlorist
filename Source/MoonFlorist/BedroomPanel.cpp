@@ -6,8 +6,6 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet/KismetTextLibrary.h"
 #include "UObject/ConstructorHelpers.h"
-
-#include "UObject/ConstructorHelpers.h"
 #include "Math/Color.h"
 
 
