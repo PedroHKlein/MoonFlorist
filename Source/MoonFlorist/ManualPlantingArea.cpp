@@ -6,7 +6,6 @@
 #include "UObject/ConstructorHelpers.h"
 #include "Camera/CameraComponent.h"
 #include "Components/WidgetComponent.h"
-#include "GameFramework/SpringArmComponent.h"
 // Sets default values
 AManualPlantingArea::AManualPlantingArea()
 {
@@ -16,12 +15,9 @@ AManualPlantingArea::AManualPlantingArea()
 	PlantingArea = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	PlantingArea->SetupAttachment(RootComponent);
 	PlantingArea->SetRelativeLocation(FVector(0.f, 0.f, 0.f));
-	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
-	SpringArm->SetupAttachment(RootComponent);
-	SpringArm->SetRelativeRotation(FRotator(0.f, -45.f, 0.f));
 
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
-	Camera->SetupAttachment(SpringArm);
+	Camera->SetupAttachment(RootComponent);
 
 	WidgetComp = CreateDefaultSubobject<UWidgetComponent>(TEXT("Radial Menu"));
 	WidgetComp->SetupAttachment(Camera);

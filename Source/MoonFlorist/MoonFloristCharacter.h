@@ -29,18 +29,16 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Mouse Sens")
 	float MouseSensitivity;
-
-	/*Money*/
+	UFUNCTION(BlueprintCallable, Category = "Raycast")
+	FHitResult RaycastCheck();
 	UPROPERTY(BlueprintReadWrite, VisibleDefaultsOnly, Category = "Currency")
 	int CosmoCoins;
 	UPROPERTY(BlueprintReadWrite, VisibleDefaultsOnly, Category = "Currency")
 	int StartCoins;
 
-	/*Raycast*/
-	UFUNCTION(BlueprintCallable, Category = "Raycast")
-		FHitResult RaycastCheck();
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Interaction")
-		FHitResult m_Hitsdata;
+	FHitResult m_Hitsdata;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Interaction", meta = (AllowPrivateAccess = "true"))
 	float RayDisCheck;
 	bool CanClick;
@@ -55,7 +53,7 @@ public:
 	class AInteractableActor* CurrentInteractActor;
 
 	UPROPERTY(EditAnywhere, Category = "Interaction")
-	float RayCastAcceptanceDis;
+		float RayCastAcceptanceDis;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Storage")
 	class AStorage* PlayerStorage;
