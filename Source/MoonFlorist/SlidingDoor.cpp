@@ -25,7 +25,6 @@ ASlidingDoor::ASlidingDoor()
 	TriggerBox->SetupAttachment(DoorFrame);
 	TriggerBox->OnComponentBeginOverlap.AddDynamic(this, &ASlidingDoor::OnOverlapBegin);
 	TriggerBox->OnComponentEndOverlap.AddDynamic(this, &ASlidingDoor::OnOverlapEnd);
-	//TriggerBox->OnComponentActivated.AddDynamic(this, &)
 	
 	LeftDoor = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("LeftDoor"));
 	LeftDoor->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/ModularSet/SM_Door_Left.SM_Door_Left")).Object);
@@ -86,18 +85,15 @@ void ASlidingDoor::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* O
 {
 	if (OtherActor && (OtherActor != this) && OtherComp)
 	{
-
-		if (GEngine) 
+		if (GEngine)
 		{
 			GEngine->AddOnScreenDebugMessage(0, 2.0f, FColor::Purple, TEXT("Actor Begin Overlap"));
-			
 		}
-		if (!Open)
-			OpenSound->Play();
+
 		if (!bLocked)
 		{
 			Open = true;
-		
+			OpenSound->Play();
 		}
 	}
 }
@@ -107,18 +103,14 @@ void ASlidingDoor::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* Oth
 
 	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr))
 	{
-	
-		GetOverlappingActors(Array);
-		if (Array.Num() < 1)
+		if (GEngine)
 		{
-			if (GEngine)
-			{
-				GEngine->AddOnScreenDebugMessage(0, 2.0f, FColor::Purple, TEXT("Actor End Overlap"));
-			}
-			Open = false;
-			CloseSound->Play();
+			GEngine->AddOnScreenDebugMessage(0, 2.0f, FColor::Purple, TEXT("Actor End Overlap"));
 		}
+		Open = false;
+		CloseSound->Play();
 	}
+	
 }
 
 // Called every frame
