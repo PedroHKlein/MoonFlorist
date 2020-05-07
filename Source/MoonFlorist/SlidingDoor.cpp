@@ -25,7 +25,7 @@ ASlidingDoor::ASlidingDoor()
 	TriggerBox->SetupAttachment(DoorFrame);
 	TriggerBox->OnComponentBeginOverlap.AddDynamic(this, &ASlidingDoor::OnOverlapBegin);
 	TriggerBox->OnComponentEndOverlap.AddDynamic(this, &ASlidingDoor::OnOverlapEnd);
-	//TriggerBox->OnComponentActivated.AddDynamic(this, &)
+
 	
 	LeftDoor = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("LeftDoor"));
 	LeftDoor->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/ModularSet/SM_Door_Left.SM_Door_Left")).Object);
@@ -43,13 +43,13 @@ ASlidingDoor::ASlidingDoor()
 	FVector RightDoorLoc = RightDoor->RelativeLocation;
 	
 	//Sound
-	OpenCue = ConstructorHelpers::FObjectFinder<USoundCue>(TEXT("'/Game/Sound/S_DoorOpen_Cue.S_DoorOpen_Cue'")).Object;
+	OpenCue = ConstructorHelpers::FObjectFinder<USoundCue>(TEXT("'/Game/Sound/SoundCues/S_DoorOpen_Cue.S_DoorOpen_Cue'")).Object;
 
 	OpenSound = CreateDefaultSubobject<UAudioComponent>("Open Door AudioComp");
 	OpenSound->bAutoActivate = false;
 	OpenSound->SetupAttachment(RootComponent);
 
-	CloseCue = ConstructorHelpers::FObjectFinder<USoundCue>(TEXT("'/Game/Sound/S_DoorClose_Cue.S_DoorClose_Cue'")).Object;
+	CloseCue = ConstructorHelpers::FObjectFinder<USoundCue>(TEXT("'/Game/Sound/SoundCues/S_DoorClose_Cue.S_DoorClose_Cue'")).Object;
 
 	CloseSound = CreateDefaultSubobject<UAudioComponent>("Close Door AudioComp");
 	CloseSound->bAutoActivate = false;
@@ -92,7 +92,7 @@ void ASlidingDoor::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* O
 			GEngine->AddOnScreenDebugMessage(0, 2.0f, FColor::Purple, TEXT("Actor Begin Overlap"));
 			
 		}
-		if (!Open)
+		if (!Open && !bLocked)
 			OpenSound->Play();
 		if (!bLocked)
 		{
@@ -109,7 +109,7 @@ void ASlidingDoor::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* Oth
 	{
 	
 		GetOverlappingActors(Array);
-		if (Array.Num() < 1)
+		if (Array.Num() < 1 && !bLocked)
 		{
 			if (GEngine)
 			{

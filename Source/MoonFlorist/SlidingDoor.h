@@ -40,7 +40,7 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = "SlidingDoor")
 	class USoundCue* CloseCue;
 	TArray<AActor*>Array;
-	UPROPERTY(EditAnywhere, Category = "SlidingDoor")
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "SlidingDoor")
 	bool bLocked = false;
 	bool Open;
 protected:
