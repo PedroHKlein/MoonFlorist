@@ -20,6 +20,7 @@
 #include "DeliveryTerminal.h"
 #include "ManualPlantingArea.h"
 #include "AI_HANDS.h"
+#include "Sound.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -152,7 +153,7 @@ void AMoonFloristCharacter::DetectInteraction()
 		{
 			if (flipflop)
 			{
-
+				/*When the player interacts */
 				PlayerController->SetViewTargetWithBlend(CurrentInteractActor, 1.0f, VTBlend_EaseIn, 2.0f);
 				PlayerController->SetIgnoreMoveInput(true);
 				PlayerController->SetIgnoreLookInput(true);
@@ -165,6 +166,7 @@ void AMoonFloristCharacter::DetectInteraction()
 			}
 			else if(!flipflop)
 			{
+				/*When player exits interaction*/
 				PlayerController->SetViewTargetWithBlend(UGameplayStatics::GetPlayerCharacter(this,0), 1.0f, VTBlend_EaseOut, 2.0f);
 				PlayerController->SetIgnoreMoveInput(false);
 				PlayerController->SetIgnoreLookInput(false);
@@ -183,10 +185,18 @@ void AMoonFloristCharacter::DetectInteraction()
 			if (Window->Open)
 			{
 				Window->Open = false;
+				if (Window->OpenWindowCue != nullptr)
+				{
+					Window->AudioPlayer->PlaySoundOnce(Window->OpenWindowCue, Window->GetRootComponent());
+				}
 			}
 			else
 			{
 				Window->Open = true;
+				if (Window->CloseWindowCue != nullptr)
+				{
+					Window->AudioPlayer->PlaySoundOnce(Window->CloseWindowCue, Window->GetRootComponent());
+				}
 			}
 
 		}
