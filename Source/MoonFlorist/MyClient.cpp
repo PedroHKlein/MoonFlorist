@@ -609,3 +609,20 @@ FString AMyClient::GetFullDescription()
 {
 	return sFullDescription;
 }
+
+void AMyClient::ToggleServeable()
+{
+	if (bCanServe)
+	{
+		bCanServe = false;
+	}
+	else
+	{
+		bCanServe = true;
+	}
+}
+
+bool AMyClient::GetServeable()
+{
+	return bCanServe;
+}

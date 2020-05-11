@@ -27,19 +27,29 @@ void AMyGameManager::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	//Test(DeltaTime);
 	ProcessMoney();
+	NewClientRand(DeltaTime);
 }
 
 void AMyGameManager::NewClient()
 {
+	AMyEmail* temp;
 	if (CurrClient == NULL)
 	{
 		CurrClient = ClientList->GetClients()[FMath::RandRange(0, 99)];
 		CurrClient->SetFullDescription();
+		CurrClient->ToggleServeable();
+		temp = GetWorld()->SpawnActor<AMyEmail>(AMyEmail::StaticClass());
+		temp->Orderinit(CurrClient);
+		EmailLists->AddToOrders(temp);
 	}
 	else
 	{
 		CurrClient = ClientList->GetClients()[FMath::RandRange(0, 99)];
 		CurrClient->SetFullDescription();
+		CurrClient->ToggleServeable();
+		temp = GetWorld()->SpawnActor<AMyEmail>(AMyEmail::StaticClass());
+		temp->Orderinit(CurrClient);
+		EmailLists->AddToOrders(temp);
 	}
 
 	if (CurrentClient == NULL)
@@ -56,6 +66,41 @@ void AMyGameManager::NewClient()
 	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(*FString(CurrentClient->GetFullDescription()), false));
 
 	
+}
+
+void AMyGameManager::NewClientRand(float _time)
+{
+	AMyEmail* temp;
+	AMyClient* Tempy;
+
+	if (fCurrTimeForNewClient >= fTimeForNewClient)
+	{
+		if (CurrClient == NULL)
+		{
+
+			Tempy = ClientList->GetClients()[FMath::RandRange(0, 99)];
+			Tempy->SetFullDescription();
+			Tempy->ToggleServeable();
+			temp = GetWorld()->SpawnActor<AMyEmail>(AMyEmail::StaticClass());
+			temp->Orderinit(CurrClient);
+			EmailLists->AddToOrders(temp);
+		}
+		else
+		{
+			Tempy = ClientList->GetClients()[FMath::RandRange(0, 99)];
+			Tempy->SetFullDescription();
+			Tempy->ToggleServeable();
+			temp = GetWorld()->SpawnActor<AMyEmail>(AMyEmail::StaticClass());
+			temp->Orderinit(CurrClient);
+			EmailLists->AddToOrders(temp);
+		}
+		fCurrTimeForNewClient = 0.0;
+		fTimeForNewClient = FMath::RandRange(60.0f, 180.0f);
+	}
+	else
+	{
+		fCurrTimeForNewClient = fCurrTimeForNewClient + _time;
+	}
 }
 
 void AMyGameManager::NewBouquet()
@@ -191,11 +236,9 @@ void AMyGameManager::CompleteOrder()
 		temp->Feedbackinit(CurrClient, CurrentBouquet->GetSuccess(), CurrentBouquet->GetFailure(), (CurrentBouquet->GetWorth() - 70) / 10, CurrentBouquet->GetWorth());
 		EmailLists->AddToFeedback(temp);
 		CurrClient->UpdateClientDescriptions();
+		CurrClient->ToggleServeable();
 		NewClient();
 		NewBouquet();
-		temp = GetWorld()->SpawnActor<AMyEmail>(AMyEmail::StaticClass());
-		temp->Orderinit(CurrClient);
-		EmailLists->AddToOrders(temp);
 	}
 }
 
@@ -211,12 +254,12 @@ void AMyGameManager::init()
 	GoalLists->init();
 	ClientList = GetWorld()->SpawnActor<AMyClientManager>(AMyClientManager::StaticClass());
 	ClientList->init();
-	NewClient();
-	NewBouquet();
 	EmailLists = GetWorld()->SpawnActor<AMyEmailManager>(AMyEmailManager::StaticClass());
-	AMyEmail* temp = GetWorld()->SpawnActor<AMyEmail>(AMyEmail::StaticClass());
-	temp->Orderinit(CurrClient);
-	EmailLists->AddToOrders(temp);
+	for (int i = 0; i < 3; i++)
+	{
+		NewClient();
+	}
+	NewBouquet();
 }
 
 AMyGameManager* AMyGameManager::GetInstance()

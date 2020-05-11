@@ -46,6 +46,10 @@ public:
 	int GetNature();
 	UFUNCTION(BlueprintCallable)
 	FString GetName();
+	UFUNCTION(BlueprintCallable)
+	void ToggleServeable();
+	UFUNCTION(BlueprintCallable)
+	bool GetServeable();
 
 protected:
 	// Called when the game starts or when spawned
@@ -73,6 +77,8 @@ protected:
 	UMyClientOrder* CurrentOrder;
 	UPROPERTY()
 	UMyClientOrder* LastOrder;
+	UPROPERTY()
+	bool bCanServe = false;
 
 public:	
 	// Called every frame
