@@ -105,4 +105,6 @@ private:
 	AMyEmailManager* EmailLists;
 	UPROPERTY()
 	int iTempMoney = 0;
+	UPROPERTY()
+	TArray<UMyBouquet*> BouquetList;
 };
