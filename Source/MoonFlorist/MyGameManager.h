@@ -74,6 +74,8 @@ public:
 	int GetTempMoney();
 	UFUNCTION(BlueprintCallable)
 	FString MoneyString();
+	UFUNCTION(BlueprintCallable)
+	void NewClientRand(float _time);
 	
 
 
@@ -107,4 +109,8 @@ private:
 	int iTempMoney = 0;
 	UPROPERTY()
 	TArray<UMyBouquet*> BouquetList;
+	UPROPERTY()
+	float fTimeForNewClient = 60.0f;
+	UPROPERTY()
+	float fCurrTimeForNewClient = 0.0f;
 };
