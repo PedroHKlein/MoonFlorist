@@ -18,6 +18,13 @@ public:
 	UPROPERTY(VisibleAnywhere,BlueprintReadOnly, Category = "SlidingWindow")
 	bool Open;
 
+	/*Audio*/
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SlidingWindow")
+	class USoundCue* OpenWindowCue;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SlidingWindow")
+	class USoundCue* CloseWindowCue;
+
+	class Sound* AudioPlayer;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -39,7 +46,8 @@ protected:
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "SlidingWindow", meta = (AllowPrivateAccess = "true"))
 		class UStaticMeshComponent* Switch;
-	
+
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
