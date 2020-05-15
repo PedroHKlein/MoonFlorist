@@ -79,51 +79,51 @@ void AMoonFloristCharacter::StartItems()
 #pragma region FLOWERS
 	//Scarlet Flower
 	AItem* Scarlet = NewObject<AItem>();
-	Scarlet->CreateItem(EItemType::IT_Flower, "RedFlower", "/Game/User_Interface/Storage/StorageAssets/ScarletFlower.ScarletFlower", 10, 15);
+	Scarlet->CreateItem(EItemType::IT_Flower, "Scarletflower", "/Game/User_Interface/Storage/StorageAssets/ScarletFlower.ScarletFlower", 10, 15);
 	PlayerStorage->AddItem(Scarlet);
 	//Cobalt Flower
 	AItem* Cobalt = NewObject<AItem>();
-	Cobalt->CreateItem(EItemType::IT_Flower, "BlueFlower", "/Game/User_Interface/Storage/StorageAssets/CobaltFlower.CobaltFlower", 10, 15);
+	Cobalt->CreateItem(EItemType::IT_Flower, "Cobaltflower", "/Game/User_Interface/Storage/StorageAssets/CobaltFlower.CobaltFlower", 10, 15);
 	PlayerStorage->AddItem(Cobalt);
 	//Golden Flower
 	AItem* Golden = NewObject<AItem>();
-	Golden->CreateItem(EItemType::IT_Flower, "YellowFlower", "/Game/User_Interface/Storage/StorageAssets/GoldenFlower.GoldenFlower", 10, 15);
+	Golden->CreateItem(EItemType::IT_Flower, "Goldenflower", "/Game/User_Interface/Storage/StorageAssets/GoldenFlower.GoldenFlower", 10, 15);
 	PlayerStorage->AddItem(Golden);
 	//Silver Flower
 	AItem* Silver = NewObject<AItem>();
-	Silver->CreateItem(EItemType::IT_Flower, "WhiteFlower", "/Game/User_Interface/Storage/StorageAssets/SilverFlower.SilverFlower", 10, 35);
+	Silver->CreateItem(EItemType::IT_Flower, "Silverflower", "/Game/User_Interface/Storage/StorageAssets/SilverFlower.SilverFlower", 5, 35);
 	PlayerStorage->AddItem(Silver);
 #pragma endregion
 #pragma region SEEDS
 	//Scarlet Seed
 	AItem* ScarletSeeds = NewObject<AItem>();
-	ScarletSeeds->CreateItem(EItemType::IT_Seed, "Red Seed", "/Game/User_Interface/Storage/StorageAssets/ScarletSeeds.ScarletSeeds", 5, 15);
+	ScarletSeeds->CreateItem(EItemType::IT_Seed, "Scarletseed", "/Game/User_Interface/Storage/StorageAssets/ScarletSeeds.ScarletSeeds", 5, 15);
 	PlayerStorage->AddItem(ScarletSeeds);
 	//Cobalt Seed
 	AItem* CobaltSeeds = NewObject<AItem>();
-	CobaltSeeds->CreateItem(EItemType::IT_Seed, "Blue Seed", "/Game/User_Interface/Storage/StorageAssets/CobaltSeeds.CobaltSeeds", 5, 15);
+	CobaltSeeds->CreateItem(EItemType::IT_Seed, "Cobaltseed", "/Game/User_Interface/Storage/StorageAssets/CobaltSeeds.CobaltSeeds", 5, 15);
 	PlayerStorage->AddItem(CobaltSeeds);
 	//Golden Seed
 	AItem* GoldenSeeds = NewObject<AItem>();
-	GoldenSeeds->CreateItem(EItemType::IT_Seed, "Yellow Seed", "/Game/User_Interface/Storage/StorageAssets/GoldenSeeds.GoldenSeeds", 5, 35);
+	GoldenSeeds->CreateItem(EItemType::IT_Seed, "Goldenseed", "/Game/User_Interface/Storage/StorageAssets/GoldenSeeds.GoldenSeeds", 5, 35);
 	PlayerStorage->AddItem(GoldenSeeds);
 	//Silver Seed
 	AItem* SilverSeeds = NewObject<AItem>();
-	SilverSeeds->CreateItem(EItemType::IT_Seed, "White Seed", "/Game/User_Interface/Storage/StorageAssets/SilverSeeds.SilverSeeds", 5, 35);
+	SilverSeeds->CreateItem(EItemType::IT_Seed, "Silverseed", "/Game/User_Interface/Storage/StorageAssets/SilverSeeds.SilverSeeds",3, 35);
 	PlayerStorage->AddItem(SilverSeeds);
 #pragma endregion
 #pragma region FERTILIZER
 	//Terran(Earth)
 	AItem* Terran = NewObject<AItem>();
-	Terran->CreateItem(EItemType::IT_Fertilizer, "Terran Fertilizer", "/Game/User_Interface/Storage/StorageAssets/EarthFertiliser.EarthFertiliser", 5, 15);
+	Terran->CreateItem(EItemType::IT_Fertilizer, "Terranfertilizer", "/Game/User_Interface/Storage/StorageAssets/EarthFertiliser.EarthFertiliser", 5, 15);
 	PlayerStorage->AddItem(Terran);
 	//Moon
 	AItem* Moon = NewObject<AItem>(); 
-	Moon->CreateItem(EItemType::IT_Fertilizer, "Moon Fertilizer", "/Game/User_Interface/Storage/StorageAssets/MoonFertiliser.MoonFertiliser", 3, 25);
+	Moon->CreateItem(EItemType::IT_Fertilizer, "Moonfertilizer", "/Game/User_Interface/Storage/StorageAssets/MoonFertiliser.MoonFertiliser", 3, 25);
 	PlayerStorage->AddItem(Moon);
 	//Comet
 	AItem* Comet = NewObject<AItem>();
-	Comet->CreateItem(EItemType::IT_Fertilizer, "Comet Fertilizer", "/Game/User_Interface/Storage/StorageAssets/CometFertiliser.CometFertiliser", 1, 40);
+	Comet->CreateItem(EItemType::IT_Fertilizer, "Cometfertilizer", "/Game/User_Interface/Storage/StorageAssets/CometFertiliser.CometFertiliser", 1, 40);
 	PlayerStorage->AddItem(Comet);
 	
 #pragma endregion
@@ -267,7 +267,7 @@ FHitResult AMoonFloristCharacter::RaycastCheck()
 	FVector fwd = FirstPersonCameraComponent->GetForwardVector();
 	FVector endTrace = ((fwd * 1000.0f) + start);
 	FCollisionQueryParams CollisionParams;
-	DrawDebugLine(GetWorld(), start, endTrace, FColor::Orange, false);
+	//DrawDebugLine(GetWorld(), start, endTrace, FColor::Orange, false);
 	bool isHit = GetWorld()->LineTraceSingleByChannel(HitData, start, endTrace, ECC_Visibility, CollisionParams);
 
 	if (isHit)
