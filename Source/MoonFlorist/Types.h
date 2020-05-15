@@ -15,3 +15,22 @@ enum class EHandsStates : uint8
 	//Goes and delivers the bouquet
 	HS_DeliveryMode,
 };
+//Different item types in the game
+UENUM(BlueprintType)
+enum class EItems : uint8
+{
+	Scarletflower,
+	Cobaltflower,
+	Goldenflower,
+	Silverflower,
+	Scarletseed,
+	Cobaltseed,
+	Goldenseed,
+	Silverseed,
+	Cometfertilizer,
+	Terranfertilizer,
+	Moonfertilizer,
+	Noneselected,
+};
+
+
