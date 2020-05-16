@@ -71,14 +71,23 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Interaction")
 	void OnClick();
+	//Manual Planting
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "PlantingArea Interaction")
+	FHitResult HitResult;
+
+	UPROPERTY(BlueprintReadWrite, Category = "PlantingArea Interaction")
+	bool WateringMode;
+
+	UPROPERTY(BlueprintReadWrite, Category = "PlantingArea Interaction")
+	bool FertilizingMode;
+
+	UPROPERTY(BlueprintReadWrite, Category = "PlantingArea Interaction")
+	bool CanPlant;
 
 protected:
 	virtual void BeginPlay();
 	//Beginning Items that the player has
 	void StartItems();
-
-
-protected:
 	
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);
@@ -86,9 +95,6 @@ protected:
 	/** Handles strafing movement, left and right */
 	void MoveRight(float Val);
 
-	
-	
-protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
 

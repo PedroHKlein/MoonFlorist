@@ -7,6 +7,11 @@
 #include "Camera/CameraComponent.h"
 #include "Components/WidgetComponent.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Components/InputComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "MoonFloristCharacter.h"
+#include "Engine/EngineTypes.h"
+
 // Sets default values
 AManualPlantingArea::AManualPlantingArea()
 {
@@ -25,12 +30,18 @@ AManualPlantingArea::AManualPlantingArea()
 
 	WidgetComp = CreateDefaultSubobject<UWidgetComponent>(TEXT("Radial Menu"));
 	WidgetComp->SetupAttachment(Camera);
-}
+
+} 
 
 // Called when the game starts or when spawned
 void AManualPlantingArea::BeginPlay()
 {
 	Super::BeginPlay();
+	if (!PlayerRef)
+	{
+		PlayerRef = Cast<AMoonFloristCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+
+	}
 	
 }
 
@@ -41,3 +52,25 @@ void AManualPlantingArea::Tick(float DeltaTime)
 
 }
 
+void AManualPlantingArea::PlantingAreaInteraction()
+{
+	if (PlayerRef)
+	{
+		if (PlayerRef->CurrentInteractActor && PlayerRef->Interacting)
+		{
+			
+			LocationUnderCursor = PlayerRef->HitResult.Location;
+			if (Cast<AManualPlantingArea>(PlayerRef->HitResult.GetActor()))
+			{
+
+			}
+		
+
+			
+		}
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("PlantingArea: No Actor"));
+		}
+	}
+}

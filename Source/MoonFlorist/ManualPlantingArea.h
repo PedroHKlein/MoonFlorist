@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "InteractableActor.h"
-//#include "Components/InputComponent.h"
 #include "ManualPlantingArea.generated.h"
 
 UCLASS()
@@ -15,6 +14,8 @@ class MOONFLORIST_API AManualPlantingArea : public AInteractableActor
 public:	
 	// Sets default values for this actor's properties
 	AManualPlantingArea();
+	void PlantingAreaInteraction();
+	//void CameraMovement();
 
 protected:
 	// Called when the game starts or when spawned
@@ -25,13 +26,18 @@ protected:
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
 		class UStaticMeshComponent* PlantingArea;
+
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
 		class UCameraComponent* Camera;
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
 	class UWidgetComponent* WidgetComp;
 
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
+		FVector LocationUnderCursor;
 
+	UPROPERTY(EditAnywhere, Category = "PlantingArea")
+		TSubclassOf<class AActor> FlowerToSpawn;
 
 public:	
 	// Called every frame

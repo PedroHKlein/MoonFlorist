@@ -13,7 +13,6 @@
 #include "Engine.h"
 #include "MoonFloristHUD.h"
 #include "XRMotionControllerBase.h" // for FXRMotionControllerBase::RightHandSourceId
-#include "Kismet/GameplayStatics.h"
 
 #include "InteractableActor.h"
 #include "SlidingWindow.h"
@@ -243,15 +242,14 @@ void AMoonFloristCharacter::RightArrowAction()
 
 void AMoonFloristCharacter::OnClick()
 {
-	/*if (CurrentInteractActor && Interacting)
+	if (CurrentInteractActor && Interacting)
 	{
 		AManualPlantingArea* Area = Cast<AManualPlantingArea>(CurrentInteractActor);
 		if (Area)
 		{
-			CanClick = true;
+			PlayerController->GetHitResultUnderCursor(ECollisionChannel::ECC_GameTraceChannel13, true, HitResult);
 		}
-	
-	}*/
+	}
 }
 
 void AMoonFloristCharacter::Tick(float DeltaTime)
