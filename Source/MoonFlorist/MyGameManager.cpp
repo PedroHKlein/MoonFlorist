@@ -312,3 +312,22 @@ FString AMyGameManager::MoneyString()
 		return "$" + FString::FromInt(iMoney);
 	}
 }
+
+void AMyGameManager::LoadGameManager(AMyGameManager* _LoadManager)
+{
+	GoalLists = _LoadManager->GoalLists;
+	ClientList = _LoadManager->ClientList;
+	CurrClient = _LoadManager->CurrClient;
+	CurrentClient = _LoadManager->CurrentClient;
+	CurrentBouquet = _LoadManager->CurrentBouquet;
+	fTimeToWait = _LoadManager->fTimeToWait;
+	fCurrTime = _LoadManager->fCurrTime;
+	iLastBoquetWorth = _LoadManager->iLastBoquetWorth;
+	EmailLists = _LoadManager->EmailLists;
+	iTempMoney = _LoadManager->iTempMoney;
+	BouquetList = _LoadManager->BouquetList;
+	fTimeForNewClient = _LoadManager->fTimeForNewClient;
+	fCurrTimeForNewClient = _LoadManager->fCurrTimeForNewClient;
+	HandsCanDeliver = _LoadManager->HandsCanDeliver;
+	ConstructCapsule = _LoadManager->ConstructCapsule;
+}

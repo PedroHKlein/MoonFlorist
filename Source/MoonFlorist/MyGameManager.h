@@ -76,6 +76,8 @@ public:
 	FString MoneyString();
 	UFUNCTION(BlueprintCallable)
 	void NewClientRand(float _time);
+	UFUNCTION(BlueprintCallable)
+	void LoadGameManager(AMyGameManager* _LoadManager);
 	
 
 
