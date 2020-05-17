@@ -14,27 +14,42 @@ class MOONFLORIST_API APlantingFlower : public AActor
 public:	
 	// Sets default values for this actor's properties
 	APlantingFlower();
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = Flower)
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Flower)
+		FName FlowerName;
+
+	UPROPERTY(BlueprintReadWrite, Category = Flower)
 		bool ReadyToBloom;
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = Flower)
+
+	UPROPERTY(BlueprintReadWrite, Category = Flower)
 		bool ReadyToCollect;
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = Flower)
+
+	UPROPERTY(BlueprintReadWrite, Category = Flower)
 		bool Watered;
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = Flower)
+
+	UPROPERTY(BlueprintReadWrite, Category = Flower)
+		bool Growing;
+
+	UPROPERTY(BlueprintReadWrite, Category = Flower)
+		bool ReadyForVFX;
+
+	UPROPERTY(BlueprintReadWrite, Category = Flower)
 		float PlayRate;
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Mesh, meta = (AllowPrivateAccess = "true"))
+		class USceneComponent* Root;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Mesh, meta = (AllowPrivateAccess = "true"))
+		class USkeletalMeshComponent* FlowerSKMesh;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Flower, meta = (AllowPrivateAccess = "true"))
+		class UCapsuleComponent* PlantingRange;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Flower, meta = (AllowPrivateAccess = "true"))
-		class USceneComponent* Root;
 
-	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
-		class USkeletalMeshComponent* FlowerSKMesh;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = Flower, meta = (AllowPrivateAccess = "true"))
-		class UCapsuleComponent* PlantingRange;
-
+	void Setup();
 
 public:	
 	// Called every frame

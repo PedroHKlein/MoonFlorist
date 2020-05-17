@@ -20,6 +20,7 @@
 #include "ManualPlantingArea.h"
 #include "AI_HANDS.h"
 #include "Sound.h"
+#include "Engine/CollisionProfile.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -52,6 +53,13 @@ AMoonFloristCharacter::AMoonFloristCharacter()
 	RayCastAcceptanceDis = 300.0f;
 	IsOutlining = false;
 	CanClick = false;
+	//Item types for Planting Area
+	ChosenFlower = EItems::Noneselected;
+	ChosenFertilizer = EItems::Noneselected;
+	ChosenSeed = EItems::Noneselected;
+	WateringMode = false;
+	FertilizingMode = false;
+	CanPlant = false;
 }
 
 void AMoonFloristCharacter::BeginPlay()
@@ -247,8 +255,15 @@ void AMoonFloristCharacter::OnClick()
 		AManualPlantingArea* Area = Cast<AManualPlantingArea>(CurrentInteractActor);
 		if (Area)
 		{
-			PlayerController->GetHitResultUnderCursor(ECollisionChannel::ECC_GameTraceChannel13, true, HitResult);
+			Clicked = PlayerController->GetHitResultUnderCursorByChannel(UCollisionProfile::Get()->ConvertToTraceType(ECollisionChannel::ECC_GameTraceChannel13), true, HitResult);
+			Area->EnableInput(PlayerController);
 		}
+		else
+		{
+			Area->DisableInput(PlayerController);
+			Clicked = false;
+		}
+		
 	}
 }
 

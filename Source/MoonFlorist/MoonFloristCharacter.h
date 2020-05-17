@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "Storage.h"
 #include "Item.h"
+#include "Types.h"
 #include "MoonFloristCharacter.generated.h"
 
 class UInputComponent;
@@ -84,6 +85,16 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = "PlantingArea Interaction")
 	bool CanPlant;
 
+	UPROPERTY(BlueprintReadWrite, Category = "PlantingArea Interaction")
+	EItems ChosenFlower;
+
+	UPROPERTY(BlueprintReadWrite, Category = "PlantingArea Interaction")
+	EItems ChosenFertilizer;
+
+	UPROPERTY(BlueprintReadWrite, Category = "PlantingArea Interaction")
+	EItems ChosenSeed;
+
+	bool Clicked;
 protected:
 	virtual void BeginPlay();
 	//Beginning Items that the player has

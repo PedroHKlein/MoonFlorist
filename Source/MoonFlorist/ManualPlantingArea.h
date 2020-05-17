@@ -4,7 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "InteractableActor.h"
+#include "Containers/Array.h"
+#include "PlantingFlower.h"
+#include "MoonFloristCharacter.h"
+#include "GameFramework/Actor.h"
 #include "ManualPlantingArea.generated.h"
+
 
 UCLASS()
 class MOONFLORIST_API AManualPlantingArea : public AInteractableActor
@@ -14,9 +19,17 @@ class MOONFLORIST_API AManualPlantingArea : public AInteractableActor
 public:	
 	// Sets default values for this actor's properties
 	AManualPlantingArea();
+	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
 	void PlantingAreaInteraction();
 	//void CameraMovement();
+	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
+	bool CheckEnough(TEnumAsByte<EItems> ItemToCheck);
+	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
+	void GrowFlower(TSubclassOf<APlantingFlower> FlowerToGrow);
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<APlantingFlower> GrowTest;
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -33,11 +46,12 @@ protected:
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
 	class UWidgetComponent* WidgetComp;
 
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
 		FVector LocationUnderCursor;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlantingArea")
+		TArray<TSubclassOf<APlantingFlower>> FlowerTemplate;
 
-	UPROPERTY(EditAnywhere, Category = "PlantingArea")
-		TSubclassOf<class AActor> FlowerToSpawn;
+	 
 
 public:	
 	// Called every frame
