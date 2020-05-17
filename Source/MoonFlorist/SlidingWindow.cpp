@@ -8,6 +8,7 @@
 #include "Components/BoxComponent.h"
 #include "Components/AudioComponent.h"
 #include "Sound/SoundCue.h"
+#include "Sound.h"
 
 // Sets default values
 ASlidingWindow::ASlidingWindow()
@@ -16,7 +17,7 @@ ASlidingWindow::ASlidingWindow()
 	PrimaryActorTick.bCanEverTick = true;
 
 	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root Component"));
-	Root->SetupAttachment(RootComponent);
+	SetRootComponent(Root);
 
 	Window = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Window Cover"));
 	Window->SetStaticMesh(ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("/Game/Meshes/ModularSet/SM_Bed_Window_Shield.SM_Bed_Window_Shield")).Object);
@@ -31,7 +32,10 @@ ASlidingWindow::ASlidingWindow()
 	StartLerpLoc->SetupAttachment(Root);
 	EndLerpLoc = CreateDefaultSubobject<USceneComponent>(TEXT("EndLocation"));
 	EndLerpLoc->SetupAttachment(Root);
+	
 	//Audio
+	AudioPlayer = new Sound();
+
 
 }
 
@@ -48,6 +52,7 @@ void ASlidingWindow::BeginPlay()
 	}
 }
 
+
 // Called every frame
 void ASlidingWindow::Tick(float DeltaTime)
 {
@@ -55,6 +60,7 @@ void ASlidingWindow::Tick(float DeltaTime)
 	if (Open)
 	{
 		Window->SetRelativeLocation(FMath::VInterpTo(Window->RelativeLocation, EndLerpLoc->RelativeLocation, DeltaTime, 1.0f));
+	
 		
 	}
 	else
