@@ -256,11 +256,15 @@ void AMoonFloristCharacter::OnClick()
 		if (Area)
 		{
 			Clicked = PlayerController->GetHitResultUnderCursorByChannel(UCollisionProfile::Get()->ConvertToTraceType(ECollisionChannel::ECC_GameTraceChannel13), true, HitResult);
-			Area->EnableInput(PlayerController);
+			
+			if (Clicked)
+			{
+				Area->PlantingAreaInteraction();
+			}
 		}
 		else
 		{
-			Area->DisableInput(PlayerController);
+			
 			Clicked = false;
 		}
 		

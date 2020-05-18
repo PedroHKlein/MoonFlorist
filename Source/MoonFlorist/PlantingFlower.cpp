@@ -16,15 +16,16 @@ APlantingFlower::APlantingFlower()
 	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
 	RootComponent = Root;
 
-	FlowerSKMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Flower SKMesh"));
-	FlowerSKMesh->SetupAttachment(Root);
-
 	PlantingRange = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Flower Capsule"));
 	PlantingRange->InitCapsuleSize(30.0f, 30.0f);
 	PlantingRange->SetRelativeLocation(FVector(0.f, 0.f, 20.0f));
 	PlantingRange->SetupAttachment(Root);
 
-	
+	FlowerSKMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Flower SKMesh"));
+	FlowerSKMesh->SetupAttachment(Root);
+
+
+
 
 	FlowerName = " ";
 }
@@ -34,10 +35,6 @@ void APlantingFlower::BeginPlay()
 {
 	Super::BeginPlay();
 	Setup();
-	if (FlowerName == " ")
-	{
-		UE_LOG(LogFlower, Warning, TEXT("Planting Flower: No Name of Flower"));
-	}
 }
 
 void APlantingFlower::Setup()
@@ -47,7 +44,7 @@ void APlantingFlower::Setup()
 	Watered = false;
 	Growing = true;
 	ReadyForVFX = false;
-	PlayRate = 0;
+	PlayRate = 1.0f;
 }
 
 // Called every frame

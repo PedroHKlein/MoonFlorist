@@ -22,14 +22,21 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
 	void PlantingAreaInteraction();
 	//void CameraMovement();
+	
 	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
 	bool CheckEnough(TEnumAsByte<EItems> ItemToCheck);
+	
 	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
 	void GrowFlower(TSubclassOf<APlantingFlower> FlowerToGrow);
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
-	TSubclassOf<APlantingFlower> GrowTest;
 	
+	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
+	void DeducedChosenItem(TEnumAsByte<EItems> ItemToDeduct);
+	
+	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
+	void CollectFlower(TEnumAsByte<EItems> FlowerToCollect);
+
+	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
+	void CanPlant(TEnumAsByte<EItems> FlowerToPlant);
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -51,7 +58,8 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlantingArea")
 		TArray<TSubclassOf<APlantingFlower>> FlowerTemplate;
 
-	 
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
+		class USceneComponent* LookAtDir;
 
 public:	
 	// Called every frame
