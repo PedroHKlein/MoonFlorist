@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "InteractableActor.h"
+//#include "Components/InputComponent.h"
 #include "ManualPlantingArea.generated.h"
 
 UCLASS()
