@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "Storage.h"
 #include "Item.h"
+#include "Types.h"
 #include "MoonFloristCharacter.generated.h"
 
 class UInputComponent;
@@ -71,14 +72,33 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Interaction")
 	void OnClick();
+	//Manual Planting
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "PlantingArea Interaction")
+	FHitResult HitResult;
 
+	UPROPERTY(BlueprintReadWrite, Category = "PlantingArea Interaction")
+	bool WateringMode;
+
+	UPROPERTY(BlueprintReadWrite, Category = "PlantingArea Interaction")
+	bool FertilizingMode;
+
+	UPROPERTY(BlueprintReadWrite, Category = "PlantingArea Interaction")
+	bool CanPlant;
+
+	UPROPERTY(BlueprintReadWrite, Category = "PlantingArea Interaction")
+	EItems ChosenFlower;
+
+	UPROPERTY(BlueprintReadWrite, Category = "PlantingArea Interaction")
+	EItems ChosenFertilizer;
+
+	UPROPERTY(BlueprintReadWrite, Category = "PlantingArea Interaction")
+	EItems ChosenSeed;
+
+	bool Clicked;
 protected:
 	virtual void BeginPlay();
 	//Beginning Items that the player has
 	void StartItems();
-
-
-protected:
 	
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);
@@ -86,9 +106,6 @@ protected:
 	/** Handles strafing movement, left and right */
 	void MoveRight(float Val);
 
-	
-	
-protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
 
