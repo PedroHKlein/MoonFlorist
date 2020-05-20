@@ -6,7 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "PlantingFlower.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class MOONFLORIST_API APlantingFlower : public AActor
 {
 	GENERATED_BODY()
@@ -15,8 +15,17 @@ public:
 	// Sets default values for this actor's properties
 	APlantingFlower();
 
+	UFUNCTION(BlueprintCallable, category = Flower)
+		void Bloom();
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Flower)
 		FName FlowerName;
+
+	UPROPERTY(BlueprintReadWrite, Category = Flower)
+		float AnimationRate;
+
+	UPROPERTY(BlueprintReadWrite, Category = Flower)
+		float TestNumber;
 
 	UPROPERTY(BlueprintReadWrite, Category = Flower)
 		bool ReadyToBloom;
@@ -48,7 +57,7 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
+	UFUNCTION(BlueprintCallable, category = Flower)
 	void Setup();
 
 public:	

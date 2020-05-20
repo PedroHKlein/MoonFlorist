@@ -253,18 +253,17 @@ void AMoonFloristCharacter::OnClick()
 	if (CurrentInteractActor && Interacting)
 	{
 		AManualPlantingArea* Area = Cast<AManualPlantingArea>(CurrentInteractActor);
+		Clicked = PlayerController->GetHitResultUnderCursorByChannel(UCollisionProfile::Get()->ConvertToTraceType(ECollisionChannel::ECC_GameTraceChannel13), true, HitResult);
 		if (Area)
 		{
-			Clicked = PlayerController->GetHitResultUnderCursorByChannel(UCollisionProfile::Get()->ConvertToTraceType(ECollisionChannel::ECC_GameTraceChannel13), true, HitResult);
-			
 			if (Clicked)
 			{
 				Area->PlantingAreaInteraction();
 			}
+
 		}
 		else
 		{
-			
 			Clicked = false;
 		}
 		

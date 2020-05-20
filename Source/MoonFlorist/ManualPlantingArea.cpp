@@ -68,10 +68,11 @@ void AManualPlantingArea::Tick(float DeltaTime)
 
 void AManualPlantingArea::PlantingAreaInteraction()
 {
-	if (Cast<AManualPlantingArea>(PlayerRef->HitResult.GetActor()) != nullptr)
+	if (Cast<AManualPlantingArea>(PlayerRef->HitResult.GetActor()))
 	{
 		
 		LocationUnderCursor = PlayerRef->HitResult.Location;
+		
 		if (!PlayerRef->WateringMode && !PlayerRef->FertilizingMode && (PlayerRef->ChosenFlower != EItems::Noneselected))
 		{
 			switch (PlayerRef->ChosenFlower)
@@ -116,8 +117,28 @@ void AManualPlantingArea::PlantingAreaInteraction()
 				break;
 			}
 		}
+
+	}
+	else
+	{
+		APlantingFlower* CurrentFlower = Cast<APlantingFlower>(PlayerRef->HitResult.GetActor());
+		if (CurrentFlower)
+		{
+			if (!PlayerRef->WateringMode && !PlayerRef->FertilizingMode && 
+				!CurrentFlower->ReadyToCollect && 
+				!CurrentFlower->ReadyToBloom)
+			{
+				CurrentFlower->Bloom();
+			}
+			else if (PlayerRef->WateringMode && !PlayerRef->FertilizingMode)
+			{
+				CurrentFlower->Watered = true;
+				UE_LOG(LogPlantingArea, Warning, TEXT("Watered"));
+			}
+		}
 		
 	}
+	
 	
 }
 
