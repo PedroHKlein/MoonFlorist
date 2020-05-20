@@ -58,6 +58,7 @@ void APlantingFlower::Setup()
 	ReadyForVFX = false;
 	PlayRate = 1.0f;
 	AnimationRate = 1.0f;
+	NeedWatering = false;
 }
 
 // Called every frame

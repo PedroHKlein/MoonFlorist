@@ -133,7 +133,18 @@ void AManualPlantingArea::PlantingAreaInteraction()
 			else if (PlayerRef->WateringMode && !PlayerRef->FertilizingMode)
 			{
 				CurrentFlower->Watered = true;
-				UE_LOG(LogPlantingArea, Warning, TEXT("Watered"));
+				if (CurrentFlower->ReadyToBloom)
+				{
+					/*Remove from here once spawning vfx*/
+					CurrentFlower->ReadyToCollect = true;
+					CurrentFlower->ReadyForVFX = true;
+				}
+			}
+			else if (CurrentFlower->ReadyToCollect)
+			{
+				CollectFlower(CurrentFlower);
+				
+				CurrentFlower->Destroy();
 			}
 		}
 		
@@ -187,9 +198,10 @@ void AManualPlantingArea::DeducedChosenItem(TEnumAsByte<EItems> ItemToDeduct)
 	}
 }
 
-void AManualPlantingArea::CollectFlower(TEnumAsByte<EItems> FlowerToCollect)
+void AManualPlantingArea::CollectFlower(APlantingFlower* FlowerToCollect)
 {
-	FString Name = UEnum::GetValueAsString(FlowerToCollect.GetValue()).RightChop(8);
+	
+	FString Name = FlowerToCollect->FlowerName.ToString();
 	for (int i = 0; i < (PlayerRef->PlayerStorage->StorageArray.Num() - 1); i++)
 	{
 

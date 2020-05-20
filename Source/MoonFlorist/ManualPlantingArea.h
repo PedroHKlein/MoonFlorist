@@ -33,7 +33,7 @@ public:
 	void DeducedChosenItem(TEnumAsByte<EItems> ItemToDeduct);
 	
 	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
-	void CollectFlower(TEnumAsByte<EItems> FlowerToCollect);
+	void CollectFlower(APlantingFlower* FlowerToCollect);
 
 	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
 	void CanPlant(TEnumAsByte<EItems> FlowerToPlant);

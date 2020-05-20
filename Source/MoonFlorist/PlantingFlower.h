@@ -54,6 +54,8 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Flower, meta = (AllowPrivateAccess = "true"))
 		class UCapsuleComponent* PlantingRange;
 
+	UPROPERTY(BlueprintReadWrite, Category = Flower)
+		bool NeedWatering;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
