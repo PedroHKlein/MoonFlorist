@@ -72,7 +72,8 @@ protected:
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
 		class USceneComponent* LookAtDir;
 
-	
+	UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = "PlantingArea")
+		float AttentionLightToggle;
 
 
 	UPROPERTY(EditAnywhere, Category = "PlantingArea")
