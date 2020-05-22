@@ -5,6 +5,7 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Components/SceneComponent.h"
 #include "Animation/AnimInstance.h"
+#include "Engine/Engine.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFlower, Warning, All);
 
@@ -24,17 +25,36 @@ APlantingFlower::APlantingFlower()
 	FlowerSKMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Flower SKMesh"));
 	FlowerSKMesh->SetupAttachment(Root);
 
-
-
-
 	FlowerName = " ";
+	
+}
+
+void APlantingFlower::Bloom()
+{
+	if (!Growing)
+	{
+		ReadyToBloom = true;
+	}
+	else
+	{
+		ReadyToBloom = false;
+	}
+	
+}
+
+FVector APlantingFlower::GetSocketLocation()
+{
+	return FlowerSKMesh->GetSocketLocation("FP_Socket");
 }
 
 // Called when the game starts or when spawned
 void APlantingFlower::BeginPlay()
 {
 	Super::BeginPlay();
-	Setup();
+	if (Fidget)
+	{
+		Fidget = false;
+	}
 }
 
 void APlantingFlower::Setup()
@@ -45,6 +65,8 @@ void APlantingFlower::Setup()
 	Growing = true;
 	ReadyForVFX = false;
 	PlayRate = 1.0f;
+	AnimationRate = 1.0f;
+	Fidget = false;
 }
 
 // Called every frame
