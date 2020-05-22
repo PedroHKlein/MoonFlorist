@@ -42,11 +42,16 @@ void APlantingFlower::Bloom()
 	
 }
 
+FVector APlantingFlower::GetSocketLocation()
+{
+	return FlowerSKMesh->GetSocketLocation("FP_Socket");
+}
+
 // Called when the game starts or when spawned
 void APlantingFlower::BeginPlay()
 {
 	Super::BeginPlay();
-
+	
 }
 
 void APlantingFlower::Setup()

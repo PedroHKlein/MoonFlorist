@@ -10,7 +10,7 @@
 #include "GameFramework/Actor.h"
 #include "ManualPlantingArea.generated.h"
 
-
+class UParticleSystem;
 UCLASS()
 class MOONFLORIST_API AManualPlantingArea : public AInteractableActor
 {
@@ -37,6 +37,8 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
 	void CanPlant(TEnumAsByte<EItems> FlowerToPlant);
+
+	UParticleSystemComponent* SpawnParticle(UParticleSystem* PS,USceneComponent* AttachTo, FName AttachName, FVector Location, FRotator Rotation,FVector Scale, EAttachLocation::Type AttachType);
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -58,9 +60,28 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlantingArea")
 		TArray<TSubclassOf<APlantingFlower>> FlowerTemplate;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlantingArea")
+		TArray<UParticleSystem*> FlowerVFX;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlantingArea")
+		UParticleSystem* WateringVFX;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlantingArea")
+		UParticleSystem* FertilizerVFX;
+
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
 		class USceneComponent* LookAtDir;
 
+	
+
+
+	UPROPERTY(EditAnywhere, Category = "PlantingArea")
+		class USoundCue* WateringCue;
+
+	
+	UPROPERTY(EditAnywhere, Category = "PlantingArea")
+		class USoundCue* FertilizerCue;
+	class Sound* SFX;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

@@ -21,6 +21,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Flower)
 		FName FlowerName;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Flower)
+		class UParticleSystem* VFX;
+	UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = Flower)
+		 FVector VFXScale;
+
 	UPROPERTY(BlueprintReadWrite, Category = Flower)
 		float AnimationRate;
 
@@ -48,7 +53,7 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Mesh, meta = (AllowPrivateAccess = "true"))
 		class USceneComponent* Root;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Mesh, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Mesh)
 		class USkeletalMeshComponent* FlowerSKMesh;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Flower, meta = (AllowPrivateAccess = "true"))
@@ -56,6 +61,9 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, Category = Flower)
 		bool NeedWatering;
+	
+	UFUNCTION(BlueprintCallable, category = Flower)
+		FVector GetSocketLocation();
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
