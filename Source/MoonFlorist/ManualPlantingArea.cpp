@@ -202,8 +202,9 @@ void AManualPlantingArea::PlantingAreaInteraction()
 						break;
 					}
 				}
+
 			}
-			else if (CurrentFlower->ReadyToCollect && PlayerRef->CollectMode && !PlayerRef->WateringMode && PlayerRef->FertilizingMode && !PlayerRef->CareMode)
+			else if (CurrentFlower->ReadyToCollect && PlayerRef->CollectMode && !PlayerRef->WateringMode && !PlayerRef->FertilizingMode && !PlayerRef->CareMode)
 			{
 				CollectFlower(CurrentFlower);
 				

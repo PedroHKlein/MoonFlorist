@@ -51,6 +51,10 @@ FVector APlantingFlower::GetSocketLocation()
 void APlantingFlower::BeginPlay()
 {
 	Super::BeginPlay();
+	if (Fidget)
+	{
+		Fidget = false;
+	}
 }
 
 void APlantingFlower::Setup()
@@ -62,7 +66,7 @@ void APlantingFlower::Setup()
 	ReadyForVFX = false;
 	PlayRate = 1.0f;
 	AnimationRate = 1.0f;
-	NeedsAttention = false;
+	Fidget = false;
 }
 
 // Called every frame

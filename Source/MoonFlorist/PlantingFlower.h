@@ -60,7 +60,7 @@ public:
 		class UCapsuleComponent* PlantingRange;
 
 	UPROPERTY(BlueprintReadWrite, Category = Flower)
-		bool NeedsAttention;
+		bool Fidget;
 	
 	UFUNCTION(BlueprintCallable, category = Flower)
 		FVector GetSocketLocation();
