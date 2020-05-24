@@ -83,6 +83,12 @@ public:
 	bool FertilizingMode;
 
 	UPROPERTY(BlueprintReadWrite, Category = "PlantingArea Interaction")
+	bool CollectMode;
+
+	UPROPERTY(BlueprintReadWrite, Category = "PlantingArea Interaction")
+	bool CareMode;
+
+	UPROPERTY(BlueprintReadWrite, Category = "PlantingArea Interaction")
 	bool CanPlant;
 
 	UPROPERTY(BlueprintReadWrite, Category = "PlantingArea Interaction")
