@@ -35,8 +35,14 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
 	void CollectFlower(APlantingFlower* FlowerToCollect);
 
-	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
-	void CanPlant(TEnumAsByte<EItems> FlowerToPlant);
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea")
+	class UDecalComponent* AttentionDecal;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PlantingArea")
+	class UMaterialInstanceDynamic* PA_DynamicMaterial;
+	bool NeedsAttention;
+	
+	void AttentionSwitch(UMaterialInstanceDynamic* MaterialInstance, float Value);
 
 	UParticleSystemComponent* SpawnParticle(UParticleSystem* PS,USceneComponent* AttachTo, FName AttachName, FVector Location, FRotator Rotation,FVector Scale, EAttachLocation::Type AttachType);
 protected:
@@ -75,14 +81,13 @@ protected:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = "PlantingArea")
 		float AttentionLightToggle;
 
-
 	UPROPERTY(EditAnywhere, Category = "PlantingArea")
 		class USoundCue* WateringCue;
-
 	
 	UPROPERTY(EditAnywhere, Category = "PlantingArea")
 		class USoundCue* FertilizerCue;
-	class Sound* SFX;
+
+		class Sound* SFX;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
