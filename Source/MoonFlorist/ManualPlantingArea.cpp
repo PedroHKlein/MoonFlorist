@@ -72,11 +72,13 @@ void AManualPlantingArea::Tick(float DeltaTime)
 
 void AManualPlantingArea::PlantingAreaInteraction()
 {
-	if (Cast<AManualPlantingArea>(PlayerRef->HitResult.GetActor()))
+	AManualPlantingArea* PlantingArea = Cast<AManualPlantingArea>(PlayerRef->HitResult.GetActor());
+	if (PlantingArea)
 	{
 		
 		LocationUnderCursor = PlayerRef->HitResult.Location;
 		
+
 		if (!PlayerRef->WateringMode && !PlayerRef->FertilizingMode && !PlayerRef->CollectMode && !PlayerRef->CareMode && (PlayerRef->ChosenFlower != EItems::Noneselected))
 		{
 			switch (PlayerRef->ChosenFlower)
@@ -103,7 +105,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 			{
 				if (CheckEnough(EItems::Goldenseed))
 				{
-					
+
 					GrowFlower(FlowerTemplate[2]);
 					DeducedChosenItem(EItems::Goldenseed);
 				}
@@ -113,9 +115,9 @@ void AManualPlantingArea::PlantingAreaInteraction()
 			{
 				if (CheckEnough(EItems::Silverseed))
 				{
-					
+
 					GrowFlower(FlowerTemplate[3]);
-			
+
 					DeducedChosenItem(EItems::Silverseed);
 				}
 				break;
@@ -124,7 +126,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 				break;
 			}
 		}
-
+	
 	}
 	else
 	{
@@ -275,29 +277,6 @@ void AManualPlantingArea::CollectFlower(APlantingFlower* FlowerToCollect)
 			PlayerRef->PlayerStorage->IncreaseStacks(1, PlayerRef->PlayerStorage->StorageArray[i]);
 			return;
 
-		}
-	}
-}
-
-void AManualPlantingArea::CanPlant(TEnumAsByte<EItems> FlowerToPlant)
-{
-	FString Name = UEnum::GetValueAsString(FlowerToPlant.GetValue()).RightChop(8);
-
-	for (int i = 0; i < (PlayerRef->PlayerStorage->StorageArray.Num()); i++)
-	{
-
-		if (PlayerRef->PlayerStorage->StorageArray[i]->GetName().ToString() == Name)
-		{
-			if (PlayerRef->PlayerStorage->StorageArray[i]->GetStacks() > 0)
-			{
-				PlayerRef->CanPlant = true;
-				return;
-			}
-			else if(PlayerRef->PlayerStorage->StorageArray[i]->GetStacks() <= 0)
-			{
-				PlayerRef->CanPlant = false;
-				return;
-			}
 		}
 	}
 }

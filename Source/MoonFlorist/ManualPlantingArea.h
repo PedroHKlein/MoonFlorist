@@ -35,9 +35,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
 	void CollectFlower(APlantingFlower* FlowerToCollect);
 
-	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
-	void CanPlant(TEnumAsByte<EItems> FlowerToPlant);
-
 	UParticleSystemComponent* SpawnParticle(UParticleSystem* PS,USceneComponent* AttachTo, FName AttachName, FVector Location, FRotator Rotation,FVector Scale, EAttachLocation::Type AttachType);
 protected:
 	// Called when the game starts or when spawned
@@ -75,14 +72,13 @@ protected:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = "PlantingArea")
 		float AttentionLightToggle;
 
-
 	UPROPERTY(EditAnywhere, Category = "PlantingArea")
 		class USoundCue* WateringCue;
-
 	
 	UPROPERTY(EditAnywhere, Category = "PlantingArea")
 		class USoundCue* FertilizerCue;
-	class Sound* SFX;
+
+		class Sound* SFX;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
