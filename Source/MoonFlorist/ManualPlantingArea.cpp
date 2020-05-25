@@ -19,6 +19,8 @@
 #include "Components/AudioComponent.h"
 #include "Sound/SoundCue.h"
 #include "Sound.h"
+#include "Components/DecalComponent.h"
+#include "Materials/MaterialInstanceDynamic.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogPlantingArea, Warning, All);
 
@@ -43,6 +45,13 @@ AManualPlantingArea::AManualPlantingArea()
 
 	LookAtDir = CreateDefaultSubobject<USceneComponent>(TEXT("Look At Direction"));
 	LookAtDir->SetupAttachment(RootComponent);
+
+	AttentionDecal = CreateDefaultSubobject<UDecalComponent>("Attention Decal");
+	AttentionDecal->SetupAttachment(RootComponent);
+	AttentionDecal->DecalSize = FVector(128.0f, 256.0f, 256.0f);
+	AttentionDecal->FadeScreenSize = 0.01f;
+	AttentionDecal->bDestroyOwnerAfterFade = true;
+
 	SFX = new Sound();
 } 
 
@@ -58,8 +67,8 @@ void AManualPlantingArea::BeginPlay()
 	{
 		UE_LOG(LogPlantingArea, Error, TEXT("Planting Area: Flower Template Array is empty!"));
 	}
-
-	AttentionLightToggle = 0.0f;
+	PA_DynamicMaterial = AttentionDecal->CreateDynamicMaterialInstance();
+	AttentionSwitch(PA_DynamicMaterial, 0.0f);
 }
 
 // Called every frame
@@ -72,11 +81,13 @@ void AManualPlantingArea::Tick(float DeltaTime)
 
 void AManualPlantingArea::PlantingAreaInteraction()
 {
-	if (Cast<AManualPlantingArea>(PlayerRef->HitResult.GetActor()))
+	AManualPlantingArea* PlantingArea = Cast<AManualPlantingArea>(PlayerRef->HitResult.GetActor());
+	if (PlantingArea)
 	{
 		
 		LocationUnderCursor = PlayerRef->HitResult.Location;
-		
+		AttentionSwitch(PA_DynamicMaterial, 1.0f);
+
 		if (!PlayerRef->WateringMode && !PlayerRef->FertilizingMode && !PlayerRef->CollectMode && !PlayerRef->CareMode && (PlayerRef->ChosenFlower != EItems::Noneselected))
 		{
 			switch (PlayerRef->ChosenFlower)
@@ -103,7 +114,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 			{
 				if (CheckEnough(EItems::Goldenseed))
 				{
-					
+
 					GrowFlower(FlowerTemplate[2]);
 					DeducedChosenItem(EItems::Goldenseed);
 				}
@@ -113,9 +124,9 @@ void AManualPlantingArea::PlantingAreaInteraction()
 			{
 				if (CheckEnough(EItems::Silverseed))
 				{
-					
+
 					GrowFlower(FlowerTemplate[3]);
-			
+
 					DeducedChosenItem(EItems::Silverseed);
 				}
 				break;
@@ -124,7 +135,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 				break;
 			}
 		}
-
+	
 	}
 	else
 	{
@@ -136,7 +147,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 				!CurrentFlower->ReadyToBloom && !PlayerRef->CollectMode && !PlayerRef->CareMode)
 			{
 				CurrentFlower->Bloom();
-				AttentionLightToggle = 1.0f;
+				AttentionSwitch(PA_DynamicMaterial, 1.0f);
 			}
 			else if (PlayerRef->WateringMode && !PlayerRef->FertilizingMode && !PlayerRef->CollectMode && !PlayerRef->CareMode)
 			{
@@ -144,15 +155,19 @@ void AManualPlantingArea::PlantingAreaInteraction()
 				SpawnParticle(WateringVFX, CurrentFlower->Root, "None", SpawnLocationWater, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
 				SFX->PlaySoundOnce(WateringCue, CurrentFlower->Root);
 				CurrentFlower->Watered = true;
+				AttentionSwitch(PA_DynamicMaterial, 0.0f);
 				//dynamic material
-				AttentionLightToggle = 0.0f;
+				
 				if (CurrentFlower->ReadyToBloom)
 				{
-					
-					/*Remove from here once spawning vfx*/
+					AttentionSwitch(PA_DynamicMaterial, 0.0f);
 					CurrentFlower->ReadyToCollect = true;
 					CurrentFlower->ReadyForVFX = true;
 					SpawnParticle(CurrentFlower->VFX, CurrentFlower->Root, "None", CurrentFlower->GetSocketLocation(), FRotator(0.0f, 0.0f, 0.0f), CurrentFlower->VFXScale, EAttachLocation::KeepWorldPosition);
+				}
+				if (!CurrentFlower->ReadyToBloom && !CurrentFlower->Growing)
+				{
+					AttentionSwitch(PA_DynamicMaterial, 1.0f);
 				}
 
 			}
@@ -206,6 +221,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 			}
 			else if (CurrentFlower->ReadyToCollect && PlayerRef->CollectMode && !PlayerRef->WateringMode && !PlayerRef->FertilizingMode && !PlayerRef->CareMode)
 			{
+				AttentionSwitch(PA_DynamicMaterial, 0.0f);
 				CollectFlower(CurrentFlower);
 				
 				CurrentFlower->Destroy();
@@ -279,27 +295,9 @@ void AManualPlantingArea::CollectFlower(APlantingFlower* FlowerToCollect)
 	}
 }
 
-void AManualPlantingArea::CanPlant(TEnumAsByte<EItems> FlowerToPlant)
+void AManualPlantingArea::AttentionSwitch(UMaterialInstanceDynamic* MaterialInstance, float Value)
 {
-	FString Name = UEnum::GetValueAsString(FlowerToPlant.GetValue()).RightChop(8);
-
-	for (int i = 0; i < (PlayerRef->PlayerStorage->StorageArray.Num()); i++)
-	{
-
-		if (PlayerRef->PlayerStorage->StorageArray[i]->GetName().ToString() == Name)
-		{
-			if (PlayerRef->PlayerStorage->StorageArray[i]->GetStacks() > 0)
-			{
-				PlayerRef->CanPlant = true;
-				return;
-			}
-			else if(PlayerRef->PlayerStorage->StorageArray[i]->GetStacks() <= 0)
-			{
-				PlayerRef->CanPlant = false;
-				return;
-			}
-		}
-	}
+	MaterialInstance->SetScalarParameterValue("Emission Strenght", Value);
 }
 
 UParticleSystemComponent* AManualPlantingArea::SpawnParticle(UParticleSystem* PS, USceneComponent* AttachTo, FName AttachName, FVector Location, FRotator Rotation, FVector Scale, EAttachLocation::Type AttachType)
