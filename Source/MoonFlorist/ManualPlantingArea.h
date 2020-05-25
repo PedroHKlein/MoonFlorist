@@ -35,6 +35,15 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
 	void CollectFlower(APlantingFlower* FlowerToCollect);
 
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea")
+	class UDecalComponent* AttentionDecal;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PlantingArea")
+	class UMaterialInstanceDynamic* PA_DynamicMaterial;
+	bool NeedsAttention;
+	
+	void AttentionSwitch(UMaterialInstanceDynamic* MaterialInstance, float Value);
+
 	UParticleSystemComponent* SpawnParticle(UParticleSystem* PS,USceneComponent* AttachTo, FName AttachName, FVector Location, FRotator Rotation,FVector Scale, EAttachLocation::Type AttachType);
 protected:
 	// Called when the game starts or when spawned
