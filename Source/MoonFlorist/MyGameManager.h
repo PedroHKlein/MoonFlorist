@@ -78,8 +78,6 @@ public:
 	void NewClientRand(float _time);
 	UFUNCTION(BlueprintCallable)
 	void LoadGameManager(AMyGameManager* _LoadManager);
-	
-
 
 private:
 
@@ -115,4 +113,6 @@ private:
 	float fTimeForNewClient = 60.0f;
 	UPROPERTY()
 	float fCurrTimeForNewClient = 0.0f;
+
+
 };
