@@ -6,6 +6,7 @@
 #include "Components/SceneComponent.h"
 #include "Animation/AnimInstance.h"
 #include "Engine/Engine.h"
+#include "Particles/ParticleSystemComponent.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFlower, Warning, All);
 
@@ -30,6 +31,10 @@ APlantingFlower::APlantingFlower()
 
 	FlowerName = " ";
 	
+	VFXFlower = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("Flower Particle"));
+	VFXFlower->SetupAttachment(FlowerSKMesh);
+	
+	VFXFlower->bHiddenInGame = true;
 }
 
 void APlantingFlower::Bloom()

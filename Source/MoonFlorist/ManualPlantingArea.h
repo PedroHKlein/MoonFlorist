@@ -67,13 +67,16 @@ protected:
 		TArray<TSubclassOf<APlantingFlower>> FlowerTemplate;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlantingArea")
-		TArray<UParticleSystem*> FlowerVFX;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlantingArea")
 		UParticleSystem* WateringVFX;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlantingArea")
-		UParticleSystem* FertilizerVFX;
+		UParticleSystem* CometVFX;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlantingArea")
+		UParticleSystem* MoonVFX;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlantingArea")
+		UParticleSystem* TerranVFX;
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
 		class USceneComponent* LookAtDir;

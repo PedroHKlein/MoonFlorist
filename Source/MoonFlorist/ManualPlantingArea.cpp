@@ -163,13 +163,17 @@ void AManualPlantingArea::PlantingAreaInteraction()
 				}
 				if (CurrentFlower->ReadyToBloom)
 				{
+					/*Spawn Water VFX*/
 					FVector SpawnLocationWater = PlayerRef->HitResult.Location + FVector(0.0f, 0.0f, 100.0f);
 					SpawnParticle(WateringVFX, CurrentFlower->Root, "None", SpawnLocationWater, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
 					SFX->PlaySoundOnce(WateringCue, CurrentFlower->Root);
 					CurrentFlower->Watered = true;
+
+					/*Spawn Flower VFX*/
+					CurrentFlower->VFXFlower->bHiddenInGame = false;
 					AttentionSwitch(PA_DynamicMaterial, 0.0f);
 					CurrentFlower->ReadyToCollect = true;
-					SpawnParticle(CurrentFlower->VFX, CurrentFlower->Root, "None", CurrentFlower->GetSocketLocation(), FRotator(0.0f, 0.0f, 0.0f), CurrentFlower->VFXScale, EAttachLocation::KeepWorldPosition);
+					
 				}
 				if (!CurrentFlower->ReadyToBloom && !CurrentFlower->Growing)
 				{
@@ -189,7 +193,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 						if (CheckEnough(EItems::Terranfertilizer))
 						{
 							FVector SpawnLocationFert = PlayerRef->HitResult.Location + FVector(0.0f, 0.0f, 100.0f);
-							SpawnParticle(FertilizerVFX, CurrentFlower->Root, "None", SpawnLocationFert, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
+							SpawnParticle(TerranVFX, CurrentFlower->Root, "None", SpawnLocationFert, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
 							SFX->PlaySoundOnce(FertilizerCue, CurrentFlower->Root);
 							CurrentFlower->PlayRate = 1.2f;
 							DeducedChosenItem(EItems::Terranfertilizer);
@@ -201,7 +205,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 						if (CheckEnough(EItems::Moonfertilizer))
 						{
 							FVector SpawnLocationFert = PlayerRef->HitResult.Location + FVector(0.0f, 0.0f, 100.0f);
-							SpawnParticle(FertilizerVFX, CurrentFlower->Root, "None", SpawnLocationFert, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
+							SpawnParticle(MoonVFX, CurrentFlower->Root, "None", SpawnLocationFert, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
 							SFX->PlaySoundOnce(FertilizerCue, CurrentFlower->Root);
 							CurrentFlower->PlayRate = 1.6f;
 							DeducedChosenItem(EItems::Moonfertilizer);
@@ -213,7 +217,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 						if (CheckEnough(EItems::Cometfertilizer))
 						{
 							FVector SpawnLocationFert = PlayerRef->HitResult.Location + FVector(0.0f, 0.0f, 100.0f);
-							SpawnParticle(FertilizerVFX, CurrentFlower->Root, "None", SpawnLocationFert, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
+							SpawnParticle(CometVFX, CurrentFlower->Root, "None", SpawnLocationFert, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
 							SFX->PlaySoundOnce(FertilizerCue, CurrentFlower->Root);
 							CurrentFlower->PlayRate = 2.0f;
 							DeducedChosenItem(EItems::Cometfertilizer);

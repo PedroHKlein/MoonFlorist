@@ -6,7 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "PlantingFlower.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS()
 class MOONFLORIST_API APlantingFlower : public AActor
 {
 	GENERATED_BODY()
@@ -21,8 +21,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Flower)
 		FName FlowerName;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Flower)
-		class UParticleSystem* VFX;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = VFX)
+		class UParticleSystemComponent* VFXFlower;
 	UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = Flower)
 		 FVector VFXScale;
 
