@@ -45,9 +45,6 @@ public:
 		bool Growing;
 
 	UPROPERTY(BlueprintReadWrite, Category = Flower)
-		bool ReadyForVFX;
-
-	UPROPERTY(BlueprintReadWrite, Category = Flower)
 		float PlayRate;
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Mesh, meta = (AllowPrivateAccess = "true"))

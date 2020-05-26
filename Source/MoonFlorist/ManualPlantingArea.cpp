@@ -76,7 +76,6 @@ void AManualPlantingArea::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	
 }
 
 void AManualPlantingArea::PlantingAreaInteraction()
@@ -87,7 +86,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 		
 		LocationUnderCursor = PlayerRef->HitResult.Location;
 		AttentionSwitch(PA_DynamicMaterial, 1.0f);
-
+		/*Growing Flower----------------------------------*/
 		if (!PlayerRef->WateringMode && !PlayerRef->FertilizingMode && !PlayerRef->CollectMode && !PlayerRef->CareMode && (PlayerRef->ChosenFlower != EItems::Noneselected))
 		{
 			switch (PlayerRef->ChosenFlower)
@@ -142,35 +141,43 @@ void AManualPlantingArea::PlantingAreaInteraction()
 		APlantingFlower* CurrentFlower = Cast<APlantingFlower>(PlayerRef->HitResult.GetActor());
 		if (CurrentFlower)
 		{
+			/*Blooming Flower----------------------------------*/
 			if (!PlayerRef->WateringMode && !PlayerRef->FertilizingMode && 
 				!CurrentFlower->ReadyToCollect && 
-				!CurrentFlower->ReadyToBloom && !PlayerRef->CollectMode && !PlayerRef->CareMode)
+				!CurrentFlower->ReadyToBloom && !PlayerRef->CollectMode && PlayerRef->CareMode && !CurrentFlower->Growing)
 			{
 				CurrentFlower->Bloom();
 				AttentionSwitch(PA_DynamicMaterial, 1.0f);
 			}
-			else if (PlayerRef->WateringMode && !PlayerRef->FertilizingMode && !PlayerRef->CollectMode && !PlayerRef->CareMode)
+			/*Watering Flower----------------------------------*/
+			else if (PlayerRef->WateringMode && !PlayerRef->FertilizingMode && !PlayerRef->CollectMode && !PlayerRef->CareMode && !CurrentFlower->Watered)
 			{
-				FVector SpawnLocationWater = PlayerRef->HitResult.Location + FVector(-40.0f, 10.0f, 100.0f);
-				SpawnParticle(WateringVFX, CurrentFlower->Root, "None", SpawnLocationWater, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
-				SFX->PlaySoundOnce(WateringCue, CurrentFlower->Root);
-				CurrentFlower->Watered = true;
-				AttentionSwitch(PA_DynamicMaterial, 0.0f);
-				//dynamic material
-				
+				if (CurrentFlower->Growing)
+				{
+					FVector SpawnLocationWater = PlayerRef->HitResult.Location + FVector(0.0f, 0.0f, 100.0f);
+					SpawnParticle(WateringVFX, CurrentFlower->Root, "None", SpawnLocationWater, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
+					SFX->PlaySoundOnce(WateringCue, CurrentFlower->Root);
+					CurrentFlower->Watered = true;
+					//dynamic material
+					AttentionSwitch(PA_DynamicMaterial, 0.0f);
+				}
 				if (CurrentFlower->ReadyToBloom)
 				{
+					FVector SpawnLocationWater = PlayerRef->HitResult.Location + FVector(0.0f, 0.0f, 100.0f);
+					SpawnParticle(WateringVFX, CurrentFlower->Root, "None", SpawnLocationWater, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
+					SFX->PlaySoundOnce(WateringCue, CurrentFlower->Root);
+					CurrentFlower->Watered = true;
 					AttentionSwitch(PA_DynamicMaterial, 0.0f);
 					CurrentFlower->ReadyToCollect = true;
-					CurrentFlower->ReadyForVFX = true;
 					SpawnParticle(CurrentFlower->VFX, CurrentFlower->Root, "None", CurrentFlower->GetSocketLocation(), FRotator(0.0f, 0.0f, 0.0f), CurrentFlower->VFXScale, EAttachLocation::KeepWorldPosition);
 				}
 				if (!CurrentFlower->ReadyToBloom && !CurrentFlower->Growing)
 				{
 					AttentionSwitch(PA_DynamicMaterial, 1.0f);
 				}
-
+				
 			}
+			/*Fertilizing Flower----------------------------------*/
 			else if (!PlayerRef->WateringMode && PlayerRef->FertilizingMode && !PlayerRef->CollectMode && !PlayerRef->CareMode)
 			{
 				if (CurrentFlower->Growing)
@@ -219,7 +226,15 @@ void AManualPlantingArea::PlantingAreaInteraction()
 				}
 
 			}
-			else if (CurrentFlower->ReadyToCollect && PlayerRef->CollectMode && !PlayerRef->WateringMode && !PlayerRef->FertilizingMode && !PlayerRef->CareMode)
+			/*Caring For Flower----------------------------------*/
+			if (!PlayerRef->WateringMode && !PlayerRef->FertilizingMode &&
+				CurrentFlower->ReadyToCollect &&
+				CurrentFlower->ReadyToBloom && !PlayerRef->CollectMode && PlayerRef->CareMode && !CurrentFlower->Growing && !CurrentFlower->Watered)
+			{
+				CurrentFlower->Fidget = true;
+			}
+			/*Collecting Flower----------------------------------*/
+			else if (CurrentFlower->ReadyToCollect && PlayerRef->CollectMode && !PlayerRef->WateringMode && !PlayerRef->FertilizingMode && !PlayerRef->CareMode)  
 			{
 				AttentionSwitch(PA_DynamicMaterial, 0.0f);
 				CollectFlower(CurrentFlower);
