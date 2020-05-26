@@ -27,7 +27,7 @@ protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite)
-	class AMoonFloristCharacter* PlayerRef;
+	class AMoonFloristCharacter* PlayerRef ;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
