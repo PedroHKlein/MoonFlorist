@@ -17,10 +17,13 @@ APlantingFlower::APlantingFlower()
 	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
 	RootComponent = Root;
 
+
 	PlantingRange = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Flower Capsule"));
 	PlantingRange->InitCapsuleSize(30.0f, 30.0f);
 	PlantingRange->SetRelativeLocation(FVector(0.f, 0.f, 20.0f));
+
 	PlantingRange->SetupAttachment(Root);
+	
 
 	FlowerSKMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Flower SKMesh"));
 	FlowerSKMesh->SetupAttachment(Root);
