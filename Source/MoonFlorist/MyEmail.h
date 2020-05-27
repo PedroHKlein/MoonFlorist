@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "MyClient.h"
+#include "EngineUtils.h"
+#include "Engine/World.h"
 #include "GameFramework/Actor.h"
 #include "MyEmail.generated.h"
 
@@ -68,6 +70,10 @@ private:
 	bool bDelivered = true;
 	UPROPERTY()
 	int iWorth;
+	UPROPERTY()
+	bool bNotified = false;
+	UPROPERTY()
+	class AMyGameManager* GameManager;
 
 
 	UPROPERTY()
