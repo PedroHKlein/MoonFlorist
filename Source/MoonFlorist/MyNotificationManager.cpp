@@ -22,7 +22,7 @@ void AMyNotificationManager::BeginPlay()
 void AMyNotificationManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	RemoveOldNotifications();
 }
 
 void AMyNotificationManager::AddNotification(FString _Notification, float _fTime)
@@ -35,7 +35,8 @@ void AMyNotificationManager::AddNotification(FString _Notification, float _fTime
 
 void AMyNotificationManager::GenerateNotifications()
 {
-	if (NotificationList[0] != NULL)
+	sAllNotifications = "";
+	if (NotificationList.Num() > 0)
 	{
 		for (int i = 0; i < NotificationList.Num(); i++)
 		{
@@ -46,12 +47,25 @@ void AMyNotificationManager::GenerateNotifications()
 
 void AMyNotificationManager::RemoveOldNotifications()
 {
-	for (int i = 0; i < NotificationList.Num(); i++)
+	if (NotificationList.Num() > 0)
 	{
-		if (NotificationList[i]->HasExpired())
+		for (int i = 0; i < NotificationList.Num(); i++)
 		{
-			NotificationList.RemoveAt(i);
+			if (NotificationList[i]->HasExpired())
+			{
+				NotificationList.RemoveAt(i);
+			}
 		}
+		GenerateNotifications();
 	}
-	GenerateNotifications();
+}
+
+TArray<AMyNotification*> AMyNotificationManager::GetNotifications()
+{
+	return NotificationList;
+}
+
+FString AMyNotificationManager::GetNotificationString()
+{
+	return sAllNotifications;
 }

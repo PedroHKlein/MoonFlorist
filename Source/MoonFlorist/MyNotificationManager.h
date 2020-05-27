@@ -21,6 +21,10 @@ public:
 	void GenerateNotifications();
 	UFUNCTION(BlueprintCallable)
 	void RemoveOldNotifications();
+	UFUNCTION(BlueprintCallable)
+	TArray<AMyNotification*> GetNotifications();
+	UFUNCTION(BlueprintCallable)
+	FString GetNotificationString();
 
 
 protected:

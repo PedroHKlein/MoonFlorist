@@ -81,6 +81,8 @@ public:
 	void LoadGameManager(AMyGameManager* _LoadManager);
 	UFUNCTION(BlueprintCallable)
 	void AddNotification(FString _Notification, float _fTime);
+	UFUNCTION(BlueprintCallable)
+	AMyNotificationManager* GetNotifications();
 
 private:
 
