@@ -255,11 +255,9 @@ void AMyGameManager::init()
 	ClientList = GetWorld()->SpawnActor<AMyClientManager>(AMyClientManager::StaticClass());
 	ClientList->init();
 	EmailLists = GetWorld()->SpawnActor<AMyEmailManager>(AMyEmailManager::StaticClass());
-	for (int i = 0; i < 3; i++)
-	{
-		NewClient();
-	}
+	NewClient();
 	NewBouquet();
+	Notifications = GetWorld()->SpawnActor<AMyNotificationManager>(AMyNotificationManager::StaticClass());
 }
 
 AMyGameManager* AMyGameManager::GetInstance()
@@ -330,4 +328,9 @@ void AMyGameManager::LoadGameManager(AMyGameManager* _LoadManager)
 	fCurrTimeForNewClient = _LoadManager->fCurrTimeForNewClient;
 	HandsCanDeliver = _LoadManager->HandsCanDeliver;
 	ConstructCapsule = _LoadManager->ConstructCapsule;
+}
+
+void AMyGameManager::AddNotification(FString _Notification, float _fTime)
+{
+	Notifications->AddNotification(_Notification, _fTime);
 }
