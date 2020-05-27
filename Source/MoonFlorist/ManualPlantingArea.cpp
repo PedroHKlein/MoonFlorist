@@ -295,7 +295,6 @@ void AManualPlantingArea::PlantingAreaInteraction()
 			}
 			/*Caring For Flower----------------------------------*/
 			if (!PlayerRef->WateringMode && !PlayerRef->FertilizingMode &&
-				CurrentFlower->ReadyToCollect &&
 				CurrentFlower->ReadyToBloom && !PlayerRef->CollectMode && PlayerRef->CareMode && !CurrentFlower->Growing && !CurrentFlower->Watered)
 			{
 				CurrentFlower->Fidget = true;

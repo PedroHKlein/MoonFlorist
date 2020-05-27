@@ -26,6 +26,15 @@ public:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = Flower)
 		 FVector VFXScale;
 
+	UPROPERTY(BlueprintReadOnly, Category = Flower)
+	class UMaterialInstanceDynamic* DM_FirstElement;
+
+	UPROPERTY(BlueprintReadOnly, Category = Flower)
+		class UMaterialInstanceDynamic* DM_SecondElement;
+
+
+	UPROPERTY(BlueprintReadWrite, Category = Flower)
+		bool StartDesaturation;
 	UPROPERTY(BlueprintReadWrite, Category = Flower)
 		float AnimationRate;
 

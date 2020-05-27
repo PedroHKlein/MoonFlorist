@@ -72,6 +72,8 @@ void APlantingFlower::Setup()
 	Fidget = false;
 	NeedWater = false;
 	CanTend = false;
+	DM_FirstElement = FlowerSKMesh->CreateDynamicMaterialInstance(0,FlowerSKMesh->GetMaterial(0));
+	DM_SecondElement = FlowerSKMesh->CreateDynamicMaterialInstance(1, FlowerSKMesh->GetMaterial(1));
 }
 
 // Called every frame
