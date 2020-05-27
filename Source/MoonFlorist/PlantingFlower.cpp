@@ -70,6 +70,8 @@ void APlantingFlower::Setup()
 	PlayRate = 1.0f;
 	AnimationRate = 1.0f;
 	Fidget = false;
+	NeedWater = false;
+	CanTend = false;
 }
 
 // Called every frame

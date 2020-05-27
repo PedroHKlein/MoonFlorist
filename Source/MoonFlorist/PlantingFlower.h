@@ -43,6 +43,11 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, Category = Flower)
 		bool Growing;
+	
+	UPROPERTY(BlueprintReadWrite, Category = Flower)
+		bool NeedWater;
+	UPROPERTY(BlueprintReadWrite, Category = Flower)
+		bool CanTend;
 
 	UPROPERTY(BlueprintReadWrite, Category = Flower)
 		float PlayRate;

@@ -46,12 +46,27 @@ AManualPlantingArea::AManualPlantingArea()
 	LookAtDir = CreateDefaultSubobject<USceneComponent>(TEXT("Look At Direction"));
 	LookAtDir->SetupAttachment(RootComponent);
 
-	AttentionDecal = CreateDefaultSubobject<UDecalComponent>("Attention Decal");
-	AttentionDecal->SetupAttachment(RootComponent);
-	AttentionDecal->DecalSize = FVector(128.0f, 256.0f, 256.0f);
-	AttentionDecal->FadeScreenSize = 0.01f;
-	AttentionDecal->bDestroyOwnerAfterFade = true;
-
+	/*Decal------------------*/
+		/*Tend*/
+	TendDecal = CreateDefaultSubobject<UDecalComponent>("Tend Decal");
+	TendDecal->SetupAttachment(RootComponent);
+	TendDecal->DecalSize = FVector(128.0f, 256.0f, 256.0f);
+	TendDecal->FadeScreenSize = 0.01f;
+	TendDecal->bDestroyOwnerAfterFade = true;
+		/*Water*/
+	WaterDecal = CreateDefaultSubobject<UDecalComponent>("Water Decal");
+	WaterDecal->SetupAttachment(RootComponent);
+	WaterDecal->DecalSize = FVector(128.0f, 256.0f, 256.0f);
+	WaterDecal->FadeScreenSize = 0.01f;
+	WaterDecal->bDestroyOwnerAfterFade = true;
+		/*Colect*/
+	CollectDecal = CreateDefaultSubobject<UDecalComponent>("Collect Decal");
+	CollectDecal->SetupAttachment(RootComponent);
+	CollectDecal->DecalSize = FVector(128.0f, 256.0f, 256.0f);
+	CollectDecal->FadeScreenSize = 0.01f;
+	CollectDecal->bDestroyOwnerAfterFade = true;
+	/*----------------Decal*/
+	/*Custom Sound Class Initilization*/
 	SFX = new Sound();
 } 
 
@@ -67,15 +82,70 @@ void AManualPlantingArea::BeginPlay()
 	{
 		UE_LOG(LogPlantingArea, Error, TEXT("Planting Area: Flower Template Array is empty!"));
 	}
-	PA_DynamicMaterial = AttentionDecal->CreateDynamicMaterialInstance();
-	AttentionSwitch(PA_DynamicMaterial, 0.0f);
+	DM_Tend = TendDecal->CreateDynamicMaterialInstance();
+	DM_Water = WaterDecal->CreateDynamicMaterialInstance();
+	DM_Collect = CollectDecal->CreateDynamicMaterialInstance();
+	AttentionSwitch(DM_Tend, 0.0f);
+	AttentionSwitch(DM_Water, 0.0f);
+	AttentionSwitch(DM_Collect, 0.0f);
+}
+
+void AManualPlantingArea::DecalDetection()
+{
+	if(GrownFlowers.Num() != 0)
+	{
+		
+		for (int i = 0; i < GrownFlowers.Num(); i++)
+		{
+			if (GrownFlowers[i]->ReadyToCollect)
+			{
+				AttentionSwitch(DM_Collect, 1.0f);
+				break;
+			}
+			else
+			{
+				AttentionSwitch(DM_Collect, 0.0f);
+			}
+		}
+		for (int i = 0; i < GrownFlowers.Num(); i++)
+		{
+			if (GrownFlowers[i]->NeedWater)
+			{
+				AttentionSwitch(DM_Water, 1.0f);
+				break;
+			}
+			else
+			{
+				AttentionSwitch(DM_Water, 0.0f);
+			}
+
+		}
+		for (int i = 0; i < GrownFlowers.Num(); i++)
+		{
+			if (GrownFlowers[i]->CanTend)
+			{
+				AttentionSwitch(DM_Tend, 1.0f);
+				break;
+			}
+			else
+			{
+				AttentionSwitch(DM_Tend, 0.0f);
+			}
+		}
+	}
+	else
+	{
+		AttentionSwitch(DM_Tend, 0.0f);
+		AttentionSwitch(DM_Water, 0.0f);
+		AttentionSwitch(DM_Collect, 0.0f);
+	}
 }
 
 // Called every frame
 void AManualPlantingArea::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	DecalDetection();
 }
 
 void AManualPlantingArea::PlantingAreaInteraction()
@@ -83,9 +153,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 	AManualPlantingArea* PlantingArea = Cast<AManualPlantingArea>(PlayerRef->HitResult.GetActor());
 	if (PlantingArea)
 	{
-		
 		LocationUnderCursor = PlayerRef->HitResult.Location;
-		AttentionSwitch(PA_DynamicMaterial, 1.0f);
 		/*Growing Flower----------------------------------*/
 		if (!PlayerRef->WateringMode && !PlayerRef->FertilizingMode && !PlayerRef->CollectMode && !PlayerRef->CareMode && (PlayerRef->ChosenFlower != EItems::Noneselected))
 		{
@@ -95,7 +163,8 @@ void AManualPlantingArea::PlantingAreaInteraction()
 			{
 				if (CheckEnough(EItems::Scarletseed))
 				{
-					GrowFlower(FlowerTemplate[0]);
+					GrownFlowers.Add(GrowFlower(FlowerTemplate[0]));
+					//GrowFlower(FlowerTemplate[0]);
 					DeducedChosenItem(EItems::Scarletseed);
 				}
 				break;
@@ -104,7 +173,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 			{
 				if (CheckEnough(EItems::Cobaltseed))
 				{
-					GrowFlower(FlowerTemplate[1]);
+					GrownFlowers.Add(GrowFlower(FlowerTemplate[1]));
 					DeducedChosenItem(EItems::Cobaltseed);
 				}
 				break;
@@ -114,7 +183,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 				if (CheckEnough(EItems::Goldenseed))
 				{
 
-					GrowFlower(FlowerTemplate[2]);
+					GrownFlowers.Add(GrowFlower(FlowerTemplate[2]));
 					DeducedChosenItem(EItems::Goldenseed);
 				}
 				break;
@@ -124,7 +193,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 				if (CheckEnough(EItems::Silverseed))
 				{
 
-					GrowFlower(FlowerTemplate[3]);
+					GrownFlowers.Add(GrowFlower(FlowerTemplate[3]));
 
 					DeducedChosenItem(EItems::Silverseed);
 				}
@@ -147,7 +216,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 				!CurrentFlower->ReadyToBloom && !PlayerRef->CollectMode && PlayerRef->CareMode && !CurrentFlower->Growing)
 			{
 				CurrentFlower->Bloom();
-				AttentionSwitch(PA_DynamicMaterial, 1.0f);
+				CurrentFlower->NeedWater = true;
 			}
 			/*Watering Flower----------------------------------*/
 			else if (PlayerRef->WateringMode && !PlayerRef->FertilizingMode && !PlayerRef->CollectMode && !PlayerRef->CareMode && !CurrentFlower->Watered)
@@ -158,8 +227,6 @@ void AManualPlantingArea::PlantingAreaInteraction()
 					SpawnParticle(WateringVFX, CurrentFlower->Root, "None", SpawnLocationWater, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
 					SFX->PlaySoundOnce(WateringCue, CurrentFlower->Root);
 					CurrentFlower->Watered = true;
-					//dynamic material
-					AttentionSwitch(PA_DynamicMaterial, 0.0f);
 				}
 				if (CurrentFlower->ReadyToBloom)
 				{
@@ -168,18 +235,14 @@ void AManualPlantingArea::PlantingAreaInteraction()
 					SpawnParticle(WateringVFX, CurrentFlower->Root, "None", SpawnLocationWater, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
 					SFX->PlaySoundOnce(WateringCue, CurrentFlower->Root);
 					CurrentFlower->Watered = true;
-
+					
 					/*Spawn Flower VFX*/
 					CurrentFlower->VFXFlower->bHiddenInGame = false;
-					AttentionSwitch(PA_DynamicMaterial, 0.0f);
-					CurrentFlower->ReadyToCollect = true;
+					CurrentFlower->CanTend = true;
+					CurrentFlower->NeedWater = false;
+					//CurrentFlower->ReadyToCollect = true;
 					
-				}
-				if (!CurrentFlower->ReadyToBloom && !CurrentFlower->Growing)
-				{
-					AttentionSwitch(PA_DynamicMaterial, 1.0f);
-				}
-				
+				}			
 			}
 			/*Fertilizing Flower----------------------------------*/
 			else if (!PlayerRef->WateringMode && PlayerRef->FertilizingMode && !PlayerRef->CollectMode && !PlayerRef->CareMode)
@@ -240,9 +303,8 @@ void AManualPlantingArea::PlantingAreaInteraction()
 			/*Collecting Flower----------------------------------*/
 			else if (CurrentFlower->ReadyToCollect && PlayerRef->CollectMode && !PlayerRef->WateringMode && !PlayerRef->FertilizingMode && !PlayerRef->CareMode)  
 			{
-				AttentionSwitch(PA_DynamicMaterial, 0.0f);
 				CollectFlower(CurrentFlower);
-				
+				GrownFlowers.Remove(CurrentFlower);
 				CurrentFlower->Destroy();
 			}
 		}
@@ -270,7 +332,7 @@ bool AManualPlantingArea::CheckEnough(TEnumAsByte<EItems> ItemToCheck)
 	return false;
 }
 
-void AManualPlantingArea::GrowFlower(TSubclassOf<APlantingFlower> FlowerToGrow)
+APlantingFlower* AManualPlantingArea::GrowFlower(TSubclassOf<APlantingFlower> FlowerToGrow)
 {
 	FActorSpawnParameters Param;
 	//Param.Owner = this;
@@ -279,8 +341,8 @@ void AManualPlantingArea::GrowFlower(TSubclassOf<APlantingFlower> FlowerToGrow)
 	Flower->SetActorRotation(FQuat(FRotator(Flower->GetActorRotation().Pitch,
 											LookAt.Yaw,
 											Flower->GetActorRotation().Roll)));
-	AttentionLightToggle = 1.0f;
-	
+
+	return Flower;
 }
 
 void AManualPlantingArea::DeducedChosenItem(TEnumAsByte<EItems> ItemToDeduct)
