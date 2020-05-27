@@ -19,36 +19,52 @@ class MOONFLORIST_API AManualPlantingArea : public AInteractableActor
 public:	
 	// Sets default values for this actor's properties
 	AManualPlantingArea();
+
+	/*Planting Area Interaction------------------------------------------*/
 	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
-	void PlantingAreaInteraction();
-	//void CameraMovement();
+		void PlantingAreaInteraction();
 	
 	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
 	bool CheckEnough(TEnumAsByte<EItems> ItemToCheck);
 	
 	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
-	void GrowFlower(TSubclassOf<APlantingFlower> FlowerToGrow);
+	APlantingFlower* GrowFlower(TSubclassOf<APlantingFlower> FlowerToGrow);
 	
 	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
 	void DeducedChosenItem(TEnumAsByte<EItems> ItemToDeduct);
 	
 	UFUNCTION(BlueprintCallable, Category = "PlantingArea")
 	void CollectFlower(APlantingFlower* FlowerToCollect);
+	/*-------------------------------------------Planting Area Interaction*/
+
+	/*Decals----------------------------------*/
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea")
+	class UDecalComponent* TendDecal;
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea")
-	class UDecalComponent* AttentionDecal;
+	class UDecalComponent* WaterDecal;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PlantingArea")
-	class UMaterialInstanceDynamic* PA_DynamicMaterial;
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea")
+	class UDecalComponent* CollectDecal;
+
+	class UMaterialInstanceDynamic* DM_Tend;
+	class UMaterialInstanceDynamic* DM_Water;
+	class UMaterialInstanceDynamic* DM_Collect;
+
 	bool NeedsAttention;
-	
+	UPROPERTY(BlueprintReadOnly, Category = "PlantingArea")
+	TArray<APlantingFlower*>GrownFlowers;
 	void AttentionSwitch(UMaterialInstanceDynamic* MaterialInstance, float Value);
+	/*-----------------------------------Decals*/
+
 
 	UParticleSystemComponent* SpawnParticle(UParticleSystem* PS,USceneComponent* AttachTo, FName AttachName, FVector Location, FRotator Rotation,FVector Scale, EAttachLocation::Type AttachType);
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	void DecalDetection();
+	/*Components of Planting Area*/
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
 		class USpringArmComponent* SpringArm;
 
@@ -61,26 +77,31 @@ protected:
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
 	class UWidgetComponent* WidgetComp;
 
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
+		class USceneComponent* LookAtDir;
+
 	UPROPERTY(BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
 		FVector LocationUnderCursor;
+
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlantingArea")
 		TArray<TSubclassOf<APlantingFlower>> FlowerTemplate;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlantingArea")
-		TArray<UParticleSystem*> FlowerVFX;
-
+	/*Particles*/
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlantingArea")
 		UParticleSystem* WateringVFX;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlantingArea")
-		UParticleSystem* FertilizerVFX;
+		UParticleSystem* CometVFX;
 
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea", meta = (AllowPrivateAccess = "true"))
-		class USceneComponent* LookAtDir;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlantingArea")
+		UParticleSystem* MoonVFX;
 
-	UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = "PlantingArea")
-		float AttentionLightToggle;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlantingArea")
+		UParticleSystem* TerranVFX;
 
+	
+	/*Sound*/
 	UPROPERTY(EditAnywhere, Category = "PlantingArea")
 		class USoundCue* WateringCue;
 	
