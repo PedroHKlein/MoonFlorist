@@ -9,6 +9,7 @@
 #include "MyBouquet.h"
 #include "MySeed.h"
 #include "MyEmailManager.h"
+#include "MyNotificationManager.h"
 #include "GameFramework/Actor.h"
 #include "MyGameManager.generated.h"
 
@@ -76,8 +77,10 @@ public:
 	FString MoneyString();
 	UFUNCTION(BlueprintCallable)
 	void NewClientRand(float _time);
-	
-
+	UFUNCTION(BlueprintCallable)
+	void LoadGameManager(AMyGameManager* _LoadManager);
+	UFUNCTION(BlueprintCallable)
+	void AddNotification(FString _Notification, float _fTime);
 
 private:
 
@@ -113,4 +116,8 @@ private:
 	float fTimeForNewClient = 60.0f;
 	UPROPERTY()
 	float fCurrTimeForNewClient = 0.0f;
+	UPROPERTY()
+	AMyNotificationManager* Notifications;
+
+
 };
