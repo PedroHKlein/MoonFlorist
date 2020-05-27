@@ -6,6 +6,7 @@
 #include "Components/SceneComponent.h"
 #include "Animation/AnimInstance.h"
 #include "Engine/Engine.h"
+#include "Particles/ParticleSystemComponent.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFlower, Warning, All);
 
@@ -30,6 +31,10 @@ APlantingFlower::APlantingFlower()
 
 	FlowerName = " ";
 	
+	VFXFlower = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("Flower Particle"));
+	VFXFlower->SetupAttachment(FlowerSKMesh);
+	
+	VFXFlower->bHiddenInGame = true;
 }
 
 void APlantingFlower::Bloom()
@@ -54,22 +59,21 @@ FVector APlantingFlower::GetSocketLocation()
 void APlantingFlower::BeginPlay()
 {
 	Super::BeginPlay();
-	if (Fidget)
-	{
-		Fidget = false;
-	}
 }
 
 void APlantingFlower::Setup()
 {
 	ReadyToBloom = false;
 	ReadyToCollect = false;
-	Watered = false;
+	Watered = true;
 	Growing = true;
-	ReadyForVFX = false;
 	PlayRate = 1.0f;
 	AnimationRate = 1.0f;
 	Fidget = false;
+	NeedWater = false;
+	CanTend = false;
+	DM_FirstElement = FlowerSKMesh->CreateDynamicMaterialInstance(0,FlowerSKMesh->GetMaterial(0));
+	DM_SecondElement = FlowerSKMesh->CreateDynamicMaterialInstance(1, FlowerSKMesh->GetMaterial(1));
 }
 
 // Called every frame

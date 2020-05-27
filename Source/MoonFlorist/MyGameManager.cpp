@@ -27,7 +27,7 @@ void AMyGameManager::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	//Test(DeltaTime);
 	ProcessMoney();
-	NewClientRand(DeltaTime);
+	//NewClientRand(DeltaTime);
 }
 
 void AMyGameManager::NewClient()
@@ -237,7 +237,7 @@ void AMyGameManager::CompleteOrder()
 		EmailLists->AddToFeedback(temp);
 		CurrClient->UpdateClientDescriptions();
 		CurrClient->ToggleServeable();
-		NewClient();
+		NewClient(); 
 		NewBouquet();
 	}
 }
@@ -258,6 +258,9 @@ void AMyGameManager::init()
 	NewClient();
 	NewBouquet();
 	Notifications = GetWorld()->SpawnActor<AMyNotificationManager>(AMyNotificationManager::StaticClass());
+	Notifications->AddNotification("I eat da poo poo", 5);
+	Notifications->AddNotification("Fly round da moon", 5);
+	Notifications->AddNotification("I am Hands", 5);
 }
 
 AMyGameManager* AMyGameManager::GetInstance()
@@ -333,4 +336,9 @@ void AMyGameManager::LoadGameManager(AMyGameManager* _LoadManager)
 void AMyGameManager::AddNotification(FString _Notification, float _fTime)
 {
 	Notifications->AddNotification(_Notification, _fTime);
+}
+
+AMyNotificationManager* AMyGameManager::GetNotifications()
+{
+	return Notifications;
 }
