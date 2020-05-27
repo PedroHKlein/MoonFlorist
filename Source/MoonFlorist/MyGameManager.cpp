@@ -238,7 +238,6 @@ void AMyGameManager::CompleteOrder()
 		CurrClient->UpdateClientDescriptions();
 		CurrClient->ToggleServeable();
 		NewClient(); 
-		Notifications->AddNotification("You have new mail", 10);
 		NewBouquet();
 	}
 }
@@ -259,9 +258,9 @@ void AMyGameManager::init()
 	NewClient();
 	NewBouquet();
 	Notifications = GetWorld()->SpawnActor<AMyNotificationManager>(AMyNotificationManager::StaticClass());
-	Notifications->AddNotification("I eat da poo poo", 10);
-	Notifications->AddNotification("Fly round da moon", 30);
-	Notifications->AddNotification("I am Hands", 60);
+	Notifications->AddNotification("I eat da poo poo", 5);
+	Notifications->AddNotification("Fly round da moon", 5);
+	Notifications->AddNotification("I am Hands", 5);
 }
 
 AMyGameManager* AMyGameManager::GetInstance()
