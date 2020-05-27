@@ -19,6 +19,8 @@
 #include "Components/AudioComponent.h"
 #include "Sound/SoundCue.h"
 #include "Sound.h"
+#include "Components/DecalComponent.h"
+#include "Materials/MaterialInstanceDynamic.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogPlantingArea, Warning, All);
 
@@ -43,6 +45,28 @@ AManualPlantingArea::AManualPlantingArea()
 
 	LookAtDir = CreateDefaultSubobject<USceneComponent>(TEXT("Look At Direction"));
 	LookAtDir->SetupAttachment(RootComponent);
+
+	/*Decal------------------*/
+		/*Tend*/
+	TendDecal = CreateDefaultSubobject<UDecalComponent>("Tend Decal");
+	TendDecal->SetupAttachment(RootComponent);
+	TendDecal->DecalSize = FVector(128.0f, 256.0f, 256.0f);
+	TendDecal->FadeScreenSize = 0.01f;
+	TendDecal->bDestroyOwnerAfterFade = true;
+		/*Water*/
+	WaterDecal = CreateDefaultSubobject<UDecalComponent>("Water Decal");
+	WaterDecal->SetupAttachment(RootComponent);
+	WaterDecal->DecalSize = FVector(128.0f, 256.0f, 256.0f);
+	WaterDecal->FadeScreenSize = 0.01f;
+	WaterDecal->bDestroyOwnerAfterFade = true;
+		/*Colect*/
+	CollectDecal = CreateDefaultSubobject<UDecalComponent>("Collect Decal");
+	CollectDecal->SetupAttachment(RootComponent);
+	CollectDecal->DecalSize = FVector(128.0f, 256.0f, 256.0f);
+	CollectDecal->FadeScreenSize = 0.01f;
+	CollectDecal->bDestroyOwnerAfterFade = true;
+	/*----------------Decal*/
+	/*Custom Sound Class Initilization*/
 	SFX = new Sound();
 } 
 
@@ -58,25 +82,79 @@ void AManualPlantingArea::BeginPlay()
 	{
 		UE_LOG(LogPlantingArea, Error, TEXT("Planting Area: Flower Template Array is empty!"));
 	}
+	DM_Tend = TendDecal->CreateDynamicMaterialInstance();
+	DM_Water = WaterDecal->CreateDynamicMaterialInstance();
+	DM_Collect = CollectDecal->CreateDynamicMaterialInstance();
+	AttentionSwitch(DM_Tend, 0.0f);
+	AttentionSwitch(DM_Water, 0.0f);
+	AttentionSwitch(DM_Collect, 0.0f);
+}
 
-	AttentionLightToggle = 0.0f;
+void AManualPlantingArea::DecalDetection()
+{
+	if(GrownFlowers.Num() != 0)
+	{
+		
+		for (int i = 0; i < GrownFlowers.Num(); i++)
+		{
+			if (GrownFlowers[i]->ReadyToCollect)
+			{
+				AttentionSwitch(DM_Collect, 1.0f);
+				break;
+			}
+			else
+			{
+				AttentionSwitch(DM_Collect, 0.0f);
+			}
+		}
+		for (int i = 0; i < GrownFlowers.Num(); i++)
+		{
+			if (GrownFlowers[i]->NeedWater)
+			{
+				AttentionSwitch(DM_Water, 1.0f);
+				break;
+			}
+			else
+			{
+				AttentionSwitch(DM_Water, 0.0f);
+			}
+
+		}
+		for (int i = 0; i < GrownFlowers.Num(); i++)
+		{
+			if (GrownFlowers[i]->CanTend)
+			{
+				AttentionSwitch(DM_Tend, 1.0f);
+				break;
+			}
+			else
+			{
+				AttentionSwitch(DM_Tend, 0.0f);
+			}
+		}
+	}
+	else
+	{
+		AttentionSwitch(DM_Tend, 0.0f);
+		AttentionSwitch(DM_Water, 0.0f);
+		AttentionSwitch(DM_Collect, 0.0f);
+	}
 }
 
 // Called every frame
 void AManualPlantingArea::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	
+	DecalDetection();
 }
 
 void AManualPlantingArea::PlantingAreaInteraction()
 {
-	if (Cast<AManualPlantingArea>(PlayerRef->HitResult.GetActor()))
+	AManualPlantingArea* PlantingArea = Cast<AManualPlantingArea>(PlayerRef->HitResult.GetActor());
+	if (PlantingArea)
 	{
-		
 		LocationUnderCursor = PlayerRef->HitResult.Location;
-		
+		/*Growing Flower----------------------------------*/
 		if (!PlayerRef->WateringMode && !PlayerRef->FertilizingMode && !PlayerRef->CollectMode && !PlayerRef->CareMode && (PlayerRef->ChosenFlower != EItems::Noneselected))
 		{
 			switch (PlayerRef->ChosenFlower)
@@ -85,7 +163,8 @@ void AManualPlantingArea::PlantingAreaInteraction()
 			{
 				if (CheckEnough(EItems::Scarletseed))
 				{
-					GrowFlower(FlowerTemplate[0]);
+					GrownFlowers.Add(GrowFlower(FlowerTemplate[0]));
+					//GrowFlower(FlowerTemplate[0]);
 					DeducedChosenItem(EItems::Scarletseed);
 				}
 				break;
@@ -94,7 +173,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 			{
 				if (CheckEnough(EItems::Cobaltseed))
 				{
-					GrowFlower(FlowerTemplate[1]);
+					GrownFlowers.Add(GrowFlower(FlowerTemplate[1]));
 					DeducedChosenItem(EItems::Cobaltseed);
 				}
 				break;
@@ -103,8 +182,8 @@ void AManualPlantingArea::PlantingAreaInteraction()
 			{
 				if (CheckEnough(EItems::Goldenseed))
 				{
-					
-					GrowFlower(FlowerTemplate[2]);
+
+					GrownFlowers.Add(GrowFlower(FlowerTemplate[2]));
 					DeducedChosenItem(EItems::Goldenseed);
 				}
 				break;
@@ -113,9 +192,9 @@ void AManualPlantingArea::PlantingAreaInteraction()
 			{
 				if (CheckEnough(EItems::Silverseed))
 				{
-					
-					GrowFlower(FlowerTemplate[3]);
-			
+
+					GrownFlowers.Add(GrowFlower(FlowerTemplate[3]));
+
 					DeducedChosenItem(EItems::Silverseed);
 				}
 				break;
@@ -124,38 +203,48 @@ void AManualPlantingArea::PlantingAreaInteraction()
 				break;
 			}
 		}
-
+	
 	}
 	else
 	{
 		APlantingFlower* CurrentFlower = Cast<APlantingFlower>(PlayerRef->HitResult.GetActor());
 		if (CurrentFlower)
 		{
+			/*Blooming Flower----------------------------------*/
 			if (!PlayerRef->WateringMode && !PlayerRef->FertilizingMode && 
 				!CurrentFlower->ReadyToCollect && 
-				!CurrentFlower->ReadyToBloom && !PlayerRef->CollectMode && !PlayerRef->CareMode)
+				!CurrentFlower->ReadyToBloom && !PlayerRef->CollectMode && PlayerRef->CareMode && !CurrentFlower->Growing)
 			{
 				CurrentFlower->Bloom();
-				AttentionLightToggle = 1.0f;
+				CurrentFlower->NeedWater = true;
 			}
-			else if (PlayerRef->WateringMode && !PlayerRef->FertilizingMode && !PlayerRef->CollectMode && !PlayerRef->CareMode)
+			/*Watering Flower----------------------------------*/
+			else if (PlayerRef->WateringMode && !PlayerRef->FertilizingMode && !PlayerRef->CollectMode && !PlayerRef->CareMode && !CurrentFlower->Watered)
 			{
-				FVector SpawnLocationWater = PlayerRef->HitResult.Location + FVector(-40.0f, 10.0f, 100.0f);
-				SpawnParticle(WateringVFX, CurrentFlower->Root, "None", SpawnLocationWater, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
-				SFX->PlaySoundOnce(WateringCue, CurrentFlower->Root);
-				CurrentFlower->Watered = true;
-				//dynamic material
-				AttentionLightToggle = 0.0f;
+				if (CurrentFlower->Growing)
+				{
+					FVector SpawnLocationWater = PlayerRef->HitResult.Location + FVector(0.0f, 0.0f, 100.0f);
+					SpawnParticle(WateringVFX, CurrentFlower->Root, "None", SpawnLocationWater, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
+					SFX->PlaySoundOnce(WateringCue, CurrentFlower->Root);
+					CurrentFlower->Watered = true;
+				}
 				if (CurrentFlower->ReadyToBloom)
 				{
+					/*Spawn Water VFX*/
+					FVector SpawnLocationWater = PlayerRef->HitResult.Location + FVector(0.0f, 0.0f, 100.0f);
+					SpawnParticle(WateringVFX, CurrentFlower->Root, "None", SpawnLocationWater, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
+					SFX->PlaySoundOnce(WateringCue, CurrentFlower->Root);
+					CurrentFlower->Watered = true;
 					
-					/*Remove from here once spawning vfx*/
-					CurrentFlower->ReadyToCollect = true;
-					CurrentFlower->ReadyForVFX = true;
-					SpawnParticle(CurrentFlower->VFX, CurrentFlower->Root, "None", CurrentFlower->GetSocketLocation(), FRotator(0.0f, 0.0f, 0.0f), CurrentFlower->VFXScale, EAttachLocation::KeepWorldPosition);
-				}
-
+					/*Spawn Flower VFX*/
+					CurrentFlower->VFXFlower->bHiddenInGame = false;
+					CurrentFlower->CanTend = true;
+					CurrentFlower->NeedWater = false;
+					//CurrentFlower->ReadyToCollect = true;
+					
+				}			
 			}
+			/*Fertilizing Flower----------------------------------*/
 			else if (!PlayerRef->WateringMode && PlayerRef->FertilizingMode && !PlayerRef->CollectMode && !PlayerRef->CareMode)
 			{
 				if (CurrentFlower->Growing)
@@ -167,7 +256,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 						if (CheckEnough(EItems::Terranfertilizer))
 						{
 							FVector SpawnLocationFert = PlayerRef->HitResult.Location + FVector(0.0f, 0.0f, 100.0f);
-							SpawnParticle(FertilizerVFX, CurrentFlower->Root, "None", SpawnLocationFert, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
+							SpawnParticle(TerranVFX, CurrentFlower->Root, "None", SpawnLocationFert, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
 							SFX->PlaySoundOnce(FertilizerCue, CurrentFlower->Root);
 							CurrentFlower->PlayRate = 1.2f;
 							DeducedChosenItem(EItems::Terranfertilizer);
@@ -179,7 +268,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 						if (CheckEnough(EItems::Moonfertilizer))
 						{
 							FVector SpawnLocationFert = PlayerRef->HitResult.Location + FVector(0.0f, 0.0f, 100.0f);
-							SpawnParticle(FertilizerVFX, CurrentFlower->Root, "None", SpawnLocationFert, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
+							SpawnParticle(MoonVFX, CurrentFlower->Root, "None", SpawnLocationFert, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
 							SFX->PlaySoundOnce(FertilizerCue, CurrentFlower->Root);
 							CurrentFlower->PlayRate = 1.6f;
 							DeducedChosenItem(EItems::Moonfertilizer);
@@ -191,7 +280,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 						if (CheckEnough(EItems::Cometfertilizer))
 						{
 							FVector SpawnLocationFert = PlayerRef->HitResult.Location + FVector(0.0f, 0.0f, 100.0f);
-							SpawnParticle(FertilizerVFX, CurrentFlower->Root, "None", SpawnLocationFert, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
+							SpawnParticle(CometVFX, CurrentFlower->Root, "None", SpawnLocationFert, FRotator(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f), EAttachLocation::KeepWorldPosition);
 							SFX->PlaySoundOnce(FertilizerCue, CurrentFlower->Root);
 							CurrentFlower->PlayRate = 2.0f;
 							DeducedChosenItem(EItems::Cometfertilizer);
@@ -204,10 +293,17 @@ void AManualPlantingArea::PlantingAreaInteraction()
 				}
 
 			}
-			else if (CurrentFlower->ReadyToCollect && PlayerRef->CollectMode && !PlayerRef->WateringMode && !PlayerRef->FertilizingMode && !PlayerRef->CareMode)
+			/*Caring For Flower----------------------------------*/
+			if (!PlayerRef->WateringMode && !PlayerRef->FertilizingMode &&
+				CurrentFlower->ReadyToBloom && !PlayerRef->CollectMode && PlayerRef->CareMode && !CurrentFlower->Growing && !CurrentFlower->Watered)
+			{
+				CurrentFlower->Fidget = true;
+			}
+			/*Collecting Flower----------------------------------*/
+			else if (CurrentFlower->ReadyToCollect && PlayerRef->CollectMode && !PlayerRef->WateringMode && !PlayerRef->FertilizingMode && !PlayerRef->CareMode)  
 			{
 				CollectFlower(CurrentFlower);
-				
+				GrownFlowers.Remove(CurrentFlower);
 				CurrentFlower->Destroy();
 			}
 		}
@@ -235,7 +331,7 @@ bool AManualPlantingArea::CheckEnough(TEnumAsByte<EItems> ItemToCheck)
 	return false;
 }
 
-void AManualPlantingArea::GrowFlower(TSubclassOf<APlantingFlower> FlowerToGrow)
+APlantingFlower* AManualPlantingArea::GrowFlower(TSubclassOf<APlantingFlower> FlowerToGrow)
 {
 	FActorSpawnParameters Param;
 	//Param.Owner = this;
@@ -244,8 +340,8 @@ void AManualPlantingArea::GrowFlower(TSubclassOf<APlantingFlower> FlowerToGrow)
 	Flower->SetActorRotation(FQuat(FRotator(Flower->GetActorRotation().Pitch,
 											LookAt.Yaw,
 											Flower->GetActorRotation().Roll)));
-	AttentionLightToggle = 1.0f;
-	
+
+	return Flower;
 }
 
 void AManualPlantingArea::DeducedChosenItem(TEnumAsByte<EItems> ItemToDeduct)
@@ -279,27 +375,9 @@ void AManualPlantingArea::CollectFlower(APlantingFlower* FlowerToCollect)
 	}
 }
 
-void AManualPlantingArea::CanPlant(TEnumAsByte<EItems> FlowerToPlant)
+void AManualPlantingArea::AttentionSwitch(UMaterialInstanceDynamic* MaterialInstance, float Value)
 {
-	FString Name = UEnum::GetValueAsString(FlowerToPlant.GetValue()).RightChop(8);
-
-	for (int i = 0; i < (PlayerRef->PlayerStorage->StorageArray.Num()); i++)
-	{
-
-		if (PlayerRef->PlayerStorage->StorageArray[i]->GetName().ToString() == Name)
-		{
-			if (PlayerRef->PlayerStorage->StorageArray[i]->GetStacks() > 0)
-			{
-				PlayerRef->CanPlant = true;
-				return;
-			}
-			else if(PlayerRef->PlayerStorage->StorageArray[i]->GetStacks() <= 0)
-			{
-				PlayerRef->CanPlant = false;
-				return;
-			}
-		}
-	}
+	MaterialInstance->SetScalarParameterValue("Emission Strenght", Value);
 }
 
 UParticleSystemComponent* AManualPlantingArea::SpawnParticle(UParticleSystem* PS, USceneComponent* AttachTo, FName AttachName, FVector Location, FRotator Rotation, FVector Scale, EAttachLocation::Type AttachType)
