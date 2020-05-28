@@ -46,9 +46,11 @@ public:
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "PlantingArea")
 	class UDecalComponent* CollectDecal;
-
+	UPROPERTY( BlueprintReadOnly, Category = "PlantingArea")
 	class UMaterialInstanceDynamic* DM_Tend;
+	UPROPERTY(BlueprintReadOnly, Category = "PlantingArea")
 	class UMaterialInstanceDynamic* DM_Water;
+	UPROPERTY(BlueprintReadOnly, Category = "PlantingArea")
 	class UMaterialInstanceDynamic* DM_Collect;
 
 	bool NeedsAttention;
@@ -107,6 +109,11 @@ protected:
 	
 	UPROPERTY(EditAnywhere, Category = "PlantingArea")
 		class USoundCue* FertilizerCue;
+
+	UPROPERTY(EditAnywhere, Category = "PlantingArea")
+		class USoundCue* PlantCue;
+
+
 
 		class Sound* SFX;
 public:	
