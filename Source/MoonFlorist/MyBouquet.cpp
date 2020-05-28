@@ -235,7 +235,7 @@ void UMyBouquet::GradeBouquet()
 		}
 	}
 
-	iMoney = iMoney + (iScore * 10);
+	iMoney = iMoney + (iScore * 20);
 	iScore = 0;
 }
 
