@@ -65,7 +65,7 @@ private:
 	UPROPERTY()
 	int iScore;
 	UPROPERTY()
-	int iMoney = 70;
+	int iMoney = 100;
 	UPROPERTY()
 	TArray<UMyGoal*> GoalSuccess;
 	UPROPERTY()
