@@ -10,6 +10,8 @@
 #include "MySeed.h"
 #include "MyEmailManager.h"
 #include "MyNotificationManager.h"
+#include "Components/AudioComponent.h"
+#include "Sound/SoundCue.h"
 #include "GameFramework/Actor.h"
 #include "MyGameManager.generated.h"
 
@@ -120,6 +122,10 @@ private:
 	float fCurrTimeForNewClient = 0.0f;
 	UPROPERTY()
 	AMyNotificationManager* Notifications;
+	UPROPERTY()
+	USoundCue* NotificationSound;
+	UPROPERTY()
+	UAudioComponent* NotificationSoundComponent;
 
 
 };
