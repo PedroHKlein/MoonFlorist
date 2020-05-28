@@ -13,5 +13,8 @@ UCLASS()
 class MOONFLORIST_API APatrolPoint : public ATargetPoint
 {
 	GENERATED_BODY()
-	
+public: 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, category = TargetPoint)
+        bool Active;
+
 };
