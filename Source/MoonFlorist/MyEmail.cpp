@@ -32,7 +32,7 @@ void AMyEmail::Tick(float DeltaTime)
 			{
 				GameManager = *ActorItr;
 			}
-			GameManager->AddNotification("You have new mail!", 5);
+			GameManager->AddNotification("You have new mail from " + Client->GetName(), 5);
 			bNotified = true;
 		}
 	}
