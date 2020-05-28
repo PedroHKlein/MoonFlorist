@@ -40,7 +40,7 @@ EBTNodeResult::Type UBTTask_FindPatrolPoint::ExecuteTask(UBehaviorTreeComponent&
 	//Goes through and only adds the patrol points and not the delivery points aswell
 	for (AActor* PatrolPoints : AllPoints)
 	{
-		if (PatrolPoints->ActorHasTag("PatrolPoint"))
+		if (PatrolPoints->ActorHasTag("PatrolPoint") && Cast<APatrolPoint>(PatrolPoints)->Active)
 		{
 			AllPatrolPoints.Add(PatrolPoints);
 		}

@@ -2,6 +2,8 @@
 
 
 #include "MyEmail.h"
+#include "MyGameManager.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AMyEmail::AMyEmail()
@@ -24,7 +26,15 @@ void AMyEmail::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	if (bDelivered)
 	{
-
+		if (!bNotified)
+		{
+			for (TActorIterator<AMyGameManager> ActorItr(GetWorld()); ActorItr; ++ActorItr)
+			{
+				GameManager = *ActorItr;
+			}
+			GameManager->AddNotification("You have new mail from " + Client->GetName(), 5);
+			bNotified = true;
+		}
 	}
 	else
 	{

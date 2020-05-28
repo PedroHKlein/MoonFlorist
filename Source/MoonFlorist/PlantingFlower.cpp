@@ -5,6 +5,8 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "Components/SceneComponent.h"
 #include "Animation/AnimInstance.h"
+#include "Engine/Engine.h"
+#include "Particles/ParticleSystemComponent.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFlower, Warning, All);
 
@@ -16,35 +18,62 @@ APlantingFlower::APlantingFlower()
 	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
 	RootComponent = Root;
 
+
 	PlantingRange = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Flower Capsule"));
 	PlantingRange->InitCapsuleSize(30.0f, 30.0f);
 	PlantingRange->SetRelativeLocation(FVector(0.f, 0.f, 20.0f));
+
 	PlantingRange->SetupAttachment(Root);
+	
 
 	FlowerSKMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Flower SKMesh"));
 	FlowerSKMesh->SetupAttachment(Root);
 
-
-
-
 	FlowerName = " ";
+	
+	VFXFlower = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("Flower Particle"));
+	VFXFlower->SetupAttachment(FlowerSKMesh);
+	
+	VFXFlower->bHiddenInGame = true;
+}
+
+void APlantingFlower::Bloom()
+{
+	if (!Growing)
+	{
+		ReadyToBloom = true;
+	}
+	else
+	{
+		ReadyToBloom = false;
+	}
+	
+}
+
+FVector APlantingFlower::GetSocketLocation()
+{
+	return FlowerSKMesh->GetSocketLocation("FP_Socket");
 }
 
 // Called when the game starts or when spawned
 void APlantingFlower::BeginPlay()
 {
 	Super::BeginPlay();
-	Setup();
 }
 
 void APlantingFlower::Setup()
 {
 	ReadyToBloom = false;
 	ReadyToCollect = false;
-	Watered = false;
+	Watered = true;
 	Growing = true;
-	ReadyForVFX = false;
 	PlayRate = 1.0f;
+	AnimationRate = 1.0f;
+	Fidget = false;
+	NeedWater = false;
+	CanTend = false;
+	DM_FirstElement = FlowerSKMesh->CreateDynamicMaterialInstance(0,FlowerSKMesh->GetMaterial(0));
+	DM_SecondElement = FlowerSKMesh->CreateDynamicMaterialInstance(1, FlowerSKMesh->GetMaterial(1));
 }
 
 // Called every frame

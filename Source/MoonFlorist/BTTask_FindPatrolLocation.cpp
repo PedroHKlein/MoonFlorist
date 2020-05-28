@@ -40,10 +40,7 @@ EBTNodeResult::Type UBTTask_FindPatrolLocation::ExecuteTask(UBehaviorTreeCompone
 			UE_LOG(LogTemp, Error, TEXT("BTTask_FindPatrolLocation: Found Patrol Location"));
 			return  EBTNodeResult::Succeeded;
 		}
-	
-
 	}
-	
 
 	/* Task Returns Fail State */
 	UE_LOG(LogTemp, Error, TEXT("BTTask_FindPatrolLocation: Cannot Find Location"));

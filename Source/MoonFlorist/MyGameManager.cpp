@@ -9,7 +9,10 @@ AMyGameManager::AMyGameManager()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	static ConstructorHelpers::FObjectFinder<USoundCue>Notification(TEXT("/Game/Sound/SoundCues/Notification5_Cue.Notification5_Cue"));
+	NotificationSound = Notification.Object;
+	NotificationSoundComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("notificationsoundcomponent"));
+	NotificationSoundComponent->bAutoActivate = false;
 }
 
 // Called when the game starts or when spawned
@@ -19,6 +22,7 @@ void AMyGameManager::BeginPlay()
 	init();
 	ConstructCapsule = false;
 	HandsCanDeliver = false;
+	NotificationSoundComponent->SetSound(NotificationSound);
 }
 
 // Called every frame
@@ -27,7 +31,7 @@ void AMyGameManager::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	//Test(DeltaTime);
 	ProcessMoney();
-	NewClientRand(DeltaTime);
+	//NewClientRand(DeltaTime);
 }
 
 void AMyGameManager::NewClient()
@@ -237,7 +241,7 @@ void AMyGameManager::CompleteOrder()
 		EmailLists->AddToFeedback(temp);
 		CurrClient->UpdateClientDescriptions();
 		CurrClient->ToggleServeable();
-		NewClient();
+		NewClient(); 
 		NewBouquet();
 	}
 }
@@ -255,11 +259,9 @@ void AMyGameManager::init()
 	ClientList = GetWorld()->SpawnActor<AMyClientManager>(AMyClientManager::StaticClass());
 	ClientList->init();
 	EmailLists = GetWorld()->SpawnActor<AMyEmailManager>(AMyEmailManager::StaticClass());
-	for (int i = 0; i < 3; i++)
-	{
-		NewClient();
-	}
+	NewClient();
 	NewBouquet();
+	Notifications = GetWorld()->SpawnActor<AMyNotificationManager>(AMyNotificationManager::StaticClass());
 }
 
 AMyGameManager* AMyGameManager::GetInstance()
@@ -311,4 +313,34 @@ FString AMyGameManager::MoneyString()
 	{
 		return "$" + FString::FromInt(iMoney);
 	}
+}
+
+void AMyGameManager::LoadGameManager(AMyGameManager* _LoadManager)
+{
+	GoalLists = _LoadManager->GoalLists;
+	ClientList = _LoadManager->ClientList;
+	CurrClient = _LoadManager->CurrClient;
+	CurrentClient = _LoadManager->CurrentClient;
+	CurrentBouquet = _LoadManager->CurrentBouquet;
+	fTimeToWait = _LoadManager->fTimeToWait;
+	fCurrTime = _LoadManager->fCurrTime;
+	iLastBoquetWorth = _LoadManager->iLastBoquetWorth;
+	EmailLists = _LoadManager->EmailLists;
+	iTempMoney = _LoadManager->iTempMoney;
+	BouquetList = _LoadManager->BouquetList;
+	fTimeForNewClient = _LoadManager->fTimeForNewClient;
+	fCurrTimeForNewClient = _LoadManager->fCurrTimeForNewClient;
+	HandsCanDeliver = _LoadManager->HandsCanDeliver;
+	ConstructCapsule = _LoadManager->ConstructCapsule;
+}
+
+void AMyGameManager::AddNotification(FString _Notification, float _fTime)
+{
+	Notifications->AddNotification(_Notification, _fTime);
+	NotificationSoundComponent->Play();
+}
+
+AMyNotificationManager* AMyGameManager::GetNotifications()
+{
+	return Notifications;
 }
