@@ -9,7 +9,10 @@ AMyGameManager::AMyGameManager()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	static ConstructorHelpers::FObjectFinder<USoundCue>Notification(TEXT("/Game/Sound/SoundCues/Notification5_Cue.Notification5_Cue"));
+	NotificationSound = Notification.Object;
+	NotificationSoundComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("notificationsoundcomponent"));
+	NotificationSoundComponent->bAutoActivate = false;
 }
 
 // Called when the game starts or when spawned
@@ -19,6 +22,7 @@ void AMyGameManager::BeginPlay()
 	init();
 	ConstructCapsule = false;
 	HandsCanDeliver = false;
+	NotificationSoundComponent->SetSound(NotificationSound);
 }
 
 // Called every frame
@@ -333,6 +337,7 @@ void AMyGameManager::LoadGameManager(AMyGameManager* _LoadManager)
 void AMyGameManager::AddNotification(FString _Notification, float _fTime)
 {
 	Notifications->AddNotification(_Notification, _fTime);
+	NotificationSoundComponent->Play();
 }
 
 AMyNotificationManager* AMyGameManager::GetNotifications()
