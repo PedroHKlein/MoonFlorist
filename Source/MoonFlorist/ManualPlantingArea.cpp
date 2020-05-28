@@ -99,6 +99,8 @@ void AManualPlantingArea::DecalDetection()
 		{
 			if (GrownFlowers[i]->ReadyToCollect)
 			{
+				
+				
 				AttentionSwitch(DM_Collect, 1.0f);
 				break;
 			}
@@ -111,6 +113,7 @@ void AManualPlantingArea::DecalDetection()
 		{
 			if (GrownFlowers[i]->NeedWater)
 			{
+				
 				AttentionSwitch(DM_Water, 1.0f);
 				break;
 			}
@@ -124,6 +127,7 @@ void AManualPlantingArea::DecalDetection()
 		{
 			if (GrownFlowers[i]->CanTend)
 			{
+			
 				AttentionSwitch(DM_Tend, 1.0f);
 				break;
 			}
@@ -202,6 +206,7 @@ void AManualPlantingArea::PlantingAreaInteraction()
 			default:
 				break;
 			}
+			SFX->PlaySoundOnce(PlantCue, RootComponent);
 		}
 	
 	}
@@ -237,7 +242,6 @@ void AManualPlantingArea::PlantingAreaInteraction()
 					
 					/*Spawn Flower VFX*/
 					CurrentFlower->VFXFlower->bHiddenInGame = false;
-					
 					CurrentFlower->NeedWater = false;
 					//CurrentFlower->ReadyToCollect = true;
 					

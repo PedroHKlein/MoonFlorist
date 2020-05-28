@@ -72,7 +72,7 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, Category = Flower)
 		bool Fidget;
-	
+
 	UFUNCTION(BlueprintCallable, category = Flower)
 		FVector GetSocketLocation();
 protected:
