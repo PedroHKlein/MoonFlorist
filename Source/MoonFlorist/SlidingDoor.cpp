@@ -125,21 +125,21 @@ void ASlidingDoor::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* Oth
 void ASlidingDoor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	FVector LeftDoorLoc = LeftDoor->RelativeLocation;
-	FVector RightDoorLoc = RightDoor->RelativeLocation;
-	if (Open)
-	{
-	
-		LeftDoor->SetRelativeLocation(FMath::Lerp(LeftDoorLoc, LeftPoint->RelativeLocation,  DeltaTime * Speed));
-		RightDoor->SetRelativeLocation(FMath::Lerp(RightDoorLoc, RightPoint->RelativeLocation, DeltaTime * Speed));
-		
-	}
-	else 
-	{
-		
-		LeftDoor->SetRelativeLocation(FMath::Lerp(LeftDoorLoc, FVector(0.0f, 0.0f, 0.0f), DeltaTime * Speed));
-		RightDoor->SetRelativeLocation(FMath::Lerp(RightDoorLoc, FVector(0.0f, 0.0f, 0.0f), DeltaTime * Speed));
-		
-	}
+	//FVector LeftDoorLoc = LeftDoor->RelativeLocation;
+	//FVector RightDoorLoc = RightDoor->RelativeLocation;
+	//if (Open)
+	//{
+	//
+	//	LeftDoor->SetRelativeLocation(FMath::Lerp(LeftDoorLoc, LeftPoint->RelativeLocation,  DeltaTime * Speed));
+	//	RightDoor->SetRelativeLocation(FMath::Lerp(RightDoorLoc, RightPoint->RelativeLocation, DeltaTime * Speed));
+		//	
+	//}
+	//else 
+	//{
+		//	
+	//	LeftDoor->SetRelativeLocation(FMath::Lerp(LeftDoorLoc, FVector(0.0f, 0.0f, 0.0f), DeltaTime * Speed));
+		//	RightDoor->SetRelativeLocation(FMath::Lerp(RightDoorLoc, FVector(0.0f, 0.0f, 0.0f), DeltaTime * Speed));
+	//	
+	//}
 }
 
